@@ -13,7 +13,7 @@
 from openstack_dashboard.test.test_data import utils
 
 
-def load_test_data(load_onto=None):
+def load_data(load_onto=None):
     from neutron_vpnaas_dashboard.test.test_data import vpnaas_data
 
     # The order of these loaders matters, some depend on others.

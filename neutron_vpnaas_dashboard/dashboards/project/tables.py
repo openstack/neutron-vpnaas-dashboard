@@ -24,7 +24,7 @@ from horizon import tables
 
 from openstack_dashboard import policy
 
-from neutron_vpnaas_dashboard import api
+from neutron_vpnaas_dashboard.api import vpn as api_vpn
 
 
 forbid_updates = set(["PENDING_CREATE", "PENDING_UPDATE", "PENDING_DELETE"])
@@ -93,7 +93,7 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     def delete(self, request, obj_id):
         try:
-            api.vpn.vpnservice_delete(request, obj_id)
+            api_vpn.vpnservice_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
                 request, _('Unable to delete VPN Service. %s') % e)
@@ -126,7 +126,7 @@ class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     def delete(self, request, obj_id):
         try:
-            api.vpn.ikepolicy_delete(request, obj_id)
+            api_vpn.ikepolicy_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
                 request, _('Unable to delete IKE Policy. %s') % e)
@@ -159,7 +159,7 @@ class DeleteIPSecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     def delete(self, request, obj_id):
         try:
-            api.vpn.ipsecpolicy_delete(request, obj_id)
+            api_vpn.ipsecpolicy_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
                 request, _('Unable to delete IPSec Policy. %s') % e)
@@ -188,7 +188,7 @@ class DeleteIPSecSiteConnectionLink(policy.PolicyTargetMixin,
 
     def delete(self, request, obj_id):
         try:
-            api.vpn.ipsecsiteconnection_delete(request, obj_id)
+            api_vpn.ipsecsiteconnection_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
                 request, _('Unable to delete IPSec Site Connection. %s') % e)
@@ -291,7 +291,7 @@ class UpdateIPSecSiteConnectionRow(tables.Row):
     ajax = True
 
     def get_data(self, request, conn_id):
-        conn = api.vpn.ipsecsiteconnection_get(request, conn_id)
+        conn = api_vpn.ipsecsiteconnection_get(request, conn_id)
         conn.ikepolicy_name = conn['ikepolicy'].get('name',
                                                     conn['ikepolicy_id'])
         conn.ipsecpolicy_name = conn['ipsecpolicy'].get('name',
@@ -359,7 +359,7 @@ class UpdateVPNServiceRow(tables.Row):
     ajax = True
 
     def get_data(self, request, vpn_id):
-        vpn = api.vpn.vpnservice_get(request, vpn_id)
+        vpn = api_vpn.vpnservice_get(request, vpn_id)
         vpn.router_name = vpn['router'].get('name', vpn['router_id'])
         vpn.subnet_name = vpn['subnet'].get('cidr', vpn['subnet_id'])
         return vpn

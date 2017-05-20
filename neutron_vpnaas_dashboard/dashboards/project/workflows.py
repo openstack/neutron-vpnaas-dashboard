@@ -20,7 +20,7 @@ from horizon import workflows
 
 from openstack_dashboard import api
 
-from neutron_vpnaas_dashboard import api as api_vpn
+from neutron_vpnaas_dashboard.api import vpn as api_vpn
 
 
 class AddVPNServiceAction(workflows.Action):

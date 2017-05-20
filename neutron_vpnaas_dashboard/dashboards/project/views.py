@@ -22,7 +22,7 @@ from horizon import tabs
 from horizon.utils import memoized
 from horizon import workflows
 
-from neutron_vpnaas_dashboard import api as api_vpn
+from neutron_vpnaas_dashboard.api import vpn as api_vpn
 from neutron_vpnaas_dashboard.dashboards.project import forms as vpn_forms
 from neutron_vpnaas_dashboard.dashboards.project import tables as vpn_tables
 from neutron_vpnaas_dashboard.dashboards.project import tabs as vpn_tabs

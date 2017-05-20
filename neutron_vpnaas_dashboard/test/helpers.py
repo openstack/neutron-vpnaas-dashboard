@@ -21,7 +21,7 @@ create_stubs = helpers.create_stubs
 class TestDataLoaderMixin(object):
     def _setup_test_data(self):
         super(TestDataLoaderMixin, self)._setup_test_data()
-        utils.load_test_data(self)
+        utils.load_data(self)
 
 
 class TestCase(TestDataLoaderMixin, helpers.TestCase):

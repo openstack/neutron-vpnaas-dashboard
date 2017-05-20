@@ -21,7 +21,7 @@ from horizon import exceptions
 from horizon import forms
 from horizon import messages
 
-from neutron_vpnaas_dashboard import api as api_vpn
+from neutron_vpnaas_dashboard.api import vpn as api_vpn
 
 
 LOG = logging.getLogger(__name__)
