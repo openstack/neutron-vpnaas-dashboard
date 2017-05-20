@@ -16,7 +16,8 @@ function pip_install() {
 # and honour any/all Depends-On headers in the commit message
 function install_from_git() {
     ZUUL_CLONER=/usr/zuul-env/bin/zuul-cloner
-    GIT_HOST=git.openstack.org
+    # GIT_HOST=git.openstack.org
+    GIT_HOST=github.com
     PROJ=$1
     EGG=$2
 
