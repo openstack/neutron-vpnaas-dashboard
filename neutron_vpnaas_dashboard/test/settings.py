@@ -35,3 +35,16 @@ settings.update_dashboards(
 
 # Ensure any duplicate apps are removed after the update_dashboards call
 INSTALLED_APPS = list(set(INSTALLED_APPS))
+
+# --------------------
+# Test-only settings
+# --------------------
+# TEST_GLOBAL_MOCKS_ON_PANELS: defines what and how methods should be
+# mocked globally for unit tests and Selenium tests.
+# 'method' is required. 'return_value' and 'side_effect'
+# are optional and passed to mock.patch().
+TEST_GLOBAL_MOCKS_ON_PANELS['vpn'] = {
+    'method': ('neutron_vpnaas_dashboard.dashboards.project.panel.'
+               'VPN.can_access'),
+    'return_value': True,
+}
