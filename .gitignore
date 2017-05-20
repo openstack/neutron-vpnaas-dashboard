@@ -1,2 +1,8 @@
 *.pyc
 *.swp
+*.egg*/
+.tox/
+build/
+dist/
+AUTHORS
+ChangeLog

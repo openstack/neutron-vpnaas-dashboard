@@ -26,8 +26,8 @@ from openstack_dashboard.utils import settings
 
 settings.update_dashboards(
     [
-        neutron_vpnaas_dashboard.enabled,
         openstack_dashboard.enabled,
+        neutron_vpnaas_dashboard.enabled,
     ],
     HORIZON_CONFIG,
     INSTALLED_APPS
