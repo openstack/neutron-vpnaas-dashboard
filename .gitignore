@@ -1,8 +1,10 @@
 *.pyc
 *.swp
 *.egg*/
+.coverage
 .tox/
 build/
+cover/
 dist/
 AUTHORS
 ChangeLog
