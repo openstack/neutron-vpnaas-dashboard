@@ -26,7 +26,8 @@ from neutron_vpnaas_dashboard import api as api_vpn
 from neutron_vpnaas_dashboard.dashboards.project import forms as vpn_forms
 from neutron_vpnaas_dashboard.dashboards.project import tables as vpn_tables
 from neutron_vpnaas_dashboard.dashboards.project import tabs as vpn_tabs
-from neutron_vpnaas_dashboard.dashboards.project import workflows as vpn_workflows
+from neutron_vpnaas_dashboard.dashboards.project \
+    import workflows as vpn_workflows
 
 
 class IndexView(tabs.TabbedTableView):
