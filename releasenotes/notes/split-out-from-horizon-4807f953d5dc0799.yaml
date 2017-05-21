@@ -1,0 +1,10 @@
+---
+prelude: >
+    Neutron VPNaaS support in the OpenStack Dashboard is now split out into
+    a separate python package.
+features:
+  - |
+    Neutron VPNaaS support in the OpenStack Dashboard is now split out into a
+    separate package ``neutron-vpnaas-dashboard``. You need to install
+    ``neutron-vpnaas-dashboard`` after upgrading the OpenStack Dashboard
+    to Pike release and add ``enabled`` file for Neutron VPNaaS dashboard.
