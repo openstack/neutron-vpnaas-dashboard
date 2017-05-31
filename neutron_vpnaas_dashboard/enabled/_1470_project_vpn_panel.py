@@ -18,6 +18,6 @@ PANEL_DASHBOARD = 'project'
 PANEL_GROUP = 'network'
 
 # Python panel class of the PANEL to be added.
-ADD_PANEL = 'neutron_vpnaas_dashboard.dashboards.project.panel.VPN'
+ADD_PANEL = 'neutron_vpnaas_dashboard.dashboards.project.vpn.panel.VPN'
 
 ADD_INSTALLED_APPS = ["neutron_vpnaas_dashboard"]

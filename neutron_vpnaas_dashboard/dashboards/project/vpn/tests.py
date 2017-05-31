@@ -22,7 +22,7 @@ from horizon.workflows import views
 from openstack_dashboard import api
 
 from neutron_vpnaas_dashboard.api import vpn as api_vpn
-from neutron_vpnaas_dashboard.dashboards.project import workflows
+from neutron_vpnaas_dashboard.dashboards.project.vpn import workflows
 from neutron_vpnaas_dashboard.test import helpers as test
 
 

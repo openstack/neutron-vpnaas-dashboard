@@ -44,7 +44,7 @@ INSTALLED_APPS = list(set(INSTALLED_APPS))
 # 'method' is required. 'return_value' and 'side_effect'
 # are optional and passed to mock.patch().
 TEST_GLOBAL_MOCKS_ON_PANELS['vpn'] = {
-    'method': ('neutron_vpnaas_dashboard.dashboards.project.panel.'
+    'method': ('neutron_vpnaas_dashboard.dashboards.project.vpn.panel.'
                'VPN.can_access'),
     'return_value': True,
 }

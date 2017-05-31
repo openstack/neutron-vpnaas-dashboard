@@ -14,7 +14,7 @@
 
 from django.conf.urls import url
 
-from neutron_vpnaas_dashboard.dashboards.project import views
+from neutron_vpnaas_dashboard.dashboards.project.vpn import views
 
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),

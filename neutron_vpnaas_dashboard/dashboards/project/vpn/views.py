@@ -17,43 +17,42 @@ from django.core.urlresolvers import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
 
 from horizon import exceptions
-from horizon import forms
-from horizon import tabs
+from horizon import forms as horizon_forms
+from horizon import tabs as horizon_tabs
 from horizon.utils import memoized
-from horizon import workflows
+from horizon import workflows as horizon_workflows
 
 from neutron_vpnaas_dashboard.api import vpn as api_vpn
-from neutron_vpnaas_dashboard.dashboards.project import forms as vpn_forms
-from neutron_vpnaas_dashboard.dashboards.project import tables as vpn_tables
-from neutron_vpnaas_dashboard.dashboards.project import tabs as vpn_tabs
-from neutron_vpnaas_dashboard.dashboards.project \
-    import workflows as vpn_workflows
+from neutron_vpnaas_dashboard.dashboards.project.vpn import forms
+from neutron_vpnaas_dashboard.dashboards.project.vpn import tables
+from neutron_vpnaas_dashboard.dashboards.project.vpn import tabs
+from neutron_vpnaas_dashboard.dashboards.project.vpn import workflows
 
 
-class IndexView(tabs.TabbedTableView):
-    tab_group_class = vpn_tabs.VPNTabs
+class IndexView(horizon_tabs.TabbedTableView):
+    tab_group_class = tabs.VPNTabs
     template_name = 'project/vpn/index.html'
     page_title = _("Virtual Private Network")
 
 
-class AddVPNServiceView(workflows.WorkflowView):
-    workflow_class = vpn_workflows.AddVPNService
+class AddVPNServiceView(horizon_workflows.WorkflowView):
+    workflow_class = workflows.AddVPNService
 
 
-class AddIPSecSiteConnectionView(workflows.WorkflowView):
-    workflow_class = vpn_workflows.AddIPSecSiteConnection
+class AddIPSecSiteConnectionView(horizon_workflows.WorkflowView):
+    workflow_class = workflows.AddIPSecSiteConnection
 
 
-class AddIKEPolicyView(workflows.WorkflowView):
-    workflow_class = vpn_workflows.AddIKEPolicy
+class AddIKEPolicyView(horizon_workflows.WorkflowView):
+    workflow_class = workflows.AddIKEPolicy
 
 
-class AddIPSecPolicyView(workflows.WorkflowView):
-    workflow_class = vpn_workflows.AddIPSecPolicy
+class AddIPSecPolicyView(horizon_workflows.WorkflowView):
+    workflow_class = workflows.AddIPSecPolicy
 
 
-class IKEPolicyDetailsView(tabs.TabView):
-    tab_group_class = vpn_tabs.IKEPolicyDetailsTabs
+class IKEPolicyDetailsView(horizon_tabs.TabView):
+    tab_group_class = tabs.IKEPolicyDetailsTabs
     template_name = 'horizon/common/_detail.html'
     page_title = "{{ ikepolicy.name|default:ikepolicy.id }}"
 
@@ -70,7 +69,7 @@ class IKEPolicyDetailsView(tabs.TabView):
     def get_context_data(self, **kwargs):
         context = super(IKEPolicyDetailsView, self).get_context_data(**kwargs)
         ikepolicy = self.get_data()
-        table = vpn_tables.IKEPoliciesTable(self.request)
+        table = tables.IKEPoliciesTable(self.request)
         context["ikepolicy"] = ikepolicy
         context["url"] = self.get_redirect_url()
         context["actions"] = table.render_row_actions(ikepolicy)
@@ -85,8 +84,8 @@ class IKEPolicyDetailsView(tabs.TabView):
         return reverse_lazy('horizon:project:vpn:index')
 
 
-class IPSecPolicyDetailsView(tabs.TabView):
-    tab_group_class = vpn_tabs.IPSecPolicyDetailsTabs
+class IPSecPolicyDetailsView(horizon_tabs.TabView):
+    tab_group_class = tabs.IPSecPolicyDetailsTabs
     template_name = 'horizon/common/_detail.html'
     page_title = "{{ ipsecpolicy.name|default:ipsecpolicy.id }}"
 
@@ -104,7 +103,7 @@ class IPSecPolicyDetailsView(tabs.TabView):
         context = super(IPSecPolicyDetailsView, self).get_context_data(
             **kwargs)
         ipsecpolicy = self.get_data()
-        table = vpn_tables.IPSecPoliciesTable(self.request)
+        table = tables.IPSecPoliciesTable(self.request)
         context["ipsecpolicy"] = ipsecpolicy
         context["url"] = self.get_redirect_url()
         context["actions"] = table.render_row_actions(ipsecpolicy)
@@ -119,8 +118,8 @@ class IPSecPolicyDetailsView(tabs.TabView):
         return reverse_lazy('horizon:project:vpn:index')
 
 
-class VPNServiceDetailsView(tabs.TabView):
-    tab_group_class = vpn_tabs.VPNServiceDetailsTabs
+class VPNServiceDetailsView(horizon_tabs.TabView):
+    tab_group_class = tabs.VPNServiceDetailsTabs
     template_name = 'horizon/common/_detail.html'
     page_title = "{{ vpnservice.name|default:vpnservice.id }}"
 
@@ -147,7 +146,7 @@ class VPNServiceDetailsView(tabs.TabView):
     def get_context_data(self, **kwargs):
         context = super(VPNServiceDetailsView, self).get_context_data(**kwargs)
         vpnservice = self.get_data()
-        table = vpn_tables.VPNServicesTable(self.request)
+        table = tables.VPNServicesTable(self.request)
         context["vpnservice"] = vpnservice
         context["url"] = self.get_redirect_url()
         context["actions"] = table.render_row_actions(vpnservice)
@@ -162,8 +161,8 @@ class VPNServiceDetailsView(tabs.TabView):
         return reverse_lazy('horizon:project:vpn:index')
 
 
-class IPSecSiteConnectionDetailsView(tabs.TabView):
-    tab_group_class = vpn_tabs.IPSecSiteConnectionDetailsTabs
+class IPSecSiteConnectionDetailsView(horizon_tabs.TabView):
+    tab_group_class = tabs.IPSecSiteConnectionDetailsTabs
     template_name = 'horizon/common/_detail.html'
     page_title = "{{ ipsecsiteconnection.name|default:ipsecsiteconnection.id}}"
 
@@ -181,7 +180,7 @@ class IPSecSiteConnectionDetailsView(tabs.TabView):
         context = super(IPSecSiteConnectionDetailsView, self).get_context_data(
             **kwargs)
         ipsecsiteconnection = self.get_data()
-        table = vpn_tables.IPSecSiteConnectionsTable(self.request)
+        table = tables.IPSecSiteConnectionsTable(self.request)
         context["ipsecsiteconnection"] = ipsecsiteconnection
         context["url"] = self.get_redirect_url()
         context["actions"] = table.render_row_actions(ipsecsiteconnection)
@@ -198,8 +197,8 @@ class IPSecSiteConnectionDetailsView(tabs.TabView):
         return reverse_lazy('horizon:project:vpn:index')
 
 
-class UpdateVPNServiceView(forms.ModalFormView):
-    form_class = vpn_forms.UpdateVPNService
+class UpdateVPNServiceView(horizon_forms.ModalFormView):
+    form_class = forms.UpdateVPNService
     form_id = "update_vpnservice_form"
     template_name = "project/vpn/update_vpnservice.html"
     context_object_name = 'vpnservice'
@@ -233,8 +232,8 @@ class UpdateVPNServiceView(forms.ModalFormView):
                 'admin_state_up': vpnservice['admin_state_up']}
 
 
-class UpdateIKEPolicyView(forms.ModalFormView):
-    form_class = vpn_forms.UpdateIKEPolicy
+class UpdateIKEPolicyView(horizon_forms.ModalFormView):
+    form_class = forms.UpdateIKEPolicy
     form_id = "update_ikepolicy_form"
     template_name = "project/vpn/update_ikepolicy.html"
     context_object_name = 'ikepolicy'
@@ -275,8 +274,8 @@ class UpdateIKEPolicyView(forms.ModalFormView):
                     'phase1_negotiation_mode']}
 
 
-class UpdateIPSecPolicyView(forms.ModalFormView):
-    form_class = vpn_forms.UpdateIPSecPolicy
+class UpdateIPSecPolicyView(horizon_forms.ModalFormView):
+    form_class = forms.UpdateIPSecPolicy
     form_id = "update_ipsecpolicy_form"
     template_name = "project/vpn/update_ipsecpolicy.html"
     context_object_name = 'ipsecpolicy'
@@ -316,8 +315,8 @@ class UpdateIPSecPolicyView(forms.ModalFormView):
                 'transform_protocol': ipsecpolicy['transform_protocol']}
 
 
-class UpdateIPSecSiteConnectionView(forms.ModalFormView):
-    form_class = vpn_forms.UpdateIPSecSiteConnection
+class UpdateIPSecSiteConnectionView(horizon_forms.ModalFormView):
+    form_class = forms.UpdateIPSecSiteConnection
     form_id = "update_ipsecsiteconnection_form"
     template_name = "project/vpn/update_ipsecsiteconnection.html"
     context_object_name = 'ipsecsiteconnection'
