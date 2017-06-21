@@ -1,0 +1,2 @@
+# settings file for neutron-vpnaas-dashboard plugin
+enable_service neutron-vpnaas-dashboard

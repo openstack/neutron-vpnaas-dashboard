@@ -18,12 +18,22 @@
 Neutron VPNaaS Dashboard Project
 ================================
 
-Introduction
-============
-
 Neutron VPNaaS Dashboard is a horizon plugin for Neutron VPNaaS.
 
+User Documentation
+------------------
+
+Under preparing.
+
+Contributor Guide
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+
+   contributor/devstack-plugin
+
 Release Notes
-=============
+-------------
 
 See http://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/.
