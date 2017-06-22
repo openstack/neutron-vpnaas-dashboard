@@ -14,33 +14,15 @@
       License for the specific language governing permissions and limitations
       under the License.
 
-================================
-Neutron VPNaaS Dashboard Project
-================================
+=============
+Configuration
+=============
 
-Neutron VPNaaS Dashboard is a horizon plugin for Neutron VPNaaS.
+Neutron VPNaaS dashboard has no configuration option.
+It checks if Neutron VPNaaS service is enabled in your neutron server
+and the VPNaaS panel is displayed if enabled.
 
-User Documentation
-------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   install/index
-   configuration/index
-
-Contributor Guide
------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   contributor/index
-
-Release Notes
--------------
-
-.. toctree::
-   :maxdepth: 1
-
-   Release Notes <releasenotes/index>
+For more configurations, see
+`Deployment & Configuration
+<https://docs.openstack.org/developer/horizon/install/index.html>`__
+in the Horizon documentation.
