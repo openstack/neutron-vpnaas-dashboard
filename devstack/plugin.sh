@@ -10,6 +10,12 @@ function install_neutron_vpnaas_dashboard {
 
 function configure_neutron_vpnaas_dashboard {
     cp -a $VPNAAS_ENABLED_DIR/_[0-9]*.py $HORIZON_ENABLED_DIR
+    # The following is to make vpnaas dashboard work with
+    # the master horizon with neutron vpnaas support.
+    # At now it seems overriding enabled file does not work.
+    # (horizon bug 1700325)
+    rm -f $DEST/horizon/openstack_dashboard/enabled/_1470_project_vpn_panel.py
+    rm -f $DEST/horizon/openstack_dashboard/enabled/__pycache__/_1470_project_vpn_panel.*
     # NOTE: If locale directory does not exist, compilemessages will fail,
     # so check for an existence of locale directory is required.
     if [ -d $VPNAAS_DASHBOARD_DIR/neutron_vpnaas_dashboard/locale ]; then
