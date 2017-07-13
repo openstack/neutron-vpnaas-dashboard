@@ -29,7 +29,11 @@ class AddVPNServiceAction(workflows.Action):
         initial="", required=False,
         max_length=80, label=_("Description"))
     router_id = forms.ChoiceField(label=_("Router"))
-    subnet_id = forms.ChoiceField(label=_("Subnet"))
+    subnet_id = forms.ChoiceField(
+        label=_("Subnet"),
+        help_text=_("Optional. No need to be specified "
+                    "when you use endpoint groups."),
+        required=False)
     admin_state_up = forms.BooleanField(
         label=_("Enable Admin State"),
         help_text=_("The state of VPN service to start in. If disabled "
@@ -101,6 +105,109 @@ class AddVPNService(workflows.Workflow):
     def handle(self, request, context):
         try:
             api_vpn.vpnservice_create(request, **context)
+            return True
+        except Exception:
+            return False
+
+
+class AddEndpointGroupAction(workflows.Action):
+    name = forms.CharField(
+        max_length=80,
+        label=_("Name"),
+        required=False)
+    description = forms.CharField(
+        initial="",
+        required=False,
+        max_length=80,
+        label=_("Description"))
+    type = forms.ThemableChoiceField(
+        label=_("Type"),
+        help_text=_("IPSec connection validation requires that local "
+                    "endpoints are subnets, and peer endpoints are CIDRs."),
+        choices=[('cidr', _('CIDR (for external systems)')),
+                 ('subnet', _('Subnet (for local systems)'))],
+        widget=forms.ThemableSelectWidget(attrs={
+            'class': 'switchable',
+            'data-slug': 'type', }))
+    cidrs = forms.MultiIPField(
+        required=False,
+        label=_("External System CIDRs"),
+        widget=forms.TextInput(attrs={
+            'class': 'switched',
+            'data-switch-on': 'type',
+            'data-type-cidr': _("External System CIDRs"),
+        }),
+        help_text=_("Remote peer subnet(s) address(es) "
+                    "with mask(s) in CIDR format "
+                    "separated with commas if needed "
+                    "(e.g. 20.1.0.0/24, 21.1.0.0/24). "
+                    "This field is valid if type is CIDR"),
+        version=forms.IPv4 | forms.IPv6,
+        mask=True)
+    subnets = forms.MultipleChoiceField(
+        required=False,
+        label=_("Local System Subnets"),
+        widget=forms.ThemableCheckboxSelectMultiple(attrs={
+            'class': 'switched',
+            'data-switch-on': 'type',
+            'data-type-subnet': _("External System Subnets"),
+            }),
+        help_text=_("Local subnet(s). "
+                    "This field is valid if type is Subnet"),)
+
+    def populate_subnets_choices(self, request, context):
+        subnets_choices = []
+        try:
+            tenant_id = request.user.tenant_id
+            networks = api.neutron.network_list_for_tenant(request, tenant_id)
+        except Exception:
+            exceptions.handle(request,
+                              _('Unable to retrieve networks list.'))
+            networks = []
+        for n in networks:
+            for s in n['subnets']:
+                subnets_choices.append((s.id, s.cidr))
+        self.fields['subnets'].choices = subnets_choices
+        return subnets_choices
+
+    class Meta(object):
+        name = _("Add New Endpoint Groups")
+        permissions = ('openstack.services.network',)
+        help_text_template = "project/vpn/_add_endpoint_group_help.html"
+
+
+class AddEndpointGroupStep(workflows.Step):
+    action_class = AddEndpointGroupAction
+    contributes = ("name", "description", "type",
+                   "cidrs", "subnets", "endpoints")
+
+    def contribute(self, data, context):
+        context = super(AddEndpointGroupStep, self).contribute(data, context)
+        if context['type'] == 'cidr':
+            cidrs = context['cidrs']
+            context['endpoints'] = [
+                cidr.strip() for cidr in cidrs.split(',') if cidr.strip()]
+        else:
+            context['endpoints'] = context['subnets']
+        if data:
+            return context
+
+
+class AddEndpointGroup(workflows.Workflow):
+    slug = "addendpointgroup"
+    name = _("Add Endpoint Group")
+    finalize_button_name = _("Add")
+    success_message = _('Added Endpoint Group "%s".')
+    failure_message = _('Unable to add Endpoint Group "%s".')
+    success_url = "horizon:project:vpn:index"
+    default_steps = (AddEndpointGroupStep,)
+
+    def format_status_message(self, message):
+        return message % self.context.get('name')
+
+    def handle(self, request, context):
+        try:
+            api_vpn.endpointgroup_create(request, **context)
             return True
         except Exception:
             return False
@@ -315,6 +422,12 @@ class AddIPSecSiteConnectionAction(workflows.Action):
         max_length=80, label=_("Description"))
     vpnservice_id = forms.ChoiceField(
         label=_("VPN Service associated with this connection"))
+    local_ep_group_id = forms.ChoiceField(
+        required=False,
+        label=_("Endpoint Group for local subnet(s)"),
+        help_text=_("Local subnets which the new IPsec connection is "
+                    "connected to. Required if no subnet is specified "
+                    "in a VPN service selected."))
     ikepolicy_id = forms.ChoiceField(
         label=_("IKE Policy associated with this connection"))
     ipsecpolicy_id = forms.ChoiceField(
@@ -331,9 +444,15 @@ class AddIPSecSiteConnectionAction(workflows.Action):
                     "Can be IPv4/IPv6 address, e-mail, key ID, or FQDN"),
         version=forms.IPv4 | forms.IPv6,
         mask=False)
+    peer_ep_group_id = forms.ChoiceField(
+        required=False,
+        label=_("Endpoint Group for remote peer CIDR(s)"),
+        help_text=_("Remove peer CIDR(s) connected to the new IPSec "
+                    "connection."))
     peer_cidrs = forms.MultiIPField(
+        required=False,
         label=_("Remote peer subnet(s)"),
-        help_text=_("Remote peer subnet(s) address(es) "
+        help_text=_("(Deprecated) Remote peer subnet(s) address(es) "
                     "with mask(s) in CIDR format "
                     "separated with commas if needed "
                     "(e.g. 20.1.0.0/24, 21.1.0.0/24)"),
@@ -389,6 +508,36 @@ class AddIPSecSiteConnectionAction(workflows.Action):
         self.fields['vpnservice_id'].choices = vpnservice_id_choices
         return vpnservice_id_choices
 
+    def populate_local_ep_group_id_choices(self, request, context):
+        try:
+            tenant_id = self.request.user.tenant_id
+            endpointgroups = api_vpn.endpointgroup_list(request,
+                                                        tenant_id=tenant_id)
+        except Exception:
+            exceptions.handle(request,
+                              _('Unable to retrieve endpoint group list.'))
+            endpointgroups = []
+        local_ep_group_ids = [(s.id, s.name) for s in endpointgroups
+                              if s.type == 'subnet']
+        local_ep_group_ids.insert(0, ('', _("Select local endpoint group")))
+        self.fields['local_ep_group_id'].choices = local_ep_group_ids
+        return local_ep_group_ids
+
+    def populate_peer_ep_group_id_choices(self, request, context):
+        try:
+            tenant_id = self.request.user.tenant_id
+            endpointgroups = api_vpn.endpointgroup_list(request,
+                                                        tenant_id=tenant_id)
+        except Exception:
+            exceptions.handle(request,
+                              _('Unable to retrieve endpoint group list.'))
+            endpointgroups = []
+        peer_ep_group_ids = [(s.id, s.name) for s in endpointgroups
+                             if s.type == 'cidr']
+        peer_ep_group_ids.insert(0, ('', _("Select peer endpoint group")))
+        self.fields['peer_ep_group_id'].choices = peer_ep_group_ids
+        return peer_ep_group_ids
+
     class Meta(object):
         name = _("Add New IPSec Site Connection")
         permissions = ('openstack.services.network',)
@@ -403,7 +552,8 @@ class AddIPSecSiteConnectionStep(workflows.Step):
     action_class = AddIPSecSiteConnectionAction
     contributes = ("name", "description",
                    "vpnservice_id", "ikepolicy_id", "ipsecpolicy_id",
-                   "peer_address", "peer_id", "peer_cidrs", "psk")
+                   "peer_address", "peer_id", "peer_cidrs", "psk",
+                   "local_ep_group_id", "peer_ep_group_id")
 
 
 class AddIPSecSiteConnectionOptionalAction(workflows.Action):
@@ -489,7 +639,8 @@ class AddIPSecSiteConnectionOptionalStep(workflows.Step):
         context.pop('dpd_timeout')
 
         cidrs = context['peer_cidrs']
-        context['peer_cidrs'] = cidrs.replace(" ", "").split(",")
+        context['peer_cidrs'] = [cidr.strip() for cidr in cidrs.split(',')
+                                 if cidr.strip()]
 
         if data:
             return context

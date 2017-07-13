@@ -114,6 +114,32 @@ class VPNServicesTab(tabs.TableTab, htables.DataTableView):
         return super(VPNServicesTab, self).get_filters()
 
 
+class EndpointGroupTab(tabs.TableTab, htables.DataTableView):
+    table_classes = (tables.EndpointGroupTable,)
+    name = _("Endpoint Groups")
+    slug = "endpointgroups"
+    template_name = ("horizon/common/_detail_table.html")
+
+    def get_endpointgroupstable_data(self):
+        try:
+            filters = self.get_filters()
+            tenant_id = self.request.user.tenant_id
+            endpointgroups = api_vpn.endpointgroup_list(
+                self.tab_group.request, tenant_id=tenant_id, **filters)
+        except Exception:
+            endpointgroups = []
+            exceptions.handle(self.tab_group.request,
+                              _('Unable to retrieve endpoint group list.'))
+        return endpointgroups
+
+    def get_filters(self):
+        self.table = self._tables['endpointgroupstable']
+        self.handle_server_filter(self.request, table=self.table)
+        self.update_server_filter_action(self.request, table=self.table)
+
+        return super(EndpointGroupTab, self).get_filters()
+
+
 class IKEPoliciesTab(tabs.TableTab, htables.DataTableView):
     table_classes = (tables.IKEPoliciesTable,)
     name = _("IKE Policies")
@@ -169,7 +195,8 @@ class IPSecPoliciesTab(tabs.TableTab, htables.DataTableView):
 class VPNTabs(tabs.TabGroup):
     slug = "vpntabs"
     tabs = (IKEPoliciesTab, IPSecPoliciesTab,
-            VPNServicesTab, IPSecSiteConnectionsTab,)
+            VPNServicesTab, EndpointGroupTab,
+            IPSecSiteConnectionsTab,)
     sticky = True
 
 
@@ -216,6 +243,21 @@ class VPNServiceDetailsTab(tabs.Tab):
 class VPNServiceDetailsTabs(tabs.TabGroup):
     slug = "vpnservicetabs"
     tabs = (VPNServiceDetailsTab,)
+
+
+class EndpointGroupDetailsTab(tabs.Tab):
+    name = _("Endpoint Groups Details")
+    slug = "endpointgroupdetails"
+    template_name = "project/vpn/_endpointgroup_details.html"
+
+    def get_context_data(self, request):
+        endpointgroup = self.tab_group.kwargs['endpointgroup']
+        return {'endpointgroup': endpointgroup}
+
+
+class EndpointGroupDetailsTabs(tabs.TabGroup):
+    slug = "endpointgrouptabs"
+    tabs = (EndpointGroupDetailsTab,)
 
 
 class IPSecSiteConnectionDetailsTab(tabs.Tab):

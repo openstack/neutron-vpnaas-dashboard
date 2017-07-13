@@ -88,6 +88,64 @@ class VPNaasApiTests(test.APITestCase):
         ret_val = api_vpn.vpnservice_get(self.request, vpnservice.id)
         self.assertIsInstance(ret_val, api_vpn.VPNService)
 
+    @test.create_stubs({neutronclient: ('create_endpoint_group',)})
+    def test_endpointgroup_create(self):
+        endpointgroup = self.api_endpointgroups.first()
+        form_data = {
+            'name': endpointgroup['name'],
+            'description': endpointgroup['description'],
+            'type': endpointgroup['type'],
+            'endpoints': endpointgroup['endpoints']
+        }
+
+        endpoint_group = {'endpoint_group': self.api_endpointgroups.first()}
+        neutronclient.create_endpoint_group(
+            {'endpoint_group': form_data}).AndReturn(endpoint_group)
+        self.mox.ReplayAll()
+
+        ret_val = api_vpn.endpointgroup_create(self.request, **form_data)
+        self.assertIsInstance(ret_val, api_vpn.EndpointGroup)
+
+    @test.create_stubs({neutronclient: ('list_endpoint_groups',
+                                        'list_ipsec_site_connections')})
+    def test_endpointgroup_list(self):
+        endpointgroups = {'endpoint_groups': self.endpointgroups.list()}
+        endpointgroups_dict = {
+            'endpoint_groups': self.api_endpointgroups.list()}
+        ipsecsiteconnections_dict = {
+            'ipsec_site_connections': self.api_ipsecsiteconnections.list()}
+
+        neutronclient.list_endpoint_groups().AndReturn(endpointgroups_dict)
+        neutronclient.list_ipsec_site_connections().AndReturn(
+            ipsecsiteconnections_dict)
+
+        self.mox.ReplayAll()
+
+        ret_val = api_vpn.endpointgroup_list(self.request)
+        for (v, d) in zip(ret_val, endpointgroups['endpoint_groups']):
+            self.assertIsInstance(v, api_vpn.EndpointGroup)
+            self.assertTrue(v.name, d.name)
+            self.assertTrue(v.id)
+
+    @test.create_stubs({neutronclient: ('show_endpoint_group',
+                                        'list_ipsec_site_connections')})
+    def test_endpointgroup_get(self):
+        endpoint_group = self.endpointgroups.first()
+        endpoint_group_dict = {
+            'endpoint_group': self.api_endpointgroups.first()}
+        ipsecsiteconnections_dict = {
+            'ipsec_site_connections': self.api_ipsecsiteconnections.list()}
+
+        neutronclient.show_endpoint_group(
+            endpoint_group.id).AndReturn(endpoint_group_dict)
+        neutronclient.list_ipsec_site_connections().AndReturn(
+            ipsecsiteconnections_dict)
+
+        self.mox.ReplayAll()
+
+        ret_val = api_vpn.endpointgroup_get(self.request, endpoint_group.id)
+        self.assertIsInstance(ret_val, api_vpn.EndpointGroup)
+
     @test.create_stubs({neutronclient: ('create_ikepolicy',)})
     def test_ikepolicy_create(self):
         ikepolicy1 = self.api_ikepolicies.first()

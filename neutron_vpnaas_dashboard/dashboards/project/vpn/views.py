@@ -39,6 +39,10 @@ class AddVPNServiceView(horizon_workflows.WorkflowView):
     workflow_class = workflows.AddVPNService
 
 
+class AddEndpointGroupView(horizon_workflows.WorkflowView):
+    workflow_class = workflows.AddEndpointGroup
+
+
 class AddIPSecSiteConnectionView(horizon_workflows.WorkflowView):
     workflow_class = workflows.AddIPSecSiteConnection
 
@@ -161,6 +165,50 @@ class VPNServiceDetailsView(horizon_tabs.TabView):
         return reverse_lazy('horizon:project:vpn:index')
 
 
+class EndpointGroupDetailsView(horizon_tabs.TabView):
+    tab_group_class = tabs.EndpointGroupDetailsTabs
+    template_name = 'horizon/common/_detail.html'
+    page_title = "{{ endpointgroup.name|default:endpointgroup.id }}"
+
+    @memoized.memoized_method
+    def get_data(self):
+        gid = self.kwargs['endpoint_group_id']
+
+        try:
+            endpointgroup = api_vpn.endpointgroup_get(self.request, gid)
+        except Exception:
+            msg = _('Unable to retrieve endpoint group details.')
+            exceptions.handle(self.request, msg,
+                              redirect=self.get_redirect_url())
+        try:
+            connections = api_vpn.ipsecsiteconnection_list(
+                self.request, endpoint_group_id=gid)
+            endpointgroup.vpnconnections = connections
+        except Exception:
+            endpointgroup.vpnconnections = []
+
+        return endpointgroup
+
+    def get_context_data(self, **kwargs):
+        context = super(EndpointGroupDetailsView, self).get_context_data(
+            **kwargs)
+        endpointgroup = self.get_data()
+        table = tables.EndpointGroupTable(self.request)
+        context["endpointgroup"] = endpointgroup
+        context["url"] = self.get_redirect_url()
+        context["actions"] = table.render_row_actions(endpointgroup)
+        return context
+
+    def get_tabs(self, request, *args, **kwargs):
+        endpointgroup = self.get_data()
+        return self.tab_group_class(request, endpointgroup=endpointgroup,
+                                    **kwargs)
+
+    @staticmethod
+    def get_redirect_url():
+        return reverse('horizon:project:vpn:index')
+
+
 class IPSecSiteConnectionDetailsView(horizon_tabs.TabView):
     tab_group_class = tabs.IPSecSiteConnectionDetailsTabs
     template_name = 'horizon/common/_detail.html'
@@ -230,6 +278,41 @@ class UpdateVPNServiceView(horizon_forms.ModalFormView):
                 'vpnservice_id': vpnservice['id'],
                 'description': vpnservice['description'],
                 'admin_state_up': vpnservice['admin_state_up']}
+
+
+class UpdateEndpointGroupView(horizon_forms.ModalFormView):
+    form_class = forms.UpdateEndpointGroup
+    form_id = "update_endpointgroup_form"
+    template_name = "project/vpn/update_endpointgroup.html"
+    context_object_name = 'endpointgroup'
+    submit_label = _("Save Changes")
+    submit_url = "horizon:project:vpn:update_endpointgroup"
+    success_url = reverse_lazy("horizon:project:vpn:index")
+    page_title = _("Edit Endpoint Group")
+
+    def get_context_data(self, **kwargs):
+        context = super(UpdateEndpointGroupView, self).get_context_data(
+            **kwargs)
+        context["endpoint_group_id"] = self.kwargs['endpoint_group_id']
+        args = (self.kwargs['endpoint_group_id'],)
+        context['submit_url'] = reverse(self.submit_url, args=args)
+        return context
+
+    @memoized.memoized_method
+    def _get_object(self, *args, **kwargs):
+        endpoint_group_id = self.kwargs['endpoint_group_id']
+        try:
+            return api_vpn.endpointgroup_get(self.request, endpoint_group_id)
+        except Exception as e:
+            redirect = self.success_url
+            msg = _('Unable to retrieve Endpoint Group details. %s') % e
+            exceptions.handle(self.request, msg, redirect=redirect)
+
+    def get_initial(self):
+        endpointgroup = self._get_object()
+        return {'name': endpointgroup['name'],
+                'endpoint_group_id': endpointgroup['id'],
+                'description': endpointgroup['description']}
 
 
 class UpdateIKEPolicyView(horizon_forms.ModalFormView):
@@ -346,16 +429,25 @@ class UpdateIPSecSiteConnectionView(horizon_forms.ModalFormView):
 
     def get_initial(self):
         ipsecsiteconnection = self._get_object()
-        return {'name': ipsecsiteconnection['name'],
-                'ipsecsiteconnection_id': ipsecsiteconnection['id'],
-                'description': ipsecsiteconnection['description'],
-                'peer_address': ipsecsiteconnection['peer_address'],
-                'peer_id': ipsecsiteconnection['peer_id'],
-                'peer_cidrs': ", ".join(ipsecsiteconnection['peer_cidrs']),
-                'psk': ipsecsiteconnection['psk'],
-                'mtu': ipsecsiteconnection['mtu'],
-                'dpd_action': ipsecsiteconnection['dpd']['action'],
-                'dpd_interval': ipsecsiteconnection['dpd']['interval'],
-                'dpd_timeout': ipsecsiteconnection['dpd']['timeout'],
-                'initiator': ipsecsiteconnection['initiator'],
-                'admin_state_up': ipsecsiteconnection['admin_state_up']}
+        data = {
+            'name': ipsecsiteconnection['name'],
+            'ipsecsiteconnection_id': ipsecsiteconnection['id'],
+            'description': ipsecsiteconnection['description'],
+            'peer_address': ipsecsiteconnection['peer_address'],
+            'peer_id': ipsecsiteconnection['peer_id'],
+            'psk': ipsecsiteconnection['psk'],
+            'mtu': ipsecsiteconnection['mtu'],
+            'dpd_action': ipsecsiteconnection['dpd']['action'],
+            'dpd_interval': ipsecsiteconnection['dpd']['interval'],
+            'dpd_timeout': ipsecsiteconnection['dpd']['timeout'],
+            'initiator': ipsecsiteconnection['initiator'],
+            'admin_state_up': ipsecsiteconnection['admin_state_up']
+        }
+        if 'local_ep_group_id' in ipsecsiteconnection:
+            data['local_ep_group_id'] = \
+                ipsecsiteconnection['local_ep_group_id']
+            data['peer_ep_group_id'] = ipsecsiteconnection['peer_ep_group_id']
+            return data
+        else:
+            data['peer_cidrs'] = ", ".join(ipsecsiteconnection['peer_cidrs'])
+            return data

@@ -59,6 +59,41 @@ class UpdateVPNService(forms.SelfHandlingForm):
             exceptions.handle(request, msg, redirect=redirect)
 
 
+class UpdateEndpointGroup(forms.SelfHandlingForm):
+    name = forms.CharField(
+        max_length=80,
+        label=_("Name"),
+        required=False)
+    endpoint_group_id = forms.CharField(
+        label=_("ID"),
+        widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+    description = forms.CharField(
+        required=False,
+        max_length=80,
+        label=_("Description"))
+
+    failure_url = 'horizon:project:vpn:index'
+
+    def handle(self, request, context):
+        try:
+            data = {'endpoint_group':
+                    {'name': context['name'],
+                     'description': context['description']}
+                    }
+            endpointgroup = api_vpn.endpointgroup_update(
+                request, context['endpoint_group_id'], **data)
+            msg = (_('Endpoint Group %s was successfully updated.')
+                   % context['name'])
+            messages.success(request, msg)
+            return endpointgroup
+        except Exception as e:
+            LOG.info('Failed to update Endpint Group %(id)s: %(exc)s',
+                     {'id': context['endpoint_group_id'], 'exc': e})
+            msg = _('Failed to update Endpint Group %s') % context['name']
+            redirect = reverse(self.failure_url)
+            exceptions.handle(request, msg, redirect=redirect)
+
+
 class UpdateIKEPolicy(forms.SelfHandlingForm):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
     ikepolicy_id = forms.CharField(
@@ -236,6 +271,7 @@ class UpdateIPSecSiteConnection(forms.SelfHandlingForm):
         version=forms.IPv4 | forms.IPv6,
         mask=False)
     peer_cidrs = forms.MultiIPField(
+        required=False,
         label=_("Remote peer subnet(s)"),
         help_text=_("Remote peer subnet(s) address(es) "
                     "with mask(s) in CIDR format "
@@ -243,6 +279,16 @@ class UpdateIPSecSiteConnection(forms.SelfHandlingForm):
                     "(e.g. 20.1.0.0/24, 21.1.0.0/24)"),
         version=forms.IPv4 | forms.IPv6,
         mask=True)
+    local_ep_group_id = forms.CharField(
+        required=False,
+        label=_("Local Endpoint Group(s)"),
+        help_text=_("IPsec connection validation requires "
+                    "that local endpoints are subnets"))
+    peer_ep_group_id = forms.CharField(
+        required=False,
+        label=_("Peer Endpoint Group(s)"),
+        help_text=_("IPSec connection validation requires "
+                    "that peer endpoints are CIDRs"))
     psk = forms.CharField(
         widget=forms.PasswordInput(render_value=True),
         max_length=80, label=_("Pre-Shared Key (PSK) string"))
@@ -293,23 +339,29 @@ class UpdateIPSecSiteConnection(forms.SelfHandlingForm):
 
     def handle(self, request, context):
         try:
-            data = {'ipsec_site_connection':
-                    {'name': context['name'],
-                     'description': context['description'],
-                     'peer_address': context['peer_address'],
-                     'peer_id': context['peer_id'],
-                     'peer_cidrs': context[
-                         'peer_cidrs'].replace(" ", "").split(","),
-                     'psk': context['psk'],
-                     'mtu': context['mtu'],
-                     'dpd': {'action': context['dpd_action'],
-                             'interval': context['dpd_interval'],
-                             'timeout': context['dpd_timeout']},
-                     'initiator': context['initiator'],
-                     'admin_state_up': context['admin_state_up'],
-                     }}
+            data = {
+                'name': context['name'],
+                'description': context['description'],
+                'peer_address': context['peer_address'],
+                'peer_id': context['peer_id'],
+                'psk': context['psk'],
+                'mtu': context['mtu'],
+                'dpd': {'action': context['dpd_action'],
+                        'interval': context['dpd_interval'],
+                        'timeout': context['dpd_timeout']},
+                'initiator': context['initiator'],
+                'admin_state_up': context['admin_state_up']
+            }
+            if not context['peer_cidrs']:
+                data['local_ep_group_id'] = context['local_ep_group_id']
+                data['peer_ep_group_id'] = context['peer_ep_group_id']
+            else:
+                cidrs = context['peer_cidrs']
+                data['peer_cidrs'] = [cidr.strip() for cidr in cidrs.split(',')
+                                      if cidr.strip()]
             ipsecsiteconnection = api_vpn.ipsecsiteconnection_update(
-                request, context['ipsecsiteconnection_id'], **data)
+                request, context['ipsecsiteconnection_id'],
+                ipsec_site_connection=data)
             msg = (_('IPSec Site Connection %s was successfully updated.')
                    % context['name'])
             messages.success(request, msg)

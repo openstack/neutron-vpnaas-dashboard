@@ -40,17 +40,22 @@ class VPNTests(test.TestCase):
     ADDIKEPOLICY_PATH = 'horizon:%s:vpn:addikepolicy' % DASHBOARD
     ADDIPSECPOLICY_PATH = 'horizon:%s:vpn:addipsecpolicy' % DASHBOARD
     ADDVPNSERVICE_PATH = 'horizon:%s:vpn:addvpnservice' % DASHBOARD
+    ADDENDPOINTGROUP_PATH = 'horizon:%s:vpn:addendpointgroup' % DASHBOARD
     ADDVPNCONNECTION_PATH = 'horizon:%s:vpn:addipsecsiteconnection' % DASHBOARD
 
     IKEPOLICY_DETAIL_PATH = 'horizon:%s:vpn:ikepolicydetails' % DASHBOARD
     IPSECPOLICY_DETAIL_PATH = 'horizon:%s:vpn:ipsecpolicydetails' % DASHBOARD
     VPNSERVICE_DETAIL_PATH = 'horizon:%s:vpn:vpnservicedetails' % DASHBOARD
+    ENDPOINTGROUP_DETAIL_PATH = 'horizon:%s:vpn:endpointgroupdetails' %\
+        DASHBOARD
     VPNCONNECTION_DETAIL_PATH = 'horizon:%s:vpn:ipsecsiteconnectiondetails' %\
         DASHBOARD
 
     UPDATEIKEPOLICY_PATH = 'horizon:%s:vpn:update_ikepolicy' % DASHBOARD
     UPDATEIPSECPOLICY_PATH = 'horizon:%s:vpn:update_ipsecpolicy' % DASHBOARD
     UPDATEVPNSERVICE_PATH = 'horizon:%s:vpn:update_vpnservice' % DASHBOARD
+    UPDATEENDPOINTGROUP_PATH = 'horizon:%s:vpn:update_endpointgroup' %\
+        DASHBOARD
     UPDATEVPNCONNECTION_PATH = 'horizon:%s:vpn:update_ipsecsiteconnection' %\
         DASHBOARD
 
@@ -59,6 +64,11 @@ class VPNTests(test.TestCase):
         api_vpn.vpnservice_list(
             IsA(http.HttpRequest), tenant_id=self.tenant.id) \
             .AndReturn(self.vpnservices.list())
+
+        # retrieves endpoint groups
+        api_vpn.endpointgroup_list(
+            IsA(http.HttpRequest), tenant_id=self.tenant.id) \
+            .AndReturn(self.endpointgroups.list())
 
         # retrieves ikepolicies
         api_vpn.ikepolicy_list(
@@ -79,6 +89,9 @@ class VPNTests(test.TestCase):
         api_vpn.vpnservice_list(
             IsA(http.HttpRequest),
             tenant_id=self.tenant.id).AndRaise(self.exceptions.neutron)
+        api_vpn.endpointgroup_list(
+            IsA(http.HttpRequest),
+            tenant_id=self.tenant.id).AndRaise(self.exceptions.neutron)
         api_vpn.ikepolicy_list(
             IsA(http.HttpRequest),
             tenant_id=self.tenant.id).AndRaise(self.exceptions.neutron)
@@ -90,7 +103,7 @@ class VPNTests(test.TestCase):
             tenant_id=self.tenant.id).AndRaise(self.exceptions.neutron)
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_vpnservices(self):
         self.set_up_expect()
@@ -106,7 +119,23 @@ class VPNTests(test.TestCase):
                          len(self.vpnservices.list()))
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
+                                  'ipsecsiteconnection_list')})
+    def test_index_endpointgroups(self):
+        self.set_up_expect()
+
+        self.mox.ReplayAll()
+
+        res = self.client.get(self.INDEX_URL + '?tab=vpntabs__endpointgroups')
+
+        self.assertTemplateUsed(res, '%s/vpn/index.html'
+                                % self.DASHBOARD)
+        self.assertTemplateUsed(res, 'horizon/common/_detail_table.html')
+        self.assertEqual(len(res.context['endpointgroupstable_table'].data),
+                         len(self.endpointgroups.list()))
+
+    @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_ikepolicies(self):
         self.set_up_expect()
@@ -122,7 +151,7 @@ class VPNTests(test.TestCase):
                          len(self.ikepolicies.list()))
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_ipsecpolicies(self):
         self.set_up_expect()
@@ -138,7 +167,7 @@ class VPNTests(test.TestCase):
                          len(self.ipsecpolicies.list()))
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_ipsecsiteconnections(self):
         self.set_up_expect()
@@ -156,7 +185,7 @@ class VPNTests(test.TestCase):
             len(self.ipsecsiteconnections.list()))
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_exception_vpnservices(self):
         self.set_up_expect_with_exception()
@@ -172,7 +201,23 @@ class VPNTests(test.TestCase):
         self.assertEqual(len(res.context['table'].data), 0)
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
+                                  'ipsecsiteconnection_list')})
+    def test_index_exception_endpointgroups(self):
+        self.set_up_expect_with_exception()
+
+        self.mox.ReplayAll()
+
+        res = self.client.get(self.INDEX_URL + '?tab=vpntabs__endpointgroups')
+
+        self.assertTemplateUsed(res, '%s/vpn/index.html'
+                                % self.DASHBOARD)
+        self.assertTemplateUsed(res,
+                                'horizon/common/_detail_table.html')
+        self.assertEqual(len(res.context['table'].data), 0)
+
+    @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_exception_ikepolicies(self):
         self.set_up_expect_with_exception()
@@ -188,7 +233,7 @@ class VPNTests(test.TestCase):
         self.assertEqual(len(res.context['table'].data), 0)
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_exception_ipsecpolicies(self):
         self.set_up_expect_with_exception()
@@ -204,7 +249,7 @@ class VPNTests(test.TestCase):
         self.assertEqual(len(res.context['table'].data), 0)
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_list')})
     def test_index_exception_ipsecsiteconnections(self):
         self.set_up_expect_with_exception()
@@ -293,7 +338,68 @@ class VPNTests(test.TestCase):
 
         res = self.client.post(reverse(self.ADDVPNSERVICE_PATH), form_data)
 
-        self.assertFormErrors(res, 2)
+        self.assertFormErrors(res, 1)
+
+    @test.create_stubs({api.neutron: ('network_list_for_tenant', )})
+    def test_add_endpointgroup_get(self):
+        networks = [{'subnets': [self.subnets.first(), ]}, ]
+
+        api.neutron.network_list_for_tenant(
+            IsA(http.HttpRequest), self.tenant.id).AndReturn(networks)
+
+        self.mox.ReplayAll()
+
+        res = self.client.get(reverse(self.ADDENDPOINTGROUP_PATH))
+
+        workflow = res.context['workflow']
+        self.assertTemplateUsed(res, views.WorkflowView.template_name)
+        self.assertEqual(workflow.name, workflows.AddEndpointGroup.name)
+
+        expected_objs = ['<AddEndpointGroupStep: addendpointgroupaction>', ]
+        self.assertQuerysetEqual(workflow.steps, expected_objs)
+
+    @test.create_stubs({api.neutron: ('network_list_for_tenant', ),
+                        api_vpn: ('endpointgroup_create', )})
+    def test_add_endpointgroup_post(self):
+        endpointgroup = self.endpointgroups.first()
+        networks = [{'subnets': [self.subnets.first(), ]}, ]
+
+        api.neutron.network_list_for_tenant(
+            IsA(http.HttpRequest), self.tenant.id).AndReturn(networks)
+
+        form_data = {'name': endpointgroup['name'],
+                     'description': endpointgroup['description'],
+                     'endpoints': endpointgroup['endpoints'],
+                     'type': endpointgroup['type']}
+
+        api_vpn.endpointgroup_create(
+            IsA(http.HttpRequest), **form_data).AndReturn(endpointgroup)
+
+        self.mox.ReplayAll()
+
+        res = self.client.post(reverse(self.ADDENDPOINTGROUP_PATH), form_data)
+
+        self.assertNoFormErrors(res)
+        self.assertRedirectsNoFollow(res, str(self.INDEX_URL))
+
+    @test.create_stubs({api.neutron: ('network_list_for_tenant', )})
+    def test_add_endpointgroup_post_error(self):
+        endpointgroup = self.endpointgroups.first()
+        networks = [{'subnets': [self.subnets.first(), ]}, ]
+
+        api.neutron.network_list_for_tenant(
+            IsA(http.HttpRequest), self.tenant.id).AndReturn(networks)
+
+        self.mox.ReplayAll()
+
+        form_data = {'name': endpointgroup['name'],
+                     'description': endpointgroup['description'],
+                     'endpoints': endpointgroup['endpoints'],
+                     'type': ''}
+
+        res = self.client.post(reverse(self.ADDENDPOINTGROUP_PATH), form_data)
+
+        self.assertFormErrors(res, 1)
 
     def test_add_ikepolicy_get(self):
         res = self.client.get(reverse(self.ADDIKEPOLICY_PATH))
@@ -408,7 +514,7 @@ class VPNTests(test.TestCase):
         self.assertFormErrors(res, 1)
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list')})
+                                  'vpnservice_list', 'endpointgroup_list',)})
     def test_add_ipsecsiteconnection_get(self):
         ikepolicies = self.ikepolicies.list()
         ipsecpolicies = self.ipsecpolicies.list()
@@ -439,13 +545,13 @@ class VPNTests(test.TestCase):
         self.assertQuerysetEqual(workflow.steps, expected_objs)
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_create')})
     def test_add_ipsecsiteconnection_post(self):
         self._test_add_ipsecsiteconnection_post()
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_create')})
     def test_add_ipsecsiteconnection_post_single_subnet(self):
         self._test_add_ipsecsiteconnection_post(subnet_list=False)
@@ -498,13 +604,13 @@ class VPNTests(test.TestCase):
         self.assertRedirectsNoFollow(res, str(self.INDEX_URL))
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_create')})
     def test_add_ipsecsiteconnection_post_required_fields_error(self):
         self._test_add_ipsecsiteconnection_post_error()
 
     @test.create_stubs({api_vpn: ('ikepolicy_list', 'ipsecpolicy_list',
-                                  'vpnservice_list',
+                                  'vpnservice_list', 'endpointgroup_list',
                                   'ipsecsiteconnection_create')})
     def test_add_ipsecsiteconnection_post_peer_cidrs_error(self):
         self._test_add_ipsecsiteconnection_post_error(subnets=True)
@@ -548,7 +654,10 @@ class VPNTests(test.TestCase):
 
         res = self.client.post(reverse(self.ADDVPNCONNECTION_PATH), form_data)
 
-        self.assertFormErrors(res, 7)
+        if subnets:
+            self.assertFormErrors(res, 7)
+        else:
+            self.assertFormErrors(res, 6)
 
     @test.create_stubs({api_vpn: ('vpnservice_get', )})
     def test_update_vpnservice_get(self):
@@ -586,6 +695,48 @@ class VPNTests(test.TestCase):
 
         res = self.client.post(reverse(
             self.UPDATEVPNSERVICE_PATH, args=(vpnservice.id,)), form_data)
+
+        self.assertNoFormErrors(res)
+        self.assertRedirectsNoFollow(res, str(self.INDEX_URL))
+
+    @test.create_stubs({api_vpn: ('endpointgroup_get', )})
+    def test_update_endpointgroup_get(self):
+        endpointgroup = self.endpointgroups.first()
+
+        api_vpn.endpointgroup_get(IsA(http.HttpRequest), endpointgroup.id)\
+            .AndReturn(endpointgroup)
+
+        self.mox.ReplayAll()
+
+        res = self.client.get(
+            reverse(self.UPDATEENDPOINTGROUP_PATH, args=(endpointgroup.id,)))
+
+        self.assertTemplateUsed(
+            res, 'project/vpn/update_endpointgroup.html')
+
+    @test.create_stubs({api_vpn: ('endpointgroup_get',
+                                  'endpointgroup_update')})
+    def test_update_endpointgroup_post(self):
+        endpointgroup = self.endpointgroups.first()
+
+        api_vpn.endpointgroup_get(IsA(http.HttpRequest), endpointgroup.id)\
+            .AndReturn(endpointgroup)
+
+        data = {'name': endpointgroup.name,
+                'description': endpointgroup.description}
+
+        api_vpn.endpointgroup_update(IsA(http.HttpRequest), endpointgroup.id,
+                                     endpointgroup=data
+                                     ).AndReturn(endpointgroup)
+
+        self.mox.ReplayAll()
+
+        form_data = data.copy()
+        form_data['endpoint_group_id'] = endpointgroup.id
+
+        res = self.client.post(reverse(self.UPDATEENDPOINTGROUP_PATH,
+                                       args=(endpointgroup.id, )
+                                       ), form_data)
 
         self.assertNoFormErrors(res)
         self.assertRedirectsNoFollow(res, str(self.INDEX_URL))
@@ -760,6 +911,23 @@ class VPNTests(test.TestCase):
 
         form_data = {"action":
                      "vpnservicestable__deletevpnservice__%s" % vpnservice.id}
+        res = self.client.post(self.INDEX_URL, form_data)
+
+        self.assertNoFormErrors(res)
+
+    @test.create_stubs({api_vpn: ('endpointgroup_list',
+                                  'endpointgroup_delete',)})
+    def test_delete_endpointgroup(self):
+        endpointgroup = self.endpointgroups.list()[0]
+        api_vpn.endpointgroup_list(
+            IsA(http.HttpRequest), tenant_id=self.tenant.id) \
+            .AndReturn(self.endpointgroups.list())
+        api_vpn.endpointgroup_delete(IsA(http.HttpRequest), endpointgroup.id)
+        self.mox.ReplayAll()
+
+        form_data = {"action":
+                     "endpointgroupstable__deleteendpointgroup__%s"
+                     % endpointgroup.id}
         res = self.client.post(self.INDEX_URL, form_data)
 
         self.assertNoFormErrors(res)

@@ -23,12 +23,14 @@ def data(TEST):
     TEST.ikepolicies = utils.TestDataContainer()
     TEST.ipsecpolicies = utils.TestDataContainer()
     TEST.ipsecsiteconnections = utils.TestDataContainer()
+    TEST.endpointgroups = utils.TestDataContainer()
 
     # Data return by neutronclient.
     TEST.api_vpnservices = utils.TestDataContainer()
     TEST.api_ikepolicies = utils.TestDataContainer()
     TEST.api_ipsecpolicies = utils.TestDataContainer()
     TEST.api_ipsecsiteconnections = utils.TestDataContainer()
+    TEST.api_endpointgroups = utils.TestDataContainer()
 
     # 1st VPNService.
     vpnservice_dict = {'id': '09a26949-6231-4f72-942a-0c8c0ddd4d61',
@@ -63,6 +65,17 @@ def data(TEST):
                        }
     TEST.api_vpnservices.add(vpnservice_dict)
     TEST.vpnservices.add(vpn.VPNService(vpnservice_dict))
+
+    # 1st Endpoint Group
+    endpointgroup_dict = {'id': 'baa588ff-e1b9-4256-8687-9f06315f64b7',
+                          'tenant_id': '1',
+                          'name': 'endpoint_group_one',
+                          'description': 'the first test endpoint group',
+                          'type': 'subnet',
+                          'endpoints': [TEST.subnets.first().id]
+                          }
+    TEST.api_endpointgroups.add(endpointgroup_dict)
+    TEST.endpointgroups.add(vpn.EndpointGroup(endpointgroup_dict))
 
     # 1st IKEPolicy
     ikepolicy_dict = {'id': 'a1f009b7-0ffa-43a7-ba19-dcabb0b4c981',

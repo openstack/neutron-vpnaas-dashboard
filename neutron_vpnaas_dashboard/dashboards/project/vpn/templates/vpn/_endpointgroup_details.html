@@ -1,0 +1,32 @@
+{% load i18n sizeformat parse_date %}
+
+<div class="detail">
+  <dl class="dl-horizontal">
+    <dt>{% trans "Name" %}</dt>
+    <dd>{{ endpointgroup.name|default:_("None") }}</dd>
+
+    <dt>{% trans "Description" %}</dt>
+    <dd>{{ endpointgroup.description|default:_("None") }}</dd>
+
+    <dt>{% trans "ID" %}</dt>
+    <dd>{{ endpointgroup.id }}</dd>
+
+    <dt>{% trans "Project ID" %}</dt>
+    <dd>{{ endpointgroup.tenant_id }}</dd>
+
+    <dt>{% trans "Type" %}</dt>
+    <dd>{{ endpointgroup.type }}</dd>
+
+    <dt>{% trans "Endpoints" %}</dt>
+      {% if endpointgroup.type == 'subnet' %}
+        {% for ep in endpointgroup.endpoints %}
+        {% url 'horizon:project:networks:subnets:detail' ep as subnet_url %}
+        <dd><a href="{{ subnet_url }}">{{ ep }}</a></dd>
+        {% endfor %}
+      {% else %}
+        {% for cidr in endpointgroup.endpoints %}
+        <dd>{{ cidr }}</dd>
+        {% endfor %}
+      {% endif %}
+  </dl>
+</div>

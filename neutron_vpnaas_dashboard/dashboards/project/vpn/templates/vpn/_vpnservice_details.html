@@ -19,8 +19,12 @@
     <dd><a href="{{ router_url }}">{{ vpnservice.router.name_or_id }}</a></dd>
 
     <dt>{% trans "Subnet ID" %}</dt>
-    {% url 'horizon:project:networks:subnets:detail' vpnservice.subnet_id as subnet_url %}
-    <dd><a href="{{ subnet_url }}">{{ vpnservice.subnet.name_or_id }} {{ vpnservice.subnet.cidr }}</a></dd>
+    {% if vpnservice.subnet_id %}
+      {% url 'horizon:project:networks:subnets:detail' vpnservice.subnet_id as subnet_url %}
+      <dd><a href="{{ subnet_url }}">{{ vpnservice.subnet.name_or_id }} {{ vpnservice.subnet.cidr }}</a></dd>
+    {% else %}
+      <dd>{% trans "None" %}</dd>
+    {% endif %}
 
     <dt>{% trans "VPN Connections" %}</dt>
     <dd>

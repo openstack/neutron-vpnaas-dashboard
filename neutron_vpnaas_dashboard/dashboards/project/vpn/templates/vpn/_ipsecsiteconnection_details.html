@@ -18,6 +18,10 @@
     {% url 'horizon:project:vpn:vpnservicedetails' ipsecsiteconnection.vpnservice_id as vpnservice_url %}
     <dd><a href="{{ vpnservice_url }}">{{ ipsecsiteconnection.vpnservice.name_or_id }}</a></dd>
 
+    <dt>{% trans "Local Endpoint Group" %}</dt>
+    {% url 'horizon:project:vpn:endpointgroupdetails' ipsecsiteconnection.local_ep_group_id as local_epg_url %}
+    <dd><a href="{{ local_epg_url }}">{{ ipsecsiteconnection.local_ep_group_id }}</a></dd>
+
     <dt>{% trans "IKE Policy" %}</dt>
     {% url 'horizon:project:vpn:ikepolicydetails' ipsecsiteconnection.ikepolicy_id as ikepolicy_url %}
     <dd><a href="{{ ikepolicy_url }}">{{ ipsecsiteconnection.ikepolicy.name_or_id }}</a></dd>
@@ -38,6 +42,10 @@
       {{ peer_cidr }}<br>
       {% endfor %}
     </dd>
+
+    <dt>{% trans "Peer Endpoint Group" %}</dt>
+    {% url 'horizon:project:vpn:endpointgroupdetails' ipsecsiteconnection.peer_ep_group_id as peer_epg_url %}
+    <dd><a href="{{ peer_epg_url }}">{{ ipsecsiteconnection.peer_ep_group_id }}</a></dd>
 
     <dt>{% trans "MTU" %}</dt>
     <dd>{{ ipsecsiteconnection.mtu }}</dd>

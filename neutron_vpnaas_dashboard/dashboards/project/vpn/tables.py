@@ -57,6 +57,15 @@ class AddVPNServiceLink(tables.LinkAction):
     policy_rules = (("network", "create_vpnservice"),)
 
 
+class AddEndpointGroupLink(tables.LinkAction):
+    name = "addendpointgroup"
+    verbose_name = _("Add Endpoint Group")
+    url = "horizon:project:vpn:addendpointgroup"
+    classes = ("ajax-modal",)
+    icon = "plus"
+    policy_rules = (("network", "create_endpointgroup"),)
+
+
 class AddIPSecSiteConnectionLink(tables.LinkAction):
     name = "addipsecsiteconnection"
     verbose_name = _("Add IPSec Site Connection")
@@ -97,6 +106,34 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
         except Exception as e:
             exceptions.handle(
                 request, _('Unable to delete VPN Service. %s') % e)
+
+
+class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
+    name = "deleteendpointgroup"
+    policy_rules = (("network", "delete_endpointgroup"),)
+
+    @staticmethod
+    def action_present(count):
+        return ungettext_lazy(
+            u"Delete Endpoint Group",
+            u"Delete Endpoint Groups",
+            count
+        )
+
+    @staticmethod
+    def action_past(count):
+        return ungettext_lazy(
+            u"Scheduled deletion of Endpoint Group",
+            u"Scheduled deletion of Endpoint Groups",
+            count
+        )
+
+    def delete(self, request, obj_id):
+        try:
+            api_vpn.endpointgroup_delete(request, obj_id)
+        except Exception as e:
+            exceptions.handle(
+                request, _('Unable to delete Endpoint Group. %s') % e)
 
 
 class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
@@ -208,6 +245,17 @@ class UpdateVPNServiceLink(tables.LinkAction):
         if datum and datum.status not in forbid_updates:
             return True
         return False
+
+
+class UpdateEndpointGroupLink(tables.LinkAction):
+    name = "updateendpointgroup"
+    verbose_name = _("Edit Endpoint Group")
+    classes = ("ajax-modal", "btn-update",)
+    policy_rules = (("network", "update_endpointgroup"),)
+
+    def get_link_url(self, endpoint_group):
+        return reverse("horizon:project:vpn:update_endpointgroup",
+                       kwargs={'endpoint_group_id': endpoint_group.id})
 
 
 class UpdateIKEPolicyLink(tables.LinkAction):
@@ -355,13 +403,21 @@ def get_local_ips(vpn):
     return template.loader.render_to_string(template_name, context)
 
 
+def get_subnet_name(vpn):
+    try:
+        return vpn.subnet_name
+    except AttributeError:
+        return _("-")
+
+
 class UpdateVPNServiceRow(tables.Row):
     ajax = True
 
     def get_data(self, request, vpn_id):
         vpn = api_vpn.vpnservice_get(request, vpn_id)
         vpn.router_name = vpn['router'].get('name', vpn['router_id'])
-        vpn.subnet_name = vpn['subnet'].get('cidr', vpn['subnet_id'])
+        if 'subnet' in vpn:
+            vpn.subnet_name = vpn['subnet'].get('cidr', vpn['subnet_id'])
         return vpn
 
 
@@ -384,7 +440,7 @@ class VPNServicesTable(tables.DataTable):
     description = tables.Column('description', verbose_name=_('Description'))
     local_ips = tables.Column(get_local_ips,
                               verbose_name=_("Local Side Public IPs"))
-    subnet_name = tables.Column('subnet_name', verbose_name=_('Subnet'))
+    subnet_name = tables.Column(get_subnet_name, verbose_name=_('Subnet'))
     router_name = tables.Column('router_name', verbose_name=_('Router'))
     status = tables.Column("status",
                            verbose_name=_("Status"),
@@ -404,6 +460,40 @@ class VPNServicesTable(tables.DataTable):
                          DeleteVPNServiceLink,
                          VPNServicesFilterAction)
         row_actions = (UpdateVPNServiceLink, DeleteVPNServiceLink)
+
+
+class EndpointGroupFilterAction(tables.FilterAction):
+    name = 'endpointgroups_project'
+    filter_type = 'server'
+    filter_choices = (
+        ('name', _("Name ="), True),
+        ('type', _("Type ="), True),
+        ('endpoints', _("Endpoints ="), True),
+    )
+
+
+def _get_endpoints(epg):
+    return ', '.join(epg.endpoints)
+
+
+class EndpointGroupTable(tables.DataTable):
+    id = tables.Column('id', hidden=True)
+    name = tables.Column("name_or_id", verbose_name=_('Name'),
+                         link="horizon:project:vpn:endpointgroupdetails")
+    description = tables.Column('description', verbose_name=_('Description'))
+    type = tables.Column('type', verbose_name=_('Type'))
+    endpoints = tables.Column(_get_endpoints, verbose_name=_('Endpoints'))
+
+    class Meta(object):
+        name = "endpointgroupstable"
+        verbose_name = _("Endpoint Groups")
+        table_actions = (AddEndpointGroupLink,
+                         DeleteEndpointGroupLink,
+                         EndpointGroupFilterAction)
+        row_actions = (UpdateEndpointGroupLink, DeleteEndpointGroupLink)
+
+    def get_object_display(self, endpoitgroup):
+        return endpoitgroup.name_or_id
 
 
 class PoliciesFilterAction(tables.FilterAction):
