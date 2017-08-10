@@ -159,7 +159,7 @@ msgstr "IKE 키의 수명 값"
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:124
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:226
 msgid "Equal to or greater than 60"
-msgstr "60이상"
+msgstr "60 이상"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:99
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:178
@@ -196,7 +196,7 @@ msgstr "IKE 정책 %s를 성공적으로 업데이트 했습니다."
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:135
 #, python-format
 msgid "Failed to update IKE Policy %s"
-msgstr "IKE 정책 %s를 업데이트하지 못 했습니다."
+msgstr "IKE 정책 %s를 업데이트하지 못했습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:155
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:217
@@ -218,7 +218,7 @@ msgstr "수명 단위"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:174
 msgid "Lifetime value"
-msgstr "Lifetime value"
+msgstr "수명 값"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:184
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:229
@@ -443,41 +443,35 @@ msgstr "연결 편집"
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:372
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:413
 msgid "Name ="
-msgstr "Name ="
+msgstr "이름 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:309
-#, fuzzy
 msgid "VPN Service ="
-msgstr "VPN 서비스"
+msgstr "VPN 서비스 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:310
-#, fuzzy
 msgid "VPN Service ID ="
-msgstr "VPN 서비스"
+msgstr "VPN 서비스 ID ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:311
-#, fuzzy
 msgid "IKE Policy ="
-msgstr "IKE 정책"
+msgstr "IKE 정책 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:312
-#, fuzzy
 msgid "IKE Policy ID ="
-msgstr "IKE 정책"
+msgstr "IKE 정책 ID ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:313
-#, fuzzy
 msgid "IPSec Policy ="
-msgstr "IPSec 정책"
+msgstr "IPSec 정책 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:314
-#, fuzzy
 msgid "IPSec Policy ID ="
-msgstr "IPSec 정책"
+msgstr "IPSec 정책 ID ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:315
 msgid "Status ="
-msgstr "Status ="
+msgstr "상태 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:325
 msgid "VPN Service"
@@ -494,7 +488,7 @@ msgstr "IPSec 정책"
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:331
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:390
 msgid "Status"
-msgstr "Status"
+msgstr "상태"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:341
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:29
@@ -502,24 +496,20 @@ msgid "IPSec Site Connections"
 msgstr "IPSec 사이트 연결"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:373
-#, fuzzy
 msgid "Subnet ID ="
-msgstr "서브넷 ID"
+msgstr "서브넷 ID ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:374
-#, fuzzy
 msgid "Subnet ="
-msgstr "서브넷"
+msgstr "서브넷 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:375
-#, fuzzy
 msgid "Router ID ="
-msgstr "라우터 ID"
+msgstr "라우터 ID ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:376
-#, fuzzy
 msgid "Router ="
-msgstr "라우터"
+msgstr "라우터 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:386
 msgid "Local Side Public IPs"
@@ -541,18 +531,16 @@ msgid "VPN Services"
 msgstr "VPN 서비스"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:414
-#, fuzzy
 msgid "Authorization algorithm ="
-msgstr "인증 알고리즘"
+msgstr "인증 알고리즘 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:415
-#, fuzzy
 msgid "Encryption algorithm ="
-msgstr "암호화 알고리즘"
+msgstr "암호화 알고리즘 ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:416
 msgid "PFS ="
-msgstr ""
+msgstr "PFS ="
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:430
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:454
@@ -579,22 +567,22 @@ msgstr "down"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:62
 msgid "Unable to retrieve IPSec Site Connections list."
-msgstr "IPSec 사이트 연결 목록을 찾지 못 했습니다."
+msgstr "IPSec 사이트 연결 목록을 찾지 못했습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:106
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:385
 msgid "Unable to retrieve VPN Services list."
-msgstr "VPN 서비스 목록을 찾지 못 했습니다."
+msgstr "VPN 서비스 목록을 찾지 못했습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:132
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:356
 msgid "Unable to retrieve IKE Policies list."
-msgstr "IKE 정책 목록을 찾지 못 했습니다."
+msgstr "IKE 정책 목록을 찾지 못했습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:158
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:371
 msgid "Unable to retrieve IPSec Policies list."
-msgstr "IPSec 정책 목록을 찾지 못 했습니다."
+msgstr "IPSec 정책 목록을 찾지 못했습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:177
 msgid "IKE Policy Details"
@@ -642,17 +630,17 @@ msgstr "변경사항 저장"
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:224
 #, python-format
 msgid "Unable to retrieve VPN Service details. %s"
-msgstr "VPN 서비스 세부 정보를 찾지 못 했습니다. %s"
+msgstr "VPN 서비스 세부 정보를 찾지 못했습니다. %s"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:259
 #, python-format
 msgid "Unable to retrieve IKE Policy details. %s"
-msgstr "IKE 정책 세부 정보를 찾지 못 했습니다. %s"
+msgstr "IKE 정책 세부 정보를 찾지 못했습니다. %s"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:301
 #, python-format
 msgid "Unable to retrieve IPSec Policy details. %s"
-msgstr "IPSec 정책의 세부 정보를 찾지 못 했습니다. %s"
+msgstr "IPSec 정책의 세부 정보를 찾지 못했습니다. %s"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:326
 msgid "Edit IPSec Site Connection"
@@ -677,7 +665,7 @@ msgstr "서브넷 선택"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:50
 msgid "Unable to retrieve networks list."
-msgstr "네트워크 목록을 찾지 못 했습니다."
+msgstr "네트워크 목록을 찾지 못했습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:59
 msgid "Select a Router"
@@ -685,7 +673,7 @@ msgstr "라우터 선택"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:65
 msgid "Unable to retrieve routers list."
-msgstr "라우터 목록을 찾지 못 했습니다."
+msgstr "라우터 목록을 찾지 못했습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:73
 msgid "Add New VPN Service"
@@ -701,7 +689,7 @@ msgstr "추가"
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:93
 #, python-format
 msgid "Added VPN Service \"%s\"."
-msgstr "VPN 서비스 \"%s\" 추가합니다."
+msgstr "VPN 서비스 \"%s\" 를 추가하였습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:94
 #, python-format
@@ -742,7 +730,7 @@ msgstr "IPSec 정책 \"%s\"를 추가할 수 없습니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:317
 msgid "VPN Service associated with this connection"
-msgstr "이 연결에 연결할 VPN 서비스 "
+msgstr "이 연결에 연결할 VPN 서비스"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:319
 msgid "IKE Policy associated with this connection"
@@ -754,7 +742,7 @@ msgstr "이 연결에 적용할 IPSec 정책"
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:346
 msgid "The pre-defined key string between the two peers of the VPN connection"
-msgstr "VPN에 연결하는 2개의 피어간에 미리 정의돈 문자열을 사용합니다."
+msgstr "VPN에 연결하는 2개의 피어간에 미리 정의된 문자열을 사용합니다."
 
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:350
 msgid "Select IKE Policy"
@@ -813,4 +801,4 @@ msgstr "IPSec 사이트 연결 \"%s\"를 추가하였습니다."
 #: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:503
 #, python-format
 msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr "IPSec 사이트 연결 \"%s\"를 추가 할 수 없습니다."
+msgstr "IPSec 사이트 연결 \"%s\"를 추가할 수 없습니다."
