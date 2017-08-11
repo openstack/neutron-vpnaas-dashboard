@@ -1,0 +1,815 @@
+# Daisy <guoyingc@cn.ibm.com>, 2015. #zanata
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Xu Yang <yizhongchuanqi@163.com>, 2015. #zanata
+# Yang Hongyang <hongyang.yang@easystack.cn>, 2015. #zanata
+# yan haifeng <yanheven@qq.com>, 2015. #zanata
+# zhangjingwen <zhangjingwen@cn.fujitsu.com>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Eric Lei <1165970798@qq.com>, 2016. #zanata
+# LiuYang <157815086@qq.com>, 2016. #zanata
+# Long Yu <yulong10@163.com>, 2016. #zanata
+# Petro <wang-junjie@outlook.com>, 2016. #zanata
+# Qi Kaiyuan <qiky@inspur.com>, 2016. #zanata
+# Shengjing Zhu <zsj950618@gmail.com>, 2016. #zanata
+# Tony <tfu@redhat.com>, 2016. #zanata
+# liujunpeng <liujunpeng@inspur.com>, 2016. #zanata
+# maoshuai <fwsakura@163.com>, 2016. #zanata
+# sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
+# vuuv <froms2008@gmail.com>, 2016. #zanata
+# yan <yyyan123@outlook.com>, 2016. #zanata
+# zzxwill <zzxwill@gmail.com>, 2016. #zanata
+# Alex Eng <loones1595@gmail.com>, 2017. #zanata
+# Bin <liubin@glab.cn>, 2017. #zanata
+# Tony <tfu@redhat.com>, 2017. #zanata
+# liujunpeng <liujunpeng@inspur.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: horizon 11.0.4.dev14\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-08-02 12:03-0500\n"
+"PO-Revision-Date: 2017-07-23 04:45+0000\n"
+"Last-Translator: Bin <liubin@glab.cn>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:31
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:63
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:142
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:220
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:321
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:382
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:422
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:446
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:27
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:110
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:211
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:312
+msgid "Name"
+msgstr "名称"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:33
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:65
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:144
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:222
+msgid "ID"
+msgstr "ID"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:36
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:68
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:147
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:225
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:323
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:384
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:424
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:448
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:30
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:113
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:214
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:315
+msgid "Description"
+msgstr "描述"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:37
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:279
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:34
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:432
+msgid "Enable Admin State"
+msgstr "启用管理员状态"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:50
+#, python-format
+msgid "VPN Service %s was successfully updated."
+msgstr "成功更新VPN服务 %s."
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:56
+#, python-format
+msgid "Failed to update VPN Service %s"
+msgstr "更新VPN服务 %s 失败"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:71
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:150
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:426
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:450
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:114
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:215
+msgid "Authorization algorithm"
+msgstr "授权算法"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:72
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:151
+msgid "sha1"
+msgstr "sha1"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:76
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:160
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:429
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:453
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:116
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:219
+msgid "Encryption algorithm"
+msgstr "加密算法"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:77
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:161
+msgid "3des"
+msgstr "3des"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:78
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:162
+msgid "aes-128"
+msgstr "aes-128"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:79
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:163
+msgid "aes-192"
+msgstr "aes-192"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:80
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:164
+msgid "aes-256"
+msgstr "aes-256"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:83
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:118
+msgid "IKE version"
+msgstr "IKE版本"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:84
+msgid "v1"
+msgstr "v1"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:85
+msgid "v2"
+msgstr "v2"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:89
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:119
+msgid "Lifetime units for IKE keys"
+msgstr "IKE密钥的生存期单位"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:90
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:169
+msgid "seconds"
+msgstr "秒"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:95
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:122
+msgid "Lifetime value for IKE keys"
+msgstr "IKE密钥的生存期值"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:96
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:175
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:124
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:226
+msgid "Equal to or greater than 60"
+msgstr "等于或大于60"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:99
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:178
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:126
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:228
+msgid "Perfect Forward Secrecy"
+msgstr "完善前向保密（FPS，Perfect Forward Secrecy）"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:100
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:179
+msgid "group2"
+msgstr "group2"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:101
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:180
+msgid "group5"
+msgstr "group5"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:102
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:181
+msgid "group14"
+msgstr "group14"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:106
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:128
+msgid "IKE Phase1 negotiation mode"
+msgstr "IKE Phase1协商模式"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:129
+#, python-format
+msgid "IKE Policy %s was successfully updated."
+msgstr "成功更新IKE策略 %s。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:135
+#, python-format
+msgid "Failed to update IKE Policy %s"
+msgstr "更新IKE策略 %s 失败"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:155
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:217
+msgid "Encapsulation mode"
+msgstr "封装模式"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:156
+msgid "tunnel"
+msgstr "隧道"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:157
+msgid "transport"
+msgstr "网络运输"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:168
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:221
+msgid "Lifetime units"
+msgstr "生存期单位"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:174
+msgid "Lifetime value"
+msgstr "生存期值"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:184
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:229
+msgid "Transform Protocol"
+msgstr "转换协议"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:185
+msgid "esp"
+msgstr "esp"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:186
+msgid "ah"
+msgstr "ah"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:187
+msgid "ah-esp"
+msgstr "ah-esp"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:207
+#, python-format
+msgid "IPSec Policy %s was successfully updated."
+msgstr "成功更新IPSec策略 %s."
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:213
+#, python-format
+msgid "Failed to update IPSec Policy %s"
+msgstr "更新IPSec策略 %s 失败"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:227
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:323
+msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
+msgstr "伙伴网关公共IPv4/IPv6地址或FQDN"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:228
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:324
+msgid "Peer gateway public IPv4/IPv6 address or FQDN for the VPN Connection"
+msgstr "VPN连接的伙伴网关公共IPv4/IPv6地址或FQDN"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:233
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:329
+msgid "Peer router identity for authentication (Peer ID)"
+msgstr "用于认证的伙伴路由器身份 (伙伴ID)"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:234
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:330
+msgid ""
+"Peer router identity for authentication. Can be IPv4/IPv6 address, e-mail, "
+"key ID, or FQDN"
+msgstr "用于认证的伙伴路由器身份。可以是IPv4/IPv6地址，e-mail，密钥ID，或FQDN"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:239
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:335
+msgid "Remote peer subnet(s)"
+msgstr "远程对等子网"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:240
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:336
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
+msgstr ""
+"CIDR格式的远程对等子网地址及子网掩码，用逗号分隔(例如 20.1.0.0/24, "
+"21.1.0.0/24)"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:248
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:344
+msgid "Pre-Shared Key (PSK) string"
+msgstr " 预共享密钥(PSK，Pre-Shared Key) 字符串"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:252
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:412
+msgid "Maximum Transmission Unit size for the connection"
+msgstr "这个连接的最大传输单元大小"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:253
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:415
+msgid ""
+"Equal to or greater than 68 if the local subnet is IPv4. Equal to or greater "
+"than 1280 if the local subnet is IPv6."
+msgstr ""
+"如果本地子网是IPv4，则等于或者大于68。如果本地子网是IPv6，则等于或大于1280。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:257
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:418
+msgid "Dead peer detection actions"
+msgstr "已失效伙伴探测动作"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:259
+msgid "hold"
+msgstr "保留"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:260
+msgid "clear"
+msgstr "清除"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:261
+msgid "disabled"
+msgstr "禁用"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:262
+msgid "restart"
+msgstr "重启"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:263
+msgid "restart-by-peer"
+msgstr "被对方重启"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:267
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:421
+msgid "Dead peer detection interval"
+msgstr "已失效伙伴探测间隔"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:268
+msgid "Valid integer lesser than the DPD timeout"
+msgstr "有效的整数并且小于DPD超时大小"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:272
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:426
+msgid "Dead peer detection timeout"
+msgstr "已失效伙伴探测超时"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:273
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:429
+msgid "Valid integer greater than the DPD interval"
+msgstr "大于DPD间隔的有效整数"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:275
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:430
+msgid "Initiator state"
+msgstr "发起者状态"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:277
+msgid "bi-directional"
+msgstr "双向"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:278
+msgid "response-only"
+msgstr "只应答"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:290
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:463
+msgid "DPD Timeout must be greater than DPD Interval"
+msgstr "DPD超时大小必须大于DPD间隔"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:313
+#, python-format
+msgid "IPSec Site Connection %s was successfully updated."
+msgstr "成功更新IPSec站点连接 %s."
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/forms.py:319
+#, python-format
+msgid "Failed to update IPSec Site Connection %s"
+msgstr "更新IPSec站点连接%s失败"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/panel.py:27
+msgid "VPN"
+msgstr "VPN"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:35
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:192
+msgid "Add IKE Policy"
+msgstr "添加IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:44
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:293
+msgid "Add IPSec Policy"
+msgstr "添加IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:53
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:91
+msgid "Add VPN Service"
+msgstr "添加VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:62
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:500
+msgid "Add IPSec Site Connection"
+msgstr "添加IPSec站点连接"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:99
+#, python-format
+msgid "Unable to delete VPN Service. %s"
+msgstr "无法删除VPN服务 %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:132
+#, python-format
+msgid "Unable to delete IKE Policy. %s"
+msgstr "无法删除 IKE 策略 %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:165
+#, python-format
+msgid "Unable to delete IPSec Policy. %s"
+msgstr "无法删除IPSec 策略. %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:194
+#, python-format
+msgid "Unable to delete IPSec Site Connection. %s"
+msgstr "无法删除IPSec 对点链接. %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:199
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:208
+msgid "Edit VPN Service"
+msgstr "编辑VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:215
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:243
+msgid "Edit IKE Policy"
+msgstr "编辑IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:229
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:285
+msgid "Edit IPSec Policy"
+msgstr "编辑IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:243
+msgid "Edit Connection"
+msgstr "编辑连接"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:308
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:372
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:413
+msgid "Name ="
+msgstr "名称 ="
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:309
+#, fuzzy
+msgid "VPN Service ="
+msgstr "VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:310
+#, fuzzy
+msgid "VPN Service ID ="
+msgstr "VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:311
+#, fuzzy
+msgid "IKE Policy ="
+msgstr "IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:312
+#, fuzzy
+msgid "IKE Policy ID ="
+msgstr "IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:313
+#, fuzzy
+msgid "IPSec Policy ="
+msgstr "IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:314
+#, fuzzy
+msgid "IPSec Policy ID ="
+msgstr "IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:315
+msgid "Status ="
+msgstr "状态 ="
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:325
+msgid "VPN Service"
+msgstr "VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:327
+msgid "IKE Policy"
+msgstr "IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:329
+msgid "IPSec Policy"
+msgstr "IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:331
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:390
+msgid "Status"
+msgstr "状态"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:341
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:29
+msgid "IPSec Site Connections"
+msgstr "IPSec站点连接"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:373
+#, fuzzy
+msgid "Subnet ID ="
+msgstr "子网ID"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:374
+#, fuzzy
+msgid "Subnet ="
+msgstr "子网"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:375
+#, fuzzy
+msgid "Router ID ="
+msgstr "路由id"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:376
+#, fuzzy
+msgid "Router ="
+msgstr "路由"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:386
+msgid "Local Side Public IPs"
+msgstr "本地端公共IP"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:387
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:32
+msgid "Subnet"
+msgstr "子网"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:388
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:31
+msgid "Router"
+msgstr "路由"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:400
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:76
+msgid "VPN Services"
+msgstr "VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:414
+#, fuzzy
+msgid "Authorization algorithm ="
+msgstr "授权算法"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:415
+#, fuzzy
+msgid "Encryption algorithm ="
+msgstr "加密算法"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:416
+msgid "PFS ="
+msgstr ""
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:430
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:454
+msgid "PFS"
+msgstr "PFS"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:437
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:119
+msgid "IKE Policies"
+msgstr "IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tables.py:461
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:145
+msgid "IPSec Policies"
+msgstr "IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:32
+msgid "up"
+msgstr "启动"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:32
+msgid "down"
+msgstr "关闭"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:62
+msgid "Unable to retrieve IPSec Site Connections list."
+msgstr "无法获取IPSec站点连接列表。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:106
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:385
+msgid "Unable to retrieve VPN Services list."
+msgstr "无法获取VPN服务列表。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:132
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:356
+msgid "Unable to retrieve IKE Policies list."
+msgstr "无法获取IKE策略列表。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:158
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:371
+msgid "Unable to retrieve IPSec Policies list."
+msgstr "无法获取IPSec策略列表。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:177
+msgid "IKE Policy Details"
+msgstr "IKE策略详情"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:192
+msgid "IPSec Policy Details"
+msgstr "IPSec策略详情"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:207
+msgid "VPN Service Details"
+msgstr "VPN服务详情"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/tabs.py:222
+msgid "IPSec Site Connection Details"
+msgstr "IPSec站点连接详情"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:35
+msgid "Virtual Private Network"
+msgstr "虚拟专用网络"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:65
+msgid "Unable to retrieve IKE Policy details."
+msgstr "无法获取IKE策略详情。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:98
+msgid "Unable to retrieve IPSec Policy details."
+msgstr "无法获取IPSec策略详情。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:134
+msgid "Unable to retrieve VPN Service details."
+msgstr "无法获取VPN服务详情。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:175
+msgid "Unable to retrieve IPSec Site Connection details."
+msgstr "无法获取IPSec站点连接详情。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:205
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:240
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:282
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:323
+msgid "Save Changes"
+msgstr "保存"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:224
+#, python-format
+msgid "Unable to retrieve VPN Service details. %s"
+msgstr "无法获取VPN服务详情. %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:259
+#, python-format
+msgid "Unable to retrieve IKE Policy details. %s"
+msgstr "无法获取IKE策略详情. %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:301
+#, python-format
+msgid "Unable to retrieve IPSec Policy details. %s"
+msgstr "无法获取IPSec策略详情. %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:326
+msgid "Edit IPSec Site Connection"
+msgstr "编辑IPSec站点连接"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/views.py:344
+#, python-format
+msgid "Unable to retrieve IPSec Site Connection details. %s"
+msgstr "无法获取IPSec站点连接详情. %s"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:35
+msgid ""
+"The state of VPN service to start in. If disabled (not checked), VPN service "
+"does not forward packets."
+msgstr "VPN 服务的起始状态。如果为禁用 (未选中)，那么 VPN 服务不转发包。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:44
+msgid "Select a Subnet"
+msgstr "选择子网"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:50
+msgid "Unable to retrieve networks list."
+msgstr "无法获取网络列表"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:59
+msgid "Select a Router"
+msgstr "选择一个路由器"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:65
+msgid "Unable to retrieve routers list."
+msgstr "无法获取路由器列表。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:73
+msgid "Add New VPN Service"
+msgstr "添加新的VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:92
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:193
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:294
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:501
+msgid "Add"
+msgstr "添加"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:93
+#, python-format
+msgid "Added VPN Service \"%s\"."
+msgstr "VPN服务 \"%s\" 已添加。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:94
+#, python-format
+msgid "Unable to add VPN Service \"%s\"."
+msgstr "无法添加VPN服务 \"%s\"。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:168
+msgid "Add New IKE Policy"
+msgstr "添加新的IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:194
+#, python-format
+msgid "Added IKE Policy \"%s\"."
+msgstr "IKE策略 \"%s\" 已添加。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:195
+#, python-format
+msgid "Unable to add IKE Policy \"%s\"."
+msgstr "无法添加IKE策略 \"%s\"。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:224
+msgid "Lifetime value for IKE keys "
+msgstr "IKE密钥的生存周期"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:269
+msgid "Add New IPSec Policy"
+msgstr "添加新的IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:295
+#, python-format
+msgid "Added IPSec Policy \"%s\"."
+msgstr "IPSec策略 \"%s\" 已添加。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:296
+#, python-format
+msgid "Unable to add IPSec Policy \"%s\"."
+msgstr "无法添加IPSec策略 \"%s\"。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:317
+msgid "VPN Service associated with this connection"
+msgstr "VPN服务已经与此连接关联"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:319
+msgid "IKE Policy associated with this connection"
+msgstr "IKE策略已经与此连接关联"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:321
+msgid "IPSec Policy associated with this connection"
+msgstr "IPSec策略已经与此连接关联"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:346
+msgid "The pre-defined key string between the two peers of the VPN connection"
+msgstr "VPN连接的两个端点预定义关键字的字符串"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:350
+msgid "Select IKE Policy"
+msgstr "选择IKE策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:364
+msgid "Select IPSec Policy"
+msgstr "选择IPSec策略"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:379
+msgid "Select VPN Service"
+msgstr "选择VPN服务"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:393
+msgid "Add New IPSec Site Connection"
+msgstr "添加新的IPSec站点连接"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:395
+msgid ""
+"Create IPSec Site Connection for current project. Assign a name and "
+"description for the IPSec Site Connection. All fields in this tab are "
+"required."
+msgstr ""
+"为当前项目创建 IPSec 站点连接。为 IPSec 站点连接分配名称和描述。当前选项卡中"
+"的所有字段都是必填字段。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:424
+msgid "Valid integer lesser than DPD timeout"
+msgstr "有效的整数并且小于DPD超时"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:433
+msgid ""
+"The state of IPSec site connection to start in. If disabled (not checked), "
+"IPSec site connection does not forward packets."
+msgstr "IPSec 连接起始状态。如果为禁用(未选中)，那么 IPSec 站点连接不转发包。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:468
+msgid "Optional Parameters"
+msgstr "可选参数"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:470
+msgid ""
+"Fields in this tab are optional. You can configure the detail of IPSec site "
+"connection created."
+msgstr "本标签中的字段都是可选的。您可以配置已创建的IPSec站点连接的详情。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:502
+#, python-format
+msgid "Added IPSec Site Connection \"%s\"."
+msgstr "IPSec站点连接 \"%s\" 已添加。"
+
+#: neutron_vpnaas_dashboard/dashboards/project/vpn/workflows.py:503
+#, python-format
+msgid "Unable to add IPSec Site Connection \"%s\"."
+msgstr "无法添加IPSec站点连接 \"%s\"。"
