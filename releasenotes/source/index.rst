@@ -6,3 +6,4 @@ Neutron VPNaaS Dashboard Release Notes
    :maxdepth: 1
 
    unreleased
+   pike
