@@ -38,8 +38,8 @@ Enable the horizon plugin.
 
 .. code-block:: console
 
-   $ cp neutron_vpnaas_dashboard/enabled/_1470_project_vpn_panel.py \
-         /opt/stack/horizon/openstack_dashboard/local/enabled/_1470_project_vpn_panel.py
+   $ cp neutron_vpnaas_dashboard/enabled/_7100_project_vpn_panel.py \
+         /opt/stack/horizon/openstack_dashboard/local/enabled/_7100_project_vpn_panel.py
 
 .. note::
 
