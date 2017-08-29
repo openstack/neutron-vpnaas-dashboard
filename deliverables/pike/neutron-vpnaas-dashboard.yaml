@@ -1,0 +1,19 @@
+---
+launchpad: neutron-vpnaas-dashboard
+team: neutron
+release-notes: https://docs.openstack.org/releasenotes/neutron-vpnaas-dashboard/unreleased.html
+type: horizon-plugin
+release-model: cycle-with-intermediary
+releases:
+  - version: 0.1.0
+    projects:
+      - repo: openstack/neutron-vpnaas-dashboard
+        hash: 4b578bae532cd6c3224d667360996c3d0365b7a0
+    highlights: '* Initial release after split out from horizon'
+  - projects:
+      - hash: 75a1da7e3062b4f350975cddc1884f7dccd5ab4f
+        repo: openstack/neutron-vpnaas-dashboard
+    version: 1.0.0
+branches:
+  - location: 0.1.0
+    name: stable/pike
