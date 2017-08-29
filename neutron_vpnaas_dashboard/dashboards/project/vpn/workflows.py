@@ -447,7 +447,7 @@ class AddIPSecSiteConnectionAction(workflows.Action):
     peer_ep_group_id = forms.ChoiceField(
         required=False,
         label=_("Endpoint Group for remote peer CIDR(s)"),
-        help_text=_("Remove peer CIDR(s) connected to the new IPSec "
+        help_text=_("Remote peer CIDR(s) connected to the new IPSec "
                     "connection."))
     peer_cidrs = forms.MultiIPField(
         required=False,
