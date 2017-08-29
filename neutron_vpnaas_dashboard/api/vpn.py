@@ -25,19 +25,19 @@ neutronclient = neutron.neutronclient
 
 
 class IKEPolicy(neutron.NeutronAPIDictWrapper):
-    """Wrapper for neutron VPN IKEPolicy."""
+    """Wrapper for neutron VPN IKE policy."""
 
 
-class IPSecPolicy(neutron.NeutronAPIDictWrapper):
-    """Wrapper for neutron VPN IPSecPolicy."""
+class IPsecPolicy(neutron.NeutronAPIDictWrapper):
+    """Wrapper for neutron VPN IPsec policy."""
 
 
-class IPSecSiteConnection(neutron.NeutronAPIDictWrapper):
-    """Wrapper for neutron IPSecSiteConnection."""
+class IPsecSiteConnection(neutron.NeutronAPIDictWrapper):
+    """Wrapper for neutron IPsec site connection."""
 
 
 class VPNService(neutron.NeutronAPIDictWrapper):
-    """Wrapper for neutron VPNService."""
+    """Wrapper for neutron VPN service."""
 
 
 class EndpointGroup(neutron.NeutronAPIDictWrapper):
@@ -46,14 +46,14 @@ class EndpointGroup(neutron.NeutronAPIDictWrapper):
 
 @profiler.trace
 def vpnservice_create(request, **kwargs):
-    """Create VPNService
+    """Create VPN service
 
     :param request: request context
     :param admin_state_up: admin state (default on)
-    :param name: name for VPNService
-    :param description: description for VPNService
-    :param router_id: router id for router of VPNService
-    :param subnet_id: subnet id for subnet of VPNService
+    :param name: name for VPN service
+    :param description: description for VPN service
+    :param router_id: router id for router of VPN service
+    :param subnet_id: subnet id for subnet of VPN service
     """
     body = {'vpnservice':
             {'admin_state_up': kwargs['admin_state_up'],
@@ -205,17 +205,17 @@ def endpointgroup_delete(request, endpoint_group_id):
 
 @profiler.trace
 def ikepolicy_create(request, **kwargs):
-    """Create IKEPolicy
+    """Create IKE policy
 
     :param request: request context
-    :param name: name for IKEPolicy
-    :param description: description for IKEPolicy
-    :param auth_algorithm: authorization algorithm for IKEPolicy
-    :param encryption_algorithm: encryption algorithm for IKEPolicy
-    :param ike_version: IKE version for IKEPolicy
-    :param lifetime: Lifetime Units and Value for IKEPolicy
-    :param pfs: Perfect Forward Secrecy for IKEPolicy
-    :param phase1_negotiation_mode: IKE Phase1 negotiation mode for IKEPolicy
+    :param name: name for IKE policy
+    :param description: description for IKE policy
+    :param auth_algorithm: authorization algorithm for IKE policy
+    :param encryption_algorithm: encryption algorithm for IKE policy
+    :param ike_version: IKE version for IKE policy
+    :param lifetime: Lifetime Units and Value for IKE policy
+    :param pfs: Perfect Forward Secrecy for IKE policy
+    :param phase1_negotiation_mode: IKE Phase1 negotiation mode for IKE policy
     """
     body = {'ikepolicy':
             {'name': kwargs['name'],
@@ -277,17 +277,17 @@ def ikepolicy_delete(request, ikepolicy_id):
 
 @profiler.trace
 def ipsecpolicy_create(request, **kwargs):
-    """Create IPSecPolicy
+    """Create IPsec policy
 
     :param request: request context
-    :param name: name for IPSecPolicy
-    :param description: description for IPSecPolicy
-    :param auth_algorithm: authorization algorithm for IPSecPolicy
-    :param encapsulation_mode: encapsulation mode for IPSecPolicy
-    :param encryption_algorithm: encryption algorithm for IPSecPolicy
-    :param lifetime: Lifetime Units and Value for IPSecPolicy
-    :param pfs: Perfect Forward Secrecy for IPSecPolicy
-    :param transform_protocol: Transform Protocol for IPSecPolicy
+    :param name: name for IPsec policy
+    :param description: description for IPsec policy
+    :param auth_algorithm: authorization algorithm for IPsec policy
+    :param encapsulation_mode: encapsulation mode for IPsec policy
+    :param encryption_algorithm: encryption algorithm for IPsec policy
+    :param lifetime: Lifetime Units and Value for IPsec policy
+    :param pfs: Perfect Forward Secrecy for IPsec policy
+    :param transform_protocol: Transform Protocol for IPsec policy
     """
     body = {'ipsecpolicy':
             {'name': kwargs['name'],
@@ -301,7 +301,7 @@ def ipsecpolicy_create(request, **kwargs):
             }
     ipsecpolicy = neutronclient(request).create_ipsecpolicy(body).get(
         'ipsecpolicy')
-    return IPSecPolicy(ipsecpolicy)
+    return IPsecPolicy(ipsecpolicy)
 
 
 @profiler.trace
@@ -317,7 +317,7 @@ def _ipsecpolicy_list(request, expand_conns=False, **kwargs):
         for p in ipsecpolicies:
             p['ipsecsiteconns'] = [c.id for c in ipsecsiteconns
                                    if c.ipsecpolicy_id == p['id']]
-    return [IPSecPolicy(v) for v in ipsecpolicies]
+    return [IPsecPolicy(v) for v in ipsecpolicies]
 
 
 @profiler.trace
@@ -333,14 +333,14 @@ def _ipsecpolicy_get(request, ipsecpolicy_id, expand_conns=False):
         ipsecpolicy['ipsecsiteconns'] = [c for c in ipsecsiteconns
                                          if (c.ipsecpolicy_id ==
                                              ipsecpolicy['id'])]
-    return IPSecPolicy(ipsecpolicy)
+    return IPsecPolicy(ipsecpolicy)
 
 
 @profiler.trace
 def ipsecpolicy_update(request, ipsecpolicy_id, **kwargs):
     ipsecpolicy = neutronclient(request).update_ipsecpolicy(
         ipsecpolicy_id, kwargs).get('ipsecpolicy')
-    return IPSecPolicy(ipsecpolicy)
+    return IPsecPolicy(ipsecpolicy)
 
 
 @profiler.trace
@@ -350,13 +350,13 @@ def ipsecpolicy_delete(request, ipsecpolicy_id):
 
 @profiler.trace
 def ipsecsiteconnection_create(request, **kwargs):
-    """Create IPSecSiteConnection
+    """Create IPsec site connection
 
     :param request: request context
-    :param name: name for IPSecSiteConnection
-    :param description: description for IPSecSiteConnection
+    :param name: name for IPsec site connection
+    :param description: description for IPsec site connection
     :param dpd: dead peer detection action, interval and timeout
-    :param ikepolicy_id: IKEPolicy associated with this connection
+    :param ikepolicy_id: IKE policy associated with this connection
     :param initiator: initiator state
     :param ipsecpolicy_id: IPsecPolicy associated with this connection
     :param mtu: MTU size for the connection
@@ -364,7 +364,7 @@ def ipsecsiteconnection_create(request, **kwargs):
     :param peer_cidrs: remote subnet(s) in CIDR format
     :param peer_id:  Peer router identity for authentication"
     :param psk: Pre-Shared Key string
-    :param vpnservice_id: VPNService associated with this connection
+    :param vpnservice_id: VPN service associated with this connection
     :param admin_state_up: admin state (default on)
     """
     body = {
@@ -389,7 +389,7 @@ def ipsecsiteconnection_create(request, **kwargs):
         body['peer_cidrs'] = kwargs['peer_cidrs']
     ipsecsiteconnection = neutronclient(request).create_ipsec_site_connection(
         {'ipsec_site_connection': body}).get('ipsec_site_connection')
-    return IPSecSiteConnection(ipsecsiteconnection)
+    return IPsecSiteConnection(ipsecsiteconnection)
 
 
 @profiler.trace
@@ -423,7 +423,7 @@ def _ipsecsiteconnection_list(request, expand_ikepolicies=False,
         for c in ipsecsiteconnections:
             c['vpnservice_name'] = service_dict.get(c['vpnservice_id']
                                                     ).name_or_id
-    return [IPSecSiteConnection(v) for v in ipsecsiteconnections]
+    return [IPsecSiteConnection(v) for v in ipsecsiteconnections]
 
 
 @profiler.trace
@@ -448,14 +448,14 @@ def _ipsecsiteconnection_get(request, ipsecsiteconnection_id,
     if expand_vpnservices:
         ipsecsiteconnection['vpnservice'] = _vpnservice_get(
             request, ipsecsiteconnection['vpnservice_id'])
-    return IPSecSiteConnection(ipsecsiteconnection)
+    return IPsecSiteConnection(ipsecsiteconnection)
 
 
 @profiler.trace
 def ipsecsiteconnection_update(request, ipsecsiteconnection_id, **kwargs):
     ipsecsiteconnection = neutronclient(request).update_ipsec_site_connection(
         ipsecsiteconnection_id, kwargs).get('ipsec_site_connection')
-    return IPSecSiteConnection(ipsecsiteconnection)
+    return IPsecSiteConnection(ipsecsiteconnection)
 
 
 @profiler.trace

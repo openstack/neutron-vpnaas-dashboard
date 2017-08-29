@@ -26,7 +26,7 @@
     {% url 'horizon:project:vpn:ikepolicydetails' ipsecsiteconnection.ikepolicy_id as ikepolicy_url %}
     <dd><a href="{{ ikepolicy_url }}">{{ ipsecsiteconnection.ikepolicy.name_or_id }}</a></dd>
 
-    <dt>{% trans "IPSec Policy" %}</dt>
+    <dt>{% trans "IPsec Policy" %}</dt>
     {% url 'horizon:project:vpn:ipsecpolicydetails' ipsecsiteconnection.ipsecpolicy_id as ipsecpolicy_url %}
     <dd><a href="{{ ipsecpolicy_url }}">{{ ipsecsiteconnection.ipsecpolicy.name_or_id }}</a></dd>
 

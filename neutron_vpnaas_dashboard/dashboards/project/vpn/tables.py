@@ -39,9 +39,9 @@ class AddIKEPolicyLink(tables.LinkAction):
     policy_rules = (("network", "create_ikepolicy"),)
 
 
-class AddIPSecPolicyLink(tables.LinkAction):
+class AddIPsecPolicyLink(tables.LinkAction):
     name = "addipsecpolicy"
-    verbose_name = _("Add IPSec Policy")
+    verbose_name = _("Add IPsec Policy")
     url = "horizon:project:vpn:addipsecpolicy"
     classes = ("ajax-modal",)
     icon = "plus"
@@ -66,9 +66,9 @@ class AddEndpointGroupLink(tables.LinkAction):
     policy_rules = (("network", "create_endpointgroup"),)
 
 
-class AddIPSecSiteConnectionLink(tables.LinkAction):
+class AddIPsecSiteConnectionLink(tables.LinkAction):
     name = "addipsecsiteconnection"
-    verbose_name = _("Add IPSec Site Connection")
+    verbose_name = _("Add IPsec Site Connection")
     url = "horizon:project:vpn:addipsecsiteconnection"
     classes = ("ajax-modal",)
     icon = "plus"
@@ -90,8 +90,8 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
     @staticmethod
     def action_past(count):
         return ungettext_lazy(
-            u"Scheduled deletion of VPN Service",
-            u"Scheduled deletion of VPN Services",
+            u"Scheduled deletion of VPN service",
+            u"Scheduled deletion of VPN services",
             count
         )
 
@@ -105,7 +105,7 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
             api_vpn.vpnservice_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
-                request, _('Unable to delete VPN Service. %s') % e)
+                request, _('Unable to delete VPN service. %s') % e)
 
 
 class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
@@ -151,8 +151,8 @@ class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
     @staticmethod
     def action_past(count):
         return ungettext_lazy(
-            u"Scheduled deletion of IKE Policy",
-            u"Scheduled deletion of IKE Policies",
+            u"Scheduled deletion of IKE policy",
+            u"Scheduled deletion of IKE policies",
             count
         )
 
@@ -166,26 +166,26 @@ class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
             api_vpn.ikepolicy_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
-                request, _('Unable to delete IKE Policy. %s') % e)
+                request, _('Unable to delete IKE policy. %s') % e)
 
 
-class DeleteIPSecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
+class DeleteIPsecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
     name = "deleteipsecpolicy"
     policy_rules = (("network", "delete_ipsecpolicy"),)
 
     @staticmethod
     def action_present(count):
         return ungettext_lazy(
-            u"Delete IPSec Policy",
-            u"Delete IPSec Policies",
+            u"Delete IPsec Policy",
+            u"Delete IPsec Policies",
             count
         )
 
     @staticmethod
     def action_past(count):
         return ungettext_lazy(
-            u"Scheduled deletion of IPSec Policy",
-            u"Scheduled deletion of IPSec Policies",
+            u"Scheduled deletion of IPsec policy",
+            u"Scheduled deletion of IPsec policies",
             count
         )
 
@@ -199,10 +199,10 @@ class DeleteIPSecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
             api_vpn.ipsecpolicy_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
-                request, _('Unable to delete IPSec Policy. %s') % e)
+                request, _('Unable to delete IPsec policy. %s') % e)
 
 
-class DeleteIPSecSiteConnectionLink(policy.PolicyTargetMixin,
+class DeleteIPsecSiteConnectionLink(policy.PolicyTargetMixin,
                                     tables.DeleteAction):
     name = "deleteipsecsiteconnection"
     policy_rules = (("network", "delete_ipsec_site_connection"),)
@@ -210,16 +210,16 @@ class DeleteIPSecSiteConnectionLink(policy.PolicyTargetMixin,
     @staticmethod
     def action_present(count):
         return ungettext_lazy(
-            u"Delete IPSec Site Connection",
-            u"Delete IPSec Site Connections",
+            u"Delete IPsec Site Connection",
+            u"Delete IPsec Site Connections",
             count
         )
 
     @staticmethod
     def action_past(count):
         return ungettext_lazy(
-            u"Scheduled deletion of IPSec Site Connection",
-            u"Scheduled deletion of IPSec Site Connections",
+            u"Scheduled deletion of IPsec site connection",
+            u"Scheduled deletion of IPsec site connections",
             count
         )
 
@@ -228,7 +228,7 @@ class DeleteIPSecSiteConnectionLink(policy.PolicyTargetMixin,
             api_vpn.ipsecsiteconnection_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
-                request, _('Unable to delete IPSec Site Connection. %s') % e)
+                request, _('Unable to delete IPsec site connection. %s') % e)
 
 
 class UpdateVPNServiceLink(tables.LinkAction):
@@ -272,9 +272,9 @@ class UpdateIKEPolicyLink(tables.LinkAction):
         return not datum['ipsecsiteconns']
 
 
-class UpdateIPSecPolicyLink(tables.LinkAction):
+class UpdateIPsecPolicyLink(tables.LinkAction):
     name = "updateipsecpolicy"
-    verbose_name = _("Edit IPSec Policy")
+    verbose_name = _("Edit IPsec Policy")
     classes = ("ajax-modal", "btn-update",)
     policy_rules = (("network", "update_ipsecpolicy"),)
 
@@ -286,7 +286,7 @@ class UpdateIPSecPolicyLink(tables.LinkAction):
         return not datum['ipsecsiteconns']
 
 
-class UpdateIPSecSiteConnectionLink(tables.LinkAction):
+class UpdateIPsecSiteConnectionLink(tables.LinkAction):
     name = "updateipsecsiteconnection"
     verbose_name = _("Edit Connection")
     classes = ("ajax-modal", "btn-update",)
@@ -313,29 +313,34 @@ STATUS_CHOICES = (
 
 
 STATUS_DISPLAY_CHOICES = (
-    ("active", pgettext_lazy("Current status of an IPSec Site Connection"
-                             " and VPN Service", u"Active")),
-    ("down", pgettext_lazy("Current status of an IPSec Site Connection"
-                           " and VPN Service", u"Down")),
-    ("error", pgettext_lazy("Current status of an IPSec Site Connection"
-                            " and VPN Service", u"Error")),
-    ("created", pgettext_lazy("Current status of an IPSec Site Connection"
-                              " and VPN Service", u"Created")),
-    ("pending_create", pgettext_lazy("Current status of an"
-                                     " IPSec Site Connection and VPN Service",
+    ("active", pgettext_lazy("Current status of an IPsec site connection "
+                             "and VPN service",
+                             u"Active")),
+    ("down", pgettext_lazy("Current status of an IPsec site connection "
+                           "and VPN service",
+                           u"Down")),
+    ("error", pgettext_lazy("Current status of an IPsec site connection "
+                            "and VPN service",
+                            u"Error")),
+    ("created", pgettext_lazy("Current status of an IPsec site connection "
+                              "and VPN service",
+                              u"Created")),
+    ("pending_create", pgettext_lazy("Current status of an "
+                                     "IPsec site connection and VPN service",
                                      u"Pending Create")),
-    ("pending_update", pgettext_lazy("Current status of an"
-                                     " IPSec Site Connection and VPN Service",
+    ("pending_update", pgettext_lazy("Current status of an "
+                                     "IPsec site connection and VPN service",
                                      u"Pending Update")),
-    ("pending_delete", pgettext_lazy("Current status of an"
-                                     " IPSec Site Connection and VPN Service",
+    ("pending_delete", pgettext_lazy("Current status of an "
+                                     "IPsec site connection and VPN service",
                                      u"Pending Delete")),
-    ("inactive", pgettext_lazy("Current status of an IPSec Site Connection"
-                               " and VPN Service", u"Inactive")),
+    ("inactive", pgettext_lazy("Current status of an IPsec site connection "
+                               "and VPN service",
+                               u"Inactive")),
 )
 
 
-class UpdateIPSecSiteConnectionRow(tables.Row):
+class UpdateIPsecSiteConnectionRow(tables.Row):
     ajax = True
 
     def get_data(self, request, conn_id):
@@ -358,13 +363,13 @@ class IPSSCFilterAction(tables.FilterAction):
         ('vpnservice_id', _("VPN Service ID ="), True),
         ('ikepolicy', _("IKE Policy ="), True),
         ('ikepolicy_id', _("IKE Policy ID ="), True),
-        ('ipsecpolicy', _("IPSec Policy ="), True),
-        ('ipsecpolicy_id', _("IPSec Policy ID ="), True),
+        ('ipsecpolicy', _("IPsec Policy ="), True),
+        ('ipsecpolicy_id', _("IPsec Policy ID ="), True),
         ('status', _("Status ="), True)
     )
 
 
-class IPSecSiteConnectionsTable(tables.DataTable):
+class IPsecSiteConnectionsTable(tables.DataTable):
     id = tables.Column('id', hidden=True)
     name = tables.Column('name_or_id', verbose_name=_('Name'),
                          link="horizon:project:vpn:ipsecsiteconnectiondetails")
@@ -374,7 +379,7 @@ class IPSecSiteConnectionsTable(tables.DataTable):
     ikepolicy_name = tables.Column('ikepolicy_name',
                                    verbose_name=_('IKE Policy'))
     ipsecpolicy_name = tables.Column('ipsecpolicy_name',
-                                     verbose_name=_('IPSec Policy'))
+                                     verbose_name=_('IPsec Policy'))
     status = tables.Column("status",
                            verbose_name=_("Status"),
                            status=True,
@@ -386,14 +391,14 @@ class IPSecSiteConnectionsTable(tables.DataTable):
 
     class Meta(object):
         name = "ipsecsiteconnectionstable"
-        verbose_name = _("IPSec Site Connections")
+        verbose_name = _("IPsec Site Connections")
         status_columns = ['status']
-        row_class = UpdateIPSecSiteConnectionRow
-        table_actions = (AddIPSecSiteConnectionLink,
-                         DeleteIPSecSiteConnectionLink,
+        row_class = UpdateIPsecSiteConnectionRow
+        table_actions = (AddIPsecSiteConnectionLink,
+                         DeleteIPsecSiteConnectionLink,
                          IPSSCFilterAction)
-        row_actions = (UpdateIPSecSiteConnectionLink,
-                       DeleteIPSecSiteConnectionLink)
+        row_actions = (UpdateIPsecSiteConnectionLink,
+                       DeleteIPsecSiteConnectionLink)
 
 
 def get_local_ips(vpn):
@@ -531,7 +536,7 @@ class IKEPoliciesTable(tables.DataTable):
         row_actions = (UpdateIKEPolicyLink, DeleteIKEPolicyLink)
 
 
-class IPSecPoliciesTable(tables.DataTable):
+class IPsecPoliciesTable(tables.DataTable):
     id = tables.Column('id', hidden=True)
     name = tables.Column("name_or_id", verbose_name=_('Name'),
                          link="horizon:project:vpn:ipsecpolicydetails")
@@ -548,8 +553,8 @@ class IPSecPoliciesTable(tables.DataTable):
 
     class Meta(object):
         name = "ipsecpoliciestable"
-        verbose_name = _("IPSec Policies")
-        table_actions = (AddIPSecPolicyLink,
-                         DeleteIPSecPolicyLink,
+        verbose_name = _("IPsec Policies")
+        table_actions = (AddIPsecPolicyLink,
+                         DeleteIPsecPolicyLink,
                          PoliciesFilterAction)
-        row_actions = (UpdateIPSecPolicyLink, DeleteIPSecPolicyLink)
+        row_actions = (UpdateIPsecPolicyLink, DeleteIPsecPolicyLink)
