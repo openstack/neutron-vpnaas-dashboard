@@ -94,8 +94,8 @@ class AddVPNService(workflows.Workflow):
     slug = "addvpnservice"
     name = _("Add VPN Service")
     finalize_button_name = _("Add")
-    success_message = _('Added VPN Service "%s".')
-    failure_message = _('Unable to add VPN Service "%s".')
+    success_message = _('Added VPN service "%s".')
+    failure_message = _('Unable to add VPN service "%s".')
     success_url = "horizon:project:vpn:index"
     default_steps = (AddVPNServiceStep,)
 
@@ -122,7 +122,7 @@ class AddEndpointGroupAction(workflows.Action):
         label=_("Description"))
     type = forms.ThemableChoiceField(
         label=_("Type"),
-        help_text=_("IPSec connection validation requires that local "
+        help_text=_("IPsec connection validation requires that local "
                     "endpoints are subnets, and peer endpoints are CIDRs."),
         choices=[('cidr', _('CIDR (for external systems)')),
                  ('subnet', _('Subnet (for local systems)'))],
@@ -298,8 +298,8 @@ class AddIKEPolicy(workflows.Workflow):
     slug = "addikepolicy"
     name = _("Add IKE Policy")
     finalize_button_name = _("Add")
-    success_message = _('Added IKE Policy "%s".')
-    failure_message = _('Unable to add IKE Policy "%s".')
+    success_message = _('Added IKE policy "%s".')
+    failure_message = _('Unable to add IKE policy "%s".')
     success_url = "horizon:project:vpn:index"
     default_steps = (AddIKEPolicyStep,)
 
@@ -314,7 +314,7 @@ class AddIKEPolicy(workflows.Workflow):
             return False
 
 
-class AddIPSecPolicyAction(workflows.Action):
+class AddIPsecPolicyAction(workflows.Action):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
     description = forms.CharField(
         initial="", required=False,
@@ -337,7 +337,7 @@ class AddIPSecPolicyAction(workflows.Action):
                                            required=False)
 
     def __init__(self, request, *args, **kwargs):
-        super(AddIPSecPolicyAction, self).__init__(request, *args, **kwargs)
+        super(AddIPsecPolicyAction, self).__init__(request, *args, **kwargs)
 
         auth_algorithm_choices = [("sha1", "sha1")]
         self.fields['auth_algorithm'].choices = auth_algorithm_choices
@@ -373,20 +373,20 @@ class AddIPSecPolicyAction(workflows.Action):
         self.fields['transform_protocol'].choices = transform_protocol_choices
 
     class Meta(object):
-        name = _("Add New IPSec Policy")
+        name = _("Add New IPsec Policy")
         permissions = ('openstack.services.network',)
         help_text_template = 'project/vpn/_add_ipsec_policy_help.html'
 
 
-class AddIPSecPolicyStep(workflows.Step):
-    action_class = AddIPSecPolicyAction
+class AddIPsecPolicyStep(workflows.Step):
+    action_class = AddIPsecPolicyAction
     contributes = ("name", "description", "auth_algorithm",
                    "encapsulation_mode", "encryption_algorithm",
                    "lifetime_units", "lifetime_value",
                    "pfs", "transform_protocol")
 
     def contribute(self, data, context):
-        context = super(AddIPSecPolicyStep, self).contribute(data, context)
+        context = super(AddIPsecPolicyStep, self).contribute(data, context)
         context['lifetime'] = {'units': data['lifetime_units'],
                                'value': data['lifetime_value']}
         context.pop('lifetime_units')
@@ -395,14 +395,14 @@ class AddIPSecPolicyStep(workflows.Step):
             return context
 
 
-class AddIPSecPolicy(workflows.Workflow):
+class AddIPsecPolicy(workflows.Workflow):
     slug = "addipsecpolicy"
-    name = _("Add IPSec Policy")
+    name = _("Add IPsec Policy")
     finalize_button_name = _("Add")
-    success_message = _('Added IPSec Policy "%s".')
-    failure_message = _('Unable to add IPSec Policy "%s".')
+    success_message = _('Added IPsec policy "%s".')
+    failure_message = _('Unable to add IPsec policy "%s".')
     success_url = "horizon:project:vpn:index"
-    default_steps = (AddIPSecPolicyStep,)
+    default_steps = (AddIPsecPolicyStep,)
 
     def format_status_message(self, message):
         return message % self.context.get('name')
@@ -415,13 +415,13 @@ class AddIPSecPolicy(workflows.Workflow):
             return False
 
 
-class AddIPSecSiteConnectionAction(workflows.Action):
+class AddIPsecSiteConnectionAction(workflows.Action):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
     description = forms.CharField(
         initial="", required=False,
         max_length=80, label=_("Description"))
     vpnservice_id = forms.ChoiceField(
-        label=_("VPN Service associated with this connection"))
+        label=_("VPN service associated with this connection"))
     local_ep_group_id = forms.ChoiceField(
         required=False,
         label=_("Endpoint Group for local subnet(s)"),
@@ -429,9 +429,9 @@ class AddIPSecSiteConnectionAction(workflows.Action):
                     "connected to. Required if no subnet is specified "
                     "in a VPN service selected."))
     ikepolicy_id = forms.ChoiceField(
-        label=_("IKE Policy associated with this connection"))
+        label=_("IKE policy associated with this connection"))
     ipsecpolicy_id = forms.ChoiceField(
-        label=_("IPSec Policy associated with this connection"))
+        label=_("IPsec policy associated with this connection"))
     peer_address = forms.IPField(
         label=_("Peer gateway public IPv4/IPv6 Address or FQDN"),
         help_text=_("Peer gateway public IPv4/IPv6 address or FQDN for "
@@ -447,7 +447,7 @@ class AddIPSecSiteConnectionAction(workflows.Action):
     peer_ep_group_id = forms.ChoiceField(
         required=False,
         label=_("Endpoint Group for remote peer CIDR(s)"),
-        help_text=_("Remote peer CIDR(s) connected to the new IPSec "
+        help_text=_("Remote peer CIDR(s) connected to the new IPsec "
                     "connection."))
     peer_cidrs = forms.MultiIPField(
         required=False,
@@ -466,13 +466,13 @@ class AddIPSecSiteConnectionAction(workflows.Action):
                     "between the two peers of the VPN connection"))
 
     def populate_ikepolicy_id_choices(self, request, context):
-        ikepolicy_id_choices = [('', _("Select IKE Policy"))]
+        ikepolicy_id_choices = [('', _("Select IKE policy"))]
         try:
             tenant_id = self.request.user.tenant_id
             ikepolicies = api_vpn.ikepolicy_list(request, tenant_id=tenant_id)
         except Exception:
             exceptions.handle(request,
-                              _('Unable to retrieve IKE Policies list.'))
+                              _('Unable to retrieve IKE policies list.'))
             ikepolicies = []
         for p in ikepolicies:
             ikepolicy_id_choices.append((p.id, p.name))
@@ -480,14 +480,14 @@ class AddIPSecSiteConnectionAction(workflows.Action):
         return ikepolicy_id_choices
 
     def populate_ipsecpolicy_id_choices(self, request, context):
-        ipsecpolicy_id_choices = [('', _("Select IPSec Policy"))]
+        ipsecpolicy_id_choices = [('', _("Select IPsec Policy"))]
         try:
             tenant_id = self.request.user.tenant_id
             ipsecpolicies = api_vpn.ipsecpolicy_list(request,
                                                      tenant_id=tenant_id)
         except Exception:
             exceptions.handle(request,
-                              _('Unable to retrieve IPSec Policies list.'))
+                              _('Unable to retrieve IPsec policies list.'))
             ipsecpolicies = []
         for p in ipsecpolicies:
             ipsecpolicy_id_choices.append((p.id, p.name))
@@ -495,13 +495,13 @@ class AddIPSecSiteConnectionAction(workflows.Action):
         return ipsecpolicy_id_choices
 
     def populate_vpnservice_id_choices(self, request, context):
-        vpnservice_id_choices = [('', _("Select VPN Service"))]
+        vpnservice_id_choices = [('', _("Select VPN service"))]
         try:
             tenant_id = self.request.user.tenant_id
             vpnservices = api_vpn.vpnservice_list(request, tenant_id=tenant_id)
         except Exception:
             exceptions.handle(request,
-                              _('Unable to retrieve VPN Services list.'))
+                              _('Unable to retrieve VPN services list.'))
             vpnservices = []
         for s in vpnservices:
             vpnservice_id_choices.append((s.id, s.name))
@@ -539,24 +539,24 @@ class AddIPSecSiteConnectionAction(workflows.Action):
         return peer_ep_group_ids
 
     class Meta(object):
-        name = _("Add New IPSec Site Connection")
+        name = _("Add New IPsec Site Connection")
         permissions = ('openstack.services.network',)
-        help_text = _("Create IPSec Site Connection for current "
+        help_text = _("Create IPsec site connection for current "
                       "project. Assign a name and description for the "
-                      "IPSec Site Connection. "
+                      "IPsec site connection. "
                       "All fields in this tab are required."
                       )
 
 
-class AddIPSecSiteConnectionStep(workflows.Step):
-    action_class = AddIPSecSiteConnectionAction
+class AddIPsecSiteConnectionStep(workflows.Step):
+    action_class = AddIPsecSiteConnectionAction
     contributes = ("name", "description",
                    "vpnservice_id", "ikepolicy_id", "ipsecpolicy_id",
                    "peer_address", "peer_id", "peer_cidrs", "psk",
                    "local_ep_group_id", "peer_ep_group_id")
 
 
-class AddIPSecSiteConnectionOptionalAction(workflows.Action):
+class AddIPsecSiteConnectionOptionalAction(workflows.Action):
     mtu = forms.IntegerField(
         min_value=68,
         label=_("Maximum Transmission Unit size for the connection"),
@@ -580,14 +580,14 @@ class AddIPSecSiteConnectionOptionalAction(workflows.Action):
     initiator = forms.ChoiceField(label=_("Initiator state"), required=False)
     admin_state_up = forms.BooleanField(
         label=_("Enable Admin State"),
-        help_text=_("The state of IPSec site connection to start in. "
-                    "If disabled (not checked), IPSec site connection "
+        help_text=_("The state of IPsec site connection to start in. "
+                    "If disabled (not checked), IPsec site connection "
                     "does not forward packets."),
         initial=True,
         required=False)
 
     def __init__(self, request, *args, **kwargs):
-        super(AddIPSecSiteConnectionOptionalAction, self).__init__(
+        super(AddIPsecSiteConnectionOptionalAction, self).__init__(
             request, *args, **kwargs)
 
         initiator_choices = [("bi-directional", "bi-directional"),
@@ -604,7 +604,7 @@ class AddIPSecSiteConnectionOptionalAction(workflows.Action):
         return dpd_action_choices
 
     def clean(self):
-        cleaned_data = super(AddIPSecSiteConnectionOptionalAction,
+        cleaned_data = super(AddIPsecSiteConnectionOptionalAction,
                              self).clean()
         interval = cleaned_data.get('dpd_interval')
         timeout = cleaned_data.get('dpd_timeout')
@@ -619,18 +619,18 @@ class AddIPSecSiteConnectionOptionalAction(workflows.Action):
         permissions = ('openstack.services.network',)
         help_text = _("Fields in this tab are optional. "
                       "You can configure the detail of "
-                      "IPSec site connection created."
+                      "IPsec site connection created."
                       )
 
 
-class AddIPSecSiteConnectionOptionalStep(workflows.Step):
-    action_class = AddIPSecSiteConnectionOptionalAction
+class AddIPsecSiteConnectionOptionalStep(workflows.Step):
+    action_class = AddIPsecSiteConnectionOptionalAction
     contributes = ("dpd_action", "dpd_interval", "dpd_timeout",
                    "initiator", "mtu", "admin_state_up")
 
     def contribute(self, data, context):
         context = super(
-            AddIPSecSiteConnectionOptionalStep, self).contribute(data, context)
+            AddIPsecSiteConnectionOptionalStep, self).contribute(data, context)
         context['dpd'] = {'action': data['dpd_action'],
                           'interval': data['dpd_interval'],
                           'timeout': data['dpd_timeout']}
@@ -646,15 +646,15 @@ class AddIPSecSiteConnectionOptionalStep(workflows.Step):
             return context
 
 
-class AddIPSecSiteConnection(workflows.Workflow):
+class AddIPsecSiteConnection(workflows.Workflow):
     slug = "addipsecsiteconnection"
-    name = _("Add IPSec Site Connection")
+    name = _("Add IPsec Site Connection")
     finalize_button_name = _("Add")
-    success_message = _('Added IPSec Site Connection "%s".')
-    failure_message = _('Unable to add IPSec Site Connection "%s".')
+    success_message = _('Added IPsec site connection "%s".')
+    failure_message = _('Unable to add IPsec site connection "%s".')
     success_url = "horizon:project:vpn:index"
-    default_steps = (AddIPSecSiteConnectionStep,
-                     AddIPSecSiteConnectionOptionalStep)
+    default_steps = (AddIPsecSiteConnectionStep,
+                     AddIPsecSiteConnectionOptionalStep)
 
     def format_status_message(self, message):
         return message % self.context.get('name')

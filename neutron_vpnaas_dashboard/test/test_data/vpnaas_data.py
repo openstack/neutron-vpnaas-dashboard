@@ -32,7 +32,7 @@ def data(TEST):
     TEST.api_ipsecsiteconnections = utils.TestDataContainer()
     TEST.api_endpointgroups = utils.TestDataContainer()
 
-    # 1st VPNService.
+    # 1st VPN service.
     vpnservice_dict = {'id': '09a26949-6231-4f72-942a-0c8c0ddd4d61',
                        'tenant_id': '1',
                        'name': 'cloud_vpn1',
@@ -48,7 +48,7 @@ def data(TEST):
     TEST.api_vpnservices.add(vpnservice_dict)
     TEST.vpnservices.add(vpn.VPNService(vpnservice_dict))
 
-    # 2nd VPNService.
+    # 2nd VPN service.
     vpnservice_dict = {'id': '09a26949-6231-4f72-942a-0c8c0ddd4d62',
                        'tenant_id': '1',
                        'name': 'cloud_vpn2',
@@ -77,7 +77,7 @@ def data(TEST):
     TEST.api_endpointgroups.add(endpointgroup_dict)
     TEST.endpointgroups.add(vpn.EndpointGroup(endpointgroup_dict))
 
-    # 1st IKEPolicy
+    # 1st IKE policy
     ikepolicy_dict = {'id': 'a1f009b7-0ffa-43a7-ba19-dcabb0b4c981',
                       'tenant_id': '1',
                       'name': 'ikepolicy_1',
@@ -92,7 +92,7 @@ def data(TEST):
     TEST.api_ikepolicies.add(ikepolicy_dict)
     TEST.ikepolicies.add(vpn.IKEPolicy(ikepolicy_dict))
 
-    # 2nd IKEPolicy
+    # 2nd IKE policy
     ikepolicy_dict = {'id': 'a1f009b7-0ffa-43a7-ba19-dcabb0b4c982',
                       'tenant_id': '1',
                       'name': 'ikepolicy_2',
@@ -107,7 +107,7 @@ def data(TEST):
     TEST.api_ikepolicies.add(ikepolicy_dict)
     TEST.ikepolicies.add(vpn.IKEPolicy(ikepolicy_dict))
 
-    # 1st IPSecPolicy
+    # 1st IPsec policy
     ipsecpolicy_dict = {'id': '8376e1dd-2b1c-4346-b23c-6989e75ecdb8',
                         'tenant_id': '1',
                         'name': 'ipsecpolicy_1',
@@ -120,9 +120,9 @@ def data(TEST):
                         'transform_protocol': 'esp',
                         'ipsecsiteconns': TEST.ipsecsiteconnections.list()}
     TEST.api_ipsecpolicies.add(ipsecpolicy_dict)
-    TEST.ipsecpolicies.add(vpn.IPSecPolicy(ipsecpolicy_dict))
+    TEST.ipsecpolicies.add(vpn.IPsecPolicy(ipsecpolicy_dict))
 
-    # 2nd IPSecPolicy
+    # 2nd IPsec policy
     ipsecpolicy_dict = {'id': '8376e1dd-2b1c-4346-b23c-6989e75ecdb9',
                         'tenant_id': '1',
                         'name': 'ipsecpolicy_2',
@@ -135,9 +135,9 @@ def data(TEST):
                         'transform_protocol': 'esp',
                         'ipsecsiteconns': []}
     TEST.api_ipsecpolicies.add(ipsecpolicy_dict)
-    TEST.ipsecpolicies.add(vpn.IPSecPolicy(ipsecpolicy_dict))
+    TEST.ipsecpolicies.add(vpn.IPsecPolicy(ipsecpolicy_dict))
 
-    # 1st IPSecSiteConnection
+    # 1st IPsec site connection
     ipsecsiteconnection_dict = {'id': 'dd1dd3a0-f349-49be-b013-245e147763d6',
                                 'tenant_id': '1',
                                 'name': 'ipsec_connection_1',
@@ -160,9 +160,9 @@ def data(TEST):
                                 'status': 'Active'}
     TEST.api_ipsecsiteconnections.add(ipsecsiteconnection_dict)
     TEST.ipsecsiteconnections.add(
-        vpn.IPSecSiteConnection(ipsecsiteconnection_dict))
+        vpn.IPsecSiteConnection(ipsecsiteconnection_dict))
 
-    # 2nd IPSecSiteConnection
+    # 2nd IPsec site connection
     ipsecsiteconnection_dict = {'id': 'dd1dd3a0-f349-49be-b013-245e147763d7',
                                 'tenant_id': '1',
                                 'name': 'ipsec_connection_2',
@@ -183,4 +183,4 @@ def data(TEST):
                                 'status': 'Active'}
     TEST.api_ipsecsiteconnections.add(ipsecsiteconnection_dict)
     TEST.ipsecsiteconnections.add(
-        vpn.IPSecSiteConnection(ipsecsiteconnection_dict))
+        vpn.IPsecSiteConnection(ipsecsiteconnection_dict))

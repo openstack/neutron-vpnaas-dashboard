@@ -226,7 +226,7 @@ class VPNaasApiTests(test.APITestCase):
         self.mox.ReplayAll()
 
         ret_val = api_vpn.ipsecpolicy_create(self.request, **form_data)
-        self.assertIsInstance(ret_val, api_vpn.IPSecPolicy)
+        self.assertIsInstance(ret_val, api_vpn.IPsecPolicy)
 
     @test.create_stubs({neutronclient: ('list_ipsecpolicies',
                                         'list_ipsec_site_connections')})
@@ -244,7 +244,7 @@ class VPNaasApiTests(test.APITestCase):
 
         ret_val = api_vpn.ipsecpolicy_list(self.request)
         for (v, d) in zip(ret_val, ipsecpolicies['ipsecpolicies']):
-            self.assertIsInstance(v, api_vpn.IPSecPolicy)
+            self.assertIsInstance(v, api_vpn.IPsecPolicy)
             self.assertTrue(v.name, d.name)
             self.assertTrue(v.id)
 
@@ -264,7 +264,7 @@ class VPNaasApiTests(test.APITestCase):
         self.mox.ReplayAll()
 
         ret_val = api_vpn.ipsecpolicy_get(self.request, ipsecpolicy.id)
-        self.assertIsInstance(ret_val, api_vpn.IPSecPolicy)
+        self.assertIsInstance(ret_val, api_vpn.IPsecPolicy)
 
     @test.create_stubs({neutronclient: ('create_ipsec_site_connection',)})
     def test_ipsecsiteconnection_create(self):
@@ -294,7 +294,7 @@ class VPNaasApiTests(test.APITestCase):
 
         ret_val = api_vpn.ipsecsiteconnection_create(
             self.request, **form_data)
-        self.assertIsInstance(ret_val, api_vpn.IPSecSiteConnection)
+        self.assertIsInstance(ret_val, api_vpn.IPsecSiteConnection)
 
     @test.create_stubs({neutronclient: ('list_ipsec_site_connections',
                                         'list_ikepolicies',
@@ -320,7 +320,7 @@ class VPNaasApiTests(test.APITestCase):
         ret_val = api_vpn.ipsecsiteconnection_list(self.request)
         for (v, d) in zip(ret_val,
                           ipsecsiteconnections['ipsec_site_connections']):
-            self.assertIsInstance(v, api_vpn.IPSecSiteConnection)
+            self.assertIsInstance(v, api_vpn.IPsecSiteConnection)
             self.assertTrue(v.name, d.name)
             self.assertTrue(v.id)
 
@@ -348,4 +348,4 @@ class VPNaasApiTests(test.APITestCase):
 
         ret_val = api_vpn.ipsecsiteconnection_get(self.request,
                                                   ipsecsiteconnection.id)
-        self.assertIsInstance(ret_val, api_vpn.IPSecSiteConnection)
+        self.assertIsInstance(ret_val, api_vpn.IPsecSiteConnection)

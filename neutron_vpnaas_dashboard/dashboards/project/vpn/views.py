@@ -43,16 +43,16 @@ class AddEndpointGroupView(horizon_workflows.WorkflowView):
     workflow_class = workflows.AddEndpointGroup
 
 
-class AddIPSecSiteConnectionView(horizon_workflows.WorkflowView):
-    workflow_class = workflows.AddIPSecSiteConnection
+class AddIPsecSiteConnectionView(horizon_workflows.WorkflowView):
+    workflow_class = workflows.AddIPsecSiteConnection
 
 
 class AddIKEPolicyView(horizon_workflows.WorkflowView):
     workflow_class = workflows.AddIKEPolicy
 
 
-class AddIPSecPolicyView(horizon_workflows.WorkflowView):
-    workflow_class = workflows.AddIPSecPolicy
+class AddIPsecPolicyView(horizon_workflows.WorkflowView):
+    workflow_class = workflows.AddIPsecPolicy
 
 
 class IKEPolicyDetailsView(horizon_tabs.TabView):
@@ -66,7 +66,7 @@ class IKEPolicyDetailsView(horizon_tabs.TabView):
         try:
             return api_vpn.ikepolicy_get(self.request, pid)
         except Exception:
-            msg = _('Unable to retrieve IKE Policy details.')
+            msg = _('Unable to retrieve IKE policy details.')
             exceptions.handle(self.request, msg,
                               redirect=self.get_redirect_url())
 
@@ -88,8 +88,8 @@ class IKEPolicyDetailsView(horizon_tabs.TabView):
         return reverse_lazy('horizon:project:vpn:index')
 
 
-class IPSecPolicyDetailsView(horizon_tabs.TabView):
-    tab_group_class = tabs.IPSecPolicyDetailsTabs
+class IPsecPolicyDetailsView(horizon_tabs.TabView):
+    tab_group_class = tabs.IPsecPolicyDetailsTabs
     template_name = 'horizon/common/_detail.html'
     page_title = "{{ ipsecpolicy.name|default:ipsecpolicy.id }}"
 
@@ -99,15 +99,15 @@ class IPSecPolicyDetailsView(horizon_tabs.TabView):
         try:
             return api_vpn.ipsecpolicy_get(self.request, pid)
         except Exception:
-            msg = _('Unable to retrieve IPSec Policy details.')
+            msg = _('Unable to retrieve IPsec policy details.')
             exceptions.handle(self.request, msg,
                               redirect=self.get_redirect_url())
 
     def get_context_data(self, **kwargs):
-        context = super(IPSecPolicyDetailsView, self).get_context_data(
+        context = super(IPsecPolicyDetailsView, self).get_context_data(
             **kwargs)
         ipsecpolicy = self.get_data()
-        table = tables.IPSecPoliciesTable(self.request)
+        table = tables.IPsecPoliciesTable(self.request)
         context["ipsecpolicy"] = ipsecpolicy
         context["url"] = self.get_redirect_url()
         context["actions"] = table.render_row_actions(ipsecpolicy)
@@ -135,7 +135,7 @@ class VPNServiceDetailsView(horizon_tabs.TabView):
             vpnservice = api_vpn.vpnservice_get(self.request, sid)
         except Exception:
             vpnservice = []
-            msg = _('Unable to retrieve VPN Service details.')
+            msg = _('Unable to retrieve VPN service details.')
             exceptions.handle(self.request, msg,
                               redirect=self.get_redirect_url())
         try:
@@ -209,8 +209,8 @@ class EndpointGroupDetailsView(horizon_tabs.TabView):
         return reverse('horizon:project:vpn:index')
 
 
-class IPSecSiteConnectionDetailsView(horizon_tabs.TabView):
-    tab_group_class = tabs.IPSecSiteConnectionDetailsTabs
+class IPsecSiteConnectionDetailsView(horizon_tabs.TabView):
+    tab_group_class = tabs.IPsecSiteConnectionDetailsTabs
     template_name = 'horizon/common/_detail.html'
     page_title = "{{ ipsecsiteconnection.name|default:ipsecsiteconnection.id}}"
 
@@ -220,15 +220,15 @@ class IPSecSiteConnectionDetailsView(horizon_tabs.TabView):
         try:
             return api_vpn.ipsecsiteconnection_get(self.request, cid)
         except Exception:
-            msg = _('Unable to retrieve IPSec Site Connection details.')
+            msg = _('Unable to retrieve IPsec site connection details.')
             exceptions.handle(self.request, msg,
                               redirect=self.get_redirect_url())
 
     def get_context_data(self, **kwargs):
-        context = super(IPSecSiteConnectionDetailsView, self).get_context_data(
+        context = super(IPsecSiteConnectionDetailsView, self).get_context_data(
             **kwargs)
         ipsecsiteconnection = self.get_data()
-        table = tables.IPSecSiteConnectionsTable(self.request)
+        table = tables.IPsecSiteConnectionsTable(self.request)
         context["ipsecsiteconnection"] = ipsecsiteconnection
         context["url"] = self.get_redirect_url()
         context["actions"] = table.render_row_actions(ipsecsiteconnection)
@@ -269,7 +269,7 @@ class UpdateVPNServiceView(horizon_forms.ModalFormView):
             return api_vpn.vpnservice_get(self.request, vpnservice_id)
         except Exception as e:
             redirect = self.success_url
-            msg = _('Unable to retrieve VPN Service details. %s') % e
+            msg = _('Unable to retrieve VPN service details. %s') % e
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
@@ -339,7 +339,7 @@ class UpdateIKEPolicyView(horizon_forms.ModalFormView):
             return api_vpn.ikepolicy_get(self.request, ikepolicy_id)
         except Exception as e:
             redirect = self.success_url
-            msg = _('Unable to retrieve IKE Policy details. %s') % e
+            msg = _('Unable to retrieve IKE policy details. %s') % e
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
@@ -357,18 +357,18 @@ class UpdateIKEPolicyView(horizon_forms.ModalFormView):
                     'phase1_negotiation_mode']}
 
 
-class UpdateIPSecPolicyView(horizon_forms.ModalFormView):
-    form_class = forms.UpdateIPSecPolicy
+class UpdateIPsecPolicyView(horizon_forms.ModalFormView):
+    form_class = forms.UpdateIPsecPolicy
     form_id = "update_ipsecpolicy_form"
     template_name = "project/vpn/update_ipsecpolicy.html"
     context_object_name = 'ipsecpolicy'
     submit_label = _("Save Changes")
     submit_url = "horizon:project:vpn:update_ipsecpolicy"
     success_url = reverse_lazy("horizon:project:vpn:index")
-    page_title = _("Edit IPSec Policy")
+    page_title = _("Edit IPsec Policy")
 
     def get_context_data(self, **kwargs):
-        context = super(UpdateIPSecPolicyView, self).get_context_data(**kwargs)
+        context = super(UpdateIPsecPolicyView, self).get_context_data(**kwargs)
         context["ipsecpolicy_id"] = self.kwargs['ipsecpolicy_id']
         args = (self.kwargs['ipsecpolicy_id'],)
         context['submit_url'] = reverse(self.submit_url, args=args)
@@ -381,7 +381,7 @@ class UpdateIPSecPolicyView(horizon_forms.ModalFormView):
             return api_vpn.ipsecpolicy_get(self.request, ipsecpolicy_id)
         except Exception as e:
             redirect = self.success_url
-            msg = _('Unable to retrieve IPSec Policy details. %s') % e
+            msg = _('Unable to retrieve IPsec policy details. %s') % e
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
@@ -398,19 +398,19 @@ class UpdateIPSecPolicyView(horizon_forms.ModalFormView):
                 'transform_protocol': ipsecpolicy['transform_protocol']}
 
 
-class UpdateIPSecSiteConnectionView(horizon_forms.ModalFormView):
-    form_class = forms.UpdateIPSecSiteConnection
+class UpdateIPsecSiteConnectionView(horizon_forms.ModalFormView):
+    form_class = forms.UpdateIPsecSiteConnection
     form_id = "update_ipsecsiteconnection_form"
     template_name = "project/vpn/update_ipsecsiteconnection.html"
     context_object_name = 'ipsecsiteconnection'
     submit_label = _("Save Changes")
     submit_url = "horizon:project:vpn:update_ipsecsiteconnection"
     success_url = reverse_lazy("horizon:project:vpn:index")
-    page_title = _("Edit IPSec Site Connection")
+    page_title = _("Edit IPsec Site Connection")
 
     def get_context_data(self, **kwargs):
         context = super(
-            UpdateIPSecSiteConnectionView, self).get_context_data(**kwargs)
+            UpdateIPsecSiteConnectionView, self).get_context_data(**kwargs)
         context["ipsecsiteconnection_id"] = self.kwargs[
             'ipsecsiteconnection_id']
         args = (self.kwargs['ipsecsiteconnection_id'],)
@@ -424,7 +424,7 @@ class UpdateIPSecSiteConnectionView(horizon_forms.ModalFormView):
             return api_vpn.ipsecsiteconnection_get(self.request, connection_id)
         except Exception as e:
             redirect = self.success_url
-            msg = _('Unable to retrieve IPSec Site Connection details. %s') % e
+            msg = _('Unable to retrieve IPsec site connection details. %s') % e
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):

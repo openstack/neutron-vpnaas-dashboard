@@ -461,9 +461,9 @@ class VPNTests(test.TestCase):
 
         workflow = res.context['workflow']
         self.assertTemplateUsed(res, views.WorkflowView.template_name)
-        self.assertEqual(workflow.name, workflows.AddIPSecPolicy.name)
+        self.assertEqual(workflow.name, workflows.AddIPsecPolicy.name)
 
-        expected_objs = ['<AddIPSecPolicyStep: addipsecpolicyaction>', ]
+        expected_objs = ['<AddIPsecPolicyStep: addipsecpolicyaction>', ]
         self.assertQuerysetEqual(workflow.steps, expected_objs)
 
     @test.create_stubs({api_vpn: ('ipsecpolicy_create', )})
@@ -536,11 +536,11 @@ class VPNTests(test.TestCase):
 
         workflow = res.context['workflow']
         self.assertTemplateUsed(res, views.WorkflowView.template_name)
-        self.assertEqual(workflow.name, workflows.AddIPSecSiteConnection.name)
+        self.assertEqual(workflow.name, workflows.AddIPsecSiteConnection.name)
 
-        expected_objs = ['<AddIPSecSiteConnectionStep: '
+        expected_objs = ['<AddIPsecSiteConnectionStep: '
                          'addipsecsiteconnectionaction>',
-                         '<AddIPSecSiteConnectionOptionalStep: '
+                         '<AddIPsecSiteConnectionOptionalStep: '
                          'addipsecsiteconnectionoptionalaction>', ]
         self.assertQuerysetEqual(workflow.steps, expected_objs)
 

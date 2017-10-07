@@ -24,9 +24,9 @@ from neutron_vpnaas_dashboard.api import vpn as api_vpn
 from neutron_vpnaas_dashboard.dashboards.project.vpn import tables
 
 
-class IPSecSiteConnectionsTab(tabs.TableTab, htables.DataTableView):
-    table_classes = (tables.IPSecSiteConnectionsTable,)
-    name = _("IPSec Site Connections")
+class IPsecSiteConnectionsTab(tabs.TableTab, htables.DataTableView):
+    table_classes = (tables.IPsecSiteConnectionsTable,)
+    name = _("IPsec Site Connections")
     slug = "ipsecsiteconnections"
     template_name = ("horizon/common/_detail_table.html")
     FILTERS_MAPPING = {'admin_state_up': {_("up"): True, _("down"): False}}
@@ -59,7 +59,7 @@ class IPSecSiteConnectionsTab(tabs.TableTab, htables.DataTableView):
             ipsecsiteconnections = []
             exceptions.handle(
                 self.tab_group.request,
-                _('Unable to retrieve IPSec Site Connections list.'))
+                _('Unable to retrieve IPsec site connections list.'))
         return ipsecsiteconnections
 
     def get_filters(self):
@@ -67,7 +67,7 @@ class IPSecSiteConnectionsTab(tabs.TableTab, htables.DataTableView):
         self.handle_server_filter(self.request, table=self.table)
         self.update_server_filter_action(self.request, table=self.table)
 
-        return super(IPSecSiteConnectionsTab,
+        return super(IPsecSiteConnectionsTab,
                      self).get_filters(filters_map=self.FILTERS_MAPPING)
 
 
@@ -103,7 +103,7 @@ class VPNServicesTab(tabs.TableTab, htables.DataTableView):
         except Exception:
             vpnservices = []
             exceptions.handle(self.tab_group.request,
-                              _('Unable to retrieve VPN Services list.'))
+                              _('Unable to retrieve VPN services list.'))
         return vpnservices
 
     def get_filters(self):
@@ -155,7 +155,7 @@ class IKEPoliciesTab(tabs.TableTab, htables.DataTableView):
         except Exception:
             ikepolicies = []
             exceptions.handle(self.tab_group.request,
-                              _('Unable to retrieve IKE Policies list.'))
+                              _('Unable to retrieve IKE policies list.'))
         return ikepolicies
 
     def get_filters(self):
@@ -166,9 +166,9 @@ class IKEPoliciesTab(tabs.TableTab, htables.DataTableView):
         return super(IKEPoliciesTab, self).get_filters()
 
 
-class IPSecPoliciesTab(tabs.TableTab, htables.DataTableView):
-    table_classes = (tables.IPSecPoliciesTable,)
-    name = _("IPSec Policies")
+class IPsecPoliciesTab(tabs.TableTab, htables.DataTableView):
+    table_classes = (tables.IPsecPoliciesTable,)
+    name = _("IPsec Policies")
     slug = "ipsecpolicies"
     template_name = ("horizon/common/_detail_table.html")
 
@@ -181,7 +181,7 @@ class IPSecPoliciesTab(tabs.TableTab, htables.DataTableView):
         except Exception:
             ipsecpolicies = []
             exceptions.handle(self.tab_group.request,
-                              _('Unable to retrieve IPSec Policies list.'))
+                              _('Unable to retrieve IPsec policy list.'))
         return ipsecpolicies
 
     def get_filters(self):
@@ -189,14 +189,14 @@ class IPSecPoliciesTab(tabs.TableTab, htables.DataTableView):
         self.handle_server_filter(self.request, table=self.table)
         self.update_server_filter_action(self.request, table=self.table)
 
-        return super(IPSecPoliciesTab, self).get_filters()
+        return super(IPsecPoliciesTab, self).get_filters()
 
 
 class VPNTabs(tabs.TabGroup):
     slug = "vpntabs"
-    tabs = (IKEPoliciesTab, IPSecPoliciesTab,
+    tabs = (IKEPoliciesTab, IPsecPoliciesTab,
             VPNServicesTab, EndpointGroupTab,
-            IPSecSiteConnectionsTab,)
+            IPsecSiteConnectionsTab,)
     sticky = True
 
 
@@ -215,8 +215,8 @@ class IKEPolicyDetailsTabs(tabs.TabGroup):
     tabs = (IKEPolicyDetailsTab,)
 
 
-class IPSecPolicyDetailsTab(tabs.Tab):
-    name = _("IPSec Policy Details")
+class IPsecPolicyDetailsTab(tabs.Tab):
+    name = _("IPsec Policy Details")
     slug = "ipsecpolicydetails"
     template_name = "project/vpn/_ipsecpolicy_details.html"
 
@@ -225,9 +225,9 @@ class IPSecPolicyDetailsTab(tabs.Tab):
         return {'ipsecpolicy': ipsecpolicy}
 
 
-class IPSecPolicyDetailsTabs(tabs.TabGroup):
+class IPsecPolicyDetailsTabs(tabs.TabGroup):
     slug = "ipsecpolicytabs"
-    tabs = (IPSecPolicyDetailsTab,)
+    tabs = (IPsecPolicyDetailsTab,)
 
 
 class VPNServiceDetailsTab(tabs.Tab):
@@ -260,8 +260,8 @@ class EndpointGroupDetailsTabs(tabs.TabGroup):
     tabs = (EndpointGroupDetailsTab,)
 
 
-class IPSecSiteConnectionDetailsTab(tabs.Tab):
-    name = _("IPSec Site Connection Details")
+class IPsecSiteConnectionDetailsTab(tabs.Tab):
+    name = _("IPsec Site Connection Details")
     slug = "ipsecsiteconnectiondetails"
     template_name = "project/vpn/_ipsecsiteconnection_details.html"
 
@@ -270,6 +270,6 @@ class IPSecSiteConnectionDetailsTab(tabs.Tab):
         return {'ipsecsiteconnection': ipsecsiteconnection}
 
 
-class IPSecSiteConnectionDetailsTabs(tabs.TabGroup):
+class IPsecSiteConnectionDetailsTabs(tabs.TabGroup):
     slug = "ipsecsiteconnectiontabs"
-    tabs = (IPSecSiteConnectionDetailsTab,)
+    tabs = (IPsecSiteConnectionDetailsTab,)
