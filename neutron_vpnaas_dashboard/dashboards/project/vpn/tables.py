@@ -370,7 +370,6 @@ class IPSSCFilterAction(tables.FilterAction):
 
 
 class IPsecSiteConnectionsTable(tables.DataTable):
-    id = tables.Column('id', hidden=True)
     name = tables.Column('name_or_id', verbose_name=_('Name'),
                          link="horizon:project:vpn:ipsecsiteconnectiondetails")
     description = tables.Column('description', verbose_name=_('Description'))
@@ -439,7 +438,6 @@ class VPNServicesFilterAction(tables.FilterAction):
 
 
 class VPNServicesTable(tables.DataTable):
-    id = tables.Column('id', hidden=True)
     name = tables.Column("name_or_id", verbose_name=_('Name'),
                          link="horizon:project:vpn:vpnservicedetails")
     description = tables.Column('description', verbose_name=_('Description'))
@@ -482,7 +480,6 @@ def _get_endpoints(epg):
 
 
 class EndpointGroupTable(tables.DataTable):
-    id = tables.Column('id', hidden=True)
     name = tables.Column("name_or_id", verbose_name=_('Name'),
                          link="horizon:project:vpn:endpointgroupdetails")
     description = tables.Column('description', verbose_name=_('Description'))
@@ -513,7 +510,6 @@ class PoliciesFilterAction(tables.FilterAction):
 
 
 class IKEPoliciesTable(tables.DataTable):
-    id = tables.Column('id', hidden=True)
     name = tables.Column("name_or_id", verbose_name=_('Name'),
                          link="horizon:project:vpn:ikepolicydetails")
     description = tables.Column('description', verbose_name=_('Description'))
@@ -537,7 +533,6 @@ class IKEPoliciesTable(tables.DataTable):
 
 
 class IPsecPoliciesTable(tables.DataTable):
-    id = tables.Column('id', hidden=True)
     name = tables.Column("name_or_id", verbose_name=_('Name'),
                          link="horizon:project:vpn:ipsecpolicydetails")
     description = tables.Column('description', verbose_name=_('Description'))

@@ -29,9 +29,6 @@ LOG = logging.getLogger(__name__)
 
 class UpdateVPNService(forms.SelfHandlingForm):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
-    vpnservice_id = forms.CharField(
-        label=_("ID"),
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}))
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
     admin_state_up = forms.BooleanField(label=_("Enable Admin State"),
@@ -46,14 +43,14 @@ class UpdateVPNService(forms.SelfHandlingForm):
                                    'admin_state_up': context['admin_state_up'],
                                    }}
             vpnservice = api_vpn.vpnservice_update(
-                request, context['vpnservice_id'], **data)
+                request, self.initial['vpnservice_id'], **data)
             msg = (_('VPN service %s was successfully updated.')
                    % context['name'])
             messages.success(request, msg)
             return vpnservice
         except Exception as e:
             LOG.info('Failed to update VPN service %(id)s: %(exc)s',
-                     {'id': context['vpnservice_id'], 'exc': e})
+                     {'id': self.initial['vpnservice_id'], 'exc': e})
             msg = _('Failed to update VPN service %s') % context['name']
             redirect = reverse(self.failure_url)
             exceptions.handle(request, msg, redirect=redirect)
@@ -64,9 +61,6 @@ class UpdateEndpointGroup(forms.SelfHandlingForm):
         max_length=80,
         label=_("Name"),
         required=False)
-    endpoint_group_id = forms.CharField(
-        label=_("ID"),
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}))
     description = forms.CharField(
         required=False,
         max_length=80,
@@ -81,14 +75,14 @@ class UpdateEndpointGroup(forms.SelfHandlingForm):
                      'description': context['description']}
                     }
             endpointgroup = api_vpn.endpointgroup_update(
-                request, context['endpoint_group_id'], **data)
+                request, self.initial['endpoint_group_id'], **data)
             msg = (_('Endpoint Group %s was successfully updated.')
                    % context['name'])
             messages.success(request, msg)
             return endpointgroup
         except Exception as e:
             LOG.info('Failed to update Endpint Group %(id)s: %(exc)s',
-                     {'id': context['endpoint_group_id'], 'exc': e})
+                     {'id': self.initial['endpoint_group_id'], 'exc': e})
             msg = _('Failed to update Endpint Group %s') % context['name']
             redirect = reverse(self.failure_url)
             exceptions.handle(request, msg, redirect=redirect)
@@ -96,9 +90,6 @@ class UpdateEndpointGroup(forms.SelfHandlingForm):
 
 class UpdateIKEPolicy(forms.SelfHandlingForm):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
-    ikepolicy_id = forms.CharField(
-        label=_("ID"),
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}))
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
     # Currently this field has only one choice, so mark it as readonly.
@@ -160,14 +151,14 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
                      context['phase1_negotiation_mode'],
                      }}
             ikepolicy = api_vpn.ikepolicy_update(
-                request, context['ikepolicy_id'], **data)
+                request, self.initial['ikepolicy_id'], **data)
             msg = (_('IKE policy %s was successfully updated.')
                    % context['name'])
             messages.success(request, msg)
             return ikepolicy
         except Exception as e:
             LOG.info('Failed to update IKE policy %(id)s: %(exc)s',
-                     {'id': context['ikepolicy_id'], 'exc': e})
+                     {'id': self.initial['ikepolicy_id'], 'exc': e})
             msg = _('Failed to update IKE policy %s') % context['name']
             redirect = reverse(self.failure_url)
             exceptions.handle(request, msg, redirect=redirect)
@@ -175,9 +166,6 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
 
 class UpdateIPsecPolicy(forms.SelfHandlingForm):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
-    ipsecpolicy_id = forms.CharField(
-        label=_("ID"),
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}))
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
     # Currently this field has only one choice, so mark it as readonly.
@@ -238,14 +226,14 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
                      'transform_protocol': context['transform_protocol'],
                      }}
             ipsecpolicy = api_vpn.ipsecpolicy_update(
-                request, context['ipsecpolicy_id'], **data)
+                request, self.initial['ipsecpolicy_id'], **data)
             msg = (_('IPsec policy %s was successfully updated.')
                    % context['name'])
             messages.success(request, msg)
             return ipsecpolicy
         except Exception as e:
             LOG.info('Failed to update IPsec policy %(id)s: %(exc)s',
-                     {'id': context['ipsecpolicy_id'], 'exc': e})
+                     {'id': self.initial['ipsecpolicy_id'], 'exc': e})
             msg = _('Failed to update IPsec policy %s') % context['name']
             redirect = reverse(self.failure_url)
             exceptions.handle(request, msg, redirect=redirect)
@@ -253,9 +241,6 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
 
 class UpdateIPsecSiteConnection(forms.SelfHandlingForm):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
-    ipsecsiteconnection_id = forms.CharField(
-        label=_("ID"),
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}))
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
     peer_address = forms.IPField(
@@ -360,7 +345,7 @@ class UpdateIPsecSiteConnection(forms.SelfHandlingForm):
                 data['peer_cidrs'] = [cidr.strip() for cidr in cidrs.split(',')
                                       if cidr.strip()]
             ipsecsiteconnection = api_vpn.ipsecsiteconnection_update(
-                request, context['ipsecsiteconnection_id'],
+                request, self.initial['ipsecsiteconnection_id'],
                 ipsec_site_connection=data)
             msg = (_('IPsec site connection %s was successfully updated.')
                    % context['name'])
@@ -368,7 +353,7 @@ class UpdateIPsecSiteConnection(forms.SelfHandlingForm):
             return ipsecsiteconnection
         except Exception as e:
             LOG.info('Failed to update IPsec site connection %(id)s: %(exc)s',
-                     {'id': context['ipsecsiteconnection_id'], 'exc': e})
+                     {'id': self.initial['ipsecsiteconnection_id'], 'exc': e})
             msg = (_('Failed to update IPsec site connection %s')
                    % context['name'])
             redirect = reverse(self.failure_url)
