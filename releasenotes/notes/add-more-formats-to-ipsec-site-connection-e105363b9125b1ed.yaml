@@ -1,0 +1,6 @@
+---
+fixes:
+  - |
+    Add support the attributes of IPsec site connection to be able to get
+    more formats like FQDN other than IP format. For more information, see
+    bug `1261127 <https://launchpad.net/bugs/1261127>`_.
