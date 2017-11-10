@@ -85,7 +85,7 @@ class IKEPolicyDetailsView(horizon_tabs.TabView):
 
     @staticmethod
     def get_redirect_url():
-        return reverse_lazy('horizon:project:vpn:index')
+        return reverse('horizon:project:vpn:index')
 
 
 class IPsecPolicyDetailsView(horizon_tabs.TabView):
@@ -119,7 +119,7 @@ class IPsecPolicyDetailsView(horizon_tabs.TabView):
 
     @staticmethod
     def get_redirect_url():
-        return reverse_lazy('horizon:project:vpn:index')
+        return reverse('horizon:project:vpn:index')
 
 
 class VPNServiceDetailsView(horizon_tabs.TabView):
@@ -162,7 +162,7 @@ class VPNServiceDetailsView(horizon_tabs.TabView):
 
     @staticmethod
     def get_redirect_url():
-        return reverse_lazy('horizon:project:vpn:index')
+        return reverse('horizon:project:vpn:index')
 
 
 class EndpointGroupDetailsView(horizon_tabs.TabView):
@@ -242,7 +242,7 @@ class IPsecSiteConnectionDetailsView(horizon_tabs.TabView):
 
     @staticmethod
     def get_redirect_url():
-        return reverse_lazy('horizon:project:vpn:index')
+        return reverse('horizon:project:vpn:index')
 
 
 class UpdateVPNServiceView(horizon_forms.ModalFormView):
