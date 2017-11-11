@@ -448,10 +448,7 @@ class VPNServicesTable(tables.DataTable):
     subnet_name = tables.Column(get_subnet_name, verbose_name=_('Subnet'))
     router_name = tables.Column('router_name', verbose_name=_('Router'))
     status = tables.Column("status",
-                           verbose_name=_("Status"),
-                           status=True,
-                           status_choices=STATUS_CHOICES,
-                           display_choices=STATUS_DISPLAY_CHOICES)
+                           verbose_name=_("Status"))
 
     def get_object_display(self, vpnservice):
         return vpnservice.name_or_id
