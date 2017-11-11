@@ -432,18 +432,14 @@ class AddIPsecSiteConnectionAction(workflows.Action):
         label=_("IKE policy associated with this connection"))
     ipsecpolicy_id = forms.ChoiceField(
         label=_("IPsec policy associated with this connection"))
-    peer_address = forms.IPField(
+    peer_address = forms.CharField(
         label=_("Peer gateway public IPv4/IPv6 Address or FQDN"),
         help_text=_("Peer gateway public IPv4/IPv6 address or FQDN for "
-                    "the VPN Connection"),
-        version=forms.IPv4 | forms.IPv6,
-        mask=False)
-    peer_id = forms.IPField(
+                    "the VPN Connection"),)
+    peer_id = forms.CharField(
         label=_("Peer router identity for authentication (Peer ID)"),
         help_text=_("Peer router identity for authentication. "
-                    "Can be IPv4/IPv6 address, e-mail, key ID, or FQDN"),
-        version=forms.IPv4 | forms.IPv6,
-        mask=False)
+                    "Can be IPv4/IPv6 address, e-mail, key ID, or FQDN"),)
     peer_ep_group_id = forms.ChoiceField(
         required=False,
         label=_("Endpoint Group for remote peer CIDR(s)"),

@@ -243,18 +243,14 @@ class UpdateIPsecSiteConnection(forms.SelfHandlingForm):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
-    peer_address = forms.IPField(
+    peer_address = forms.CharField(
         label=_("Peer gateway public IPv4/IPv6 Address or FQDN"),
         help_text=_("Peer gateway public IPv4/IPv6 address or FQDN for "
-                    "the VPN Connection"),
-        version=forms.IPv4 | forms.IPv6,
-        mask=False)
-    peer_id = forms.IPField(
+                    "the VPN Connection"),)
+    peer_id = forms.CharField(
         label=_("Peer router identity for authentication (Peer ID)"),
         help_text=_("Peer router identity for authentication. "
-                    "Can be IPv4/IPv6 address, e-mail, key ID, or FQDN"),
-        version=forms.IPv4 | forms.IPv6,
-        mask=False)
+                    "Can be IPv4/IPv6 address, e-mail, key ID, or FQDN"),)
     peer_cidrs = forms.MultiIPField(
         required=False,
         label=_("Remote peer subnet(s)"),
