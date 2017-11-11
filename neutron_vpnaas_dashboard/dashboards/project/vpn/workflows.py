@@ -28,8 +28,8 @@ class AddVPNServiceAction(workflows.Action):
     description = forms.CharField(
         initial="", required=False,
         max_length=80, label=_("Description"))
-    router_id = forms.ChoiceField(label=_("Router"))
-    subnet_id = forms.ChoiceField(
+    router_id = forms.ThemableChoiceField(label=_("Router"))
+    subnet_id = forms.ThemableChoiceField(
         label=_("Subnet"),
         help_text=_("Optional. No need to be specified "
                     "when you use endpoint groups."),
@@ -218,20 +218,26 @@ class AddIKEPolicyAction(workflows.Action):
     description = forms.CharField(
         initial="", required=False,
         max_length=80, label=_("Description"))
-    auth_algorithm = forms.ChoiceField(label=_("Authorization algorithm"),
-                                       required=False)
-    encryption_algorithm = forms.ChoiceField(label=_("Encryption algorithm"),
-                                             required=False)
-    ike_version = forms.ChoiceField(label=_("IKE version"), required=False)
-    lifetime_units = forms.ChoiceField(label=_("Lifetime units for IKE keys"),
-                                       required=False)
+    auth_algorithm = forms.ThemableChoiceField(
+        label=_("Authorization algorithm"),
+        required=False)
+    encryption_algorithm = forms.ThemableChoiceField(
+        label=_("Encryption algorithm"),
+        required=False)
+    ike_version = forms.ThemableChoiceField(
+        label=_("IKE version"),
+        required=False)
+    lifetime_units = forms.ThemableChoiceField(
+        label=_("Lifetime units for IKE keys"),
+        required=False)
     lifetime_value = forms.IntegerField(
         min_value=60, label=_("Lifetime value for IKE keys"),
         initial=3600,
         help_text=_("Equal to or greater than 60"),
         required=False)
-    pfs = forms.ChoiceField(label=_("Perfect Forward Secrecy"), required=False)
-    phase1_negotiation_mode = forms.ChoiceField(
+    pfs = forms.ThemableChoiceField(
+        label=_("Perfect Forward Secrecy"), required=False)
+    phase1_negotiation_mode = forms.ThemableChoiceField(
         label=_("IKE Phase1 negotiation mode"), required=False)
 
     def __init__(self, request, *args, **kwargs):
@@ -319,22 +325,23 @@ class AddIPsecPolicyAction(workflows.Action):
     description = forms.CharField(
         initial="", required=False,
         max_length=80, label=_("Description"))
-    auth_algorithm = forms.ChoiceField(label=_("Authorization algorithm"),
-                                       required=False)
-    encapsulation_mode = forms.ChoiceField(label=_("Encapsulation mode"),
-                                           required=False)
-    encryption_algorithm = forms.ChoiceField(label=_("Encryption algorithm"),
-                                             required=False)
-    lifetime_units = forms.ChoiceField(label=_("Lifetime units"),
-                                       required=False)
+    auth_algorithm = forms.ThemableChoiceField(
+        label=_("Authorization algorithm"), required=False)
+    encapsulation_mode = forms.ThemableChoiceField(
+        label=_("Encapsulation mode"), required=False)
+    encryption_algorithm = forms.ThemableChoiceField(
+        label=_("Encryption algorithm"), required=False)
+    lifetime_units = forms.ThemableChoiceField(
+        label=_("Lifetime units"), required=False)
     lifetime_value = forms.IntegerField(
         min_value=60, label=_("Lifetime value for IKE keys "),
         initial=3600,
         help_text=_("Equal to or greater than 60"),
         required=False)
-    pfs = forms.ChoiceField(label=_("Perfect Forward Secrecy"), required=False)
-    transform_protocol = forms.ChoiceField(label=_("Transform Protocol"),
-                                           required=False)
+    pfs = forms.ThemableChoiceField(
+        label=_("Perfect Forward Secrecy"), required=False)
+    transform_protocol = forms.ThemableChoiceField(
+        label=_("Transform Protocol"), required=False)
 
     def __init__(self, request, *args, **kwargs):
         super(AddIPsecPolicyAction, self).__init__(request, *args, **kwargs)
@@ -420,17 +427,17 @@ class AddIPsecSiteConnectionAction(workflows.Action):
     description = forms.CharField(
         initial="", required=False,
         max_length=80, label=_("Description"))
-    vpnservice_id = forms.ChoiceField(
+    vpnservice_id = forms.ThemableChoiceField(
         label=_("VPN service associated with this connection"))
-    local_ep_group_id = forms.ChoiceField(
+    local_ep_group_id = forms.ThemableChoiceField(
         required=False,
         label=_("Endpoint Group for local subnet(s)"),
         help_text=_("Local subnets which the new IPsec connection is "
                     "connected to. Required if no subnet is specified "
                     "in a VPN service selected."))
-    ikepolicy_id = forms.ChoiceField(
+    ikepolicy_id = forms.ThemableChoiceField(
         label=_("IKE policy associated with this connection"))
-    ipsecpolicy_id = forms.ChoiceField(
+    ipsecpolicy_id = forms.ThemableChoiceField(
         label=_("IPsec policy associated with this connection"))
     peer_address = forms.CharField(
         label=_("Peer gateway public IPv4/IPv6 Address or FQDN"),
@@ -440,7 +447,7 @@ class AddIPsecSiteConnectionAction(workflows.Action):
         label=_("Peer router identity for authentication (Peer ID)"),
         help_text=_("Peer router identity for authentication. "
                     "Can be IPv4/IPv6 address, e-mail, key ID, or FQDN"),)
-    peer_ep_group_id = forms.ChoiceField(
+    peer_ep_group_id = forms.ThemableChoiceField(
         required=False,
         label=_("Endpoint Group for remote peer CIDR(s)"),
         help_text=_("Remote peer CIDR(s) connected to the new IPsec "
@@ -561,8 +568,9 @@ class AddIPsecSiteConnectionOptionalAction(workflows.Action):
         help_text=_("Equal to or greater than 68 if the local subnet is IPv4. "
                     "Equal to or greater than 1280 if the local subnet "
                     "is IPv6."))
-    dpd_action = forms.ChoiceField(label=_("Dead peer detection actions"),
-                                   required=False)
+    dpd_action = forms.ThemableChoiceField(
+        label=_("Dead peer detection actions"),
+        required=False)
     dpd_interval = forms.IntegerField(
         min_value=1, label=_("Dead peer detection interval"),
         initial=30,
@@ -573,7 +581,8 @@ class AddIPsecSiteConnectionOptionalAction(workflows.Action):
         initial=120,
         required=False,
         help_text=_("Valid integer greater than the DPD interval"))
-    initiator = forms.ChoiceField(label=_("Initiator state"), required=False)
+    initiator = forms.ThemableChoiceField(
+        label=_("Initiator state"), required=False)
     admin_state_up = forms.BooleanField(
         label=_("Enable Admin State"),
         help_text=_("The state of IPsec site connection to start in. "

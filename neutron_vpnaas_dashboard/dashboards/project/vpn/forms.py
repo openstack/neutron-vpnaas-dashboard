@@ -93,25 +93,25 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
     # Currently this field has only one choice, so mark it as readonly.
-    auth_algorithm = forms.ChoiceField(
+    auth_algorithm = forms.ThemableChoiceField(
         label=_("Authorization algorithm"),
         choices=[('sha1', _('sha1'))],
         widget=forms.ThemableSelectWidget(attrs={'readonly': 'readonly'}),
         required=False)
-    encryption_algorithm = forms.ChoiceField(
+    encryption_algorithm = forms.ThemableChoiceField(
         label=_("Encryption algorithm"),
         choices=[('3des', _('3des')),
                  ('aes-128', _('aes-128')),
                  ('aes-192', _('aes-192')),
                  ('aes-256', _('aes-256'))],
         required=False)
-    ike_version = forms.ChoiceField(
+    ike_version = forms.ThemableChoiceField(
         label=_("IKE version"),
         choices=[('v1', _('v1')),
                  ('v2', _('v2'))],
         required=False)
     # Currently this field has only one choice, so mark it as readonly.
-    lifetime_units = forms.ChoiceField(
+    lifetime_units = forms.ThemableChoiceField(
         label=_("Lifetime units for IKE keys"),
         choices=[('seconds', _('seconds'))],
         widget=forms.ThemableSelectWidget(attrs={'readonly': 'readonly'}),
@@ -121,14 +121,14 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
         label=_("Lifetime value for IKE keys"),
         help_text=_("Equal to or greater than 60"),
         required=False)
-    pfs = forms.ChoiceField(
+    pfs = forms.ThemableChoiceField(
         label=_("Perfect Forward Secrecy"),
         choices=[('group2', _('group2')),
                  ('group5', _('group5')),
                  ('group14', _('group14'))],
         required=False)
     # Currently this field has only one choice, so mark it as readonly.
-    phase1_negotiation_mode = forms.ChoiceField(
+    phase1_negotiation_mode = forms.ThemableChoiceField(
         label=_("IKE Phase1 negotiation mode"),
         choices=[('main', 'main')],
         widget=forms.ThemableSelectWidget(attrs={'readonly': 'readonly'}),
@@ -169,17 +169,17 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
     # Currently this field has only one choice, so mark it as readonly.
-    auth_algorithm = forms.ChoiceField(
+    auth_algorithm = forms.ThemableChoiceField(
         label=_("Authorization algorithm"),
         choices=[('sha1', _('sha1'))],
         widget=forms.TextInput(attrs={'readonly': 'readonly'}),
         required=False)
-    encapsulation_mode = forms.ChoiceField(
+    encapsulation_mode = forms.ThemableChoiceField(
         label=_("Encapsulation mode"),
         choices=[('tunnel', _('tunnel')),
                  ('transport', _('transport'))],
         required=False)
-    encryption_algorithm = forms.ChoiceField(
+    encryption_algorithm = forms.ThemableChoiceField(
         label=_("Encryption algorithm"),
         choices=[('3des', _('3des')),
                  ('aes-128', _('aes-128')),
@@ -187,7 +187,7 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
                  ('aes-256', _('aes-256'))],
         required=False)
     # Currently this field has only one choice, so mark it as readonly.
-    lifetime_units = forms.ChoiceField(
+    lifetime_units = forms.ThemableChoiceField(
         label=_("Lifetime units"),
         choices=[('seconds', _('seconds'))],
         widget=forms.ThemableSelectWidget(attrs={'readonly': 'readonly'}),
@@ -197,13 +197,13 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
         label=_("Lifetime value"),
         help_text=_("Equal to or greater than 60"),
         required=False)
-    pfs = forms.ChoiceField(
+    pfs = forms.ThemableChoiceField(
         label=_("Perfect Forward Secrecy"),
         choices=[('group2', _('group2')),
                  ('group5', _('group5')),
                  ('group14', _('group14'))],
         required=False)
-    transform_protocol = forms.ChoiceField(
+    transform_protocol = forms.ThemableChoiceField(
         label=_("Transform Protocol"),
         choices=[('esp', _('esp')),
                  ('ah', _('ah')),
@@ -280,7 +280,7 @@ class UpdateIPsecSiteConnection(forms.SelfHandlingForm):
         help_text=_("Equal to or greater than 68 if the local subnet is IPv4. "
                     "Equal to or greater than 1280 if the local subnet "
                     "is IPv6."))
-    dpd_action = forms.ChoiceField(
+    dpd_action = forms.ThemableChoiceField(
         label=_("Dead peer detection actions"),
         required=False,
         choices=[('hold', _('hold')),
@@ -298,7 +298,7 @@ class UpdateIPsecSiteConnection(forms.SelfHandlingForm):
         required=False,
         label=_("Dead peer detection timeout"),
         help_text=_("Valid integer greater than the DPD interval"))
-    initiator = forms.ChoiceField(
+    initiator = forms.ThemableChoiceField(
         label=_("Initiator state"),
         required=False,
         choices=[('bi-directional', _('bi-directional')),
