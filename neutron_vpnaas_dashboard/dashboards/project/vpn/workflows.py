@@ -475,7 +475,7 @@ class AddIPsecSiteConnectionAction(workflows.Action):
                               _('Unable to retrieve IKE policies list.'))
             ikepolicies = []
         for p in ikepolicies:
-            ikepolicy_id_choices.append((p.id, p.name))
+            ikepolicy_id_choices.append((p.id, p.name_or_id))
         self.fields['ikepolicy_id'].choices = ikepolicy_id_choices
         return ikepolicy_id_choices
 
@@ -490,7 +490,7 @@ class AddIPsecSiteConnectionAction(workflows.Action):
                               _('Unable to retrieve IPsec policies list.'))
             ipsecpolicies = []
         for p in ipsecpolicies:
-            ipsecpolicy_id_choices.append((p.id, p.name))
+            ipsecpolicy_id_choices.append((p.id, p.name_or_id))
         self.fields['ipsecpolicy_id'].choices = ipsecpolicy_id_choices
         return ipsecpolicy_id_choices
 
@@ -504,7 +504,7 @@ class AddIPsecSiteConnectionAction(workflows.Action):
                               _('Unable to retrieve VPN services list.'))
             vpnservices = []
         for s in vpnservices:
-            vpnservice_id_choices.append((s.id, s.name))
+            vpnservice_id_choices.append((s.id, s.name_or_id))
         self.fields['vpnservice_id'].choices = vpnservice_id_choices
         return vpnservice_id_choices
 
@@ -517,8 +517,8 @@ class AddIPsecSiteConnectionAction(workflows.Action):
             exceptions.handle(request,
                               _('Unable to retrieve endpoint group list.'))
             endpointgroups = []
-        local_ep_group_ids = [(s.id, s.name) for s in endpointgroups
-                              if s.type == 'subnet']
+        local_ep_group_ids = [(ep.id, ep.name_or_id) for ep in endpointgroups
+                              if ep.type == 'subnet']
         local_ep_group_ids.insert(0, ('', _("Select local endpoint group")))
         self.fields['local_ep_group_id'].choices = local_ep_group_ids
         return local_ep_group_ids
@@ -532,8 +532,8 @@ class AddIPsecSiteConnectionAction(workflows.Action):
             exceptions.handle(request,
                               _('Unable to retrieve endpoint group list.'))
             endpointgroups = []
-        peer_ep_group_ids = [(s.id, s.name) for s in endpointgroups
-                             if s.type == 'cidr']
+        peer_ep_group_ids = [(ep.id, ep.name_or_id)
+                             for ep in endpointgroups if ep.type == 'cidr']
         peer_ep_group_ids.insert(0, ('', _("Select peer endpoint group")))
         self.fields['peer_ep_group_id'].choices = peer_ep_group_ids
         return peer_ep_group_ids
