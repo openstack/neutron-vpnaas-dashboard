@@ -7,8 +7,8 @@ For more information on DevStack plugins,
 see the `DevStack Plugins documentation
 <https://docs.openstack.org/devstack/latest/plugins.html>`__.
 
-How to enable VPNaaS dsashboard
--------------------------------
+How to enable VPNaaS dashboard
+------------------------------
 
 Add the following to the localrc section of your local.conf.
 You need to configure VPNaaS DevStack plugin as well.
