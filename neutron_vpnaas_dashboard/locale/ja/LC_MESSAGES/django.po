@@ -1,47 +1,61 @@
-# Akihiro Motoki <amotoki@gmail.com>, 2015. #zanata
-# Yuko Katabami <yukokatabami@gmail.com>, 2015. #zanata
-# Akihiro Motoki <amotoki@gmail.com>, 2016. #zanata
-# Mie Yamamoto <myamamot@redhat.com>, 2016. #zanata
-# Yuko Katabami <yukokatabami@gmail.com>, 2016. #zanata
-# Akihiro Motoki <amotoki@gmail.com>, 2017. #zanata
-# Yuko Katabami <yukokatabami@gmail.com>, 2017. #zanata
+# Akihiro Motoki <amotoki@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: horizon 11.0.3.dev17\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-02 12:03-0500\n"
-"PO-Revision-Date: 2017-08-05 22:30+0000\n"
-"Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
-"Language-Team: Japanese\n"
-"Language: ja\n"
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-27 23:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-01-27 08:52+0000\n"
+"Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+
+msgid ""
+"(Deprecated) Remote peer subnet(s) address(es) with mask(s) in CIDR format "
+"separated with commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
+msgstr ""
+"(廃止予定) 接続相手のサブネットアドレスを CIDR 形式で指定します。複数指定する"
+"場合はコンマで区切ります (例: 20.1.0.0/24, 21.1.0.0/24)"
+
+msgid "-"
+msgstr "-"
 
 msgid "3des"
 msgstr "3des"
 
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "稼働中"
+
 msgid "Add"
 msgstr "追加"
+
+msgid "Add Endpoint Group"
+msgstr "エンドポイントグループの追加"
 
 msgid "Add IKE Policy"
 msgstr "IKE ポリシーの追加"
 
-msgid "Add IPSec Policy"
+msgid "Add IPsec Policy"
 msgstr "IPsec ポリシーの追加"
 
-msgid "Add IPSec Site Connection"
+msgid "Add IPsec Site Connection"
 msgstr "IPsec サイト間接続の追加"
+
+msgid "Add New Endpoint Groups"
+msgstr "エンドポイントグループの追加"
 
 msgid "Add New IKE Policy"
 msgstr "IKE ポリシーの追加"
 
-msgid "Add New IPSec Policy"
+msgid "Add New IPsec Policy"
 msgstr "IPsec ポリシーの追加"
 
-msgid "Add New IPSec Site Connection"
+msgid "Add New IPsec Site Connection"
 msgstr "IPsec サイト間接続の追加"
 
 msgid "Add New VPN Service"
@@ -51,19 +65,23 @@ msgid "Add VPN Service"
 msgstr "VPN サービスの追加"
 
 #, python-format
-msgid "Added IKE Policy \"%s\"."
+msgid "Added Endpoint Group \"%s\"."
+msgstr "エンドポイントグループ \"%s\" を追加しました。"
+
+#, python-format
+msgid "Added IKE policy \"%s\"."
 msgstr "IKE ポリシー \"%s\" を追加しました。"
 
 #, python-format
-msgid "Added IPSec Policy \"%s\"."
+msgid "Added IPsec policy \"%s\"."
 msgstr "IPsec ポリシー \"%s\" を追加しました。"
 
 #, python-format
-msgid "Added IPSec Site Connection \"%s\"."
+msgid "Added IPsec site connection \"%s\"."
 msgstr "IPsec サイト間接続 \"%s\" を追加しました。"
 
 #, python-format
-msgid "Added VPN Service \"%s\"."
+msgid "Added VPN service \"%s\"."
 msgstr "VPN サービス \"%s\" を追加しました。"
 
 msgid "Authorization algorithm"
@@ -72,13 +90,20 @@ msgstr "認可アルゴリズム"
 msgid "Authorization algorithm ="
 msgstr "認可アルゴリズム ="
 
+msgid "CIDR (for external systems)"
+msgstr "CIDR (外部システム用)"
+
 msgid ""
-"Create IPSec Site Connection for current project. Assign a name and "
-"description for the IPSec Site Connection. All fields in this tab are "
+"Create IPsec site connection for current project. Assign a name and "
+"description for the IPsec site connection. All fields in this tab are "
 "required."
 msgstr ""
 "現在のプロジェクトに IPsec サイト間接続を作成します。 IPsec サイト間接続の名"
 "前と説明を入力してください。このタブのフィールドはすべて必須です。"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "作成済み"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr ""
@@ -93,19 +118,46 @@ msgstr "Dead Peer 検出間隔"
 msgid "Dead peer detection timeout"
 msgstr "Dead Peer 検出タイムアウト"
 
+msgid "Delete Endpoint Group"
+msgid_plural "Delete Endpoint Groups"
+msgstr[0] "エンドポイントグループの削除"
+
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "IKE ポリシーの削除"
+
+msgid "Delete IPsec Policy"
+msgid_plural "Delete IPsec Policies"
+msgstr[0] "IPsec ポリシーの削除"
+
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "IPsec サイト間接続の削除"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "VPN サービスの削除"
+
 msgid "Description"
 msgstr "説明"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "停止中"
 
 msgid "Edit Connection"
 msgstr "接続の編集"
 
+msgid "Edit Endpoint Group"
+msgstr "エンドポイントグループの編集"
+
 msgid "Edit IKE Policy"
 msgstr "IKE ポリシーの編集"
 
-msgid "Edit IPSec Policy"
+msgid "Edit IPsec Policy"
 msgstr "IPsec ポリシーの編集"
 
-msgid "Edit IPSec Site Connection"
+msgid "Edit IPsec Site Connection"
 msgstr "IPsec サイト間接続の編集"
 
 msgid "Edit VPN Service"
@@ -123,6 +175,22 @@ msgstr "暗号化アルゴリズム"
 msgid "Encryption algorithm ="
 msgstr "暗号化アルゴリズム ="
 
+#, python-format
+msgid "Endpoint Group %s was successfully updated."
+msgstr "エンドポイントグループ %s が正常に更新されました。"
+
+msgid "Endpoint Groups"
+msgstr "エンドポイントグループ"
+
+msgid "Endpoint Groups Details"
+msgstr "エンドポイントグループの詳細"
+
+msgid "Endpoints"
+msgstr "エンドポイント"
+
+msgid "Endpoints ="
+msgstr "エンドポイント ="
+
 msgid "Equal to or greater than 60"
 msgstr "60 以上"
 
@@ -131,31 +199,42 @@ msgid ""
 "than 1280 if the local subnet is IPv6."
 msgstr "ローカルサブネットが IPv4 の場合は 68 以上、IPv6 の場合は 1280 以上。"
 
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "エラー"
+
+msgid "External System CIDRs"
+msgstr "外部システムの CIDR"
+
+msgid "External System Subnets"
+msgstr "外部システムのサブネット"
+
 #, python-format
-msgid "Failed to update IKE Policy %s"
+msgid "Failed to update Endpint Group %s"
+msgstr "エンドポイントグループ %s を更新できません。"
+
+#, python-format
+msgid "Failed to update IKE policy %s"
 msgstr "IKE ポリシー %s を更新できません。"
 
 #, python-format
-msgid "Failed to update IPSec Policy %s"
+msgid "Failed to update IPsec policy %s"
 msgstr "IPsec ポリシー %s を更新できません。"
 
 #, python-format
-msgid "Failed to update IPSec Site Connection %s"
+msgid "Failed to update IPsec site connection %s"
 msgstr "IPsec サイト間接続 %s を更新できません。"
 
 #, python-format
-msgid "Failed to update VPN Service %s"
+msgid "Failed to update VPN service %s"
 msgstr "VPN サービス %s を更新できません。"
 
 msgid ""
-"Fields in this tab are optional. You can configure the detail of IPSec site "
+"Fields in this tab are optional. You can configure the detail of IPsec site "
 "connection created."
 msgstr ""
 "このタブのフィールドは任意項目です。作成する IPsec サイト間接続の詳細設定がで"
 "きます。"
-
-msgid "ID"
-msgstr "ID"
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE フェーズ 1 のメッセージ交換モード"
@@ -166,12 +245,8 @@ msgstr "IKE ポリシー"
 msgid "IKE Policy"
 msgstr "IKE ポリシー"
 
-#, python-format
-msgid "IKE Policy %s was successfully updated."
-msgstr "IKE ポリシー %s が正常に更新されました。"
-
 msgid "IKE Policy ="
-msgstr "IKE ポリシー ="
+msgstr "IKE ポリシー"
 
 msgid "IKE Policy Details"
 msgstr "IKE ポリシーの詳細"
@@ -179,43 +254,51 @@ msgstr "IKE ポリシーの詳細"
 msgid "IKE Policy ID ="
 msgstr "IKE ポリシー ID ="
 
-msgid "IKE Policy associated with this connection"
+#, python-format
+msgid "IKE policy %s was successfully updated."
+msgstr "IKE ポリシー %s が正常に更新されました。"
+
+msgid "IKE policy associated with this connection"
 msgstr "この接続に関連付ける IKE ポリシー"
 
 msgid "IKE version"
 msgstr "IKE バージョン"
 
-msgid "IPSec Policies"
+msgid "IPsec Policies"
 msgstr "IPsec ポリシー"
 
-msgid "IPSec Policy"
+msgid "IPsec Policy"
 msgstr "IPsec ポリシー"
 
-#, python-format
-msgid "IPSec Policy %s was successfully updated."
-msgstr "IPsec ポリシー %s が正常に更新されました。"
-
-msgid "IPSec Policy ="
+msgid "IPsec Policy ="
 msgstr "IPsec ポリシー ="
 
-msgid "IPSec Policy Details"
+msgid "IPsec Policy Details"
 msgstr "IPsec ポリシーの詳細"
 
-msgid "IPSec Policy ID ="
+msgid "IPsec Policy ID ="
 msgstr "IPsec ポリシー ID ="
 
-msgid "IPSec Policy associated with this connection"
+msgid "IPsec Site Connection Details"
+msgstr "IPsec サイト間接続の詳細"
+
+msgid "IPsec Site Connections"
+msgstr "IPsec サイト間接続"
+
+#, python-format
+msgid "IPsec policy %s was successfully updated."
+msgstr "IPsec ポリシー %s が正常に更新されました。"
+
+msgid "IPsec policy associated with this connection"
 msgstr "この接続に関連付ける IPsec ポリシー"
 
 #, python-format
-msgid "IPSec Site Connection %s was successfully updated."
+msgid "IPsec site connection %s was successfully updated."
 msgstr "IPsec サイト間接続 %s が正常に更新されました。"
 
-msgid "IPSec Site Connection Details"
-msgstr "IPsec サイト間接続の詳細"
-
-msgid "IPSec Site Connections"
-msgstr "IPsec サイト間接続"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "非稼働"
 
 msgid "Initiator state"
 msgstr "イニシエーターモード"
@@ -236,7 +319,10 @@ msgid "Lifetime value for IKE keys "
 msgstr "IKE 鍵のライフタイムの値"
 
 msgid "Local Side Public IPs"
-msgstr "ローカル側パブリック IP"
+msgstr "ローカル側のパブリック IP"
+
+msgid "Local System Subnets"
+msgstr "ローカルシステムのサブネット"
 
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "この接続の MTU (最大転送単位) の大きさ"
@@ -245,7 +331,7 @@ msgid "Name"
 msgstr "名前"
 
 msgid "Name ="
-msgstr "名前 = "
+msgstr "名前 ="
 
 msgid "Optional Parameters"
 msgstr "詳細パラメーター"
@@ -272,6 +358,18 @@ msgid ""
 msgstr ""
 "接続相手のルータの認証用識別子。IPv4/IPv6 アドレス、メールアドレス、キー ID、"
 "FQDN が使用できます。"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "作成待ち"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "削除待ち"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "更新待ち"
 
 msgid "Perfect Forward Secrecy"
 msgstr "Perfect Forward Secrecy"
@@ -301,13 +399,33 @@ msgstr "ルーター ID ="
 msgid "Save Changes"
 msgstr "変更の保存"
 
-msgid "Select IKE Policy"
+msgid "Scheduled deletion of Endpoint Group"
+msgid_plural "Scheduled deletion of Endpoint Groups"
+msgstr[0] "エンドポイントグループの削除を予約しました"
+
+msgid "Scheduled deletion of IKE policy"
+msgid_plural "Scheduled deletion of IKE policies"
+msgstr[0] "IKE ポリシーの削除を予約しました"
+
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "IPsec ポリシーの削除を予約しました"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "IPsec サイト間接続の削除を予約しました"
+
+msgid "Scheduled deletion of VPN service"
+msgid_plural "Scheduled deletion of VPN services"
+msgstr[0] "VPN サービスの削除を予約しました"
+
+msgid "Select IKE policy"
 msgstr "IKE ポリシーを選択してください"
 
-msgid "Select IPSec Policy"
+msgid "Select IPsec Policy"
 msgstr "IPsec ポリシーを選択してください"
 
-msgid "Select VPN Service"
+msgid "Select VPN service"
 msgstr "VPN サービスを選択してください"
 
 msgid "Select a Router"
@@ -325,6 +443,9 @@ msgstr "ステータス ="
 msgid "Subnet"
 msgstr "サブネット"
 
+msgid "Subnet (for local systems)"
+msgstr "サブネット (ローカルシステム用)"
+
 msgid "Subnet ="
 msgstr "サブネット ="
 
@@ -335,8 +456,8 @@ msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "VPN 接続の両端間で共有される事前定義鍵"
 
 msgid ""
-"The state of IPSec site connection to start in. If disabled (not checked), "
-"IPSec site connection does not forward packets."
+"The state of IPsec site connection to start in. If disabled (not checked), "
+"IPsec site connection does not forward packets."
 msgstr ""
 "IPsec サイト間接続の初期状態。無効の場合 (チェックが入っていない場合)、IPsec "
 "サイト間接続はパケット転送を行いません。"
@@ -351,77 +472,100 @@ msgstr ""
 msgid "Transform Protocol"
 msgstr "トランスフォームプロトコル"
 
+msgid "Type"
+msgstr "種別"
+
+msgid "Type ="
+msgstr "種別 ="
+
 #, python-format
-msgid "Unable to add IKE Policy \"%s\"."
+msgid "Unable to add Endpoint Group \"%s\"."
+msgstr "エンドポイントグループ \"%s\" を追加できません。"
+
+#, python-format
+msgid "Unable to add IKE policy \"%s\"."
 msgstr "IKE ポリシー \"%s\" を追加できません。"
 
 #, python-format
-msgid "Unable to add IPSec Policy \"%s\"."
+msgid "Unable to add IPsec policy \"%s\"."
 msgstr "IPsec ポリシー \"%s\" を追加できません。"
 
 #, python-format
-msgid "Unable to add IPSec Site Connection \"%s\"."
+msgid "Unable to add IPsec site connection \"%s\"."
 msgstr "IPsec サイト間接続 \"%s\" を追加できません。"
 
 #, python-format
-msgid "Unable to add VPN Service \"%s\"."
+msgid "Unable to add VPN service \"%s\"."
 msgstr "VPN サービス \"%s\" を追加できません。"
 
 #, python-format
-msgid "Unable to delete IKE Policy. %s"
+msgid "Unable to delete Endpoint Group. %s"
+msgstr "エンドポイントグループを削除できません。 %s"
+
+#, python-format
+msgid "Unable to delete IKE policy. %s"
 msgstr "IKE ポリシーを削除できません。%s"
 
 #, python-format
-msgid "Unable to delete IPSec Policy. %s"
+msgid "Unable to delete IPsec policy. %s"
 msgstr "IPsec ポリシーを削除できません。%s"
 
 #, python-format
-msgid "Unable to delete IPSec Site Connection. %s"
+msgid "Unable to delete IPsec site connection. %s"
 msgstr "IPsec サイト間接続を削除できません。%s"
 
 #, python-format
-msgid "Unable to delete VPN Service. %s"
+msgid "Unable to delete VPN service. %s"
 msgstr "VPN サービスを削除できません。%s"
 
-msgid "Unable to retrieve IKE Policies list."
+msgid "Unable to retrieve IKE policies list."
 msgstr "IKE ポリシーの一覧を取得できません。"
 
-msgid "Unable to retrieve IKE Policy details."
+msgid "Unable to retrieve IKE policy details."
 msgstr "IKE ポリシーの詳細を取得できません。"
 
 #, python-format
-msgid "Unable to retrieve IKE Policy details. %s"
+msgid "Unable to retrieve IKE policy details. %s"
 msgstr "IKE ポリシーの詳細を取得できません。 %s"
 
-msgid "Unable to retrieve IPSec Policies list."
+msgid "Unable to retrieve IPsec policies list."
 msgstr "IPsec ポリシーの一覧を取得できません。"
 
-msgid "Unable to retrieve IPSec Policy details."
+msgid "Unable to retrieve IPsec policy details."
 msgstr "IPsec ポリシーの詳細を取得できません。"
 
 #, python-format
-msgid "Unable to retrieve IPSec Policy details. %s"
+msgid "Unable to retrieve IPsec policy details. %s"
 msgstr "IPsec ポリシーの詳細を取得できません。%s"
 
-msgid "Unable to retrieve IPSec Site Connection details."
+msgid "Unable to retrieve IPsec policy list."
+msgstr "IPsec ポリシーの一覧を取得できません。"
+
+msgid "Unable to retrieve IPsec site connection details."
 msgstr "IPsec サイト間接続の詳細を取得できません。"
 
 #, python-format
-msgid "Unable to retrieve IPSec Site Connection details. %s"
+msgid "Unable to retrieve IPsec site connection details. %s"
 msgstr "IPsec サイト間接続の詳細を取得できません。%s"
 
-msgid "Unable to retrieve IPSec Site Connections list."
+msgid "Unable to retrieve IPsec site connections list."
 msgstr "IPsec サイト間接続の一覧を取得できません。"
 
-msgid "Unable to retrieve VPN Service details."
+msgid "Unable to retrieve VPN service details."
 msgstr "VPN サービスの詳細を取得できません。"
 
 #, python-format
-msgid "Unable to retrieve VPN Service details. %s"
+msgid "Unable to retrieve VPN service details. %s"
 msgstr "VPN サービスの詳細を取得できません。 %s"
 
-msgid "Unable to retrieve VPN Services list."
+msgid "Unable to retrieve VPN services list."
 msgstr "VPN サービスの一覧を取得できません。"
+
+msgid "Unable to retrieve endpoint group details."
+msgstr "エンドポイントグループの詳細を取得できません。"
+
+msgid "Unable to retrieve endpoint group list."
+msgstr "エンドポイントグループの一覧を取得できません。"
 
 msgid "Unable to retrieve networks list."
 msgstr "ネットワーク一覧を取得できません。"
@@ -435,10 +579,6 @@ msgstr "VPN"
 msgid "VPN Service"
 msgstr "VPN サービス"
 
-#, python-format
-msgid "VPN Service %s was successfully updated."
-msgstr "VPN サービス %s が正常に更新されました。"
-
 msgid "VPN Service ="
 msgstr "VPN サービス ="
 
@@ -448,11 +588,15 @@ msgstr "VPN サービスの詳細"
 msgid "VPN Service ID ="
 msgstr "VPN サービス ID ="
 
-msgid "VPN Service associated with this connection"
-msgstr "この接続に関連付ける VPN サービス"
-
 msgid "VPN Services"
 msgstr "VPN サービス"
+
+#, python-format
+msgid "VPN service %s was successfully updated."
+msgstr "VPN サービス %s が正常に更新されました。"
+
+msgid "VPN service associated with this connection"
+msgstr "この接続に関連付ける VPN サービス"
 
 msgid "Valid integer greater than the DPD interval"
 msgstr "Dead Peer 検出間隔よりも大きい有効な整数値"
@@ -490,9 +634,6 @@ msgstr "clear"
 msgid "disabled"
 msgstr "disabled"
 
-msgid "down"
-msgstr "down"
-
 msgid "esp"
 msgstr "esp"
 
@@ -528,9 +669,6 @@ msgstr "トランスポート"
 
 msgid "tunnel"
 msgstr "トンネル"
-
-msgid "up"
-msgstr "up"
 
 msgid "v1"
 msgstr "v1"
