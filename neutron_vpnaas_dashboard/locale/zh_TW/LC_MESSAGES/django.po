@@ -1,106 +1,90 @@
-# Chester Cheng <snowlet.cheng@gmail.com>, 2015. #zanata
-# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
 # Zhang Xiaowei <zero00072@gmail.com>, 2015. #zanata
-# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
-# Ching Kuo <gene@openstack.org>, 2016. #zanata
-# Ching Kuo <gene@openstack.org>, 2017. #zanata
+# Jennifer <cristxu@tw.ibm.com>, 2016. #zanata
+# Gene Kuo <gene@openstack.org>, 2017. #zanata
+# Terry Tai <terry@cloudcube.com.tw>, 2017. #zanata
+# Tom Fifield <tom@openstack.org>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: horizon 11.0.4.dev13\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-02 12:03-0500\n"
-"PO-Revision-Date: 2017-07-20 03:04+0000\n"
-"Last-Translator: Ching Kuo <gene@openstack.org>\n"
-"Language-Team: Chinese (Taiwan)\n"
-"Language: zh-TW\n"
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-28 11:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-09-16 08:03+0000\n"
+"Last-Translator: Gene Kuo <gene@openstack.org>\n"
+"Language-Team: Chinese (Taiwan)\n"
+"Language: zh-TW\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
+msgid "-"
+msgstr "-"
+
 msgid "3des"
 msgstr "3des"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "作用中"
 
 msgid "Add"
 msgstr "加入"
 
 msgid "Add IKE Policy"
-msgstr "加入網際網路密鑰交換政策"
-
-msgid "Add IPSec Policy"
-msgstr "加入 IPSec 政策"
-
-msgid "Add IPSec Site Connection"
-msgstr "加入 IPSec 網站連線"
+msgstr "新增 IKE 原則"
 
 msgid "Add New IKE Policy"
-msgstr "加入新的網際網路密鑰交換政策"
-
-msgid "Add New IPSec Policy"
-msgstr "加入新的 IPSec 政策"
-
-msgid "Add New IPSec Site Connection"
-msgstr "加入新的 IPSec 網站連線"
+msgstr "新增 IKE 原則"
 
 msgid "Add New VPN Service"
-msgstr "加入新的虛擬私人網路伺服器"
+msgstr "新增 VPN 服務"
 
 msgid "Add VPN Service"
-msgstr "加入虛擬私人網路伺服器"
-
-#, python-format
-msgid "Added IKE Policy \"%s\"."
-msgstr "已加入網際網路密鑰交換政策「%s」。"
-
-#, python-format
-msgid "Added IPSec Policy \"%s\"."
-msgstr "已加入 IPSec 政策「%s」。"
-
-#, python-format
-msgid "Added IPSec Site Connection \"%s\"."
-msgstr "已加入 IPSec 網站連線「%s」。"
-
-#, python-format
-msgid "Added VPN Service \"%s\"."
-msgstr "加入了虛擬私人網路伺服器「%s」。"
+msgstr "新增 VPN 服務"
 
 msgid "Authorization algorithm"
-msgstr "認證演算法"
+msgstr "授權演算法"
 
-#, fuzzy
-msgid "Authorization algorithm ="
-msgstr "認證演算法"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "已新增"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "死亡節點偵測逾期必須大於死亡節點偵測間隔"
 
 msgid "Dead peer detection actions"
-msgstr "死亡節點偵測行為"
+msgstr "已停用同層級偵測動作"
 
 msgid "Dead peer detection interval"
-msgstr "死亡節點偵測間隔"
+msgstr "已停用同層級偵測間隔"
 
 msgid "Dead peer detection timeout"
-msgstr "死亡節點偵測逾時"
+msgstr "已停用同層級偵測逾時"
+
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "刪除 IKE 原則"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "刪除虛擬私人網路伺服器"
 
 msgid "Description"
 msgstr "描述"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "離線"
 
 msgid "Edit Connection"
 msgstr "編輯連線"
 
 msgid "Edit IKE Policy"
-msgstr "編輯網際網路密鑰交換政策"
-
-msgid "Edit IPSec Policy"
-msgstr "編輯 IPSec 政策"
-
-msgid "Edit IPSec Site Connection"
-msgstr "編輯 IPSec 網站連線"
+msgstr "編輯 IKE 原則"
 
 msgid "Edit VPN Service"
-msgstr "編輯虛擬私人網路伺服器"
+msgstr "編輯 VPN 服務"
 
 msgid "Enable Admin State"
 msgstr "啟用管理員狀態"
@@ -111,131 +95,65 @@ msgstr "封裝模式"
 msgid "Encryption algorithm"
 msgstr "加密演算法"
 
-#, fuzzy
-msgid "Encryption algorithm ="
-msgstr "加密演算法"
+msgid "Endpoints"
+msgstr "端點"
 
 msgid "Equal to or greater than 60"
-msgstr "大於等於 60"
+msgstr "大於或等於 60"
 
 msgid ""
 "Equal to or greater than 68 if the local subnet is IPv4. Equal to or greater "
 "than 1280 if the local subnet is IPv6."
 msgstr ""
-"若目前的子網路是 IPv4，大於等於 68。若目前的子網路是 IPv6，大於等於 1280。"
+"如果本端子網路是 IPv4，則大於或等於 68。如果本端子網路是 IPv6，則大於或等於 "
+"1280。"
 
-#, python-format
-msgid "Failed to update IKE Policy %s"
-msgstr "更新網際網路密鑰交換政策 %s 時失敗"
-
-#, python-format
-msgid "Failed to update IPSec Policy %s"
-msgstr "更新 IPSec 政策 %s 時失敗。"
-
-#, python-format
-msgid "Failed to update IPSec Site Connection %s"
-msgstr "更新 IPSec 網站連線 %s 時失敗"
-
-#, python-format
-msgid "Failed to update VPN Service %s"
-msgstr "更新虛擬私人網路伺服器 %s 時失敗"
-
-msgid ""
-"Fields in this tab are optional. You can configure the detail of IPSec site "
-"connection created."
-msgstr ""
-"此標籤所有欄位都是選填的。您可以設置已新增的 IPSec 網站連線的詳細資訊。"
-
-msgid "ID"
-msgstr "識別號"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "錯誤"
 
 msgid "IKE Phase1 negotiation mode"
-msgstr "網際網路密鑰交換第一階段轉交模式"
+msgstr "IKE 第一階段協商模式"
 
 msgid "IKE Policies"
-msgstr "網際網路密鑰交換政策"
+msgstr "IKE 原則"
 
 msgid "IKE Policy"
-msgstr "網際網路密鑰交換政策"
-
-#, python-format
-msgid "IKE Policy %s was successfully updated."
-msgstr "已成功更新網際網路密鑰交換政策 %s。"
-
-#, fuzzy
-msgid "IKE Policy ="
-msgstr "網際網路密鑰交換政策"
+msgstr "IKE 原則"
 
 msgid "IKE Policy Details"
-msgstr "網際網路密鑰交換政策詳細資訊"
-
-#, fuzzy
-msgid "IKE Policy ID ="
-msgstr "網際網路密鑰交換政策"
-
-msgid "IKE Policy associated with this connection"
-msgstr "已將此連線聯結網際網路密鑰交換政策"
+msgstr "IKE 原則詳細資料"
 
 msgid "IKE version"
-msgstr "網際網路密鑰交換版本"
+msgstr "IKE 版本"
 
-msgid "IPSec Policies"
-msgstr "IPSec 政策"
-
-msgid "IPSec Policy"
-msgstr "IPSec 政策"
-
-#, python-format
-msgid "IPSec Policy %s was successfully updated."
-msgstr "已成功更新 IPSec 政策 %s。"
-
-#, fuzzy
-msgid "IPSec Policy ="
-msgstr "IPSec 政策"
-
-msgid "IPSec Policy Details"
-msgstr "IPSec 政策詳細資訊"
-
-#, fuzzy
-msgid "IPSec Policy ID ="
-msgstr "IPSec 政策"
-
-msgid "IPSec Policy associated with this connection"
-msgstr "已將此連線聯結 IPSec 政策"
-
-#, python-format
-msgid "IPSec Site Connection %s was successfully updated."
-msgstr "已成功更新 IPSec 網站連線 %s。"
-
-msgid "IPSec Site Connection Details"
-msgstr "IPSec 網站連線詳細資訊"
-
-msgid "IPSec Site Connections"
-msgstr "IPSec 網站連線"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "非作用中"
 
 msgid "Initiator state"
-msgstr "起始者狀態"
+msgstr "起始器狀態"
 
 msgid "Lifetime units"
-msgstr "有效期單位"
+msgstr "生命週期單位"
 
 msgid "Lifetime units for IKE keys"
-msgstr "網際網路密鑰交換密鑰有效期單位"
+msgstr "IKE 金鑰的生命週期單位"
 
 msgid "Lifetime value"
-msgstr "有效期"
+msgstr "生命週期"
 
 msgid "Lifetime value for IKE keys"
-msgstr "網際網路密鑰交換密鑰有效期"
+msgstr "IKE 金鑰的生命週期值"
 
 msgid "Lifetime value for IKE keys "
-msgstr "網際網路密鑰交換密鑰有效期"
+msgstr "IKE 密鑰的生命週期值"
 
 msgid "Local Side Public IPs"
 msgstr "當地的公開 IP"
 
 msgid "Maximum Transmission Unit size for the connection"
-msgstr "連線最大傳輸單位流量"
+msgstr "連線的傳輸單位大小上限"
 
 msgid "Name"
 msgstr "名稱"
@@ -244,70 +162,65 @@ msgid "Name ="
 msgstr "名稱 ＝"
 
 msgid "Optional Parameters"
-msgstr "選填的參數"
+msgstr "選用參數"
 
 msgid "PFS"
 msgstr "PFS"
 
 msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
-msgstr "節點閘道公開 IPv4/IPv6 位址或 FQDN"
+msgstr "同層級閘道公開 IPv4/IPv6 位址或 FQDN"
 
 msgid "Peer gateway public IPv4/IPv6 address or FQDN for the VPN Connection"
-msgstr "節點閘道公開 IPv4/IPv6 位址或者虛擬私人網路連線的 FQDN"
+msgstr "同層級閘道公開 IPv4/IPv6 位址或者 VPN 連線的 FQDN"
 
 msgid "Peer router identity for authentication (Peer ID)"
-msgstr "用於認證的節點路由器識別號（節點識別號）"
+msgstr "用於鑑別的同層級路由器身分（同層級 ID）"
 
 msgid ""
 "Peer router identity for authentication. Can be IPv4/IPv6 address, e-mail, "
 "key ID, or FQDN"
 msgstr ""
-"用於認證的節點路由器識別號。可能是 IPv4/IPv6 位址、電子郵件、密鑰識別號或 "
-"FQDN"
+"用於鑑別的同層級路由器身分。可以是 IPv4/IPv6 位址、電子郵件、金鑰 ID 或 FQDN"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "擱置建立"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "等候刪除"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "擱置更新"
 
 msgid "Perfect Forward Secrecy"
-msgstr "Perfect Forward Secrecy"
+msgstr "完整轉遞保密"
 
 msgid "Pre-Shared Key (PSK) string"
-msgstr "預共用密鑰（PSK）字串"
+msgstr "預先共用金鑰 (PSK) 字串"
 
 msgid "Remote peer subnet(s)"
-msgstr "遙控節點子網路"
+msgstr "遠端同層級子網路"
 
 msgid ""
 "Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
 "commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
 msgstr ""
-"CIDR 格式遮罩的遙控節點子網路位址並以逗號區隔（如 20.1.0.0/24, 21.1.0.0/24）"
+"具備 CIDR 格式遮罩並依需要以逗號區隔的遠端同層級子網路位址（如 20.1.0.0/24, "
+"21.1.0.0/24）"
 
 msgid "Router"
 msgstr "路由器"
 
-#, fuzzy
-msgid "Router ="
-msgstr "路由器"
-
-#, fuzzy
-msgid "Router ID ="
-msgstr "路由器識別號"
-
 msgid "Save Changes"
 msgstr "儲存變更"
 
-msgid "Select IKE Policy"
-msgstr "選擇網際網路密鑰交換政策"
-
-msgid "Select IPSec Policy"
-msgstr "選擇 IPSec 政策"
-
-msgid "Select VPN Service"
-msgstr "選擇虛擬私人網路伺服器"
-
 msgid "Select a Router"
-msgstr "選擇路由器"
+msgstr "選取路由器"
 
 msgid "Select a Subnet"
-msgstr "選擇子網路"
+msgstr "選取子網路"
 
 msgid "Status"
 msgstr "狀態"
@@ -316,129 +229,40 @@ msgid "Status ="
 msgstr "狀態 ="
 
 msgid "Subnet"
-msgstr "子網域"
-
-#, fuzzy
-msgid "Subnet ="
-msgstr "子網域"
-
-#, fuzzy
-msgid "Subnet ID ="
-msgstr "子網路識別號"
+msgstr "子網路"
 
 msgid "The pre-defined key string between the two peers of the VPN connection"
-msgstr "虛擬私人網路連線的兩個節點之間的預先定義金鑰字串"
+msgstr "VPN 連線的兩個同層級之間的預先定義金鑰字串"
 
 msgid "Transform Protocol"
-msgstr "傳輸協定"
+msgstr "傳輸通訊協定"
 
-#, python-format
-msgid "Unable to add IKE Policy \"%s\"."
-msgstr "無法加入網際網路密鑰交換政策「%s」。"
+msgid "Type"
+msgstr "類型"
 
-#, python-format
-msgid "Unable to add IPSec Policy \"%s\"."
-msgstr "無法加入 IPSec 政策「%s」。"
-
-#, python-format
-msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr "無法加入 IPSec 網站連線「%s」。"
-
-#, python-format
-msgid "Unable to add VPN Service \"%s\"."
-msgstr "無法加入虛擬私人網路伺服器「%s」。"
-
-#, python-format
-msgid "Unable to delete IKE Policy. %s"
-msgstr "無法刪除網際網路密鑰原則。%s"
-
-#, python-format
-msgid "Unable to delete IPSec Policy. %s"
-msgstr "無法刪除 IPSec 原則。%s"
-
-#, python-format
-msgid "Unable to delete IPSec Site Connection. %s"
-msgstr "無法刪除 IPSec 網站連線。%s"
-
-#, python-format
-msgid "Unable to delete VPN Service. %s"
-msgstr "無法刪除虛擬私人網路伺服器。%s"
-
-msgid "Unable to retrieve IKE Policies list."
-msgstr "無法獲得網際網路密鑰交換政策列表。"
-
-msgid "Unable to retrieve IKE Policy details."
-msgstr "無法獲得網際網路密鑰交換政策詳細資訊。"
-
-#, python-format
-msgid "Unable to retrieve IKE Policy details. %s"
-msgstr "無法獲得網際網路密鑰交換政策詳細資訊。%s"
-
-msgid "Unable to retrieve IPSec Policies list."
-msgstr "無法獲得 IPSec 政策列表。"
-
-msgid "Unable to retrieve IPSec Policy details."
-msgstr "無法獲得 IPSec 政策詳細資訊。"
-
-#, python-format
-msgid "Unable to retrieve IPSec Policy details. %s"
-msgstr "無法獲得 IPSec 政策詳細資訊。%s"
-
-msgid "Unable to retrieve IPSec Site Connection details."
-msgstr "無法獲得 IPSec 網站連線詳細資訊。"
-
-#, python-format
-msgid "Unable to retrieve IPSec Site Connection details. %s"
-msgstr "無法獲得 IPSec 網站連線詳細資訊。%s"
-
-msgid "Unable to retrieve IPSec Site Connections list."
-msgstr "無法獲得 IPSec 網站連線列表。"
-
-msgid "Unable to retrieve VPN Service details."
-msgstr "無法獲得虛擬私人網路伺服器詳細資訊。"
-
-#, python-format
-msgid "Unable to retrieve VPN Service details. %s"
-msgstr "無法獲得虛擬私人網路伺服器詳細資訊。%s"
-
-msgid "Unable to retrieve VPN Services list."
-msgstr "無法獲得虛擬私人網路伺服器列表。"
+msgid "Type ="
+msgstr "類型 ="
 
 msgid "Unable to retrieve networks list."
-msgstr "無法獲得網路列表。"
+msgstr "無法擷取網路清單。"
 
 msgid "Unable to retrieve routers list."
-msgstr "無法獲得路由器列表。"
+msgstr "無法擷取路由器清單。"
 
 msgid "VPN"
-msgstr "虛擬私人網路"
+msgstr "VPN"
 
 msgid "VPN Service"
-msgstr "虛擬私人網路伺服器"
-
-#, python-format
-msgid "VPN Service %s was successfully updated."
-msgstr "已成功更新虛擬私人網路伺服器 %s。"
-
-#, fuzzy
-msgid "VPN Service ="
-msgstr "虛擬私人網路伺服器"
+msgstr " VPN 服務"
 
 msgid "VPN Service Details"
-msgstr "虛擬私人網路伺服器詳細資訊"
-
-#, fuzzy
-msgid "VPN Service ID ="
-msgstr "虛擬私人網路伺服器"
-
-msgid "VPN Service associated with this connection"
-msgstr "已將此連線聯結虛擬私人網路伺服器"
+msgstr "VPN 服務詳細資料"
 
 msgid "VPN Services"
-msgstr "虛擬私人網路伺服器"
+msgstr "VPN 服務"
 
 msgid "Valid integer greater than the DPD interval"
-msgstr "大於死亡節點偵測間隔的整數"
+msgstr "大於已停用同層級偵測間隔的有效整數"
 
 msgid "Valid integer lesser than DPD timeout"
 msgstr "小於死亡節點偵測逾期的有效整數"
@@ -447,7 +271,7 @@ msgid "Valid integer lesser than the DPD timeout"
 msgstr "小於死亡節點偵測逾期的有效整數"
 
 msgid "Virtual Private Network"
-msgstr "虛擬私人網路"
+msgstr "虛擬專用網路"
 
 msgid "aes-128"
 msgstr "aes-128"
@@ -471,7 +295,7 @@ msgid "clear"
 msgstr "清除"
 
 msgid "disabled"
-msgstr "已關閉"
+msgstr "已停用"
 
 msgid "down"
 msgstr "關閉"
@@ -498,7 +322,7 @@ msgid "restart"
 msgstr "重新開始"
 
 msgid "restart-by-peer"
-msgstr "以節點重新開始"
+msgstr "依同層級重新開始"
 
 msgid "seconds"
 msgstr "秒"
@@ -510,13 +334,13 @@ msgid "transport"
 msgstr "傳輸"
 
 msgid "tunnel"
-msgstr "隧道"
+msgstr "通道"
 
 msgid "up"
 msgstr "上線"
 
 msgid "v1"
-msgstr "第一版"
+msgstr "第 1 版"
 
 msgid "v2"
-msgstr "第二版"
+msgstr "第 2 版"

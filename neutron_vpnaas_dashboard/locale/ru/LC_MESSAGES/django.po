@@ -1,52 +1,41 @@
-# Translations template for PROJECT.
-# Copyright (C) 2015 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-#
-# Translators:
-# Ainur Shakirov <ainur.shakirov.tt@gmail.com>, 2015
-# Alexander Vasiliev <avasiliev@asdco.ru>, 2015
-# Dasha Sher <sher.dasha@gmail.com>, 2014
-# Denis Gubanov <v12aml@gmail.com>, 2015
-# Fedor Tarasenko <feodor.tarasenko@gmail.com>, 2015
-# Ilya Alekseyev <ilyaalekseyev@acm.org>, 2015
-# Ilya Shakhat <shakhat@gmail.com>, 2015
-# Kyrylo Romanenko <kromanenko@mirantis.com>, 2015
-# Nikita Burtsev, 2015
-# Nikita Burtsev, 2015
 # Antonio Kless <antoniok.spb@gmail.com>, 2015. #zanata
 # Fedor Tarasenko <feodor.tarasenko@gmail.com>, 2015. #zanata
-# Ilya Alekseyev <ilyaalekseyev@acm.org>, 2015. #zanata
-# Nikita Burtsev <nikita.burtsev@gmail.com>, 2015. #zanata
 # OpenStack Infra <zanata@openstack.org>, 2015. #zanata
 # Aleksey Alekseenko <9118250541@mail.ru>, 2016. #zanata
+# Alexander <ainikitenkov@gmail.com>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Andrew <apapsujko@gmail.com>, 2016. #zanata
+# Artem <amikhalev90@gmail.com>, 2016. #zanata
 # Daisy <guoyingc@cn.ibm.com>, 2016. #zanata
 # Fedor Tarasenko <feodor.tarasenko@gmail.com>, 2016. #zanata
-# Ilya Alekseyev <ilyaalekseyev@acm.org>, 2016. #zanata
-# Maxim Bozhenko <mbozhenko@gmail.com>, 2016. #zanata
 # Nikita Burtsev <nikita.burtsev@gmail.com>, 2016. #zanata
 # Artem <amikhalev90@gmail.com>, 2017. #zanata
-# Fedor Tarasenko <feodor.tarasenko@gmail.com>, 2017. #zanata
 # Ilya Alekseyev <ilyaalekseyev@acm.org>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: horizon 11.0.2.dev38\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-02 12:03-0500\n"
-"PO-Revision-Date: 2017-02-03 09:09+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Russian\n"
-"Language: ru\n"
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-28 11:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Generated-By: Babel 2.0\n"
+"PO-Revision-Date: 2017-09-29 01:09+0000\n"
+"Last-Translator: Ilya Alekseyev <ilyaalekseyev@acm.org>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
 "X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+msgid "-"
+msgstr "-"
 
 msgid "3des"
 msgstr "3des"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "Активен"
 
 msgid "Add"
 msgstr "Добавить"
@@ -54,20 +43,8 @@ msgstr "Добавить"
 msgid "Add IKE Policy"
 msgstr "Добавить политику IKE"
 
-msgid "Add IPSec Policy"
-msgstr "Добавить политику IPSec"
-
-msgid "Add IPSec Site Connection"
-msgstr "Добавить IPSec подключение"
-
 msgid "Add New IKE Policy"
 msgstr "Добавить политику IKE"
-
-msgid "Add New IPSec Policy"
-msgstr "Добавить политику IPSec"
-
-msgid "Add New IPSec Site Connection"
-msgstr "Добавить новое IPSec подключение"
 
 msgid "Add New VPN Service"
 msgstr "Добавить новый сервис VPN"
@@ -75,37 +52,12 @@ msgstr "Добавить новый сервис VPN"
 msgid "Add VPN Service"
 msgstr "Добавить сервис VPN"
 
-#, python-format
-msgid "Added IKE Policy \"%s\"."
-msgstr "Добавлена политика IKE \"%s\"."
-
-#, python-format
-msgid "Added IPSec Policy \"%s\"."
-msgstr "Добавлена политика IPSec \"%s\"."
-
-#, python-format
-msgid "Added IPSec Site Connection \"%s\"."
-msgstr "Добавлено подключение IPSec \"%s\"."
-
-#, python-format
-msgid "Added VPN Service \"%s\"."
-msgstr "Добавлен сервис VPN \"%s\"."
-
 msgid "Authorization algorithm"
 msgstr " Алгоритм авторизации"
 
-#, fuzzy
-msgid "Authorization algorithm ="
-msgstr " Алгоритм авторизации"
-
-msgid ""
-"Create IPSec Site Connection for current project. Assign a name and "
-"description for the IPSec Site Connection. All fields in this tab are "
-"required."
-msgstr ""
-"Создание нового IPSec подключения для текущего проекта. Укажите имя и "
-"название для IPSec подключения. Все поля на данной закладке обязательны для "
-"заполнения."
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "Создано"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "Таймаут DPD должен быть больше, чем интервал DPD"
@@ -119,8 +71,24 @@ msgstr "Интервал обнаружения недоступного пир�
 msgid "Dead peer detection timeout"
 msgstr "Время ожидания для обнаружения недоступного пира"
 
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "Удалить политику IKE"
+msgstr[1] "Удалить политики IKE"
+msgstr[2] "Удалить политики IKE"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "Удалить службу VPN"
+msgstr[1] "Удалить службы VPN"
+msgstr[2] "Удалить службы VPN"
+
 msgid "Description"
 msgstr "Описание"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "Выключен"
 
 msgid "Edit Connection"
 msgstr "Редактировать подключение"
@@ -128,18 +96,11 @@ msgstr "Редактировать подключение"
 msgid "Edit IKE Policy"
 msgstr "Редактировать IKE политику"
 
-msgid "Edit IPSec Policy"
-msgstr "Редактировать IPSec политику"
-
-msgid "Edit IPSec Site Connection"
-msgstr "Редактировать подключение IPSec сайта"
-
 msgid "Edit VPN Service"
 msgstr "Редактировать VPN сервис"
 
-#, fuzzy
 msgid "Enable Admin State"
-msgstr "Административное состояние"
+msgstr "Разрешить Admin State"
 
 msgid "Encapsulation mode"
 msgstr "Режим инкапсуляции"
@@ -147,9 +108,8 @@ msgstr "Режим инкапсуляции"
 msgid "Encryption algorithm"
 msgstr "Алгоритм шифрования"
 
-#, fuzzy
-msgid "Encryption algorithm ="
-msgstr "Алгоритм шифрования"
+msgid "Endpoints"
+msgstr "Точки доступа"
 
 msgid "Equal to or greater than 60"
 msgstr "Равен или больше 60"
@@ -161,31 +121,9 @@ msgstr ""
 "Равен или больше 68, если локальная подсеть IPv4. Равен или больше 1280, "
 "если локальная подсеть IPv6."
 
-#, python-format
-msgid "Failed to update IKE Policy %s"
-msgstr "Не удалось обновить IKE политику %s"
-
-#, python-format
-msgid "Failed to update IPSec Policy %s"
-msgstr "Не удалось обновить IPSec политику %s"
-
-#, python-format
-msgid "Failed to update IPSec Site Connection %s"
-msgstr "Не удалось обновить подключение IPSec сайта %s"
-
-#, python-format
-msgid "Failed to update VPN Service %s"
-msgstr "Не удалось обновить VPN сервис %s"
-
-msgid ""
-"Fields in this tab are optional. You can configure the detail of IPSec site "
-"connection created."
-msgstr ""
-"Поля на данной заклады не обязательны для заполнения. Вы можете изменить "
-"параметры созданного IPSec подключения."
-
-msgid "ID"
-msgstr "ID"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "Ошибка"
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "Режим согласования IKE Phase1"
@@ -196,60 +134,15 @@ msgstr "Политики IKE"
 msgid "IKE Policy"
 msgstr "Политика IKE"
 
-#, python-format
-msgid "IKE Policy %s was successfully updated."
-msgstr "IKE политика %s была успешно обновлена."
-
-#, fuzzy
-msgid "IKE Policy ="
-msgstr "Политика IKE"
-
 msgid "IKE Policy Details"
 msgstr "Информация о политики IKE"
-
-#, fuzzy
-msgid "IKE Policy ID ="
-msgstr "Политика IKE"
-
-msgid "IKE Policy associated with this connection"
-msgstr "Политика IKE для данного подключения"
 
 msgid "IKE version"
 msgstr "Версия IKE"
 
-msgid "IPSec Policies"
-msgstr "Политики IPSec"
-
-msgid "IPSec Policy"
-msgstr "Политика IPSec"
-
-#, python-format
-msgid "IPSec Policy %s was successfully updated."
-msgstr "IPSec политика %s была успешно обновлена."
-
-#, fuzzy
-msgid "IPSec Policy ="
-msgstr "Политика IPSec"
-
-msgid "IPSec Policy Details"
-msgstr "Информация о политике IPSec"
-
-#, fuzzy
-msgid "IPSec Policy ID ="
-msgstr "Политика IPSec"
-
-msgid "IPSec Policy associated with this connection"
-msgstr "Политика IPSec для данного подключения"
-
-#, python-format
-msgid "IPSec Site Connection %s was successfully updated."
-msgstr "Подключение IPSec сайта %s было успешно обновлено."
-
-msgid "IPSec Site Connection Details"
-msgstr "Информация о IPSec подключении"
-
-msgid "IPSec Site Connections"
-msgstr "Подключения IPSec"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "Неактивный"
 
 msgid "Initiator state"
 msgstr "Состояние инициатора"
@@ -303,6 +196,18 @@ msgstr ""
 "Идентификатор маршрутизатора пира для аутентификации. Может быть IPv4/IPv6 "
 "адрес, адрес электронной почты, ID ключа или FQDN"
 
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "Ожидает создание"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "Ожидает удаления"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "Ожидает обновления"
+
 msgid "Perfect Forward Secrecy"
 msgstr "Совершенная прямая секретность"
 
@@ -322,25 +227,11 @@ msgstr ""
 msgid "Router"
 msgstr "Маршрутизатор"
 
-#, fuzzy
-msgid "Router ="
-msgstr "Маршрутизатор"
-
-#, fuzzy
 msgid "Router ID ="
-msgstr "ID Маршрутизатора"
+msgstr "ID маршрутизатора ="
 
 msgid "Save Changes"
 msgstr "Сохранить изменения"
-
-msgid "Select IKE Policy"
-msgstr "Выберите политику IKE"
-
-msgid "Select IPSec Policy"
-msgstr "Выберите политику IPSec"
-
-msgid "Select VPN Service"
-msgstr "Выберите сервис VPN"
 
 msgid "Select a Router"
 msgstr "Выберите Маршрутизатор"
@@ -357,91 +248,17 @@ msgstr "Статус ="
 msgid "Subnet"
 msgstr "Подсеть"
 
-#, fuzzy
-msgid "Subnet ="
-msgstr "Подсеть"
-
-#, fuzzy
-msgid "Subnet ID ="
-msgstr "ID подсети"
-
 msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "Предопределённый ключ PSK между двумя точками VPN соединения "
 
 msgid "Transform Protocol"
 msgstr "Протокол трансформации"
 
-#, python-format
-msgid "Unable to add IKE Policy \"%s\"."
-msgstr "Не удалось добавить политику IKE \"%s\"."
+msgid "Type"
+msgstr "Тип"
 
-#, python-format
-msgid "Unable to add IPSec Policy \"%s\"."
-msgstr "Не удалось добавить политику IPSec \"%s\"."
-
-#, python-format
-msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr "Не удалось добавить подключение IPSec \"%s\"."
-
-#, python-format
-msgid "Unable to add VPN Service \"%s\"."
-msgstr "Не удалось добавить сервис VPN \"%s\"."
-
-#, python-format
-msgid "Unable to delete IKE Policy. %s"
-msgstr "Не удалось удалить политику IKE. %s"
-
-#, python-format
-msgid "Unable to delete IPSec Policy. %s"
-msgstr "Не удалось удалить политику IPSec. %s"
-
-#, python-format
-msgid "Unable to delete IPSec Site Connection. %s"
-msgstr "Не удалось удалить подключение IPSec. %s"
-
-#, python-format
-msgid "Unable to delete VPN Service. %s"
-msgstr "Невозможно удалить сервис VPN. %s"
-
-msgid "Unable to retrieve IKE Policies list."
-msgstr "Не удалось получить список политик IKE."
-
-msgid "Unable to retrieve IKE Policy details."
-msgstr "Не удалось получить информацию о политике IKE."
-
-#, python-format
-msgid "Unable to retrieve IKE Policy details. %s"
-msgstr "Не удалось получить данные о политике IKE %s"
-
-msgid "Unable to retrieve IPSec Policies list."
-msgstr "Не удалось получить список политик IPSec."
-
-msgid "Unable to retrieve IPSec Policy details."
-msgstr "Не удалось получить информацию о политике IPSec."
-
-#, python-format
-msgid "Unable to retrieve IPSec Policy details. %s"
-msgstr "Не удалось получить данные о политике IPSec %s"
-
-msgid "Unable to retrieve IPSec Site Connection details."
-msgstr "Не удалось получить информацию о IPSec подключении"
-
-#, python-format
-msgid "Unable to retrieve IPSec Site Connection details. %s"
-msgstr "Не удалось получить данные подключения IPSec сайта %s"
-
-msgid "Unable to retrieve IPSec Site Connections list."
-msgstr "Не удалось получить список IPSec подключений."
-
-msgid "Unable to retrieve VPN Service details."
-msgstr "Не удалось получить информацию о сервисе VPN."
-
-#, python-format
-msgid "Unable to retrieve VPN Service details. %s"
-msgstr "Не удалось получить данные о VPN сервисе %s"
-
-msgid "Unable to retrieve VPN Services list."
-msgstr "Не удалось получить список сервисов VPN."
+msgid "Type ="
+msgstr "Тип ="
 
 msgid "Unable to retrieve networks list."
 msgstr "Не удалось получить список сетей."
@@ -455,23 +272,8 @@ msgstr "VPN"
 msgid "VPN Service"
 msgstr "Сервис VPN"
 
-#, python-format
-msgid "VPN Service %s was successfully updated."
-msgstr "VPN сервис %s был успешно обновлен."
-
-#, fuzzy
-msgid "VPN Service ="
-msgstr "Сервис VPN"
-
 msgid "VPN Service Details"
 msgstr "Информация о сервисе VPN"
-
-#, fuzzy
-msgid "VPN Service ID ="
-msgstr "Сервис VPN"
-
-msgid "VPN Service associated with this connection"
-msgstr "Сервис VPN для данного подключения"
 
 msgid "VPN Services"
 msgstr "Сервисы VPN"
@@ -480,10 +282,10 @@ msgid "Valid integer greater than the DPD interval"
 msgstr "Допустимое целое число большее интервала DPD"
 
 msgid "Valid integer lesser than DPD timeout"
-msgstr "Допустимое целое число меньшее таймаута DPD"
+msgstr "Допустимое целое число, меньшее таймаута DPD"
 
 msgid "Valid integer lesser than the DPD timeout"
-msgstr "Допустимое целое число большее таймаута DPD"
+msgstr "Допустимое целое число, большее таймаута DPD"
 
 msgid "Virtual Private Network"
 msgstr "Виртуальная частная сеть"
@@ -510,7 +312,7 @@ msgid "clear"
 msgstr "очистить"
 
 msgid "disabled"
-msgstr "выключено"
+msgstr "запрещено"
 
 msgid "down"
 msgstr "вниз"

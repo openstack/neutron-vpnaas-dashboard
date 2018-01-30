@@ -1,13 +1,14 @@
+# Yuko Katabami <yukokatabami@gmail.com>, 2016. #zanata
 # Akihiro Motoki <amotoki@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-01-27 23:12+0000\n"
+"POT-Creation-Date: 2018-01-28 11:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-27 08:52+0000\n"
+"PO-Revision-Date: 2018-01-28 05:15+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -318,6 +319,9 @@ msgstr "IKE 鍵のライフタイムの値"
 msgid "Lifetime value for IKE keys "
 msgstr "IKE 鍵のライフタイムの値"
 
+msgid "Local Endpoint Group(s)"
+msgstr "ローカルのエンドポイントグループ"
+
 msgid "Local Side Public IPs"
 msgstr "ローカル側のパブリック IP"
 
@@ -341,6 +345,9 @@ msgstr "PFS"
 
 msgid "PFS ="
 msgstr "PFS ="
+
+msgid "Peer Endpoint Group(s)"
+msgstr "対向のエンドポイントグループ"
 
 msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
 msgstr "接続相手のゲートウェイのパブリック IPv4/IPv6 アドレスまたは FQDN"
@@ -434,6 +441,12 @@ msgstr "ルーターを選択してください"
 msgid "Select a Subnet"
 msgstr "サブネットを選択してください"
 
+msgid "Select local endpoint group"
+msgstr "ローカルのエンドポイントグループを選択してください"
+
+msgid "Select peer endpoint group"
+msgstr "対向のエンドポイントグループを選択してください"
+
 msgid "Status"
 msgstr "ステータス"
 
@@ -517,6 +530,10 @@ msgstr "IPsec サイト間接続を削除できません。%s"
 #, python-format
 msgid "Unable to delete VPN service. %s"
 msgstr "VPN サービスを削除できません。%s"
+
+#, python-format
+msgid "Unable to retrieve Endpoint Group details. %s"
+msgstr "エンドポイントグループの詳細を取得できません: %s"
 
 msgid "Unable to retrieve IKE policies list."
 msgstr "IKE ポリシーの一覧を取得できません。"
@@ -634,6 +651,9 @@ msgstr "clear"
 msgid "disabled"
 msgstr "disabled"
 
+msgid "down"
+msgstr "down"
+
 msgid "esp"
 msgstr "esp"
 
@@ -669,6 +689,9 @@ msgstr "トランスポート"
 
 msgid "tunnel"
 msgstr "トンネル"
+
+msgid "up"
+msgstr "up"
 
 msgid "v1"
 msgstr "v1"

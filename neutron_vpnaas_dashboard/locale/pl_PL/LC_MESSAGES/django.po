@@ -1,24 +1,33 @@
 # OpenStack Infra <zanata@openstack.org>, 2015. #zanata
 # Łukasz Jernas <deejay1@srem.org>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Łukasz Jernas <deejay1@srem.org>, 2016. #zanata
+# Łukasz Jernas <deejay1@srem.org>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: horizon 11.0.1.dev4\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-02 12:03-0500\n"
-"PO-Revision-Date: 2016-11-10 03:58+0000\n"
-"Last-Translator: Łukasz Jernas <deejay1@srem.org>\n"
-"Language-Team: Polish (Poland)\n"
-"Language: pl-PL\n"
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-28 11:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-06-16 04:09+0000\n"
+"Last-Translator: Łukasz Jernas <deejay1@srem.org>\n"
+"Language-Team: Polish (Poland)\n"
+"Language: pl-PL\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
+msgid "-"
+msgstr "-"
+
 msgid "3des"
 msgstr "3des"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "Aktywny"
 
 msgid "Add"
 msgstr "Dodaj"
@@ -26,20 +35,8 @@ msgstr "Dodaj"
 msgid "Add IKE Policy"
 msgstr "Dodaj zasadę IKE"
 
-msgid "Add IPSec Policy"
-msgstr "Dodaj zasadę IPSec"
-
-msgid "Add IPSec Site Connection"
-msgstr "Dodaj połączenie tunelowe IPSec "
-
 msgid "Add New IKE Policy"
 msgstr "Dodanie nowej zasady IKE"
-
-msgid "Add New IPSec Policy"
-msgstr "Dodanie nowej zasady IPSec"
-
-msgid "Add New IPSec Site Connection"
-msgstr "Dodanie nowego połączenia tunelowego IPSec"
 
 msgid "Add New VPN Service"
 msgstr "Dodanie nowej usługi VPN"
@@ -47,28 +44,12 @@ msgstr "Dodanie nowej usługi VPN"
 msgid "Add VPN Service"
 msgstr "Dodaj usługę VPN"
 
-#, python-format
-msgid "Added IKE Policy \"%s\"."
-msgstr "Dodano zasadę IKE „%s”."
-
-#, python-format
-msgid "Added IPSec Policy \"%s\"."
-msgstr "Dodano zasadę IPSec „%s”."
-
-#, python-format
-msgid "Added IPSec Site Connection \"%s\"."
-msgstr "Dodano połączenie tunelowe IPSec „%s”."
-
-#, python-format
-msgid "Added VPN Service \"%s\"."
-msgstr "Dodano usługę VPN „%s”."
-
 msgid "Authorization algorithm"
 msgstr "Algorytm upoważniania"
 
-#, fuzzy
-msgid "Authorization algorithm ="
-msgstr "Algorytm upoważniania"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "Utworzono"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "Timeout DPD musi być większy niż interwał DPD."
@@ -82,8 +63,24 @@ msgstr "Przedział wykrywania martwych partnerów (DPD)"
 msgid "Dead peer detection timeout"
 msgstr "Limit czasu wykrywania martwych partnerów (DPD)"
 
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "Usuń zasadę IKE"
+msgstr[1] "Usuń zasady IKE"
+msgstr[2] "Usuń zasady IKE"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "Usuń usługę VPN"
+msgstr[1] "Usuń usługi VPN"
+msgstr[2] "Usuń usługi VPN"
+
 msgid "Description"
 msgstr "Opis"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "Położony"
 
 msgid "Edit Connection"
 msgstr "Edytuj połączenie"
@@ -91,18 +88,8 @@ msgstr "Edytuj połączenie"
 msgid "Edit IKE Policy"
 msgstr "Edytuj zasadę IKE"
 
-msgid "Edit IPSec Policy"
-msgstr "Edytuj zasadę IPSec"
-
-msgid "Edit IPSec Site Connection"
-msgstr "Edytuj połączenie tunelowe IPSec"
-
 msgid "Edit VPN Service"
 msgstr "Edytuj usługę VPN"
-
-#, fuzzy
-msgid "Enable Admin State"
-msgstr "Stan administracyjny"
 
 msgid "Encapsulation mode"
 msgstr "Tryb enkapsulacji"
@@ -110,9 +97,8 @@ msgstr "Tryb enkapsulacji"
 msgid "Encryption algorithm"
 msgstr "Algorytm szyfrowania"
 
-#, fuzzy
-msgid "Encryption algorithm ="
-msgstr "Algorytm szyfrowania"
+msgid "Endpoints"
+msgstr "Adresy"
 
 msgid "Equal to or greater than 60"
 msgstr "Równy lub większy niż 60"
@@ -124,31 +110,9 @@ msgstr ""
 "Większe lub równe 68, jeśli lokalna podsieć jest IPv4. Większe lub równe "
 "1280, jeżeli lokalna podsieć jest IPv6."
 
-#, python-format
-msgid "Failed to update IKE Policy %s"
-msgstr "Nie można zaktualizować zasady IKE %s"
-
-#, python-format
-msgid "Failed to update IPSec Policy %s"
-msgstr "Nie można zaktualizować zasady IPSec %s."
-
-#, python-format
-msgid "Failed to update IPSec Site Connection %s"
-msgstr "Nie można zaktualizować połączenia tunelowego IPSec %s"
-
-#, python-format
-msgid "Failed to update VPN Service %s"
-msgstr "Nie można zaktualizować usługi VPN %s"
-
-msgid ""
-"Fields in this tab are optional. You can configure the detail of IPSec site "
-"connection created."
-msgstr ""
-"Pozwala na skonfigurowanie szczegółów tworzonego połączenia IPSec. Pola w "
-"tej zakładce nie są wymagane."
-
-msgid "ID"
-msgstr "ID"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "Błąd"
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "Tryb negocjacji IKE Phase1"
@@ -159,60 +123,15 @@ msgstr "Zasady IKE"
 msgid "IKE Policy"
 msgstr "Zasada IKE"
 
-#, python-format
-msgid "IKE Policy %s was successfully updated."
-msgstr "Zaktualizowano zasadę IKE %s."
-
-#, fuzzy
-msgid "IKE Policy ="
-msgstr "Zasada IKE"
-
 msgid "IKE Policy Details"
 msgstr "Szczegóły zasady IKE"
-
-#, fuzzy
-msgid "IKE Policy ID ="
-msgstr "Zasada IKE"
-
-msgid "IKE Policy associated with this connection"
-msgstr "Zasada IKE powiązana z tym połączeniem"
 
 msgid "IKE version"
 msgstr "Wersja IKE"
 
-msgid "IPSec Policies"
-msgstr "Zasady IPSec"
-
-msgid "IPSec Policy"
-msgstr "Zasada IPSec"
-
-#, python-format
-msgid "IPSec Policy %s was successfully updated."
-msgstr "Zaktualizowano zasadę IPSec %s."
-
-#, fuzzy
-msgid "IPSec Policy ="
-msgstr "Zasada IPSec"
-
-msgid "IPSec Policy Details"
-msgstr "Szczegóły zasady IPSec"
-
-#, fuzzy
-msgid "IPSec Policy ID ="
-msgstr "Zasada IPSec"
-
-msgid "IPSec Policy associated with this connection"
-msgstr "Zasada IPSec powiązana z tym połączeniem"
-
-#, python-format
-msgid "IPSec Site Connection %s was successfully updated."
-msgstr "Zaktualizowano połączenie tunelowe IPSec %s."
-
-msgid "IPSec Site Connection Details"
-msgstr "Szczegóły połączenia tunelowego IPSec"
-
-msgid "IPSec Site Connections"
-msgstr "Połączenia tunelowe IPSec"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "Nieaktywne"
 
 msgid "Initiator state"
 msgstr "Stan inicjującego"
@@ -266,6 +185,18 @@ msgstr ""
 "Tożsamość routera partnera dla uwierzytelniania. Może być adresem IPv4/IPv6, "
 "adresem e-mail, identyfikatorem klucza lub FQDN"
 
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "Oczekuje na utworzenie"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "Oczekuje na usunięcie"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "Oczekuje na aktualizację"
+
 msgid "Perfect Forward Secrecy"
 msgstr "Perfect Forward Secrecy"
 
@@ -285,25 +216,8 @@ msgstr ""
 msgid "Router"
 msgstr "Router"
 
-#, fuzzy
-msgid "Router ="
-msgstr "Router"
-
-#, fuzzy
-msgid "Router ID ="
-msgstr "ID routera"
-
 msgid "Save Changes"
 msgstr "Zapisz zmiany"
-
-msgid "Select IKE Policy"
-msgstr "Wybór zasady IKE"
-
-msgid "Select IPSec Policy"
-msgstr "Wybór zasady IPSec"
-
-msgid "Select VPN Service"
-msgstr "Wybór usługi VPN"
 
 msgid "Select a Router"
 msgstr "Wybór routera"
@@ -312,7 +226,7 @@ msgid "Select a Subnet"
 msgstr "Wybierz podsieć"
 
 msgid "Status"
-msgstr "Stan"
+msgstr "Status"
 
 msgid "Status ="
 msgstr "Stan ="
@@ -320,88 +234,11 @@ msgstr "Stan ="
 msgid "Subnet"
 msgstr "Podsieć"
 
-#, fuzzy
-msgid "Subnet ="
-msgstr "Podsieć"
-
-#, fuzzy
-msgid "Subnet ID ="
-msgstr "ID podsieci"
-
 msgid "Transform Protocol"
 msgstr "Protokół transformacji"
 
-#, python-format
-msgid "Unable to add IKE Policy \"%s\"."
-msgstr "Nie można dodać zasady IKE „%s”."
-
-#, python-format
-msgid "Unable to add IPSec Policy \"%s\"."
-msgstr "Nie można dodać zasady IPSec „%s”."
-
-#, python-format
-msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr "Nie można dodać połączenia tunelowego IPSec „%s”."
-
-#, python-format
-msgid "Unable to add VPN Service \"%s\"."
-msgstr "Nie można dodać usługi VPN „%s”."
-
-#, fuzzy, python-format
-msgid "Unable to delete IKE Policy. %s"
-msgstr "Nie można usunąć zasady. %s"
-
-#, fuzzy, python-format
-msgid "Unable to delete IPSec Policy. %s"
-msgstr "Nie można usunąć zasady. %s"
-
-#, fuzzy, python-format
-msgid "Unable to delete IPSec Site Connection. %s"
-msgstr "Nie można dodać połączenia tunelowego IPSec „%s”."
-
-#, fuzzy, python-format
-msgid "Unable to delete VPN Service. %s"
-msgstr "Nie można dodać usługi VPN „%s”."
-
-msgid "Unable to retrieve IKE Policies list."
-msgstr "Nie można pobrać listy zasad IKE."
-
-msgid "Unable to retrieve IKE Policy details."
-msgstr "Nie można pobrać szczegółów zasady IKE."
-
-#, python-format
-msgid "Unable to retrieve IKE Policy details. %s"
-msgstr "Nie można pobrać szczegółów zasady IKE. %s"
-
-msgid "Unable to retrieve IPSec Policies list."
-msgstr "Nie można pobrać listy zasad IPSec."
-
-msgid "Unable to retrieve IPSec Policy details."
-msgstr "Nie można pobrać szczegółów zasady IPSec."
-
-#, python-format
-msgid "Unable to retrieve IPSec Policy details. %s"
-msgstr "Nie można pobrać szczegółów zasady IPSec. %s"
-
-msgid "Unable to retrieve IPSec Site Connection details."
-msgstr "Nie można pobrać szczegółów połączenia tunelowego IPSec"
-
-#, python-format
-msgid "Unable to retrieve IPSec Site Connection details. %s"
-msgstr "Nie można pobrać szczegółów połączenia tunelowego IPSec. %s"
-
-msgid "Unable to retrieve IPSec Site Connections list."
-msgstr "Nie można pobrać listy połączeń tunelowych IPSec."
-
-msgid "Unable to retrieve VPN Service details."
-msgstr "Nie można pobrać szczegółów usługi VPN."
-
-#, python-format
-msgid "Unable to retrieve VPN Service details. %s"
-msgstr "Nie można pobrać szczegółów usługi VPN. %s"
-
-msgid "Unable to retrieve VPN Services list."
-msgstr "Nie można pobrać listy usług VPN."
+msgid "Type"
+msgstr "Typ"
 
 msgid "Unable to retrieve networks list."
 msgstr "Nie można pobrać listy sieci."
@@ -415,23 +252,8 @@ msgstr "VPN"
 msgid "VPN Service"
 msgstr "Usługa VPN"
 
-#, python-format
-msgid "VPN Service %s was successfully updated."
-msgstr "Zaktualizowano usługę VPN %s."
-
-#, fuzzy
-msgid "VPN Service ="
-msgstr "Usługa VPN"
-
 msgid "VPN Service Details"
 msgstr "Szczegóły usługi VPN"
-
-#, fuzzy
-msgid "VPN Service ID ="
-msgstr "Usługa VPN"
-
-msgid "VPN Service associated with this connection"
-msgstr "Usługa VPN powiązana z tym połączeniem"
 
 msgid "VPN Services"
 msgstr "Usługi VPN"

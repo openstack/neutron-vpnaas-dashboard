@@ -1,29 +1,34 @@
-# Carsten Duch <carsten.duch@posteo.de>, 2015. #zanata
-# Robert Simai <robert.simai@suse.com>, 2015. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2016. #zanata
 # Monika Wolf <vcomas3@de.ibm.com>, 2016. #zanata
-# Robert Simai <robert.simai@suse.com>, 2016. #zanata
 # Robin Naundorf <r.naundorf@fh-muenster.de>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2017. #zanata
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: horizon 11.0.3.dev17\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-02 12:03-0500\n"
-"PO-Revision-Date: 2017-06-26 12:03+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
-"Language-Team: German\n"
-"Language: de\n"
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-28 11:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-01-28 07:07+0000\n"
+"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
+"Language-Team: German\n"
+"Language: de\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
+msgid "-"
+msgstr "-"
+
 msgid "3des"
 msgstr "3des"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "Aktiv"
 
 msgid "Add"
 msgstr "Hinzufügen"
@@ -31,20 +36,20 @@ msgstr "Hinzufügen"
 msgid "Add IKE Policy"
 msgstr "IKE Richtlinie hinzufügen"
 
-msgid "Add IPSec Policy"
+msgid "Add IPsec Policy"
 msgstr "IPSec Richtlinie hinzufügen"
 
-msgid "Add IPSec Site Connection"
+msgid "Add IPsec Site Connection"
 msgstr "Füge IPSec Site Verbindung hinzu"
 
 msgid "Add New IKE Policy"
 msgstr "Neue IKE Richtlinie hinzufügen"
 
-msgid "Add New IPSec Policy"
-msgstr "Neue IPSec Richtlinie hinzufügen."
+msgid "Add New IPsec Policy"
+msgstr "Neue IPsec Richtlinie hinzufügen."
 
-msgid "Add New IPSec Site Connection"
-msgstr "Füge neue IPSec Site Verbindung hinzu"
+msgid "Add New IPsec Site Connection"
+msgstr "Füge neue IPsec Site Verbindung hinzu"
 
 msgid "Add New VPN Service"
 msgstr "Neuen VPN Dienst hinzufügen."
@@ -53,35 +58,38 @@ msgid "Add VPN Service"
 msgstr "VPN Dienst hinzufügen"
 
 #, python-format
-msgid "Added IKE Policy \"%s\"."
+msgid "Added IKE policy \"%s\"."
 msgstr "IKE Richtlinie \"%s\" hinzugefügt."
 
 #, python-format
-msgid "Added IPSec Policy \"%s\"."
-msgstr "IPSec Richtlinie \"%s\" hinzugefügt."
+msgid "Added IPsec policy \"%s\"."
+msgstr "IPsec Richtlinie \"%s\" hinzugefügt."
 
 #, python-format
-msgid "Added IPSec Site Connection \"%s\"."
-msgstr "IPSec Site Verbindung \"%s\" wurde hinzugefügt."
+msgid "Added IPsec site connection \"%s\"."
+msgstr "IPsec Site Verbindung \"%s\" wurde hinzugefügt."
 
 #, python-format
-msgid "Added VPN Service \"%s\"."
+msgid "Added VPN service \"%s\"."
 msgstr "VPN Dienst \"%s\" wurde hinzugefügt."
 
 msgid "Authorization algorithm"
 msgstr "Authorisierungsalgorithmus"
 
-#, fuzzy
 msgid "Authorization algorithm ="
-msgstr "Authorisierungsalgorithmus"
+msgstr "Authorisierungsalgorithmus ="
 
 msgid ""
-"Create IPSec Site Connection for current project. Assign a name and "
-"description for the IPSec Site Connection. All fields in this tab are "
+"Create IPsec site connection for current project. Assign a name and "
+"description for the IPsec site connection. All fields in this tab are "
 "required."
 msgstr ""
-"Erzeuge eine IPSec Site-Verbindung für das aktuelle Projekt. Fügen Sie Name "
+"Erzeuge eine IPsec Site-Verbindung für das aktuelle Projekt. Fügen Sie Name "
 "und Beschreibung hinzu. Alle Felder in diesem Tab sind erforderlich."
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "Erstellt"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "DPD-Zeitüberschreitung muss größer als das DPD-Intervall sein"
@@ -95,8 +103,32 @@ msgstr "Intervall zum Aufspüren von toten Peers"
 msgid "Dead peer detection timeout"
 msgstr "Zeitüberschreitung zum Aufspüren von toten Peers"
 
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "Lösche IKE Richtline"
+msgstr[1] "Lösche IKE Richtlinien"
+
+msgid "Delete IPsec Policy"
+msgid_plural "Delete IPsec Policies"
+msgstr[0] "Lösche IPsec Richtlinie"
+msgstr[1] "Lösche IPsec Richtlinien"
+
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "IPsec-Seitenverbindung löschen"
+msgstr[1] "IPsec-Seitenverbindungen löschen"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "VPN-Dienst löschen"
+msgstr[1] "VPN-Dienste löschen"
+
 msgid "Description"
 msgstr "Beschreibung"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "Inaktiv"
 
 msgid "Edit Connection"
 msgstr "Verbindung bearbeiten"
@@ -104,11 +136,11 @@ msgstr "Verbindung bearbeiten"
 msgid "Edit IKE Policy"
 msgstr "IKE Richtlinie bearbeiten"
 
-msgid "Edit IPSec Policy"
-msgstr "IPSec-Richtlinie bearbeiten"
+msgid "Edit IPsec Policy"
+msgstr "IPsec-Richtlinie bearbeiten"
 
-msgid "Edit IPSec Site Connection"
-msgstr "Bearbeite IPSet Site Verbindung"
+msgid "Edit IPsec Site Connection"
+msgstr "Bearbeite IPsec Site Verbindung"
 
 msgid "Edit VPN Service"
 msgstr "VPN Dienst bearbeiten"
@@ -122,9 +154,14 @@ msgstr "Kapselungsmodus"
 msgid "Encryption algorithm"
 msgstr "Verschlüsselungsalgorithmus"
 
-#, fuzzy
 msgid "Encryption algorithm ="
-msgstr "Verschlüsselungsalgorithmus"
+msgstr "Verschlüsselungsalgorithmus ="
+
+msgid "Endpoints"
+msgstr "Endpunkte"
+
+msgid "Endpoints ="
+msgstr "Endpunkte ="
 
 msgid "Equal to or greater than 60"
 msgstr "Gleich oder größer als 60"
@@ -136,31 +173,28 @@ msgstr ""
 "Größer oder gleich 68 falls das lokale Subnetz IPv4 ist. Größer oder gleich "
 "1280 falls das lokale Subnetz IPv6 ist."
 
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "Fehler"
+
 #, python-format
-msgid "Failed to update IKE Policy %s"
+msgid "Failed to update IKE policy %s"
 msgstr "Fehler beim Aktualisieren der IKE Richtlinie %s"
 
 #, python-format
-msgid "Failed to update IPSec Policy %s"
-msgstr "Fehler beim Aktualisieren der IPSec Richtlinie %s"
-
-#, python-format
-msgid "Failed to update IPSec Site Connection %s"
+msgid "Failed to update IPsec site connection %s"
 msgstr "IPSec Site Verbindung %s konnte nicht nicht geändert werden"
 
 #, python-format
-msgid "Failed to update VPN Service %s"
+msgid "Failed to update VPN service %s"
 msgstr "VPN Dienst %s konnte nicht aktualisiert werden"
 
 msgid ""
-"Fields in this tab are optional. You can configure the detail of IPSec site "
+"Fields in this tab are optional. You can configure the detail of IPsec site "
 "connection created."
 msgstr ""
 "Die Felder in diesem Tab sind optional. Sie können hier die Details der "
-"erzeugten IPSec Seiten-Verbindung konfigurieren."
-
-msgid "ID"
-msgstr "ID"
+"erzeugten IPsec Seiten-Verbindung konfigurieren."
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE Phase1 Verhandlungs-Modus"
@@ -171,60 +205,60 @@ msgstr "IKE Richtlinien"
 msgid "IKE Policy"
 msgstr "IKE Richtlinie"
 
-#, python-format
-msgid "IKE Policy %s was successfully updated."
-msgstr "IKE-Richtlinie %s wurde erfolgreich aktualisiert."
-
-#, fuzzy
 msgid "IKE Policy ="
-msgstr "IKE Richtlinie"
+msgstr "IKE Richtlinie ="
 
 msgid "IKE Policy Details"
 msgstr "IKE Richtlinien Details"
 
-#, fuzzy
 msgid "IKE Policy ID ="
-msgstr "IKE Richtlinie"
+msgstr "IKE Richtlinie ID ="
 
-msgid "IKE Policy associated with this connection"
+#, python-format
+msgid "IKE policy %s was successfully updated."
+msgstr "IKE-Richtlinie %s wurde erfolgreich aktualisiert."
+
+msgid "IKE policy associated with this connection"
 msgstr "IKE Richtlinie für diese Verbindung"
 
 msgid "IKE version"
 msgstr "IKE Version"
 
-msgid "IPSec Policies"
-msgstr "IPSec Richtlinien"
+msgid "IPsec Policies"
+msgstr "IPsec Richtlinien"
 
-msgid "IPSec Policy"
-msgstr "IPSec Richtlinie"
+msgid "IPsec Policy"
+msgstr "IPsec Richtlinie"
+
+msgid "IPsec Policy ="
+msgstr "IPsec Richtlinie ="
+
+msgid "IPsec Policy Details"
+msgstr "IPsec Richtlinien Details"
+
+msgid "IPsec Policy ID ="
+msgstr "IPsec Richtlinie ID ="
+
+msgid "IPsec Site Connection Details"
+msgstr "IPsec Site Verbindungsdetails"
+
+msgid "IPsec Site Connections"
+msgstr "IPsec Site Verbindungen"
 
 #, python-format
-msgid "IPSec Policy %s was successfully updated."
+msgid "IPsec policy %s was successfully updated."
 msgstr "IPSec Richtlinie %s wurde erfolgreich aktualisiert."
 
-#, fuzzy
-msgid "IPSec Policy ="
-msgstr "IPSec Richtlinie"
-
-msgid "IPSec Policy Details"
-msgstr "IPSec Richtlinien Details"
-
-#, fuzzy
-msgid "IPSec Policy ID ="
-msgstr "IPSec Richtlinie"
-
-msgid "IPSec Policy associated with this connection"
-msgstr "IPSec Richtline für diese Verbindung"
+msgid "IPsec policy associated with this connection"
+msgstr "IPsec Richtline für diese Verbindung"
 
 #, python-format
-msgid "IPSec Site Connection %s was successfully updated."
+msgid "IPsec site connection %s was successfully updated."
 msgstr "IPSec Site Verbindung %s wurde erfolgreich aktualisiert."
 
-msgid "IPSec Site Connection Details"
-msgstr "IPSec Site Verbindungsdetails"
-
-msgid "IPSec Site Connections"
-msgstr "IPSec Site Verbindungen"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "Inaktiv"
 
 msgid "Initiator state"
 msgstr "Initiatorstatus"
@@ -262,6 +296,9 @@ msgstr "Optionale Parameter"
 msgid "PFS"
 msgstr "PFS"
 
+msgid "PFS ="
+msgstr "PFS ="
+
 msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
 msgstr "Öffentliche IPv4/IPv6-Adresse oder FQDN für das Peer-Gateway"
 
@@ -279,6 +316,18 @@ msgid ""
 msgstr ""
 "Peer-Router Identität zur Authentifizierung. Die Identität kann eine IPv4/"
 "IPv6-Adresse, eine E-Mail oder FQDN sein."
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "Geplante Erstellung"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "Geplante Löschung"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "Geplante Aktualisierung"
 
 msgid "Perfect Forward Secrecy"
 msgstr "Perfect Forward Secrecy: perfekte vorwärts gerichtete Geheimhaltung"
@@ -299,24 +348,42 @@ msgstr ""
 msgid "Router"
 msgstr "Router"
 
-#, fuzzy
 msgid "Router ="
-msgstr "Router"
+msgstr "Router ="
 
-#, fuzzy
 msgid "Router ID ="
-msgstr "Router-ID"
+msgstr "Router-ID ="
 
 msgid "Save Changes"
 msgstr "Änderungen speichern"
 
-msgid "Select IKE Policy"
+msgid "Scheduled deletion of IKE policy"
+msgid_plural "Scheduled deletion of IKE policies"
+msgstr[0] "Geplante Löschung von IKE Richtlinie"
+msgstr[1] "Geplante Löschung von IKE Richtlinien"
+
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "Geplante Löschung von IPsec Richtlinie"
+msgstr[1] "Geplante Löschung von IPsec Richtlinien"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "Geplante Löschung der IPsec-Seitenverbindung"
+msgstr[1] "Geplante Löschung von IPsec-Seitenverbindungen"
+
+msgid "Scheduled deletion of VPN service"
+msgid_plural "Scheduled deletion of VPN services"
+msgstr[0] "Geplante Löschung des VPN-Dienstes"
+msgstr[1] "Geplante Löschung von VPN-Diensten"
+
+msgid "Select IKE policy"
 msgstr "IKE Richtlinie auswählen"
 
-msgid "Select IPSec Policy"
-msgstr "IPSec Richtlinien auswählen"
+msgid "Select IPsec Policy"
+msgstr "IPsec Richtlinien auswählen"
 
-msgid "Select VPN Service"
+msgid "Select VPN service"
 msgstr "VPN Dienst auswählen"
 
 msgid "Select a Router"
@@ -329,18 +396,16 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Status ="
-msgstr "Status ="
+msgstr "Status"
 
 msgid "Subnet"
 msgstr "Subnetz"
 
-#, fuzzy
 msgid "Subnet ="
-msgstr "Subnetz"
+msgstr "Subnetz ="
 
-#, fuzzy
 msgid "Subnet ID ="
-msgstr "Subnetz-ID"
+msgstr "Subnetz ID ="
 
 msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr ""
@@ -348,11 +413,11 @@ msgstr ""
 "der VPN Verbindung"
 
 msgid ""
-"The state of IPSec site connection to start in. If disabled (not checked), "
-"IPSec site connection does not forward packets."
+"The state of IPsec site connection to start in. If disabled (not checked), "
+"IPsec site connection does not forward packets."
 msgstr ""
-"Der Status, in dem die IPSec Site Verbindung gestartet wird. Wenn "
-"deaktiviert (nicht markiert), leitet die IPSec Site Verbindung keine Pakete "
+"Der Status, in dem die IPsec Site Verbindung gestartet wird. Wenn "
+"deaktiviert (nicht markiert), leitet die IPsec Site Verbindung keine Pakete "
 "weiter."
 
 msgid ""
@@ -365,76 +430,79 @@ msgstr ""
 msgid "Transform Protocol"
 msgstr "Verwandlungsprotokoll"
 
+msgid "Type"
+msgstr "Typ"
+
+msgid "Type ="
+msgstr "Typ ="
+
 #, python-format
-msgid "Unable to add IKE Policy \"%s\"."
+msgid "Unable to add IKE policy \"%s\"."
 msgstr "IKE Richtlinie \"%s\" konnte nicht hinzugefügt werden."
 
 #, python-format
-msgid "Unable to add IPSec Policy \"%s\"."
-msgstr "IPSec Richtlinie \"%s\" konnte nicht hinzugefügt werden."
+msgid "Unable to add IPsec policy \"%s\"."
+msgstr "IPsec Richtlinie \"%s\" konnte nicht hinzugefügt werden."
 
 #, python-format
-msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr "IPSec Site Verbindung \"%s\" konnte nicht hinzugefügt werden."
+msgid "Unable to add IPsec site connection \"%s\"."
+msgstr "IPsec Site Verbindung \"%s\" konnte nicht hinzugefügt werden."
 
 #, python-format
-msgid "Unable to add VPN Service \"%s\"."
+msgid "Unable to add VPN service \"%s\"."
 msgstr "VPN Dienst \"%s\" konnte nicht hinzugefügt werden."
 
 #, python-format
-msgid "Unable to delete IKE Policy. %s"
+msgid "Unable to delete IKE policy. %s"
 msgstr "IKE Richtlinie %s konnte nicht gelöscht werden."
 
 #, python-format
-msgid "Unable to delete IPSec Policy. %s"
-msgstr "IPSec Richtlinie %s konnte nicht gelöscht werden."
+msgid "Unable to delete IPsec policy. %s"
+msgstr "IPsec Richtlinie %s konnte nicht gelöscht werden."
 
 #, python-format
-msgid "Unable to delete IPSec Site Connection. %s"
-msgstr "IPSec Site Verbindung konnte nicht gelöscht werden: %s"
+msgid "Unable to delete IPsec site connection. %s"
+msgstr "IPsec Site Verbindung konnte nicht gelöscht werden: %s"
 
 #, python-format
-msgid "Unable to delete VPN Service. %s"
+msgid "Unable to delete VPN service. %s"
 msgstr "VPN Dienst %s konnte nicht gelöscht werden."
 
-msgid "Unable to retrieve IKE Policies list."
+msgid "Unable to retrieve IKE policies list."
 msgstr "Liste der IKE Richtlinien kann nicht abgerufen werden."
 
-msgid "Unable to retrieve IKE Policy details."
+msgid "Unable to retrieve IKE policy details."
 msgstr "IKE Richtliniendetails können nicht abgerufen werden."
 
 #, python-format
-msgid "Unable to retrieve IKE Policy details. %s"
+msgid "Unable to retrieve IKE policy details. %s"
 msgstr "IKE Richtliniendetails können nicht abgerufen werden. %s"
 
-msgid "Unable to retrieve IPSec Policies list."
-msgstr "IPSec Richtlinien Liste kann nicht abgerufen werden."
-
-msgid "Unable to retrieve IPSec Policy details."
-msgstr "IPSec Richtliniendetails können nicht abgerufen werden."
+msgid "Unable to retrieve IPsec policy details."
+msgstr "IPsec Richtliniendetails können nicht abgerufen werden."
 
 #, python-format
-msgid "Unable to retrieve IPSec Policy details. %s"
-msgstr "IPSec Richtliniendetails können nicht abgerufen werden. %s"
+msgid "Unable to retrieve IPsec policy details. %s"
+msgstr "IPsec Richtliniendetails können nicht abgerufen werden. %s"
 
-msgid "Unable to retrieve IPSec Site Connection details."
-msgstr "IPSec Site Verbindungsdetails können nicht abgerufen werden."
+msgid "Unable to retrieve IPsec site connection details."
+msgstr "IPsec Site Verbindungsdetails können nicht abgerufen werden."
 
 #, python-format
-msgid "Unable to retrieve IPSec Site Connection details. %s"
-msgstr "IPSec Site Verbindungsdetails können nicht abgerufen werden. %s"
+msgid "Unable to retrieve IPsec site connection details. %s"
+msgstr "IPsec Site Verbindungsdetails können nicht abgerufen werden. %s"
 
-msgid "Unable to retrieve IPSec Site Connections list."
-msgstr "IPSec Site Verbindungsliste kann nicht abgerufen werden."
+msgid "Unable to retrieve IPsec site connections list."
+msgstr "IPsec Site Verbindungsliste kann nicht abgerufen werden."
 
-msgid "Unable to retrieve VPN Service details."
+msgid "Unable to retrieve VPN service details."
 msgstr "VPN Servicedetails können nicht abgerufen werden."
 
 #, python-format
-msgid "Unable to retrieve VPN Service details. %s"
+msgid "Unable to retrieve VPN service details. %s"
 msgstr "VPN Servicedetails können nicht abgerufen werden. %s"
 
-msgid "Unable to retrieve VPN Services list."
+msgid "Unable to retrieve VPN services list."
 msgstr "VPN Service Liste kann nicht abgerufen werden."
 
 msgid "Unable to retrieve networks list."
@@ -449,26 +517,24 @@ msgstr "VPN"
 msgid "VPN Service"
 msgstr "VPN Dienst"
 
-#, python-format
-msgid "VPN Service %s was successfully updated."
-msgstr "VPN Service %s erfolgreich aktualisiert."
-
-#, fuzzy
 msgid "VPN Service ="
-msgstr "VPN Dienst"
+msgstr "VPN Dienst ="
 
 msgid "VPN Service Details"
 msgstr "VPN Dienstdetails"
 
-#, fuzzy
 msgid "VPN Service ID ="
-msgstr "VPN Dienst"
-
-msgid "VPN Service associated with this connection"
-msgstr "VPN Dienst für diese Verbindung"
+msgstr "VPN Dienst ID ="
 
 msgid "VPN Services"
 msgstr "VPN Dienste"
+
+#, python-format
+msgid "VPN service %s was successfully updated."
+msgstr "VPN Service %s erfolgreich aktualisiert."
+
+msgid "VPN service associated with this connection"
+msgstr "VPN Dienst für diese Verbindung"
 
 msgid "Valid integer greater than the DPD interval"
 msgstr "Gültige Ganzzahl größer als das DPD Intervall"
@@ -504,7 +570,7 @@ msgid "clear"
 msgstr "löschen"
 
 msgid "disabled"
-msgstr "deaktivieren"
+msgstr "inaktiviert"
 
 msgid "down"
 msgstr "Inaktiv"

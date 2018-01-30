@@ -1,24 +1,32 @@
 # Mücahit Büyükyılmaz <mucahit@deltanoc.com>, 2015. #zanata
 # OpenStack Infra <zanata@openstack.org>, 2015. #zanata
-# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Mücahit Büyükyılmaz <mucahit@deltanoc.com>, 2016. #zanata
+# işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
+# yasemin demiral <yasemin.demiral@tubitak.gov.tr>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: horizon 11.0.1.dev4\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-02 12:03-0500\n"
-"PO-Revision-Date: 2016-10-13 04:26+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Turkish (Turkey)\n"
-"Language: tr-TR\n"
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-28 11:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-09-28 11:08+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Turkish (Turkey)\n"
+"Language: tr-TR\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=(n>1)\n"
 
+msgid "-"
+msgstr "-"
+
 msgid "3des"
 msgstr "3des"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "Etkin"
 
 msgid "Add"
 msgstr "Ekle"
@@ -26,20 +34,8 @@ msgstr "Ekle"
 msgid "Add IKE Policy"
 msgstr "IKE İlkesi Ekle"
 
-msgid "Add IPSec Policy"
-msgstr "IPSec İlkesi Ekle"
-
-msgid "Add IPSec Site Connection"
-msgstr "IPSec Site Bağlantısı Ekle"
-
 msgid "Add New IKE Policy"
 msgstr "Yeni IKE İlkesi Ekle"
-
-msgid "Add New IPSec Policy"
-msgstr "Yeni IPSec İlkesi Ekle"
-
-msgid "Add New IPSec Site Connection"
-msgstr "Yeni IPSec Site Bağlantısı Ekle"
 
 msgid "Add New VPN Service"
 msgstr "Yeni VPN Servisi Ekle"
@@ -47,28 +43,15 @@ msgstr "Yeni VPN Servisi Ekle"
 msgid "Add VPN Service"
 msgstr "VPN Servisi Ekle"
 
-#, python-format
-msgid "Added IKE Policy \"%s\"."
-msgstr "IKE İlkesi \"%s\" Eklendi."
-
-#, python-format
-msgid "Added IPSec Policy \"%s\"."
-msgstr "IPSec İlkesi \"%s\" Eklendi."
-
-#, python-format
-msgid "Added IPSec Site Connection \"%s\"."
-msgstr "IPSec Site Bağlantısı \"%s\" Eklendi."
-
-#, python-format
-msgid "Added VPN Service \"%s\"."
-msgstr "VPN Servisi Eklendi \"%s\"."
-
 msgid "Authorization algorithm"
 msgstr "Yetkilendirme algoritması"
 
-#, fuzzy
 msgid "Authorization algorithm ="
-msgstr "Yetkilendirme algoritması"
+msgstr "Yetkilendirme algoritması ="
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "Oluşturuldu"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "DPD Zaman aşımı DPD Aralığından büyük olmalıdır"
@@ -82,8 +65,22 @@ msgstr "Ölü eş algılama zaman aralığı"
 msgid "Dead peer detection timeout"
 msgstr "Ölü eş algılama zaman aşımı"
 
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "IKE İlkesini Sil"
+msgstr[1] "IKE İlkelerini Sil"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "VPN Servisini Sil"
+msgstr[1] "VPN Servislerini Sil"
+
 msgid "Description"
 msgstr "Açıklama"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "Down"
 
 msgid "Edit Connection"
 msgstr "Bağlantıyı Düzenle"
@@ -91,18 +88,11 @@ msgstr "Bağlantıyı Düzenle"
 msgid "Edit IKE Policy"
 msgstr "IKE İlkesini Düzenle"
 
-msgid "Edit IPSec Policy"
-msgstr "IPSec İlkesini Düzenle"
-
-msgid "Edit IPSec Site Connection"
-msgstr "IPSec Site Bağlantısının Düzenle"
-
 msgid "Edit VPN Service"
 msgstr "VPN Servisini Düzenle"
 
-#, fuzzy
 msgid "Enable Admin State"
-msgstr "Yönetici Durum"
+msgstr "Yönetici Durumunu Etkinleştir"
 
 msgid "Encapsulation mode"
 msgstr "Sarmalama kipi"
@@ -110,9 +100,11 @@ msgstr "Sarmalama kipi"
 msgid "Encryption algorithm"
 msgstr "Şifreleme algoritması"
 
-#, fuzzy
 msgid "Encryption algorithm ="
-msgstr "Şifreleme algoritması"
+msgstr "Şifreleme algoritması ="
+
+msgid "Endpoints"
+msgstr "Uçnoktalar"
 
 msgid "Equal to or greater than 60"
 msgstr "60'a eşit ya da 60'dan daha büyük"
@@ -124,31 +116,9 @@ msgstr ""
 "Yerel alt ağ IPv4 ise 68 ya da daha büyük. Yerel alt ağ IPv6 ise 1280 ya da "
 "daha büyük."
 
-#, python-format
-msgid "Failed to update IKE Policy %s"
-msgstr "IKE İlkesi %s güncellenemedi"
-
-#, python-format
-msgid "Failed to update IPSec Policy %s"
-msgstr "IPSec İlkesi %s güncellenemedi"
-
-#, python-format
-msgid "Failed to update IPSec Site Connection %s"
-msgstr "IPSec Site Bağlantısı %s güncellenemedi"
-
-#, python-format
-msgid "Failed to update VPN Service %s"
-msgstr "VPN Servisi %s güncellenemedi"
-
-msgid ""
-"Fields in this tab are optional. You can configure the detail of IPSec site "
-"connection created."
-msgstr ""
-"Bu sekmedeki alanlar isteğe bağlıdır. Oluşturulan IPSec site bağlantısının "
-"detayını yapılandırabilirsiniz."
-
-msgid "ID"
-msgstr "KİMLİK"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "Hata"
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE Phase1 müzakere kipi"
@@ -159,60 +129,21 @@ msgstr "IKE İlkeleri"
 msgid "IKE Policy"
 msgstr "IKE İlkesi"
 
-#, python-format
-msgid "IKE Policy %s was successfully updated."
-msgstr "IKE İlkesi %s başarıyla güncellendi."
-
-#, fuzzy
 msgid "IKE Policy ="
-msgstr "IKE İlkesi"
+msgstr "IKE İlkesi ="
 
 msgid "IKE Policy Details"
 msgstr "IKE İlkesi Detayları"
 
-#, fuzzy
 msgid "IKE Policy ID ="
-msgstr "IKE İlkesi"
-
-msgid "IKE Policy associated with this connection"
-msgstr "Bu bağlantıyla ilişkili IKE İlkesi"
+msgstr "IKE İlke ID'si ="
 
 msgid "IKE version"
 msgstr "IKE sürümü"
 
-msgid "IPSec Policies"
-msgstr "IPSec İlkeleri"
-
-msgid "IPSec Policy"
-msgstr "IPSec İlkesi"
-
-#, python-format
-msgid "IPSec Policy %s was successfully updated."
-msgstr "IPSec İlkesi %s başarıyla güncellendi."
-
-#, fuzzy
-msgid "IPSec Policy ="
-msgstr "IPSec İlkesi"
-
-msgid "IPSec Policy Details"
-msgstr "IPSec İlke Detayları"
-
-#, fuzzy
-msgid "IPSec Policy ID ="
-msgstr "IPSec İlkesi"
-
-msgid "IPSec Policy associated with this connection"
-msgstr "Bu bağlantıyla ilişkili IPSec İlkesi"
-
-#, python-format
-msgid "IPSec Site Connection %s was successfully updated."
-msgstr "IPSec Site Bağlantısı %s başarıyla güncellendi."
-
-msgid "IPSec Site Connection Details"
-msgstr "IPSec Site Bağlantı Detayları"
-
-msgid "IPSec Site Connections"
-msgstr "IPSec Site Bağlantıları"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "Pasif"
 
 msgid "Initiator state"
 msgstr "Başlatıcı durumu"
@@ -232,11 +163,14 @@ msgstr "IKE anahtarları için ömür değeri"
 msgid "Lifetime value for IKE keys "
 msgstr "IKE anahtarları için ömür değeri "
 
+msgid "Local Side Public IPs"
+msgstr "Yerel Taraf Açık IP'ler"
+
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "Bağlantı için Azami Aktarım Birimi boyutu"
 
 msgid "Name"
-msgstr "Ad"
+msgstr "İsim"
 
 msgid "Name ="
 msgstr "Ad ="
@@ -246,6 +180,9 @@ msgstr "İsteğe Bağlı Parametreler"
 
 msgid "PFS"
 msgstr "PFS"
+
+msgid "PFS ="
+msgstr "PFS ="
 
 msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
 msgstr "Eş geçit açık IPv4/IPv6 Adresi veya FQDN"
@@ -262,6 +199,18 @@ msgid ""
 msgstr ""
 "Kimlik doğrulama için eş yönlendirici kimliği. IPv4/IPv6 adresi, e-posta, "
 "anahtar ID'si, veya FQDN olabilir"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "Oluşturma Bekleniyor"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "Silme Bekleniyor"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "Güncelleme Bekleniyor"
 
 msgid "Perfect Forward Secrecy"
 msgstr "Mükemmel İleri Gizlilik"
@@ -280,27 +229,16 @@ msgstr ""
 "adres(ler)i"
 
 msgid "Router"
-msgstr "Router"
+msgstr "Yönlendirici"
 
-#, fuzzy
 msgid "Router ="
-msgstr "Router"
+msgstr "Yönlendirici ="
 
-#, fuzzy
 msgid "Router ID ="
-msgstr "Router ID'si"
+msgstr "Yönlendirici ID'si ="
 
 msgid "Save Changes"
 msgstr "Değişiklikleri Kaydet"
-
-msgid "Select IKE Policy"
-msgstr "IKE İlkesi Seçin"
-
-msgid "Select IPSec Policy"
-msgstr "IPSec İlkesi Seçin"
-
-msgid "Select VPN Service"
-msgstr "VPN Servisi Seçin"
 
 msgid "Select a Router"
 msgstr "Bir Router Seçin"
@@ -315,90 +253,32 @@ msgid "Status ="
 msgstr "Durum ="
 
 msgid "Subnet"
-msgstr "Subnet"
+msgstr "Alt Ağ"
 
-#, fuzzy
 msgid "Subnet ="
-msgstr "Subnet"
+msgstr "Alt ağ ="
 
-#, fuzzy
 msgid "Subnet ID ="
-msgstr "Alt ağ ID'si"
+msgstr "Alt ağ ID'si ="
+
+msgid "The pre-defined key string between the two peers of the VPN connection"
+msgstr "VPN bağlantısının iki ucu arasındaki önceden tanımlı anahtar metin"
+
+msgid ""
+"The state of VPN service to start in. If disabled (not checked), VPN service "
+"does not forward packets."
+msgstr ""
+"VPN servisinin başlangıç durumu. Kapalıysa (seçili değilse), VPN servisi "
+"paketleri yönlendirmez."
 
 msgid "Transform Protocol"
 msgstr "Dönüştürme İletişim Kuralı"
 
-#, python-format
-msgid "Unable to add IKE Policy \"%s\"."
-msgstr "IKE İlkesi \"%s\" eklenemiyor."
+msgid "Type"
+msgstr "Tür"
 
-#, python-format
-msgid "Unable to add IPSec Policy \"%s\"."
-msgstr "IPSec İlkesi \"%s\" eklenemiyor."
-
-#, python-format
-msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr "IPSec Site Bağlantısı \"%s\" eklenemiyor."
-
-#, python-format
-msgid "Unable to add VPN Service \"%s\"."
-msgstr "VPN Servisi \"%s\" eklenemedi."
-
-#, fuzzy, python-format
-msgid "Unable to delete IKE Policy. %s"
-msgstr "İlke silinemedi. %s"
-
-#, fuzzy, python-format
-msgid "Unable to delete IPSec Policy. %s"
-msgstr "İlke silinemedi. %s"
-
-#, fuzzy, python-format
-msgid "Unable to delete IPSec Site Connection. %s"
-msgstr "IPSec Site Bağlantısı \"%s\" eklenemiyor."
-
-#, fuzzy, python-format
-msgid "Unable to delete VPN Service. %s"
-msgstr "VPN Servisi \"%s\" eklenemedi."
-
-msgid "Unable to retrieve IKE Policies list."
-msgstr "IKE İlkeleri listesi alınamadı."
-
-msgid "Unable to retrieve IKE Policy details."
-msgstr "IKE İlkesi detayları alınamadı."
-
-#, python-format
-msgid "Unable to retrieve IKE Policy details. %s"
-msgstr "IKE İlke detayları alınamıyor. %s"
-
-msgid "Unable to retrieve IPSec Policies list."
-msgstr "IPSec İlkeleri listesi alınamadı."
-
-msgid "Unable to retrieve IPSec Policy details."
-msgstr "IPSec İlke detayları alınamıyor."
-
-#, python-format
-msgid "Unable to retrieve IPSec Policy details. %s"
-msgstr "IPSec İlke detayları alınamıyor. %s"
-
-msgid "Unable to retrieve IPSec Site Connection details."
-msgstr "IPSec Site Bağlantı detayları alınamıyor."
-
-#, python-format
-msgid "Unable to retrieve IPSec Site Connection details. %s"
-msgstr "IPSec Site Bağlantı detayları alınamıyor. %s"
-
-msgid "Unable to retrieve IPSec Site Connections list."
-msgstr "IPSec Site Bağlantıları listesi alınamadı."
-
-msgid "Unable to retrieve VPN Service details."
-msgstr "VPN Servis detayları alınamıyor."
-
-#, python-format
-msgid "Unable to retrieve VPN Service details. %s"
-msgstr "VPN Servis detayları alınamıyor. %s"
-
-msgid "Unable to retrieve VPN Services list."
-msgstr "VPN Servisleri listesi alınamadı."
+msgid "Type ="
+msgstr "Tür ="
 
 msgid "Unable to retrieve networks list."
 msgstr "Ağ listesi alınamadı."
@@ -412,23 +292,14 @@ msgstr "VPN"
 msgid "VPN Service"
 msgstr "VPN Servisi"
 
-#, python-format
-msgid "VPN Service %s was successfully updated."
-msgstr "VPN Servisi %s başarıyla güncellendi."
-
-#, fuzzy
 msgid "VPN Service ="
-msgstr "VPN Servisi"
+msgstr "VPN Servisİ ="
 
 msgid "VPN Service Details"
 msgstr "VPN Servis Detayları"
 
-#, fuzzy
 msgid "VPN Service ID ="
-msgstr "VPN Servisi"
-
-msgid "VPN Service associated with this connection"
-msgstr "VPN Servisi bu bağlantıyla ilişkilendirildi"
+msgstr "VPN Servis ID'si ="
 
 msgid "VPN Services"
 msgstr "VPN Servisleri"
@@ -467,7 +338,10 @@ msgid "clear"
 msgstr "temizle"
 
 msgid "disabled"
-msgstr "kapalı"
+msgstr "disabled"
+
+msgid "down"
+msgstr "down"
 
 msgid "esp"
 msgstr "esp"
@@ -504,6 +378,9 @@ msgstr "aktarım"
 
 msgid "tunnel"
 msgstr "tünel"
+
+msgid "up"
+msgstr "up"
 
 msgid "v1"
 msgstr "v1"

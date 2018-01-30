@@ -3,42 +3,37 @@
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: horizon 11.0.4.dev2\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-02 12:03-0500\n"
-"PO-Revision-Date: 2017-07-14 12:13+0000\n"
-"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
-"Language-Team: Indonesian\n"
-"Language: id\n"
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-28 11:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-08-12 03:10+0000\n"
+"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "-"
+msgstr "-"
 
 msgid "3des"
 msgstr "3des"
 
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "Aktif"
+
 msgid "Add"
-msgstr "Add (menambah)"
+msgstr "Menambahkan"
 
 msgid "Add IKE Policy"
 msgstr "Tambah IKE Policy"
 
-msgid "Add IPSec Policy"
-msgstr "Tambah IPSec Policy"
-
-msgid "Add IPSec Site Connection"
-msgstr "Tambah IPSec Site Connection"
-
 msgid "Add New IKE Policy"
 msgstr "Tambah IKE Policy baru"
-
-msgid "Add New IPSec Policy"
-msgstr "Tambah IPSec Policy baru"
-
-msgid "Add New IPSec Site Connection"
-msgstr "Timbah IPSec Site Connection baru"
 
 msgid "Add New VPN Service"
 msgstr "Menambah layanan VPN baru"
@@ -46,36 +41,15 @@ msgstr "Menambah layanan VPN baru"
 msgid "Add VPN Service"
 msgstr "Tambah VPN Service"
 
-#, python-format
-msgid "Added IKE Policy \"%s\"."
-msgstr "Ditambakan IKE Policy \"%s\"."
-
-#, python-format
-msgid "Added IPSec Policy \"%s\"."
-msgstr "Ditambahkan IPSec Policy \"%s\"."
-
-#, python-format
-msgid "Added IPSec Site Connection \"%s\"."
-msgstr "Ditembahkan IPSec Site Connection \"%s\"."
-
-#, python-format
-msgid "Added VPN Service \"%s\"."
-msgstr "Ditambahkan layanan VPN \"%s\"."
-
 msgid "Authorization algorithm"
 msgstr "Algoritma otorisasi"
 
-#, fuzzy
 msgid "Authorization algorithm ="
-msgstr "Algoritma otorisasi"
+msgstr "Authorization algorithm ="
 
-msgid ""
-"Create IPSec Site Connection for current project. Assign a name and "
-"description for the IPSec Site Connection. All fields in this tab are "
-"required."
-msgstr ""
-"Buat IPSec Site Connection untuk proyek saat ini. Menetapkan nama dan "
-"deskripsi untuk IPSec Site Connection. Semua kolom dalam tab ini diperlukan."
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "Created"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "DPD Timeout harus lebih besar dari DPD Interval"
@@ -89,20 +63,26 @@ msgstr "Interval deteksi rekan mati"
 msgid "Dead peer detection timeout"
 msgstr "Dead peer detection timeout (DPD timeout)"
 
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "Delete IKE Policy"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "Delete VPN Service"
+
 msgid "Description"
 msgstr "Deskripsi"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "Down"
 
 msgid "Edit Connection"
 msgstr "Edit Connection"
 
 msgid "Edit IKE Policy"
 msgstr "Mengedit IKE Policy"
-
-msgid "Edit IPSec Policy"
-msgstr "Mengedit IPSec Policy"
-
-msgid "Edit IPSec Site Connection"
-msgstr "Mengedit IPSec Site Connection"
 
 msgid "Edit VPN Service"
 msgstr "Mengedit VPN Service"
@@ -116,9 +96,11 @@ msgstr "modus enkapsulasi"
 msgid "Encryption algorithm"
 msgstr "Algoritma Enkripsi"
 
-#, fuzzy
 msgid "Encryption algorithm ="
-msgstr "Algoritma Enkripsi"
+msgstr "Encryption algorithm ="
+
+msgid "Endpoints"
+msgstr "Endpoints (titik akhir)"
 
 msgid "Equal to or greater than 60"
 msgstr "Sama atau lebih besar dari 60"
@@ -130,31 +112,9 @@ msgstr ""
 "Sama dengan atau lebih besar dari 68 jika subnet lokal IPv4. Sama dengan "
 "atau lebih besar dari 1280 jika subnet lokal IPv6."
 
-#, python-format
-msgid "Failed to update IKE Policy %s"
-msgstr "Gagal memperbarui IKE Policy %s"
-
-#, python-format
-msgid "Failed to update IPSec Policy %s"
-msgstr "Gagal memperbarui IPSec Policy %s"
-
-#, python-format
-msgid "Failed to update IPSec Site Connection %s"
-msgstr "Gagal memperbarui IPSec Site Connection %s"
-
-#, python-format
-msgid "Failed to update VPN Service %s"
-msgstr "Gagal memperbarui VPN Service %s"
-
-msgid ""
-"Fields in this tab are optional. You can configure the detail of IPSec site "
-"connection created."
-msgstr ""
-"Kolom dalam tab ini adalah opsional. Anda dapat mengkonfigurasi detail dari "
-"IPSec site connection dibuat."
-
-msgid "ID"
-msgstr "ID"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "Kesalahan"
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "Modus negosiasi IKE Phase1"
@@ -165,60 +125,21 @@ msgstr "IKE Policy (kebijakan IKE)"
 msgid "IKE Policy"
 msgstr "IKE Policy"
 
-#, python-format
-msgid "IKE Policy %s was successfully updated."
-msgstr "IKE Policy %s telah berhasil diperbarui."
-
-#, fuzzy
 msgid "IKE Policy ="
-msgstr "IKE Policy"
+msgstr "IKE Policy ="
 
 msgid "IKE Policy Details"
 msgstr "Rincian IKE Policy"
 
-#, fuzzy
 msgid "IKE Policy ID ="
-msgstr "IKE Policy"
-
-msgid "IKE Policy associated with this connection"
-msgstr "IKE Policy  terkait dengan hubungan ini"
+msgstr "IKE Policy ID ="
 
 msgid "IKE version"
 msgstr "IKE version"
 
-msgid "IPSec Policies"
-msgstr "IPSec Policies (kebijakan IPSec)"
-
-msgid "IPSec Policy"
-msgstr "IPSec Policy"
-
-#, python-format
-msgid "IPSec Policy %s was successfully updated."
-msgstr "IPSec Policy %s telah berhasil diperbarui."
-
-#, fuzzy
-msgid "IPSec Policy ="
-msgstr "IPSec Policy"
-
-msgid "IPSec Policy Details"
-msgstr "Rincian IPSec Policy"
-
-#, fuzzy
-msgid "IPSec Policy ID ="
-msgstr "IPSec Policy"
-
-msgid "IPSec Policy associated with this connection"
-msgstr "IPSec Policy terkait dengan hubungan ini"
-
-#, python-format
-msgid "IPSec Site Connection %s was successfully updated."
-msgstr "IPSec Site Connection %s telah berhasil diperbarui."
-
-msgid "IPSec Site Connection Details"
-msgstr "Rincian IPSec Site Connection "
-
-msgid "IPSec Site Connections"
-msgstr "IPSec Site Connections (koneksi site IPSec)"
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "Tidak aktif"
 
 msgid "Initiator state"
 msgstr "Initiator state (keadaan inisiator)"
@@ -256,6 +177,9 @@ msgstr "Optional Parameter (parameter opsional)"
 msgid "PFS"
 msgstr "PFS"
 
+msgid "PFS ="
+msgstr "PFS ="
+
 msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
 msgstr "Alamat IPv4/IPv6 publik gateway rekan atau FQDN"
 
@@ -271,6 +195,18 @@ msgid ""
 msgstr ""
 "Identitas router rekan untuk otentikasi. Dapat alamat IPv4/IPv6, email, key "
 "ID, atau FQDN"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "Pending Create (penundaan pembuatan)"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "Pending Delete"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "Pending Update (penundaan pembaharuan)"
 
 msgid "Perfect Forward Secrecy"
 msgstr "Perfect Forward Secrecy"
@@ -291,25 +227,14 @@ msgstr ""
 msgid "Router"
 msgstr "Router"
 
-#, fuzzy
 msgid "Router ="
-msgstr "Router"
+msgstr "Router ="
 
-#, fuzzy
 msgid "Router ID ="
-msgstr "ID router"
+msgstr "Router ID ="
 
 msgid "Save Changes"
-msgstr "Menyimpan perubahan"
-
-msgid "Select IKE Policy"
-msgstr "Pilih IKE Policy"
-
-msgid "Select IPSec Policy"
-msgstr "Pilih IPSec Policy"
-
-msgid "Select VPN Service"
-msgstr "Pilih VPN Service"
+msgstr "Simpan perubahan"
 
 msgid "Select a Router"
 msgstr "Pilih Router"
@@ -326,25 +251,16 @@ msgstr "Status = "
 msgid "Subnet"
 msgstr "Subnet"
 
-#, fuzzy
 msgid "Subnet ="
-msgstr "Subnet"
+msgstr "Subnet ="
 
-#, fuzzy
 msgid "Subnet ID ="
-msgstr "Subnet ID"
+msgstr "Subnet ID ="
 
 msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr ""
 "String kunci yang telah ditetapkan (pre-defined key string) antara dua rekan "
 "dari koneksi VPN"
-
-msgid ""
-"The state of IPSec site connection to start in. If disabled (not checked), "
-"IPSec site connection does not forward packets."
-msgstr ""
-"Status koneksi situs IPSec untuk memulai. Jika dinonaktifkan (tidak "
-"dicentang), koneksi situs IPSec tidak meneruskan paket."
 
 msgid ""
 "The state of VPN service to start in. If disabled (not checked), VPN service "
@@ -356,77 +272,11 @@ msgstr ""
 msgid "Transform Protocol"
 msgstr "Transform Protocol (protokol transform)"
 
-#, python-format
-msgid "Unable to add IKE Policy \"%s\"."
-msgstr "Tidak data menambah IKE Policy \"%s\"."
+msgid "Type"
+msgstr "Type"
 
-#, python-format
-msgid "Unable to add IPSec Policy \"%s\"."
-msgstr "Tidak dapat menambahkan IPSec Policy \"%s\"."
-
-#, python-format
-msgid "Unable to add IPSec Site Connection \"%s\"."
-msgstr "Tidak dapat menambahkan IPSec Site Connection \"%s\"."
-
-#, python-format
-msgid "Unable to add VPN Service \"%s\"."
-msgstr "Tidak dapat menambahkan layanan VPN \"%s\"."
-
-#, python-format
-msgid "Unable to delete IKE Policy. %s"
-msgstr "Tidak dapat menghapus IKE Policy. %s"
-
-#, python-format
-msgid "Unable to delete IPSec Policy. %s"
-msgstr "Tidak dapat menghapus IPSec Policy. %s"
-
-#, python-format
-msgid "Unable to delete IPSec Site Connection. %s"
-msgstr "Tidak dapat menghapus IPSec Site Connection. %s"
-
-#, python-format
-msgid "Unable to delete VPN Service. %s"
-msgstr "Tidak dapat menghapus VPN Service. %s"
-
-msgid "Unable to retrieve IKE Policies list."
-msgstr "Tidak dapat mengambil daftar  IKE Policiy."
-
-msgid "Unable to retrieve IKE Policy details."
-msgstr "Tidak dapat mengambil rincian IKE Policy."
-
-#, python-format
-msgid "Unable to retrieve IKE Policy details. %s"
-msgstr "Tidak dapat mengambil rincian IKE Policy. %s"
-
-msgid "Unable to retrieve IPSec Policies list."
-msgstr "Tidak dapat mengambil daftar IPSec Policy."
-
-msgid "Unable to retrieve IPSec Policy details."
-msgstr "Tidak dapat mengambil rincian IPSec Policy ."
-
-#, python-format
-msgid "Unable to retrieve IPSec Policy details. %s"
-msgstr "Tidak dapat mengambil rincian IPSec Policy. %s"
-
-msgid "Unable to retrieve IPSec Site Connection details."
-msgstr "Tidak dapat mengambil rincian IPSec Site Connection."
-
-#, python-format
-msgid "Unable to retrieve IPSec Site Connection details. %s"
-msgstr "Tidak dapat mengambil rincian IPSec Site Connection. %s"
-
-msgid "Unable to retrieve IPSec Site Connections list."
-msgstr "Tidak dapat mengambil daftar IPSec Site Connection."
-
-msgid "Unable to retrieve VPN Service details."
-msgstr "Tidak dapat mengambil rincian Layanan VPN."
-
-#, python-format
-msgid "Unable to retrieve VPN Service details. %s"
-msgstr "Tidak dapat mengambil rincian Layanan VPN. %s"
-
-msgid "Unable to retrieve VPN Services list."
-msgstr "Tidak dapat mengambil daftar VPN Services."
+msgid "Type ="
+msgstr "Type =    (tipe=)"
 
 msgid "Unable to retrieve networks list."
 msgstr "Tidak dapat mengambil daftar jaringan."
@@ -440,23 +290,14 @@ msgstr "VPN"
 msgid "VPN Service"
 msgstr "Service VPN"
 
-#, python-format
-msgid "VPN Service %s was successfully updated."
-msgstr "VPN Service %s telah berhasil diperbarui."
-
-#, fuzzy
 msgid "VPN Service ="
-msgstr "Service VPN"
+msgstr "VPN Service ="
 
 msgid "VPN Service Details"
 msgstr "Rincian VPN Service "
 
-#, fuzzy
 msgid "VPN Service ID ="
-msgstr "Service VPN"
-
-msgid "VPN Service associated with this connection"
-msgstr "Layanan VPN yang terkait dengan hubungan ini"
+msgstr "VPN Service ID ="
 
 msgid "VPN Services"
 msgstr "VPN Services (layanan VPN)"
