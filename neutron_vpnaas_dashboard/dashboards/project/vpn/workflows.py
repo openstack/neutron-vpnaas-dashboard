@@ -69,6 +69,8 @@ class AddVPNServiceAction(workflows.Action):
                               _('Unable to retrieve routers list.'))
             routers = []
         for r in routers:
+            if not r.external_gateway_info:
+                continue
             router_id_choices.append((r.id, r.name))
         self.fields['router_id'].choices = router_id_choices
         return router_id_choices
