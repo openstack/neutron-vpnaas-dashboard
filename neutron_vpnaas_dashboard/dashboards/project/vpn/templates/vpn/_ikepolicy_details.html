@@ -3,10 +3,10 @@
 <div class="detail">
   <dl class="dl-horizontal">
     <dt>{% trans "Name" %}</dt>
-    <dd data-display="{{ ikepolicy.name_or_id }}">{{ ikepolicy.name|default:_("None") }}</dd>
+    <dd data-display="{{ ikepolicy.name_or_id }}">{{ ikepolicy.name|default:_("-") }}</dd>
 
     <dt>{% trans "Description" %}</dt>
-    <dd>{{ ikepolicy.description|default:_("None") }}</dd>
+    <dd>{{ ikepolicy.description|default:_("-") }}</dd>
 
     <dt>{% trans "ID" %}</dt>
     <dd>{{ ikepolicy.id }}</dd>

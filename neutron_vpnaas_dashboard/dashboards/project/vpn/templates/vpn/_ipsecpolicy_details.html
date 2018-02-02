@@ -3,10 +3,10 @@
 <div class="detail">
   <dl class="dl-horizontal">
     <dt>{% trans "Name" %}</dt>
-    <dd data-display="{{ ipsecpolicy.name_or_id }}">{{ ipsecpolicy.name|default:_("None") }}</dd>
+    <dd data-display="{{ ipsecpolicy.name_or_id }}">{{ ipsecpolicy.name|default:_("-") }}</dd>
 
     <dt>{% trans "Description" %}</dt>
-    <dd>{{ ipsecpolicy.description|default:_("None") }}</dd>
+    <dd>{{ ipsecpolicy.description|default:_("-") }}</dd>
 
     <dt>{% trans "ID" %}</dt>
     <dd>{{ ipsecpolicy.id }}</dd>
