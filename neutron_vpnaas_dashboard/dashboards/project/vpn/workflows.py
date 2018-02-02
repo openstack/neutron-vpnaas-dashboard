@@ -197,8 +197,8 @@ class AddEndpointGroup(workflows.Workflow):
     slug = "addendpointgroup"
     name = _("Add Endpoint Group")
     finalize_button_name = _("Add")
-    success_message = _('Added Endpoint Group "%s".')
-    failure_message = _('Unable to add Endpoint Group "%s".')
+    success_message = _('Added endpoint group "%s".')
+    failure_message = _('Unable to add endpoint group "%s".')
     success_url = "horizon:project:vpn:index"
     default_steps = (AddEndpointGroupStep,)
 
@@ -431,7 +431,7 @@ class AddIPsecSiteConnectionAction(workflows.Action):
         label=_("VPN service associated with this connection"))
     local_ep_group_id = forms.ThemableChoiceField(
         required=False,
-        label=_("Endpoint Group for local subnet(s)"),
+        label=_("Endpoint group for local subnet(s)"),
         help_text=_("Local subnets which the new IPsec connection is "
                     "connected to. Required if no subnet is specified "
                     "in a VPN service selected."))
@@ -449,7 +449,7 @@ class AddIPsecSiteConnectionAction(workflows.Action):
                     "Can be IPv4/IPv6 address, e-mail, key ID, or FQDN"),)
     peer_ep_group_id = forms.ThemableChoiceField(
         required=False,
-        label=_("Endpoint Group for remote peer CIDR(s)"),
+        label=_("Endpoint group for remote peer CIDR(s)"),
         help_text=_("Remote peer CIDR(s) connected to the new IPsec "
                     "connection."))
     peer_cidrs = forms.MultiIPField(

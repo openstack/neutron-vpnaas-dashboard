@@ -76,14 +76,14 @@ class UpdateEndpointGroup(forms.SelfHandlingForm):
                     }
             endpointgroup = api_vpn.endpointgroup_update(
                 request, self.initial['endpoint_group_id'], **data)
-            msg = (_('Endpoint Group %s was successfully updated.')
+            msg = (_('Endpoint group %s was successfully updated.')
                    % context['name'])
             messages.success(request, msg)
             return endpointgroup
         except Exception as e:
-            LOG.info('Failed to update Endpint Group %(id)s: %(exc)s',
+            LOG.info('Failed to update endpint group %(id)s: %(exc)s',
                      {'id': self.initial['endpoint_group_id'], 'exc': e})
-            msg = _('Failed to update Endpint Group %s') % context['name']
+            msg = _('Failed to update endpint group %s') % context['name']
             redirect = reverse(self.failure_url)
             exceptions.handle(request, msg, redirect=redirect)
 
