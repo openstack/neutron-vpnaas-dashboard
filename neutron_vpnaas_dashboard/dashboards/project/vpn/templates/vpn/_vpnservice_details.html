@@ -3,10 +3,10 @@
 <div class="detail">
   <dl class="dl-horizontal">
     <dt>{% trans "Name" %}</dt>
-    <dd data-display="{{ vpnservice.name_or_id }}">{{ vpnservice.name|default:_("None") }}</dd>
+    <dd data-display="{{ vpnservice.name_or_id }}">{{ vpnservice.name|default:_("-") }}</dd>
 
     <dt>{% trans "Description" %}</dt>
-    <dd>{{ vpnservice.description|default:_("None") }}</dd>
+    <dd>{{ vpnservice.description|default:_("-") }}</dd>
 
     <dt>{% trans "ID" %}</dt>
     <dd>{{ vpnservice.id }}</dd>
@@ -23,7 +23,7 @@
       {% url 'horizon:project:networks:subnets:detail' vpnservice.subnet_id as subnet_url %}
       <dd><a href="{{ subnet_url }}">{{ vpnservice.subnet.name_or_id }} {{ vpnservice.subnet.cidr }}</a></dd>
     {% else %}
-      <dd>{% trans "None" %}</dd>
+      <dd>{% trans "-" %}</dd>
     {% endif %}
 
     <dt>{% trans "VPN Connections" %}</dt>
@@ -34,7 +34,7 @@
         <a href="{{ conn_url }}">{{ conn.name_or_id }}</a><br>
         {% endfor %}
       {% else %}
-        None
+        {% trans "-" %}
       {% endif %}
     </dd>
 
@@ -50,9 +50,9 @@
     <hr class="header_rule">
     <dl class="dl-horizontal">
       <dt>{% trans "IPv4" %}</dt>
-      <dd>{{ vpnservice.external_v4_ip|default:_("None") }}</dd>
+      <dd>{{ vpnservice.external_v4_ip|default:_("-") }}</dd>
       <dt>{% trans "IPv6" %}</dt>
-      <dd>{{ vpnservice.external_v6_ip|default:_("None") }}</dd>
+      <dd>{{ vpnservice.external_v6_ip|default:_("-") }}</dd>
     </dl>
   {% endif %}
 </div>

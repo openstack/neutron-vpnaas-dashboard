@@ -3,10 +3,10 @@
 <div class="detail">
   <dl class="dl-horizontal">
     <dt>{% trans "Name" %}</dt>
-    <dd>{{ endpointgroup.name|default:_("None") }}</dd>
+    <dd>{{ endpointgroup.name|default:_("-") }}</dd>
 
     <dt>{% trans "Description" %}</dt>
-    <dd>{{ endpointgroup.description|default:_("None") }}</dd>
+    <dd>{{ endpointgroup.description|default:_("-") }}</dd>
 
     <dt>{% trans "ID" %}</dt>
     <dd>{{ endpointgroup.id }}</dd>
