@@ -147,7 +147,7 @@ class AddEndpointGroupAction(workflows.Action):
     subnets = forms.MultipleChoiceField(
         required=False,
         label=_("Local System Subnets"),
-        widget=forms.ThemableCheckboxSelectMultiple(attrs={
+        widget=forms.CheckboxSelectMultiple(attrs={
             'class': 'switched',
             'data-switch-on': 'type',
             'data-type-subnet': _("External System Subnets"),
