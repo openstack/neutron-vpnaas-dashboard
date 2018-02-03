@@ -305,7 +305,7 @@ class UpdateEndpointGroupView(horizon_forms.ModalFormView):
             return api_vpn.endpointgroup_get(self.request, endpoint_group_id)
         except Exception as e:
             redirect = self.success_url
-            msg = _('Unable to retrieve Endpoint Group details. %s') % e
+            msg = _('Unable to retrieve endpoint group details. %s') % e
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):

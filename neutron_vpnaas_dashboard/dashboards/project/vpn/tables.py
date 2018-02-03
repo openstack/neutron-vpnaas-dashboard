@@ -123,8 +123,8 @@ class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
     @staticmethod
     def action_past(count):
         return ungettext_lazy(
-            u"Scheduled deletion of Endpoint Group",
-            u"Scheduled deletion of Endpoint Groups",
+            u"Scheduled deletion of endpoint group",
+            u"Scheduled deletion of endpoint groups",
             count
         )
 
@@ -133,7 +133,7 @@ class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
             api_vpn.endpointgroup_delete(request, obj_id)
         except Exception as e:
             exceptions.handle(
-                request, _('Unable to delete Endpoint Group. %s') % e)
+                request, _('Unable to delete endpoint group. %s') % e)
 
 
 class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
