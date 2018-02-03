@@ -1,0 +1,73 @@
+# Andi Chandler <andi@gowling.com>, 2017. #zanata
+# Andi Chandler <andi@gowling.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Neutron VPNaaS Dashboard Release Notes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-02 18:02+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-02-02 08:27+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"Language-Team: English (United Kingdom)\n"
+"Language: en-GB\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "0.1.0"
+msgstr "0.1.0"
+
+msgid "1.1.0"
+msgstr "1.1.0"
+
+msgid "1.2.0"
+msgstr "1.2.0"
+
+msgid "Add support for Endpoint Group feature."
+msgstr "Add support for Endpoint Group feature."
+
+msgid ""
+"Add support the attributes of IPsec site connection to be able to get more "
+"formats like FQDN other than IP format. For more information, see bug "
+"`1261127 <https://launchpad.net/bugs/1261127>`_."
+msgstr ""
+"Add support the attributes of IPsec site connection to be able to get more "
+"formats like FQDN other than IP format. For more information, see bug "
+"`1261127 <https://launchpad.net/bugs/1261127>`_."
+
+msgid "Bug Fixes"
+msgstr "Bug Fixes"
+
+msgid "Current Series Release Notes"
+msgstr "Current Series Release Notes"
+
+msgid "Neutron VPNaaS Dashboard Release Notes"
+msgstr "Neutron VPNaaS Dashboard Release Notes"
+
+msgid ""
+"Neutron VPNaaS support in the OpenStack Dashboard is now split out into a "
+"separate package ``neutron-vpnaas-dashboard``. You need to install ``neutron-"
+"vpnaas-dashboard`` after upgrading the OpenStack Dashboard to Pike release "
+"and add ``enabled`` file for Neutron VPNaaS dashboard."
+msgstr ""
+"Neutron VPNaaS support in the OpenStack Dashboard is now split out into a "
+"separate package ``neutron-vpnaas-dashboard``. You need to install ``neutron-"
+"vpnaas-dashboard`` after upgrading the OpenStack Dashboard to Pike release "
+"and add ``enabled`` file for Neutron VPNaaS dashboard."
+
+msgid ""
+"Neutron VPNaaS support in the OpenStack Dashboard is now split out into a "
+"separate python package."
+msgstr ""
+"Neutron VPNaaS support in the OpenStack Dashboard is now split out into a "
+"separate Python package."
+
+msgid "New Features"
+msgstr "New Features"
+
+msgid "Pike Series Release Notes"
+msgstr "Pike Series Release Notes"
+
+msgid "Prelude"
+msgstr "Prelude"
