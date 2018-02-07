@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-01-28 11:17+0000\n"
+"POT-Creation-Date: 2018-02-05 18:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-28 05:15+0000\n"
+"PO-Revision-Date: 2018-02-06 01:40+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -66,10 +66,6 @@ msgid "Add VPN Service"
 msgstr "VPN サービスの追加"
 
 #, python-format
-msgid "Added Endpoint Group \"%s\"."
-msgstr "エンドポイントグループ \"%s\" を追加しました。"
-
-#, python-format
 msgid "Added IKE policy \"%s\"."
 msgstr "IKE ポリシー \"%s\" を追加しました。"
 
@@ -85,14 +81,45 @@ msgstr "IPsec サイト間接続 \"%s\" を追加しました。"
 msgid "Added VPN service \"%s\"."
 msgstr "VPN サービス \"%s\" を追加しました。"
 
+#, python-format
+msgid "Added endpoint group \"%s\"."
+msgstr "エンドポイントグループ \"%s\" を追加しました。"
+
+msgid "Admin State"
+msgstr "管理状態"
+
+msgid "Admin State is enabled by default."
+msgstr "管理状態はデフォルトで有効になっています。"
+
+msgid "All fields are optional."
+msgstr "すべてのフィールドは任意です。"
+
+msgid "An IKE policy is an association of the following attributes:"
+msgstr "IKE ポリシーでは、以下の属性を指定できます。"
+
+msgid "An IPsec policy is an association of the following attributes"
+msgstr "IPsec ポリシーでは、以下の属性を指定できます。"
+
+msgid "Auth algorithm limited to SHA1 only."
+msgstr "利用できる認可アルゴリズムは SHA1 のみです。"
+
 msgid "Authorization algorithm"
 msgstr "認可アルゴリズム"
 
 msgid "Authorization algorithm ="
 msgstr "認可アルゴリズム ="
 
+msgid "Authorization mode"
+msgstr "認可モード"
+
 msgid "CIDR (for external systems)"
 msgstr "CIDR (外部システム用)"
+
+msgid "Create IKE policy for current project."
+msgstr "現在のプロジェクトに IKE ポリシーを作成します。"
+
+msgid "Create IPsec policy for current project."
+msgstr "現在のプロジェクトに IPsec ポリシーを作成します。"
 
 msgid ""
 "Create IPsec site connection for current project. Assign a name and "
@@ -102,6 +129,12 @@ msgstr ""
 "現在のプロジェクトに IPsec サイト間接続を作成します。 IPsec サイト間接続の名"
 "前と説明を入力してください。このタブのフィールドはすべて必須です。"
 
+msgid "Create VPN service for current project."
+msgstr "現在のプロジェクトに VPN サービスを作成します。"
+
+msgid "Create endpoint group for current project."
+msgstr "現在のプロジェクトにエンドポイントグループを作成します。"
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Created"
 msgstr "作成済み"
@@ -109,6 +142,9 @@ msgstr "作成済み"
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr ""
 "Dead Peer 検出タイムアウトはDead Peer 検出間隔より大きくなければいけません。"
+
+msgid "Dead peer detection action"
+msgstr "Dead Peer 検出時のアクション"
 
 msgid "Dead peer detection actions"
 msgstr "Dead Peer 検出時のアクション"
@@ -142,6 +178,9 @@ msgstr[0] "VPN サービスの削除"
 msgid "Description"
 msgstr "説明"
 
+msgid "Description:"
+msgstr "説明:"
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Down"
 msgstr "停止中"
@@ -161,6 +200,12 @@ msgstr "IPsec ポリシーの編集"
 msgid "Edit IPsec Site Connection"
 msgstr "IPsec サイト間接続の編集"
 
+msgid "Edit IPsec policy"
+msgstr "IPsec ポリシーの編集"
+
+msgid "Edit IPsec site connection"
+msgstr "IPsec サイト間接続の編集"
+
 msgid "Edit VPN Service"
 msgstr "VPN サービスの編集"
 
@@ -176,15 +221,15 @@ msgstr "暗号化アルゴリズム"
 msgid "Encryption algorithm ="
 msgstr "暗号化アルゴリズム ="
 
-#, python-format
-msgid "Endpoint Group %s was successfully updated."
-msgstr "エンドポイントグループ %s が正常に更新されました。"
-
 msgid "Endpoint Groups"
 msgstr "エンドポイントグループ"
 
 msgid "Endpoint Groups Details"
 msgstr "エンドポイントグループの詳細"
+
+#, python-format
+msgid "Endpoint group %s was successfully updated."
+msgstr "エンドポイントグループ %s が正常に更新されました。"
 
 msgid "Endpoints"
 msgstr "エンドポイント"
@@ -211,10 +256,6 @@ msgid "External System Subnets"
 msgstr "外部システムのサブネット"
 
 #, python-format
-msgid "Failed to update Endpint Group %s"
-msgstr "エンドポイントグループ %s を更新できません。"
-
-#, python-format
 msgid "Failed to update IKE policy %s"
 msgstr "IKE ポリシー %s を更新できません。"
 
@@ -230,12 +271,22 @@ msgstr "IPsec サイト間接続 %s を更新できません。"
 msgid "Failed to update VPN service %s"
 msgstr "VPN サービス %s を更新できません。"
 
+#, python-format
+msgid "Failed to update endpint group %s"
+msgstr "エンドポイントグループ %s を更新できません。"
+
 msgid ""
 "Fields in this tab are optional. You can configure the detail of IPsec site "
 "connection created."
 msgstr ""
 "このタブのフィールドは任意項目です。作成する IPsec サイト間接続の詳細設定がで"
 "きます。"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IKE Phase 1 negotiation mode"
+msgstr "IKE フェーズ 1 のメッセージ交換モード"
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE フェーズ 1 のメッセージ交換モード"
@@ -297,12 +348,40 @@ msgstr "この接続に関連付ける IPsec ポリシー"
 msgid "IPsec site connection %s was successfully updated."
 msgstr "IPsec サイト間接続 %s が正常に更新されました。"
 
+msgid "IPv4"
+msgstr "IPv4"
+
+msgid "IPv4:"
+msgstr "IPv4:"
+
+msgid "IPv6"
+msgstr "IPv6"
+
+msgid "IPv6:"
+msgstr "IPv6:"
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Inactive"
 msgstr "非稼働"
 
 msgid "Initiator state"
 msgstr "イニシエーターモード"
+
+msgid ""
+"Life time consists of units and value. Units in 'seconds' and the default "
+"value is 3600."
+msgstr ""
+"ライフタイムは単位と値で構成されます。単位は「秒」で、デフォルト値は 3600 で"
+"す。"
+
+msgid "Lifetime"
+msgstr "ライフタイム"
+
+msgid "Lifetime Units"
+msgstr "ライフタイムの単位"
+
+msgid "Lifetime Value"
+msgstr "ライフタイムの値"
 
 msgid "Lifetime units"
 msgstr "ライフタイムの単位"
@@ -319,6 +398,12 @@ msgstr "IKE 鍵のライフタイムの値"
 msgid "Lifetime value for IKE keys "
 msgstr "IKE 鍵のライフタイムの値"
 
+msgid "Limited to 'main' mode only."
+msgstr "利用できるモードは 'main' のみです。"
+
+msgid "Local Endpoint Group"
+msgstr "ローカルのエンドポイントグループ"
+
 msgid "Local Endpoint Group(s)"
 msgstr "ローカルのエンドポイントグループ"
 
@@ -327,6 +412,9 @@ msgstr "ローカル側のパブリック IP"
 
 msgid "Local System Subnets"
 msgstr "ローカルシステムのサブネット"
+
+msgid "MTU"
+msgstr "MTU"
 
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "この接続の MTU (最大転送単位) の大きさ"
@@ -345,6 +433,13 @@ msgstr "PFS"
 
 msgid "PFS ="
 msgstr "PFS ="
+
+msgid "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+msgstr ""
+"PFS に指定できるのは Diffie-Hellman グループ 2、5 (デフォルト)、14 です。"
+
+msgid "Peer Endpoint Group"
+msgstr "対向のエンドポイントグループ"
 
 msgid "Peer Endpoint Group(s)"
 msgstr "対向のエンドポイントグループ"
@@ -384,6 +479,12 @@ msgstr "Perfect Forward Secrecy"
 msgid "Pre-Shared Key (PSK) string"
 msgstr "事前共有鍵 (Pre-Shared-Key; PSK)"
 
+msgid "Project ID"
+msgstr "プロジェクト ID"
+
+msgid "Remote peer subnet"
+msgstr "接続相手のサブネット"
+
 msgid "Remote peer subnet(s)"
 msgstr "接続相手のサブネット"
 
@@ -393,6 +494,9 @@ msgid ""
 msgstr ""
 "接続相手のサブネットアドレスを CIDR 形式で指定します。複数指定する場合はコン"
 "マで区切ります (例: 20.1.0.0/24, 21.1.0.0/24)"
+
+msgid "Route mode"
+msgstr "ルーティングモード"
 
 msgid "Router"
 msgstr "ルーター"
@@ -405,10 +509,6 @@ msgstr "ルーター ID ="
 
 msgid "Save Changes"
 msgstr "変更の保存"
-
-msgid "Scheduled deletion of Endpoint Group"
-msgid_plural "Scheduled deletion of Endpoint Groups"
-msgstr[0] "エンドポイントグループの削除を予約しました"
 
 msgid "Scheduled deletion of IKE policy"
 msgid_plural "Scheduled deletion of IKE policies"
@@ -425,6 +525,10 @@ msgstr[0] "IPsec サイト間接続の削除を予約しました"
 msgid "Scheduled deletion of VPN service"
 msgid_plural "Scheduled deletion of VPN services"
 msgstr[0] "VPN サービスの削除を予約しました"
+
+msgid "Scheduled deletion of endpoint group"
+msgid_plural "Scheduled deletion of endpoint groups"
+msgstr[0] "エンドポイントグループの削除を予約しました"
 
 msgid "Select IKE policy"
 msgstr "IKE ポリシーを選択してください"
@@ -446,6 +550,11 @@ msgstr "ローカルのエンドポイントグループを選択してくださ
 
 msgid "Select peer endpoint group"
 msgstr "対向のエンドポイントグループを選択してください"
+
+msgid ""
+"Specify a name, description, router, and subnet (optional) for the VPN "
+"service."
+msgstr "VPN サービスの名前、説明、ルーター、サブネット (省略可) を指定します。"
 
 msgid "Status"
 msgstr "ステータス"
@@ -469,6 +578,11 @@ msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "VPN 接続の両端間で共有される事前定義鍵"
 
 msgid ""
+"The router and admin state fields require to be enabled. All others are "
+"optional."
+msgstr "ルーター、管理状態のフィールドは必須です。他の項目は任意です。"
+
+msgid ""
 "The state of IPsec site connection to start in. If disabled (not checked), "
 "IPsec site connection does not forward packets."
 msgstr ""
@@ -482,6 +596,31 @@ msgstr ""
 "VPN サービスの初期状態。無効の場合 (チェックが入っていない場合)、VPN サービス"
 "はパケット転送を行いません。"
 
+msgid "The type of IPsec tunnel (tunnel/transport) to be used."
+msgstr "使用する IPsec トンネル種別です。tunnel、transport を指定できます。"
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IKE "
+"policy."
+msgstr ""
+"この IKE ポリシーで使用するアルゴリズム種別です。 3des、aes-128、aes-192、"
+"aes-256 を指定できます。"
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IPsec "
+"policy."
+msgstr ""
+"この IPsec ポリシーで使用するアルゴリズム種別です。3des、aes-128、aes-192、"
+"aes-256 を指定できます。"
+
+msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
+msgstr ""
+"この IPsec ポリシーで使用するプロトコル種別です。esp、ah、ah-esp を指定できま"
+"す。"
+
+msgid "The type of version (v1/v2) that needs to be filtered."
+msgstr "使用する IKE バージョンの種類です。v1、v2 を指定できます。"
+
 msgid "Transform Protocol"
 msgstr "トランスフォームプロトコル"
 
@@ -490,10 +629,6 @@ msgstr "種別"
 
 msgid "Type ="
 msgstr "種別 ="
-
-#, python-format
-msgid "Unable to add Endpoint Group \"%s\"."
-msgstr "エンドポイントグループ \"%s\" を追加できません。"
 
 #, python-format
 msgid "Unable to add IKE policy \"%s\"."
@@ -512,8 +647,8 @@ msgid "Unable to add VPN service \"%s\"."
 msgstr "VPN サービス \"%s\" を追加できません。"
 
 #, python-format
-msgid "Unable to delete Endpoint Group. %s"
-msgstr "エンドポイントグループを削除できません。 %s"
+msgid "Unable to add endpoint group \"%s\"."
+msgstr "エンドポイントグループ \"%s\" を追加できません。"
 
 #, python-format
 msgid "Unable to delete IKE policy. %s"
@@ -532,8 +667,8 @@ msgid "Unable to delete VPN service. %s"
 msgstr "VPN サービスを削除できません。%s"
 
 #, python-format
-msgid "Unable to retrieve Endpoint Group details. %s"
-msgstr "エンドポイントグループの詳細を取得できません: %s"
+msgid "Unable to delete endpoint group. %s"
+msgstr "エンドポイントグループを削除できません。 %s"
 
 msgid "Unable to retrieve IKE policies list."
 msgstr "IKE ポリシーの一覧を取得できません。"
@@ -581,6 +716,10 @@ msgstr "VPN サービスの一覧を取得できません。"
 msgid "Unable to retrieve endpoint group details."
 msgstr "エンドポイントグループの詳細を取得できません。"
 
+#, python-format
+msgid "Unable to retrieve endpoint group details. %s"
+msgstr "エンドポイントグループの詳細を取得できません: %s"
+
 msgid "Unable to retrieve endpoint group list."
 msgstr "エンドポイントグループの一覧を取得できません。"
 
@@ -592,6 +731,9 @@ msgstr "ルーターの一覧を取得できません。"
 
 msgid "VPN"
 msgstr "VPN"
+
+msgid "VPN Connections"
+msgstr "VPN 接続"
 
 msgid "VPN Service"
 msgstr "VPN サービス"
@@ -626,6 +768,21 @@ msgstr "Dead Peer 検出タイムアウトよりも小さい有効な整数値"
 
 msgid "Virtual Private Network"
 msgstr "仮想プライベートネットワーク"
+
+msgid "You may update IKE policy details here."
+msgstr "IKE ポリシーの詳細をここから更新できます。"
+
+msgid "You may update IPsec policy details here."
+msgstr "IPsec ポリシーの詳細をここから更新できます。"
+
+msgid "You may update IPsec site connection details here."
+msgstr "IPsec サイト間接続の詳細をここから更新できます。"
+
+msgid "You may update VPN service details here."
+msgstr "VPN サービスの詳細をここから更新できます。"
+
+msgid "You may update endpoint group details here."
+msgstr "エンドポイントグループの詳細をここから更新できます。"
 
 msgid "aes-128"
 msgstr "aes-128"

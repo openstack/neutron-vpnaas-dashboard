@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-02 18:02+0000\n"
+"POT-Creation-Date: 2018-02-05 18:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-02 08:26+0000\n"
+"PO-Revision-Date: 2018-02-06 12:12+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en-GB\n"
@@ -71,10 +71,6 @@ msgid "Add VPN Service"
 msgstr "Add VPN Service"
 
 #, python-format
-msgid "Added Endpoint Group \"%s\"."
-msgstr "Added Endpoint Group \"%s\"."
-
-#, python-format
 msgid "Added IKE policy \"%s\"."
 msgstr "Added IKE policy \"%s\"."
 
@@ -90,14 +86,45 @@ msgstr "Added IPsec site connection \"%s\"."
 msgid "Added VPN service \"%s\"."
 msgstr "Added VPN service \"%s\"."
 
+#, python-format
+msgid "Added endpoint group \"%s\"."
+msgstr "Added endpoint group \"%s\"."
+
+msgid "Admin State"
+msgstr "Admin State"
+
+msgid "Admin State is enabled by default."
+msgstr "Admin State is enabled by default."
+
+msgid "All fields are optional."
+msgstr "All fields are optional."
+
+msgid "An IKE policy is an association of the following attributes:"
+msgstr "An IKE policy is an association of the following attributes:"
+
+msgid "An IPsec policy is an association of the following attributes"
+msgstr "An IPsec policy is an association of the following attributes"
+
+msgid "Auth algorithm limited to SHA1 only."
+msgstr "Auth algorithm limited to SHA1 only."
+
 msgid "Authorization algorithm"
 msgstr "Authorisation algorithm"
 
 msgid "Authorization algorithm ="
 msgstr "Authorisation algorithm ="
 
+msgid "Authorization mode"
+msgstr "Authorisation mode"
+
 msgid "CIDR (for external systems)"
 msgstr "CIDR (for external systems)"
+
+msgid "Create IKE policy for current project."
+msgstr "Create IKE policy for current project."
+
+msgid "Create IPsec policy for current project."
+msgstr "Create IPsec policy for current project."
 
 msgid ""
 "Create IPsec site connection for current project. Assign a name and "
@@ -108,12 +135,21 @@ msgstr ""
 "description for the IPsec site connection. All fields in this tab are "
 "required."
 
+msgid "Create VPN service for current project."
+msgstr "Create VPN service for current project."
+
+msgid "Create endpoint group for current project."
+msgstr "Create endpoint group for current project."
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Created"
 msgstr "Created"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "DPD Timeout must be greater than DPD Interval"
+
+msgid "Dead peer detection action"
+msgstr "Dead peer detection action"
 
 msgid "Dead peer detection actions"
 msgstr "Dead peer detection actions"
@@ -152,6 +188,9 @@ msgstr[1] "Delete VPN Services"
 msgid "Description"
 msgstr "Description"
 
+msgid "Description:"
+msgstr "Description:"
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Down"
 msgstr "Down"
@@ -171,6 +210,12 @@ msgstr "Edit IPsec Policy"
 msgid "Edit IPsec Site Connection"
 msgstr "Edit IPsec Site Connection"
 
+msgid "Edit IPsec policy"
+msgstr "Edit IPsec policy"
+
+msgid "Edit IPsec site connection"
+msgstr "Edit IPsec site connection"
+
 msgid "Edit VPN Service"
 msgstr "Edit VPN Service"
 
@@ -186,21 +231,21 @@ msgstr "Encryption algorithm"
 msgid "Encryption algorithm ="
 msgstr "Encryption algorithm ="
 
-#, python-format
-msgid "Endpoint Group %s was successfully updated."
-msgstr "Endpoint Group %s was successfully updated."
-
-msgid "Endpoint Group for local subnet(s)"
-msgstr "Endpoint Group for local subnet(s)"
-
-msgid "Endpoint Group for remote peer CIDR(s)"
-msgstr "Endpoint Group for remote peer CIDR(s)"
-
 msgid "Endpoint Groups"
 msgstr "Endpoint Groups"
 
 msgid "Endpoint Groups Details"
 msgstr "Endpoint Groups Details"
+
+#, python-format
+msgid "Endpoint group %s was successfully updated."
+msgstr "Endpoint group %s was successfully updated."
+
+msgid "Endpoint group for local subnet(s)"
+msgstr "Endpoint group for local subnet(s)"
+
+msgid "Endpoint group for remote peer CIDR(s)"
+msgstr "Endpoint group for remote peer CIDR(s)"
 
 msgid "Endpoints"
 msgstr "Endpoints"
@@ -229,10 +274,6 @@ msgid "External System Subnets"
 msgstr "External System Subnets"
 
 #, python-format
-msgid "Failed to update Endpint Group %s"
-msgstr "Failed to update Endpoint Group %s"
-
-#, python-format
 msgid "Failed to update IKE policy %s"
 msgstr "Failed to update IKE policy %s"
 
@@ -248,12 +289,22 @@ msgstr "Failed to update IPsec site connection %s"
 msgid "Failed to update VPN service %s"
 msgstr "Failed to update VPN service %s"
 
+#, python-format
+msgid "Failed to update endpint group %s"
+msgstr "Failed to update endpint group %s"
+
 msgid ""
 "Fields in this tab are optional. You can configure the detail of IPsec site "
 "connection created."
 msgstr ""
 "Fields in this tab are optional. You can configure the detail of IPsec site "
 "connection created."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IKE Phase 1 negotiation mode"
+msgstr "IKE Phase 1 negotiation mode"
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE Phase1 negotiation mode"
@@ -328,12 +379,40 @@ msgstr "IPsec policy associated with this connection"
 msgid "IPsec site connection %s was successfully updated."
 msgstr "IPsec site connection %s was successfully updated."
 
+msgid "IPv4"
+msgstr "IPv4"
+
+msgid "IPv4:"
+msgstr "IPv4:"
+
+msgid "IPv6"
+msgstr "IPv6"
+
+msgid "IPv6:"
+msgstr "IPv6:"
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Inactive"
 msgstr "Inactive"
 
 msgid "Initiator state"
 msgstr "Initiator state"
+
+msgid ""
+"Life time consists of units and value. Units in 'seconds' and the default "
+"value is 3600."
+msgstr ""
+"Life time consists of units and value. Units in 'seconds' and the default "
+"value is 3600."
+
+msgid "Lifetime"
+msgstr "Lifetime"
+
+msgid "Lifetime Units"
+msgstr "Lifetime Units"
+
+msgid "Lifetime Value"
+msgstr "Lifetime Value"
 
 msgid "Lifetime units"
 msgstr "Lifetime units"
@@ -349,6 +428,12 @@ msgstr "Lifetime value for IKE keys"
 
 msgid "Lifetime value for IKE keys "
 msgstr "Lifetime value for IKE keys "
+
+msgid "Limited to 'main' mode only."
+msgstr "Limited to 'main' mode only."
+
+msgid "Local Endpoint Group"
+msgstr "Local Endpoint Group"
 
 msgid "Local Endpoint Group(s)"
 msgstr "Local Endpoint Group(s)"
@@ -369,6 +454,9 @@ msgstr ""
 "Local subnets which the new IPsec connection is connected to. Required if no "
 "subnet is specified in a VPN service selected."
 
+msgid "MTU"
+msgstr "MTU"
+
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "Maximum Transmission Unit size for the connection"
 
@@ -377,6 +465,17 @@ msgstr "Name"
 
 msgid "Name ="
 msgstr "Name ="
+
+msgid ""
+"Note: The recommended way to specify local subnets is to use endpoint groups "
+"in IPsec site connection. It is deprecated to specify subnet in VPN service. "
+"For a new VPN service or IPsec site connection, using endpoint group is "
+"recommended."
+msgstr ""
+"Note: The recommended way to specify local subnets is to use endpoint groups "
+"in IPsec site connection. It is deprecated to specify subnet in VPN service. "
+"For a new VPN service or IPsec site connection, using endpoint group is "
+"recommended."
 
 msgid "Optional Parameters"
 msgstr "Optional Parameters"
@@ -389,6 +488,12 @@ msgstr "PFS"
 
 msgid "PFS ="
 msgstr "PFS ="
+
+msgid "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+msgstr "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+
+msgid "Peer Endpoint Group"
+msgstr "Peer Endpoint Group"
 
 msgid "Peer Endpoint Group(s)"
 msgstr "Peer Endpoint Group(s)"
@@ -427,8 +532,14 @@ msgstr "Perfect Forward Secrecy"
 msgid "Pre-Shared Key (PSK) string"
 msgstr "Pre-Shared Key (PSK) string"
 
+msgid "Project ID"
+msgstr "Project ID"
+
 msgid "Remote peer CIDR(s) connected to the new IPsec connection."
 msgstr "Remote peer CIDR(s) connected to the new IPsec connection."
+
+msgid "Remote peer subnet"
+msgstr "Remote peer subnet"
 
 msgid "Remote peer subnet(s)"
 msgstr "Remote peer subnet(s)"
@@ -449,6 +560,9 @@ msgstr ""
 "commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24). This field is valid if "
 "type is CIDR"
 
+msgid "Route mode"
+msgstr "Route mode"
+
 msgid "Router"
 msgstr "Router"
 
@@ -460,11 +574,6 @@ msgstr "Router ID ="
 
 msgid "Save Changes"
 msgstr "Save Changes"
-
-msgid "Scheduled deletion of Endpoint Group"
-msgid_plural "Scheduled deletion of Endpoint Groups"
-msgstr[0] "Scheduled deletion of Endpoint Group"
-msgstr[1] "Scheduled deletion of Endpoint Groups"
 
 msgid "Scheduled deletion of IKE policy"
 msgid_plural "Scheduled deletion of IKE policies"
@@ -485,6 +594,11 @@ msgid "Scheduled deletion of VPN service"
 msgid_plural "Scheduled deletion of VPN services"
 msgstr[0] "Scheduled deletion of VPN service"
 msgstr[1] "Scheduled deletion of VPN services"
+
+msgid "Scheduled deletion of endpoint group"
+msgid_plural "Scheduled deletion of endpoint groups"
+msgstr[0] "Scheduled deletion of endpoint group"
+msgstr[1] "Scheduled deletion of endpoint groups"
 
 msgid "Select IKE policy"
 msgstr "Select IKE policy"
@@ -507,6 +621,13 @@ msgstr "Select local endpoint group"
 msgid "Select peer endpoint group"
 msgstr "Select peer endpoint group"
 
+msgid ""
+"Specify a name, description, router, and subnet (optional) for the VPN "
+"service."
+msgstr ""
+"Specify a name, description, router, and subnet (optional) for the VPN "
+"service."
+
 msgid "Status"
 msgstr "Status"
 
@@ -525,10 +646,24 @@ msgstr "Subnet ="
 msgid "Subnet ID ="
 msgstr "Subnet ID ="
 
+msgid ""
+"The VPN service is attached to a router and references to endpoint group or "
+"a single subnet to push to a remote site."
+msgstr ""
+"The VPN service is attached to a router and references to endpoint group or "
+"a single subnet to push to a remote site."
+
 msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "The pre-defined key string between the two peers of the VPN connection"
 
 msgid ""
+"The router and admin state fields require to be enabled. All others are "
+"optional."
+msgstr ""
+"The router and admin state fields require to be enabled. All others are "
+"optional."
+
+msgid ""
 "The state of IPsec site connection to start in. If disabled (not checked), "
 "IPsec site connection does not forward packets."
 msgstr ""
@@ -541,6 +676,29 @@ msgid ""
 msgstr ""
 "The state of VPN service to start in. If disabled (not checked), VPN service "
 "does not forward packets."
+
+msgid "The type of IPsec tunnel (tunnel/transport) to be used."
+msgstr "The type of IPsec tunnel (tunnel/transport) to be used."
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IKE "
+"policy."
+msgstr ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IKE "
+"policy."
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IPsec "
+"policy."
+msgstr ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IPsec "
+"policy."
+
+msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
+msgstr "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
+
+msgid "The type of version (v1/v2) that needs to be filtered."
+msgstr "The type of version (v1/v2) that needs to be filtered."
 
 msgid "Transform Protocol"
 msgstr "Transform Protocol"
@@ -550,10 +708,6 @@ msgstr "Type"
 
 msgid "Type ="
 msgstr "Type ="
-
-#, python-format
-msgid "Unable to add Endpoint Group \"%s\"."
-msgstr "Unable to add Endpoint Group \"%s\"."
 
 #, python-format
 msgid "Unable to add IKE policy \"%s\"."
@@ -572,8 +726,8 @@ msgid "Unable to add VPN service \"%s\"."
 msgstr "Unable to add VPN service \"%s\"."
 
 #, python-format
-msgid "Unable to delete Endpoint Group. %s"
-msgstr "Unable to delete Endpoint Group. %s"
+msgid "Unable to add endpoint group \"%s\"."
+msgstr "Unable to add endpoint group \"%s\"."
 
 #, python-format
 msgid "Unable to delete IKE policy. %s"
@@ -592,8 +746,8 @@ msgid "Unable to delete VPN service. %s"
 msgstr "Unable to delete VPN service. %s"
 
 #, python-format
-msgid "Unable to retrieve Endpoint Group details. %s"
-msgstr "Unable to retrieve Endpoint Group details. %s"
+msgid "Unable to delete endpoint group. %s"
+msgstr "Unable to delete endpoint group. %s"
 
 msgid "Unable to retrieve IKE policies list."
 msgstr "Unable to retrieve IKE policies list."
@@ -641,6 +795,10 @@ msgstr "Unable to retrieve VPN services list."
 msgid "Unable to retrieve endpoint group details."
 msgstr "Unable to retrieve endpoint group details."
 
+#, python-format
+msgid "Unable to retrieve endpoint group details. %s"
+msgstr "Unable to retrieve endpoint group details. %s"
+
 msgid "Unable to retrieve endpoint group list."
 msgstr "Unable to retrieve endpoint group list."
 
@@ -652,6 +810,9 @@ msgstr "Unable to retrieve routers list."
 
 msgid "VPN"
 msgstr "VPN"
+
+msgid "VPN Connections"
+msgstr "VPN Connections"
 
 msgid "VPN Service"
 msgstr "VPN Service"
@@ -686,6 +847,21 @@ msgstr "Valid integer lesser than the DPD timeout"
 
 msgid "Virtual Private Network"
 msgstr "Virtual Private Network"
+
+msgid "You may update IKE policy details here."
+msgstr "You may update IKE policy details here."
+
+msgid "You may update IPsec policy details here."
+msgstr "You may update IPsec policy details here."
+
+msgid "You may update IPsec site connection details here."
+msgstr "You may update IPsec site connection details here."
+
+msgid "You may update VPN service details here."
+msgstr "You may update VPN service details here."
+
+msgid "You may update endpoint group details here."
+msgstr "You may update endpoint group details here."
 
 msgid "aes-128"
 msgstr "aes-128"
