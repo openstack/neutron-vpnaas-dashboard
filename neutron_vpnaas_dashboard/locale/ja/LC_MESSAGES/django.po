@@ -1,14 +1,15 @@
 # Yuko Katabami <yukokatabami@gmail.com>, 2016. #zanata
 # Akihiro Motoki <amotoki@gmail.com>, 2018. #zanata
+# Yuko Katabami <yukokatabami@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-05 18:59+0000\n"
+"POT-Creation-Date: 2018-02-08 03:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-06 01:40+0000\n"
+"PO-Revision-Date: 2018-02-08 06:32+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -231,6 +232,12 @@ msgstr "エンドポイントグループの詳細"
 msgid "Endpoint group %s was successfully updated."
 msgstr "エンドポイントグループ %s が正常に更新されました。"
 
+msgid "Endpoint group for local subnet(s)"
+msgstr "ローカルサブネットのエンドポイントグループ"
+
+msgid "Endpoint group for remote peer CIDR(s)"
+msgstr "接続相手の CIDR のエンドポイントグループ"
+
 msgid "Endpoints"
 msgstr "エンドポイント"
 
@@ -337,6 +344,19 @@ msgstr "IPsec サイト間接続の詳細"
 msgid "IPsec Site Connections"
 msgstr "IPsec サイト間接続"
 
+msgid "IPsec connection validation requires that local endpoints are subnets"
+msgstr "ローカルのエンドポイントグループはサブネットでなければいけません。"
+
+msgid ""
+"IPsec connection validation requires that local endpoints are subnets, and "
+"peer endpoints are CIDRs."
+msgstr ""
+"ローカルのエンドポイントグループはサブネットで、ピアエンドポイントは CIDR で"
+"なければいけません。"
+
+msgid "IPsec connection validation requires that peer endpoints are CIDRs"
+msgstr "対向のエンドポイントグループは CIDR でなければいけません。"
+
 #, python-format
 msgid "IPsec policy %s was successfully updated."
 msgstr "IPsec ポリシー %s が正常に更新されました。"
@@ -413,6 +433,18 @@ msgstr "ローカル側のパブリック IP"
 msgid "Local System Subnets"
 msgstr "ローカルシステムのサブネット"
 
+msgid "Local subnet(s). This field is valid if type is Subnet"
+msgstr ""
+"ローカル側のサブネット。このフィールドが有効なのは、種別がサブネットの場合の"
+"みです。"
+
+msgid ""
+"Local subnets which the new IPsec connection is connected to. Required if no "
+"subnet is specified in a VPN service selected."
+msgstr ""
+"新規の IPsec 接続に接続されるローカルサブネット。 VPN サービスでサブネットが"
+"指定されていない場合に必要です。"
+
 msgid "MTU"
 msgstr "MTU"
 
@@ -425,8 +457,23 @@ msgstr "名前"
 msgid "Name ="
 msgstr "名前 ="
 
+msgid ""
+"Note: The recommended way to specify local subnets is to use endpoint groups "
+"in IPsec site connection. It is deprecated to specify subnet in VPN service. "
+"For a new VPN service or IPsec site connection, using endpoint group is "
+"recommended."
+msgstr ""
+"注意: ローカルサブネットを指定する推奨の方法は、 IPsec サイト間接続でエンドポ"
+"イントグループを使用する方法です。 VPN サービスでサブネットを指定する方法は廃"
+"止予定です。新規の VPN サービスや IPsec サイト間接続では、エンドポイントグ"
+"ループを使うことをお薦めします。"
+
 msgid "Optional Parameters"
 msgstr "詳細パラメーター"
+
+msgid "Optional. No need to be specified when you use endpoint groups."
+msgstr ""
+"任意。エンドポイントグループを使用している場合には指定する必要はありません。"
 
 msgid "PFS"
 msgstr "PFS"
@@ -482,6 +529,9 @@ msgstr "事前共有鍵 (Pre-Shared-Key; PSK)"
 msgid "Project ID"
 msgstr "プロジェクト ID"
 
+msgid "Remote peer CIDR(s) connected to the new IPsec connection."
+msgstr "新規の IPsec 接続に接続する対向の CIDR"
+
 msgid "Remote peer subnet"
 msgstr "接続相手のサブネット"
 
@@ -494,6 +544,15 @@ msgid ""
 msgstr ""
 "接続相手のサブネットアドレスを CIDR 形式で指定します。複数指定する場合はコン"
 "マで区切ります (例: 20.1.0.0/24, 21.1.0.0/24)"
+
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24). This field is valid if "
+"type is CIDR"
+msgstr ""
+"接続相手のサブネットアドレスを CIDR 形式で指定します。複数指定する場合はコン"
+"マで区切ります (例: 20.1.0.0/24, 21.1.0.0/24)。このフィールドが有効なのは、種"
+"別が CIDR の場合のみです。"
 
 msgid "Route mode"
 msgstr "ルーティングモード"
@@ -573,6 +632,13 @@ msgstr "サブネット ="
 
 msgid "Subnet ID ="
 msgstr "サブネット ID ="
+
+msgid ""
+"The VPN service is attached to a router and references to endpoint group or "
+"a single subnet to push to a remote site."
+msgstr ""
+"VPN サービスはルーターに接続されます。また、(エンドポイントグループを使用しな"
+"い場合) リモートサイトと接続される 1 個のサブネットに関連付けます。"
 
 msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "VPN 接続の両端間で共有される事前定義鍵"
