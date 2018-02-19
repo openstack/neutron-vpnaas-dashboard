@@ -9,16 +9,17 @@
 # bryan tak <neos346@gmail.com>, 2017. #zanata
 # johjuhyun <juhyun.joh@samsung.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
+# ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-01-28 11:17+0000\n"
+"POT-Creation-Date: 2018-02-15 05:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-12-19 03:03+0000\n"
-"Last-Translator: SeYeon Lee <sy_lee@kr.ibm.com>\n"
+"PO-Revision-Date: 2018-02-18 02:44+0000\n"
+"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -38,8 +39,17 @@ msgstr "활성"
 msgid "Add"
 msgstr "추가"
 
+msgid "Add Endpoint Group"
+msgstr "엔드포인트 그룹 추가"
+
 msgid "Add IKE Policy"
 msgstr "IKE 정책 추가"
+
+msgid "Add IPsec Policy"
+msgstr "IPsec 정책 추가"
+
+msgid "Add IPsec Site Connection"
+msgstr "IPsec 사이트 연결 추가"
 
 msgid "Add New IKE Policy"
 msgstr "새로운 IKE 정책 추가"
@@ -50,8 +60,18 @@ msgstr "새로운 VPN 서비스 추가"
 msgid "Add VPN Service"
 msgstr "VPN 서비스 추가"
 
+#, python-format
+msgid "Added VPN service \"%s\"."
+msgstr "다음 VPN 서비스가 추가되었습니다. \"%s\""
+
 msgid "Authorization algorithm"
 msgstr "인증 알고리즘"
+
+msgid "Authorization algorithm ="
+msgstr "인증 알고리즘="
+
+msgid "CIDR (for external systems)"
+msgstr "CIDR (외부 시스템용)"
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Created"
@@ -69,9 +89,21 @@ msgstr "죽은 피어 감지 간격"
 msgid "Dead peer detection timeout"
 msgstr "죽은 피어 감지 타임아웃"
 
+msgid "Delete Endpoint Group"
+msgid_plural "Delete Endpoint Groups"
+msgstr[0] "엔드포인트 그룹 삭제"
+
 msgid "Delete IKE Policy"
 msgid_plural "Delete IKE Policies"
 msgstr[0] "IKE 정책 삭제"
+
+msgid "Delete IPsec Policy"
+msgid_plural "Delete IPsec Policies"
+msgstr[0] "IPsec 정책 삭제"
+
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "IPsec 사이트 연결 삭제"
 
 msgid "Delete VPN Service"
 msgid_plural "Delete VPN Services"
@@ -87,8 +119,17 @@ msgstr "Down"
 msgid "Edit Connection"
 msgstr "연결 편집"
 
+msgid "Edit Endpoint Group"
+msgstr "엔드포인트 그룹 편집"
+
 msgid "Edit IKE Policy"
 msgstr "IKE 정책 편집"
+
+msgid "Edit IPsec Policy"
+msgstr "IPsec 정책 편집"
+
+msgid "Edit IPsec Site Connection"
+msgstr "IPsec 사이트 접속 편집"
 
 msgid "Edit VPN Service"
 msgstr "VPN 서비스 편집"
@@ -102,8 +143,24 @@ msgstr "캡슐화 모드"
 msgid "Encryption algorithm"
 msgstr "암호화 알고리즘"
 
+msgid "Encryption algorithm ="
+msgstr "암호화 알고리즘="
+
+msgid "Endpoint Groups"
+msgstr "엔드포인트 그룹"
+
+msgid "Endpoint Groups Details"
+msgstr "엔드포인트 그룹 세부 정보"
+
+#, python-format
+msgid "Endpoint group %s was successfully updated."
+msgstr "엔드포인트 그룹 %s를 성공적으로 업데이트 하였습니다."
+
 msgid "Endpoints"
 msgstr "Endpoints"
+
+msgid "Endpoints ="
+msgstr "엔드포인트="
 
 msgid "Equal to or greater than 60"
 msgstr "60이상"
@@ -119,6 +176,32 @@ msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Error"
 msgstr "오류"
 
+msgid "External System CIDRs"
+msgstr "외부 시스템 CIDR"
+
+msgid "External System Subnets"
+msgstr "외부 시스템 서브넷"
+
+#, python-format
+msgid "Failed to update IKE policy %s"
+msgstr "IKE 정책 %s를 업데이트하지 못 했습니다."
+
+#, python-format
+msgid "Failed to update IPsec policy %s"
+msgstr "IPsec 정책 %s를 업데이트 하지 못하였습니다"
+
+#, python-format
+msgid "Failed to update IPsec site connection %s"
+msgstr "IPsec 사이트 연결 %s를 업데이트 하지 못하였습니다."
+
+#, python-format
+msgid "Failed to update VPN service %s"
+msgstr "VPN 서비스 %s를 업데이트 하는데 실패했습니다."
+
+#, python-format
+msgid "Failed to update endpint group %s"
+msgstr "엔드포인트 그룹 %s를 업데이트하는 데 실패했습니다."
+
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE Phase1 협상 모드"
 
@@ -128,11 +211,63 @@ msgstr "IKE 정책"
 msgid "IKE Policy"
 msgstr "IKE 정책"
 
+msgid "IKE Policy ="
+msgstr "IKE 정책="
+
 msgid "IKE Policy Details"
 msgstr "IKE 정책 세부 정보"
 
+msgid "IKE Policy ID ="
+msgstr "IKE 정책 ID="
+
+#, python-format
+msgid "IKE policy %s was successfully updated."
+msgstr "IKE 정책 %s를 성공적으로 업데이트 했습니다."
+
 msgid "IKE version"
 msgstr "IKE 버전"
+
+msgid "IPsec Policies"
+msgstr "IPsec 정책"
+
+msgid "IPsec Policy"
+msgstr "IPsec 정책"
+
+msgid "IPsec Policy ="
+msgstr "IPsec 정책="
+
+msgid "IPsec Policy Details"
+msgstr "IPsec 정책 세부 정보"
+
+msgid "IPsec Policy ID ="
+msgstr "IPsec 정책 ID="
+
+msgid "IPsec Site Connection Details"
+msgstr "IPsec 사이트 연결 세부 정보"
+
+msgid "IPsec Site Connections"
+msgstr "IPsec 사이트 연결"
+
+msgid "IPsec connection validation requires that local endpoints are subnets"
+msgstr "IPsec 연결 유효성을 위해선 로컬 엔드포인트가 서브넷이어야 합니다."
+
+msgid ""
+"IPsec connection validation requires that local endpoints are subnets, and "
+"peer endpoints are CIDRs."
+msgstr ""
+"IPsec 연결 유효성을 위해선 로컬 엔드포인트가 서브넷이어야 하고 상대 엔드포인"
+"트는 CIDR이어야 합니다."
+
+msgid "IPsec connection validation requires that peer endpoints are CIDRs"
+msgstr "IPsec 연결 유효성을 위해선 상대 엔드포인트가 CIDR이어야 합니다."
+
+#, python-format
+msgid "IPsec policy %s was successfully updated."
+msgstr "IPsec 정책 %s를 성공적으로 업데이트 했습니다."
+
+#, python-format
+msgid "IPsec site connection %s was successfully updated."
+msgstr "IPsec 사이트 연결 %s를 성공적으로 업데이트하였습니다."
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Inactive"
@@ -156,8 +291,14 @@ msgstr "IKE 키의 수명 값"
 msgid "Lifetime value for IKE keys "
 msgstr "IKE 키의 수명 값"
 
+msgid "Local Endpoint Group(s)"
+msgstr "로컬 엔드포인트 그룹"
+
 msgid "Local Side Public IPs"
 msgstr "로컬 사이트 공용 IP"
+
+msgid "Local System Subnets"
+msgstr "로컬 시스템 서브넷"
 
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "연결에 대한 최대 전달 단위 크기"
@@ -171,8 +312,17 @@ msgstr "Name ="
 msgid "Optional Parameters"
 msgstr "옵션 매개 변수"
 
+msgid "Optional. No need to be specified when you use endpoint groups."
+msgstr "선택사항. 엔드포인트 그룹을 사용할 땐 지정할 필요가 없습니다."
+
 msgid "PFS"
 msgstr "PFS"
+
+msgid "PFS ="
+msgstr "PFS="
+
+msgid "Peer Endpoint Group(s)"
+msgstr "상대 엔드포인트 그룹"
 
 msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
 msgstr "피어 게이트웨이 공용 IPv4/IPv6 주소나 FQDN"
@@ -221,14 +371,45 @@ msgstr ""
 "필요한 경우, CIDR 포멧으로 마스크와 원격 비어 서브넷 주소를 쉼표로 구분합니"
 "다. (예: 20.1.0.0/24, 21.1.0.0/24)"
 
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24). This field is valid if "
+"type is CIDR"
+msgstr ""
+"필요한 경우, 쉼표로 나눈 CIDR 포맷 마스크로 구성된  원격 상대방 서브넷 주소 "
+"(예: 20.1.0.0/24, 21.1.0.0/24). 이 필드는 타입이 CIDR일 경우에 유효합니다."
+
 msgid "Router"
 msgstr "라우터"
+
+msgid "Router ="
+msgstr "라우터="
 
 msgid "Router ID ="
 msgstr "라우터 ID ="
 
 msgid "Save Changes"
 msgstr "변경사항 저장"
+
+msgid "Scheduled deletion of IKE policy"
+msgid_plural "Scheduled deletion of IKE policies"
+msgstr[0] "IKE 정책 예약 삭제"
+
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "IPsec 정책 예약 삭제"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "IPsec 사이트 연결 예약 삭제"
+
+msgid "Scheduled deletion of VPN service"
+msgid_plural "Scheduled deletion of VPN services"
+msgstr[0] "VPN 서비스 예약 삭제"
+
+msgid "Scheduled deletion of endpoint group"
+msgid_plural "Scheduled deletion of endpoint groups"
+msgstr[0] "엔드포인트 그룹의 예약 삭제"
 
 msgid "Select a Router"
 msgstr "라우터 선택"
@@ -244,6 +425,15 @@ msgstr "상태 = "
 
 msgid "Subnet"
 msgstr "서브넷"
+
+msgid "Subnet (for local systems)"
+msgstr "서브넷 (로컬 시스템용)"
+
+msgid "Subnet ="
+msgstr "서브넷="
+
+msgid "Subnet ID ="
+msgstr "서브넷 ID="
 
 msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "VPN에 연결하는 2개의 피어간에 미리 정의돈 문자열을 사용합니다."
@@ -264,6 +454,80 @@ msgstr "타입"
 msgid "Type ="
 msgstr "Type ="
 
+#, python-format
+msgid "Unable to add VPN service \"%s\"."
+msgstr "다음 VPN 서비스를 추가할 수 없습니다. \"%s\""
+
+#, python-format
+msgid "Unable to delete IKE policy. %s"
+msgstr "IKE 정책을 삭제할 수 없습니다. %s"
+
+#, python-format
+msgid "Unable to delete IPsec policy. %s"
+msgstr "IPsec 정책을 삭제할 수 없습니다. %s"
+
+#, python-format
+msgid "Unable to delete IPsec site connection. %s"
+msgstr "IPsec 사이트 연결을 삭제할 수 없습니다. %s"
+
+#, python-format
+msgid "Unable to delete VPN service. %s"
+msgstr "VPN 서비스를 삭제할 수 없습니다. %s"
+
+#, python-format
+msgid "Unable to delete endpoint group. %s"
+msgstr "다음 엔드포인트 그룹을 삭제할 수 없습니다. %s"
+
+msgid "Unable to retrieve IKE policies list."
+msgstr "IKE 정책 목록을 가져올 수 없습니다."
+
+msgid "Unable to retrieve IKE policy details."
+msgstr "IKE 정책 세부 정보를 가져올 수 없습니다."
+
+#, python-format
+msgid "Unable to retrieve IKE policy details. %s"
+msgstr "IKE 정책 세부 정보를 가져올 수 없습니다. %s"
+
+msgid "Unable to retrieve IPsec policy details."
+msgstr "IPsec 정책 세부 정보를 가져올 수 없습니다."
+
+#, python-format
+msgid "Unable to retrieve IPsec policy details. %s"
+msgstr "IPsec 정책 세부 정보를 가져올 수 없습니다. %s"
+
+msgid "Unable to retrieve IPsec policy list."
+msgstr "IPsec 정책 목록을 가져올 수 없습니다."
+
+msgid "Unable to retrieve IPsec site connection details."
+msgstr "IPsec 사이트 연결 세부 정보를 가져올 수 없습니다."
+
+#, python-format
+msgid "Unable to retrieve IPsec site connection details. %s"
+msgstr "IPsec 사이트 접속 세부 정보를 찾지 못 했습니다. %s"
+
+msgid "Unable to retrieve IPsec site connections list."
+msgstr "IPsec 사이트 연결 목록을 가져올 수 없습니다."
+
+msgid "Unable to retrieve VPN service details."
+msgstr "VPN 서비스 세부 정보를 가져올 수 없습니다."
+
+#, python-format
+msgid "Unable to retrieve VPN service details. %s"
+msgstr "VPN 서비스 세부 정보를 가져올 수 없습니다. %s"
+
+msgid "Unable to retrieve VPN services list."
+msgstr "VPN 서비스 목록을 가져올 수 없습니다."
+
+msgid "Unable to retrieve endpoint group details."
+msgstr "엔드포인트 그룹 세부 정보를 가져올 수 없습니다."
+
+#, python-format
+msgid "Unable to retrieve endpoint group details. %s"
+msgstr "엔드포인트 그룹 세부 정보를 가져올 수 없습니다. %s"
+
+msgid "Unable to retrieve endpoint group list."
+msgstr "엔드포인트 그룹 목록을 가져올 수 없습니다."
+
 msgid "Unable to retrieve networks list."
 msgstr "네트워크 목록을 찾지 못 했습니다."
 
@@ -276,11 +540,21 @@ msgstr "VPN"
 msgid "VPN Service"
 msgstr "VPN 서비스"
 
+msgid "VPN Service ="
+msgstr "VPN 서비스="
+
 msgid "VPN Service Details"
 msgstr "VPN 서비스 세부 정보"
 
+msgid "VPN Service ID ="
+msgstr "VPN 서비스 ID="
+
 msgid "VPN Services"
 msgstr "VPN 서비스"
+
+#, python-format
+msgid "VPN service %s was successfully updated."
+msgstr "VPN 서비스 %s를 성공적으로 업데이트하였습니다."
 
 msgid "Valid integer greater than the DPD interval"
 msgstr "DPD 간격을 보다 큰 유효한 정수"
