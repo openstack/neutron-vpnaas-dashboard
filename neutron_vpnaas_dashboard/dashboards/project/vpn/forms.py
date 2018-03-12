@@ -81,9 +81,9 @@ class UpdateEndpointGroup(forms.SelfHandlingForm):
             messages.success(request, msg)
             return endpointgroup
         except Exception as e:
-            LOG.info('Failed to update endpint group %(id)s: %(exc)s',
+            LOG.info('Failed to update endpoint group %(id)s: %(exc)s',
                      {'id': self.initial['endpoint_group_id'], 'exc': e})
-            msg = _('Failed to update endpint group %s') % context['name']
+            msg = _('Failed to update endpoint group %s') % context['name']
             redirect = reverse(self.failure_url)
             exceptions.handle(request, msg, redirect=redirect)
 
