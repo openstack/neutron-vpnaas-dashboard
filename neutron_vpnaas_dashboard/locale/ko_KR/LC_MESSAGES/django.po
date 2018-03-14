@@ -10,16 +10,17 @@
 # johjuhyun <juhyun.joh@samsung.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 # ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-02 19:54+0000\n"
+"POT-Creation-Date: 2018-03-13 08:09+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-18 02:44+0000\n"
-"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
+"PO-Revision-Date: 2018-03-13 03:00+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -51,6 +52,9 @@ msgstr "IPsec 정책 추가"
 msgid "Add IPsec Site Connection"
 msgstr "IPsec 사이트 연결 추가"
 
+msgid "Add New Endpoint Groups"
+msgstr "새 엔드포인트 그룹 추가"
+
 msgid "Add New IKE Policy"
 msgstr "새로운 IKE 정책 추가"
 
@@ -59,6 +63,10 @@ msgstr "새로운 VPN 서비스 추가"
 
 msgid "Add VPN Service"
 msgstr "VPN 서비스 추가"
+
+#, python-format
+msgid "Added IPsec site connection \"%s\"."
+msgstr "IPsec 사이트 연결 \"%s\"를 추가하였습니다."
 
 #, python-format
 msgid "Added VPN service \"%s\"."
@@ -97,6 +105,14 @@ msgid "Delete IKE Policy"
 msgid_plural "Delete IKE Policies"
 msgstr[0] "IKE 정책 삭제"
 
+msgid "Delete IPsec Policy"
+msgid_plural "Delete IPsec Policies"
+msgstr[0] "IPsec 정책 삭제"
+
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "IPsec 사이트 연결 삭제"
+
 msgid "Delete VPN Service"
 msgid_plural "Delete VPN Services"
 msgstr[0] "VPN 서비스 삭제"
@@ -111,8 +127,14 @@ msgstr "Down"
 msgid "Edit Connection"
 msgstr "연결 편집"
 
+msgid "Edit Endpoint Group"
+msgstr "엔드포인트 그룹 편집"
+
 msgid "Edit IKE Policy"
 msgstr "IKE 정책 편집"
+
+msgid "Edit IPsec Policy"
+msgstr "IPsec 정책 편집"
 
 msgid "Edit IPsec Site Connection"
 msgstr "IPsec 사이트 접속 편집"
@@ -183,6 +205,17 @@ msgstr "IPsec 사이트 연결 %s를 업데이트 하지 못하였습니다."
 #, python-format
 msgid "Failed to update VPN service %s"
 msgstr "VPN 서비스 %s를 업데이트 하는데 실패했습니다."
+
+#, python-format
+msgid "Failed to update endpoint group %s"
+msgstr "다음 엔드포인트 그룹을 삭제할 수 없습니다. %s"
+
+msgid ""
+"Fields in this tab are optional. You can configure the detail of IPsec site "
+"connection created."
+msgstr ""
+"이 탭의 항목은 선택 사항입니다. 생성된 IPsec 사이트 연결에 대한 세부 사항을 "
+"구성할 수 있습니다."
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE Phase1 협상 모드"
@@ -282,6 +315,9 @@ msgstr "로컬 사이트 공용 IP"
 msgid "Local System Subnets"
 msgstr "로컬 시스템 서브넷"
 
+msgid "Local subnet(s). This field is valid if type is Subnet"
+msgstr "로컬 서브넷. 이 항목은 유형이 서브넷인 경우 유효합니다"
+
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "연결에 대한 최대 전달 단위 크기"
 
@@ -373,6 +409,18 @@ msgstr "라우터 ID ="
 msgid "Save Changes"
 msgstr "변경사항 저장"
 
+msgid "Scheduled deletion of IKE policy"
+msgid_plural "Scheduled deletion of IKE policies"
+msgstr[0] "IKE 정책 예약 삭제"
+
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "IPsec 정책 예약 삭제"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "IPsec 사이트 연결 예약 삭제"
+
 msgid "Scheduled deletion of VPN service"
 msgid_plural "Scheduled deletion of VPN services"
 msgstr[0] "VPN 서비스 예약 삭제"
@@ -425,8 +473,24 @@ msgid "Type ="
 msgstr "Type ="
 
 #, python-format
+msgid "Unable to add IPsec site connection \"%s\"."
+msgstr "IPsec 사이트 연결 \"%s\"를 추가 할 수 없습니다."
+
+#, python-format
 msgid "Unable to add VPN service \"%s\"."
 msgstr "다음 VPN 서비스를 추가할 수 없습니다. \"%s\""
+
+#, python-format
+msgid "Unable to delete IKE policy. %s"
+msgstr "IKE 정책을 삭제할 수 없습니다. %s"
+
+#, python-format
+msgid "Unable to delete IPsec policy. %s"
+msgstr "IPsec 정책을 삭제할 수 없습니다. %s"
+
+#, python-format
+msgid "Unable to delete IPsec site connection. %s"
+msgstr "IPsec 사이트 연결을 삭제할 수 없습니다. %s"
 
 #, python-format
 msgid "Unable to delete VPN service. %s"
