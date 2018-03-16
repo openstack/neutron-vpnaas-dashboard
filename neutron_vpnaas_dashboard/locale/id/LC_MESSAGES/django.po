@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-19 11:49+0000\n"
+"POT-Creation-Date: 2018-03-12 02:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid ""
@@ -280,10 +280,6 @@ msgstr "Gagal memperbarui IPsec site connection %s"
 #, python-format
 msgid "Failed to update VPN service %s"
 msgstr "Gagal memperbarui VPN service %s"
-
-#, python-format
-msgid "Failed to update endpint group %s"
-msgstr "Gagal memperbarui endpint group %s"
 
 msgid ""
 "Fields in this tab are optional. You can configure the detail of IPsec site "
