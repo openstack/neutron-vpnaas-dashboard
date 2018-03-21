@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-12 02:30+0000\n"
+"POT-Creation-Date: 2018-03-20 07:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-16 12:46+0000\n"
+"PO-Revision-Date: 2018-03-20 11:51+0000\n"
 "Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -77,6 +77,15 @@ msgstr "O estado de Administração é habilitado por padrão."
 msgid "All fields are optional."
 msgstr "Todos os campos são opcionais."
 
+msgid "An IKE policy is an association of the following attributes:"
+msgstr "Uma política IKE é uma associação dos seguintes atributos:"
+
+msgid "An IPsec policy is an association of the following attributes"
+msgstr "Uma política IPsec é uma associação dos seguintes atributos"
+
+msgid "Auth algorithm limited to SHA1 only."
+msgstr "Algoritmo de autenticação é limitado ao SHA1 somente."
+
 msgid "Authorization algorithm"
 msgstr "Algorítimo de autorização"
 
@@ -85,6 +94,9 @@ msgstr "Algoritmo de autorização = "
 
 msgid "CIDR (for external systems)"
 msgstr "CIDR (para sistemas externos)"
+
+msgid "Create IPsec policy for current project."
+msgstr "Criar política IPsec para o projeto atual."
 
 msgid "Create VPN service for current project."
 msgstr "Criar um serviço de VPN para o projeto atual."
@@ -120,6 +132,11 @@ msgid_plural "Delete IPsec Policies"
 msgstr[0] "Excluir Política IPsec"
 msgstr[1] "Excluir Políticas IPsec"
 
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "Excluir a Conexão IPsec do Site"
+msgstr[1] "Excluir as Conexões IPsec do Site"
+
 msgid "Delete VPN Service"
 msgid_plural "Delete VPN Services"
 msgstr[0] "Excluir Serviço de VPN"
@@ -141,8 +158,14 @@ msgstr "Inativo"
 msgid "Edit Connection"
 msgstr "Editar Conexão"
 
+msgid "Edit Endpoint Group"
+msgstr "Editar Grupo de Endpoint"
+
 msgid "Edit IKE Policy"
 msgstr "Editar Política IKE "
+
+msgid "Edit IPsec Policy"
+msgstr "Editar Política IPsec"
 
 msgid "Edit IPsec Site Connection"
 msgstr "Editar Conexão de Site IPsec"
@@ -167,6 +190,12 @@ msgstr "Algoritmo de criptografia"
 
 msgid "Encryption algorithm ="
 msgstr "Algoritmo de criptografia = "
+
+msgid "Endpoint Groups"
+msgstr "Grupos de Endpoints"
+
+msgid "Endpoint Groups Details"
+msgstr "Detalhes do Grupo de Endpoint"
 
 #, python-format
 msgid "Endpoint group %s was successfully updated."
@@ -221,6 +250,9 @@ msgstr "Falha ao atualizar o grupo de endpoint %s"
 msgid "ID"
 msgstr "ID"
 
+msgid "IKE Phase 1 negotiation mode"
+msgstr "Modo de negociação IKE Fase 1"
+
 msgid "IKE Phase1 negotiation mode"
 msgstr "Modo de negociação do IKE Fase 1"
 
@@ -245,6 +277,27 @@ msgstr "A política IKE %s foi atualizada com sucesso."
 
 msgid "IKE version"
 msgstr "Versão IKE"
+
+msgid "IPsec Policies"
+msgstr "Políticas IPsec"
+
+msgid "IPsec Policy"
+msgstr "Política IPsec"
+
+msgid "IPsec Policy ="
+msgstr "Política IPsec ="
+
+msgid "IPsec Policy Details"
+msgstr "Detalhes da Política IPsec"
+
+msgid "IPsec Policy ID ="
+msgstr "ID da Política IPsec = "
+
+msgid "IPsec Site Connection Details"
+msgstr "Detalhes da Conexão de Site IPsec"
+
+msgid "IPsec Site Connections"
+msgstr "Conexões de Site IPsec"
 
 msgid "IPsec connection validation requires that local endpoints are subnets"
 msgstr ""
@@ -288,6 +341,13 @@ msgstr "Inativo"
 msgid "Initiator state"
 msgstr "Estado do iniciador"
 
+msgid ""
+"Life time consists of units and value. Units in 'seconds' and the default "
+"value is 3600."
+msgstr ""
+"Tempo de vida consiste de unidades e valor. Unidades em 'segundos' e o valor "
+"padrão é 3600."
+
 msgid "Lifetime"
 msgstr "Tempo de vida"
 
@@ -311,6 +371,9 @@ msgstr "Valor do tempo de vida para chaves IKE"
 
 msgid "Lifetime value for IKE keys "
 msgstr "Valor do Tempo de Vida para chaves IKE"
+
+msgid "Limited to 'main' mode only."
+msgstr "Limitado ao modo 'principal' somente."
 
 msgid "Local Endpoint Group(s)"
 msgstr "Grupo(s) de Endpoint Local"
@@ -415,6 +478,16 @@ msgid_plural "Scheduled deletion of IKE policies"
 msgstr[0] "Exclusão agendada da política IKE"
 msgstr[1] "Exclusão agendada das políticas IKE"
 
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "Exclusão agendada de Política IPsec"
+msgstr[1] "Exclusão agendada de Políticas IPsec"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "Exclusão agendada da conexão IPsec do site"
+msgstr[1] "Exclusão agendada das conexões IPsec do site"
+
 msgid "Scheduled deletion of VPN service"
 msgid_plural "Scheduled deletion of VPN services"
 msgstr[0] "Exclusão agendada do serviço de VPN"
@@ -459,6 +532,29 @@ msgstr ""
 "O estado em que o serviço VPN deve ser iniciado. Se desabilitado (não "
 "marcado), o serviço VPN não encaminha pacotes."
 
+msgid "The type of IPsec tunnel (tunnel/transport) to be used."
+msgstr "O tipo de túnel IPsec (túnel/transporte) a ser utilizado."
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IKE "
+"policy."
+msgstr ""
+"O tipo de algoritmo (3des, aes-128, aes-192, aes-256) utilizado na política "
+"IKE."
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IPsec "
+"policy."
+msgstr ""
+"O tipo de algoritmo (3des, aes-128, aes-192, aes-256) utilizado na política "
+"IPsec."
+
+msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
+msgstr "O tipo de protocolo (esp, ah, ah-esp) utilizado na política IPsec."
+
+msgid "The type of version (v1/v2) that needs to be filtered."
+msgstr "O tipo de versão (v1/v2) que precisa ser filtrada."
+
 msgid "Transform Protocol"
 msgstr "Transformar Protocolo"
 
@@ -485,6 +581,14 @@ msgid "Unable to delete IKE policy. %s"
 msgstr "Não é possível excluir a política IKE. %s"
 
 #, python-format
+msgid "Unable to delete IPsec policy. %s"
+msgstr "Não é possível excluir a política  IPsec. %s"
+
+#, python-format
+msgid "Unable to delete IPsec site connection. %s"
+msgstr "Não foi possível excluir a conexão IPsec do site. %s"
+
+#, python-format
 msgid "Unable to delete VPN service. %s"
 msgstr "Não é possível excluir o serviço de VPN. %s"
 
@@ -492,13 +596,25 @@ msgstr "Não é possível excluir o serviço de VPN. %s"
 msgid "Unable to delete endpoint group. %s"
 msgstr "Não é possível excluir o grupo de endpoint. %s"
 
+msgid "Unable to retrieve IKE policies list."
+msgstr "Não é possível obter a lista de políticas IKE."
+
+msgid "Unable to retrieve IKE policy details."
+msgstr "Não é possível obter detalhes da política IKE."
+
 #, python-format
 msgid "Unable to retrieve IKE policy details. %s"
 msgstr "Não é possível obter detalhes da política IKE. %s"
 
+msgid "Unable to retrieve IPsec policy details."
+msgstr "Não é possível obter detalhes da política IPsec."
+
 #, python-format
 msgid "Unable to retrieve IPsec policy details. %s"
 msgstr "Não é possível obter detalhes da política IPsec. %s"
+
+msgid "Unable to retrieve IPsec policy list."
+msgstr "Não é possível obter a lista de políticas IPsec."
 
 msgid "Unable to retrieve IPsec site connection details."
 msgstr "Não é possível obter detalhes da conexão do site IPsec."
@@ -507,9 +623,18 @@ msgstr "Não é possível obter detalhes da conexão do site IPsec."
 msgid "Unable to retrieve IPsec site connection details. %s"
 msgstr "Não é possível obter detalhes da conexão do site IPsec. %s"
 
+msgid "Unable to retrieve IPsec site connections list."
+msgstr "Não é possível obter a lista de conexões de site IPsec."
+
+msgid "Unable to retrieve VPN service details."
+msgstr "Não é possível obter detalhes do serviço de VPN."
+
 #, python-format
 msgid "Unable to retrieve VPN service details. %s"
 msgstr "Não é possível obter detalhes do serviço de VPN. %s"
+
+msgid "Unable to retrieve VPN services list."
+msgstr "Não é possível obter a lista de serviços de VPN."
 
 msgid "Unable to retrieve endpoint group details."
 msgstr "Não é possível obter detalhes do grupo de endpoint."
@@ -517,6 +642,9 @@ msgstr "Não é possível obter detalhes do grupo de endpoint."
 #, python-format
 msgid "Unable to retrieve endpoint group details. %s"
 msgstr "Não é possível obter detalhes do grupo de endpoint. %s"
+
+msgid "Unable to retrieve endpoint group list."
+msgstr "Não é possível obter a lista de grupos de endpoint."
 
 msgid "Unable to retrieve networks list."
 msgstr "Não é possível recuperar lista de redes."
