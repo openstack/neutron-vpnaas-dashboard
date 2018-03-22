@@ -8,16 +8,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-20 07:43+0000\n"
+"POT-Creation-Date: 2018-03-21 23:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-20 11:51+0000\n"
+"PO-Revision-Date: 2018-03-21 10:28+0000\n"
 "Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
 "X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid ""
+"(Deprecated) Remote peer subnet(s) address(es) with mask(s) in CIDR format "
+"separated with commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
+msgstr ""
+"(Obsoleto) Endereço(s) de sub-rede(s) remota(s) com máscara(s) em formato "
+"CIDR separado com vírgulas se necessário(por exemplo "
+"20.1.0.0/24,21.1.0.0/24). "
 
 msgid "-"
 msgstr "-"
@@ -53,6 +61,9 @@ msgstr "Adicionar Nova Política IKE"
 msgid "Add New IPsec Policy"
 msgstr "Adicionada Nova Política IPsec"
 
+msgid "Add New IPsec Site Connection"
+msgstr "Adicionar Nova Conexão de Site IPsec"
+
 msgid "Add New VPN Service"
 msgstr "Adicionar um Novo Serviço de VPN"
 
@@ -64,12 +75,23 @@ msgid "Added IKE policy \"%s\"."
 msgstr "Adicionada a política IKE \"%s\"."
 
 #, python-format
+msgid "Added IPsec policy \"%s\"."
+msgstr "Adicionada a política IPsec \"%s\"."
+
+#, python-format
+msgid "Added IPsec site connection \"%s\"."
+msgstr "Adicionada a conexão de site IPsec \"%s\"."
+
+#, python-format
 msgid "Added VPN service \"%s\"."
 msgstr "Adicionado o serviço de VPN \"%s\"."
 
 #, python-format
 msgid "Added endpoint group \"%s\"."
 msgstr "Adicionado o grupo de endpoint \"%s\"."
+
+msgid "Admin State"
+msgstr "Estado de Administração"
 
 msgid "Admin State is enabled by default."
 msgstr "O estado de Administração é habilitado por padrão."
@@ -92,14 +114,32 @@ msgstr "Algorítimo de autorização"
 msgid "Authorization algorithm ="
 msgstr "Algoritmo de autorização = "
 
+msgid "Authorization mode"
+msgstr "Modo de autorização"
+
 msgid "CIDR (for external systems)"
 msgstr "CIDR (para sistemas externos)"
+
+msgid "Create IKE policy for current project."
+msgstr "Criar política IKE para o projeto atual."
 
 msgid "Create IPsec policy for current project."
 msgstr "Criar política IPsec para o projeto atual."
 
+msgid ""
+"Create IPsec site connection for current project. Assign a name and "
+"description for the IPsec site connection. All fields in this tab are "
+"required."
+msgstr ""
+"Criar Conexão de Site IPSec para o projeto atual. Atribua um nome e uma "
+"descrição para a conexão de site IPsec. Todos os campos nessa aba são "
+"obrigatórios."
+
 msgid "Create VPN service for current project."
 msgstr "Criar um serviço de VPN para o projeto atual."
+
+msgid "Create endpoint group for current project."
+msgstr "Criar grupo de endpoints para o projeto atual."
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Created"
@@ -107,6 +147,9 @@ msgstr "Criado"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "O tempo limite de DPD deve ser maior que o intervalo de DPD"
+
+msgid "Dead peer detection action"
+msgstr "Ação de detecção de peer morto"
 
 msgid "Dead peer detection actions"
 msgstr "Ações de detecção de peer inativo"
@@ -201,6 +244,12 @@ msgstr "Detalhes do Grupo de Endpoint"
 msgid "Endpoint group %s was successfully updated."
 msgstr "O grupo de endpoint %s foi atualizado com sucesso."
 
+msgid "Endpoint group for local subnet(s)"
+msgstr "Grupo de endpoints para sub-rede(s) local(is)"
+
+msgid "Endpoint group for remote peer CIDR(s)"
+msgstr "Grupo de endpoints para CIDR(s) de peer remoto"
+
 msgid "Endpoints"
 msgstr "Endpoints"
 
@@ -247,6 +296,13 @@ msgstr "Falha ao atualizar o serviço de VPN %s"
 msgid "Failed to update endpoint group %s"
 msgstr "Falha ao atualizar o grupo de endpoint %s"
 
+msgid ""
+"Fields in this tab are optional. You can configure the detail of IPsec site "
+"connection created."
+msgstr ""
+"Os campos nessa aba são opcionais. Você pode configurar os detalhes da "
+"conexão de site IPsec criada."
+
 msgid "ID"
 msgstr "ID"
 
@@ -274,6 +330,9 @@ msgstr "ID da Política IKE ="
 #, python-format
 msgid "IKE policy %s was successfully updated."
 msgstr "A política IKE %s foi atualizada com sucesso."
+
+msgid "IKE policy associated with this connection"
+msgstr "Política IKE associada com essa conexão"
 
 msgid "IKE version"
 msgstr "Versão IKE"
@@ -317,6 +376,9 @@ msgstr ""
 #, python-format
 msgid "IPsec policy %s was successfully updated."
 msgstr "A política IPSec %s foi atualizada com sucesso."
+
+msgid "IPsec policy associated with this connection"
+msgstr "Política IPsec associada com essa conexão"
 
 #, python-format
 msgid "IPsec site connection %s was successfully updated."
@@ -375,6 +437,9 @@ msgstr "Valor do Tempo de Vida para chaves IKE"
 msgid "Limited to 'main' mode only."
 msgstr "Limitado ao modo 'principal' somente."
 
+msgid "Local Endpoint Group"
+msgstr "Grupo de Endpoint Local"
+
 msgid "Local Endpoint Group(s)"
 msgstr "Grupo(s) de Endpoint Local"
 
@@ -387,6 +452,16 @@ msgstr "Sub-redes de Sistemas Locais"
 msgid "Local subnet(s). This field is valid if type is Subnet"
 msgstr "Sub-rede(s) Locais. Este campo é válido se o tipo é Sub-rede"
 
+msgid ""
+"Local subnets which the new IPsec connection is connected to. Required if no "
+"subnet is specified in a VPN service selected."
+msgstr ""
+"Sub-redes locais às quais a nova conexão IPsec está conectada. Obrigatório "
+"se nenhuma sub-rede está especificada no serviço de VPN."
+
+msgid "MTU"
+msgstr "MTU"
+
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "Tamanho máximo de Unidade de Transmissão para a conexão"
 
@@ -395,6 +470,17 @@ msgstr "Nome"
 
 msgid "Name ="
 msgstr "Nome ="
+
+msgid ""
+"Note: The recommended way to specify local subnets is to use endpoint groups "
+"in IPsec site connection. It is deprecated to specify subnet in VPN service. "
+"For a new VPN service or IPsec site connection, using endpoint group is "
+"recommended."
+msgstr ""
+"Nota: A forma recomendada de especificar sub-redes locais é utilizar grupos "
+"de endpoints na conexão de site IPsec. É obsoleto especificar sub-rede no "
+"serviço de VPN. Para um novo serviço de VPN ou conexão de site IPsec, a "
+"utilização de grupo de endpoints é recomendada."
 
 msgid "Optional Parameters"
 msgstr "Parâmetros Opcionais"
@@ -409,6 +495,12 @@ msgstr "PFS"
 
 msgid "PFS ="
 msgstr "PFS = "
+
+msgid "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+msgstr "PFS limitado a utilizar os grupos Diffie-Hellman 2,5 (padrão) e 14."
+
+msgid "Peer Endpoint Group"
+msgstr "Grupo de Endpoints do Peer"
 
 msgid "Peer Endpoint Group(s)"
 msgstr "Grupo(s) de Endpoint Pareado"
@@ -451,6 +543,12 @@ msgstr "String de Chave Pré-Compartilhada (PSK) "
 msgid "Project ID"
 msgstr "ID do Projeto"
 
+msgid "Remote peer CIDR(s) connected to the new IPsec connection."
+msgstr "CIDR(s) de Peer remoto conectados à nova conexão IPsec."
+
+msgid "Remote peer subnet"
+msgstr "Sub-rede peer remota"
+
 msgid "Remote peer subnet(s)"
 msgstr "Sub-redes do peer remoto"
 
@@ -460,6 +558,18 @@ msgid ""
 msgstr ""
 "Endereços de sub-redes remotas com máscaras no formato CIDR, separados por "
 "vírgulas se necessário(ex. 20.1.0.0/24, 21.1.0.0/24) "
+
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24). This field is valid if "
+"type is CIDR"
+msgstr ""
+"Endereço(s) de sub-rede(s) remota(s) com máscara(s) em formato CIDR separado "
+"com vírgulas se necessário(por exemplo 20.1.0.0/24,21.1.0.0/24). Este campo "
+"é válido se o tipo é CIDR"
+
+msgid "Route mode"
+msgstr "Modo de roteamento"
 
 msgid "Router"
 msgstr "Roteador"
@@ -498,11 +608,33 @@ msgid_plural "Scheduled deletion of endpoint groups"
 msgstr[0] "Exclusão agendada do grupo de endpoint"
 msgstr[1] "Exclusão agendada dos grupo de endpoints"
 
+msgid "Select IKE policy"
+msgstr "Selecione a política IKE"
+
+msgid "Select IPsec Policy"
+msgstr "Selecione a política IPsec"
+
+msgid "Select VPN service"
+msgstr "Selecione o serviço de VPN"
+
 msgid "Select a Router"
 msgstr "Selecione um Roteador"
 
 msgid "Select a Subnet"
 msgstr "Selecione a sub-rede"
+
+msgid "Select local endpoint group"
+msgstr "Selecione o grupo de endpoint local"
+
+msgid "Select peer endpoint group"
+msgstr "Selecione o grupo de endpoint do peer"
+
+msgid ""
+"Specify a name, description, router, and subnet (optional) for the VPN "
+"service."
+msgstr ""
+"Especifique um nome, uma descrição, roteamento, e sub-rede (opcional) para o "
+"serviço e VPN."
 
 msgid "Status"
 msgstr "Status"
@@ -522,8 +654,29 @@ msgstr "Subrede = "
 msgid "Subnet ID ="
 msgstr "ID da Subrede ="
 
+msgid ""
+"The VPN service is attached to a router and references to endpoint group or "
+"a single subnet to push to a remote site."
+msgstr ""
+"O serviço VPN é anexado a um roteador e as referências ao grupo de endpoints "
+"ou a uma única sub-rede são enviadas para um site remoto."
+
 msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "A sequência de chaves pré-definida entre dois peers da conexão VPN"
+
+msgid ""
+"The router and admin state fields require to be enabled. All others are "
+"optional."
+msgstr ""
+"Os campos de roteador e estado de administração precisam estar ativados. "
+"Todos os outros são opcionais."
+
+msgid ""
+"The state of IPsec site connection to start in. If disabled (not checked), "
+"IPsec site connection does not forward packets."
+msgstr ""
+"O estado em que a conexão de site IPsec deve iniciar. Se estive desativado "
+"(não marcado), a conexão de site IPsec não encaminha pacotes."
 
 msgid ""
 "The state of VPN service to start in. If disabled (not checked), VPN service "
@@ -569,6 +722,14 @@ msgid "Unable to add IKE policy \"%s\"."
 msgstr "Não é possível adicionar a política IKE \"%s\"."
 
 #, python-format
+msgid "Unable to add IPsec policy \"%s\"."
+msgstr "Não é possível adicionar a política IPsec \"%s\"."
+
+#, python-format
+msgid "Unable to add IPsec site connection \"%s\"."
+msgstr "Não é possível adicionar a conexão de site IPsec \"%s\"."
+
+#, python-format
 msgid "Unable to add VPN service \"%s\"."
 msgstr "Não é possível adicionar o serviço de VPN \"%s\"."
 
@@ -605,6 +766,9 @@ msgstr "Não é possível obter detalhes da política IKE."
 #, python-format
 msgid "Unable to retrieve IKE policy details. %s"
 msgstr "Não é possível obter detalhes da política IKE. %s"
+
+msgid "Unable to retrieve IPsec policies list."
+msgstr "Não é possível obter a lista de políticas IPsec."
 
 msgid "Unable to retrieve IPsec policy details."
 msgstr "Não é possível obter detalhes da política IPsec."
@@ -677,6 +841,9 @@ msgstr "Serviços de VPN"
 msgid "VPN service %s was successfully updated."
 msgstr "O serviço de VPN %s foi atualizado com sucesso."
 
+msgid "VPN service associated with this connection"
+msgstr "Serviço de VPN associado com essa conexão"
+
 msgid "Valid integer greater than the DPD interval"
 msgstr "Número inteiro válido maior que o intervalo DPD"
 
@@ -688,6 +855,21 @@ msgstr "Número inteiro válido menor que o tempo limite DPD"
 
 msgid "Virtual Private Network"
 msgstr "Rede Virtual Privada"
+
+msgid "You may update IKE policy details here."
+msgstr "Você pode atualizar os detalhes da política IKE aqui."
+
+msgid "You may update IPsec policy details here."
+msgstr "Você pode atualizar os detalhes da política IPsec aqui."
+
+msgid "You may update IPsec site connection details here."
+msgstr "Você pode atualizar os detalhes da conexão de site IPsec aqui."
+
+msgid "You may update VPN service details here."
+msgstr "Você pode atualizar os detalhes do serviço de VPN aqui."
+
+msgid "You may update endpoint group details here."
+msgstr "Você pode atualizar os detalhes do grupo de endpoints aqui."
 
 msgid "aes-128"
 msgstr "aes-128"
