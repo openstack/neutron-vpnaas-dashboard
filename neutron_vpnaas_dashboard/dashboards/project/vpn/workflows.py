@@ -209,7 +209,11 @@ class AddEndpointGroup(workflows.Workflow):
 
     def handle(self, request, context):
         try:
-            api_vpn.endpointgroup_create(request, **context)
+            api_vpn.endpointgroup_create(request,
+                                         name=context['name'],
+                                         description=context['description'],
+                                         type=context['type'],
+                                         endpoints=context['endpoints'])
             return True
         except Exception:
             return False
