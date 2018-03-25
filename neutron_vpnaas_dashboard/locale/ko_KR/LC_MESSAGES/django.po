@@ -11,16 +11,17 @@
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 # ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
+# Wonil Choi <wonil0522@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-13 08:09+0000\n"
+"POT-Creation-Date: 2018-03-21 23:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-13 03:00+0000\n"
-"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
+"PO-Revision-Date: 2018-03-24 12:09+0000\n"
+"Last-Translator: Wonil Choi <wonil0522@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -58,11 +59,18 @@ msgstr "새 엔드포인트 그룹 추가"
 msgid "Add New IKE Policy"
 msgstr "새로운 IKE 정책 추가"
 
+msgid "Add New IPsec Policy"
+msgstr "새로운 IPsec 정책 추가"
+
 msgid "Add New VPN Service"
 msgstr "새로운 VPN 서비스 추가"
 
 msgid "Add VPN Service"
 msgstr "VPN 서비스 추가"
+
+#, python-format
+msgid "Added IPsec policy \"%s\"."
+msgstr "IPsec 정책 \"%s\"를 추가하였습니다."
 
 #, python-format
 msgid "Added IPsec site connection \"%s\"."
@@ -71,6 +79,10 @@ msgstr "IPsec 사이트 연결 \"%s\"를 추가하였습니다."
 #, python-format
 msgid "Added VPN service \"%s\"."
 msgstr "다음 VPN 서비스가 추가되었습니다. \"%s\""
+
+#, python-format
+msgid "Added endpoint group \"%s\"."
+msgstr "엔드포인트 그룹 \"%s\"를 추가하였습니다."
 
 msgid "Authorization algorithm"
 msgstr "인증 알고리즘"
@@ -280,6 +292,9 @@ msgstr "IPsec 연결 유효성을 위해선 상대 엔드포인트가 CIDR이어
 msgid "IPsec policy %s was successfully updated."
 msgstr "IPsec 정책 %s를 성공적으로 업데이트 했습니다."
 
+msgid "IPsec policy associated with this connection"
+msgstr "이 연결에 적용할 IPsec 정책"
+
 #, python-format
 msgid "IPsec site connection %s was successfully updated."
 msgstr "IPsec 사이트 연결 %s를 성공적으로 업데이트하였습니다."
@@ -429,6 +444,9 @@ msgid "Scheduled deletion of endpoint group"
 msgid_plural "Scheduled deletion of endpoint groups"
 msgstr[0] "엔드포인트 그룹의 예약 삭제"
 
+msgid "Select IPsec Policy"
+msgstr "IPsec 정책 선택"
+
 msgid "Select a Router"
 msgstr "라우터 선택"
 
@@ -473,12 +491,20 @@ msgid "Type ="
 msgstr "Type ="
 
 #, python-format
+msgid "Unable to add IPsec policy \"%s\"."
+msgstr "IPsec 정책 \"%s\"를 추가할 수 없습니다."
+
+#, python-format
 msgid "Unable to add IPsec site connection \"%s\"."
 msgstr "IPsec 사이트 연결 \"%s\"를 추가 할 수 없습니다."
 
 #, python-format
 msgid "Unable to add VPN service \"%s\"."
 msgstr "다음 VPN 서비스를 추가할 수 없습니다. \"%s\""
+
+#, python-format
+msgid "Unable to add endpoint group \"%s\"."
+msgstr "엔드포인트 그룹 \"%s\"를 추가할 수 없습니다."
 
 #, python-format
 msgid "Unable to delete IKE policy. %s"
