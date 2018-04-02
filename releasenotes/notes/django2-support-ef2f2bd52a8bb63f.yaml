@@ -1,0 +1,6 @@
+---
+upgrade:
+  - |
+    Supported django versions are chagned aligning with the supported versions
+    by horizon. Django 1.11 and 2.0 are supported now. Django 1.8 to 1.10 are
+    no longer supported.
