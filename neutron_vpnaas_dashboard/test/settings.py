@@ -13,6 +13,10 @@
 # Default to Horizons test settings to avoid any missing keys
 from horizon.test.settings import *  # noqa
 from openstack_dashboard.test.settings import *  # noqa
+import openstack_dashboard.enabled
+from openstack_dashboard.utils import settings
+
+import neutron_vpnaas_dashboard.enabled
 
 # pop these keys to avoid log warnings about deprecation
 # update_dashboards will populate them anyway
@@ -20,11 +24,6 @@ HORIZON_CONFIG.pop('dashboards', None)
 HORIZON_CONFIG.pop('default_dashboard', None)
 
 # Update the dashboards with neutron_vpnaas_dashboard
-import openstack_dashboard.enabled
-from openstack_dashboard.utils import settings
-
-import neutron_vpnaas_dashboard.enabled
-
 settings.update_dashboards(
     [
         openstack_dashboard.enabled,
