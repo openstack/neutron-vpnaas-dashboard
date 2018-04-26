@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-12 02:30+0000\n"
+"POT-Creation-Date: 2018-03-24 07:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-18 02:44+0000\n"
+"PO-Revision-Date: 2018-04-25 10:57+0000\n"
 "Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
@@ -51,8 +51,14 @@ msgstr "IPsec 정책 추가"
 msgid "Add IPsec Site Connection"
 msgstr "IPsec 사이트 연결 추가"
 
+msgid "Add New Endpoint Groups"
+msgstr "새 엔드포인트 그룹 추가"
+
 msgid "Add New IKE Policy"
 msgstr "새로운 IKE 정책 추가"
+
+msgid "Add New IPsec Policy"
+msgstr "새로운 IPsec 정책 추가"
 
 msgid "Add New VPN Service"
 msgstr "새로운 VPN 서비스 추가"
@@ -61,8 +67,20 @@ msgid "Add VPN Service"
 msgstr "VPN 서비스 추가"
 
 #, python-format
+msgid "Added IKE policy \"%s\"."
+msgstr "IKE 정책 \"%s\"를 추가하였습니다."
+
+#, python-format
+msgid "Added IPsec policy \"%s\"."
+msgstr "IPsec 정책 \"%s\"를 추가하였습니다."
+
+#, python-format
 msgid "Added VPN service \"%s\"."
 msgstr "다음 VPN 서비스가 추가되었습니다. \"%s\""
+
+#, python-format
+msgid "Added endpoint group \"%s\"."
+msgstr "엔드포인트 그룹 \"%s\"를 추가하였습니다."
 
 msgid "Authorization algorithm"
 msgstr "인증 알고리즘"
@@ -156,6 +174,9 @@ msgstr "엔드포인트 그룹 세부 정보"
 msgid "Endpoint group %s was successfully updated."
 msgstr "엔드포인트 그룹 %s를 성공적으로 업데이트 하였습니다."
 
+msgid "Endpoint group for local subnet(s)"
+msgstr "로컬 서브넷용 엔드포인트 그룹"
+
 msgid "Endpoints"
 msgstr "Endpoints"
 
@@ -197,6 +218,10 @@ msgstr "IPsec 사이트 연결 %s를 업데이트 하지 못하였습니다."
 #, python-format
 msgid "Failed to update VPN service %s"
 msgstr "VPN 서비스 %s를 업데이트 하는데 실패했습니다."
+
+#, python-format
+msgid "Failed to update endpoint group %s"
+msgstr "엔드포인트 그룹 %s 업데이트가 실패했습니다."
 
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE Phase1 협상 모드"
@@ -295,6 +320,9 @@ msgstr "로컬 사이트 공용 IP"
 
 msgid "Local System Subnets"
 msgstr "로컬 시스템 서브넷"
+
+msgid "Local subnet(s). This field is valid if type is Subnet"
+msgstr "로컬 서브넷. 이 항목은 유형이 서브넷인 경우 유효합니다"
 
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "연결에 대한 최대 전달 단위 크기"
@@ -451,8 +479,20 @@ msgid "Type ="
 msgstr "Type ="
 
 #, python-format
+msgid "Unable to add IKE policy \"%s\"."
+msgstr "IKE 정책 \"%s\"를 추가할 수 없습니다."
+
+#, python-format
+msgid "Unable to add IPsec policy \"%s\"."
+msgstr "IPsec 정책 \"%s\"를 추가할 수 없습니다."
+
+#, python-format
 msgid "Unable to add VPN service \"%s\"."
 msgstr "다음 VPN 서비스를 추가할 수 없습니다. \"%s\""
+
+#, python-format
+msgid "Unable to add endpoint group \"%s\"."
+msgstr "엔드포인트 그룹 \"%s\"를 추가할 수 없습니다."
 
 #, python-format
 msgid "Unable to delete IKE policy. %s"
@@ -551,6 +591,9 @@ msgstr "VPN 서비스"
 #, python-format
 msgid "VPN service %s was successfully updated."
 msgstr "VPN 서비스 %s를 성공적으로 업데이트하였습니다."
+
+msgid "VPN service associated with this connection"
+msgstr "이 연결에 연동할 VPN 서비스 "
 
 msgid "Valid integer greater than the DPD interval"
 msgstr "DPD 간격을 보다 큰 유효한 정수"
