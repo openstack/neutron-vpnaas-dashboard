@@ -29,6 +29,8 @@ import sys
 
 import django
 
+import neutron_vpnaas_dashboard.version
+
 PROJECT = 'neutron-vpnaas-dashboard'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE_DIR, "..", ".."))
@@ -38,8 +40,6 @@ sys.path.insert(0, ROOT)
 # This is required for ReadTheDocs.org, but isn't a bad idea anyway.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'neutron_vpnaas_dashboard.test.settings')
-
-import neutron_vpnaas_dashboard.version
 
 django.setup()
 
