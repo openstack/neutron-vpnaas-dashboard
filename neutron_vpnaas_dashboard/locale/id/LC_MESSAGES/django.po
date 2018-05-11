@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-02 19:54+0000\n"
+"POT-Creation-Date: 2018-05-07 00:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-21 05:05+0000\n"
+"PO-Revision-Date: 2018-05-10 02:00+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -165,6 +165,14 @@ msgid "Delete IKE Policy"
 msgid_plural "Delete IKE Policies"
 msgstr[0] "Delete IKE Policy"
 
+msgid "Delete IPsec Policy"
+msgid_plural "Delete IPsec Policies"
+msgstr[0] "Delete IPsec Policy"
+
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "Delete IPsec Site Connection"
+
 msgid "Delete VPN Service"
 msgid_plural "Delete VPN Services"
 msgstr[0] "Delete VPN Service"
@@ -182,8 +190,14 @@ msgstr "Down"
 msgid "Edit Connection"
 msgstr "Edit Connection"
 
+msgid "Edit Endpoint Group"
+msgstr "Edit Endpoint Group"
+
 msgid "Edit IKE Policy"
 msgstr "Mengedit IKE Policy"
+
+msgid "Edit IPsec Policy"
+msgstr "Edit IPsec Policy"
 
 msgid "Edit IPsec Site Connection"
 msgstr "Edit IPsec Site Connection"
@@ -266,6 +280,10 @@ msgstr "Gagal memperbarui IPsec site connection %s"
 #, python-format
 msgid "Failed to update VPN service %s"
 msgstr "Gagal memperbarui VPN service %s"
+
+#, python-format
+msgid "Failed to update endpoint group %s"
+msgstr "Gagal memperbarui endpoint group %s"
 
 msgid ""
 "Fields in this tab are optional. You can configure the detail of IPsec site "
@@ -550,6 +568,18 @@ msgstr "Router ID ="
 msgid "Save Changes"
 msgstr "Simpan perubahan"
 
+msgid "Scheduled deletion of IKE policy"
+msgid_plural "Scheduled deletion of IKE policies"
+msgstr[0] "Scheduled deletion of IKE policy"
+
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "Scheduled deletion of IPsec policy"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "Scheduled deletion of IPsec site connection"
+
 msgid "Scheduled deletion of VPN service"
 msgid_plural "Scheduled deletion of VPN services"
 msgstr[0] "Scheduled deletion of VPN service"
@@ -686,6 +716,18 @@ msgstr "Tidak dapat menambahkan VPN service \"%s\"."
 #, python-format
 msgid "Unable to add endpoint group \"%s\"."
 msgstr "Tidak dapat menambahkan endpoint group \"%s\"."
+
+#, python-format
+msgid "Unable to delete IKE policy. %s"
+msgstr "Tidak dapat menghapus IKE policy. %s"
+
+#, python-format
+msgid "Unable to delete IPsec policy. %s"
+msgstr "Tidak dapat menghapus IPsec policy. %s"
+
+#, python-format
+msgid "Unable to delete IPsec site connection. %s"
+msgstr "Tidak dapat menghapus IPsec site connection. %s"
 
 #, python-format
 msgid "Unable to delete VPN service. %s"

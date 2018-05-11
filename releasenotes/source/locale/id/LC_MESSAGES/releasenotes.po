@@ -2,27 +2,69 @@
 # suhartono <cloudsuhartono@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Neutron VPNaaS Dashboard Release Notes\n"
+"Project-Id-Version: neutron-vpnaas-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-08 08:19+0000\n"
+"POT-Creation-Date: 2018-05-07 00:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-18 02:57+0000\n"
+"PO-Revision-Date: 2018-05-10 01:59+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "0.1.0"
 msgstr "0.1.0"
+
+msgid "1.1.0"
+msgstr "1.1.0"
+
+msgid "1.2.0"
+msgstr "1.2.0"
+
+msgid "1.2.1-29"
+msgstr "1.2.1-29"
+
+msgid "Add support for Endpoint Group feature."
+msgstr "Tambahkan dukungan untuk fitur Endpoint Group."
+
+msgid ""
+"Add support the attributes of IPsec site connection to be able to get more "
+"formats like FQDN other than IP format. For more information, see bug "
+"`1261127 <https://launchpad.net/bugs/1261127>`_."
+msgstr ""
+"Tambahkan dukungan atribut koneksi situs IPsec agar bisa mendapatkan lebih "
+"banyak format seperti FQDN selain dari format IP. Untuk informasi lebih "
+"lanjut, lihat bug `1261127 <https://launchpad.net/bugs/1261127>` _."
 
 msgid "Bug Fixes"
 msgstr "Perbaikan bug"
 
 msgid "Current Series Release Notes"
 msgstr "Catatan rilis seri saat ini"
+
+msgid "Neutron VPNaaS Dashboard Release Notes"
+msgstr "Catatan Rilis Neutron VPNaaS Dashboard"
+
+msgid ""
+"Neutron VPNaaS support in the OpenStack Dashboard is now split out into a "
+"separate package ``neutron-vpnaas-dashboard``. You need to install ``neutron-"
+"vpnaas-dashboard`` after upgrading the OpenStack Dashboard to Pike release "
+"and add ``enabled`` file for Neutron VPNaaS dashboard."
+msgstr ""
+"Dukungan Neutron VPNaaS di Dasbor OpenStack kini dipisah menjadi paket "
+"terpisah ``neutron-vpnaas-dashboard``. Anda perlu menginstal ``neutron-"
+"vpnaas-dashboard`` setelah memutakhirkan OpenStack Dashboard ke rilis Pike "
+"dan menambahkan ``enabled`` file untuk dashboard Neutron VPNaaS."
+
+msgid ""
+"Neutron VPNaaS support in the OpenStack Dashboard is now split out into a "
+"separate python package."
+msgstr ""
+"Dukungan Neutron VPNaaS di Dasbor OpenStack kini dibagi menjadi paket python "
+"terpisah."
 
 msgid "New Features"
 msgstr "Fitur baru"
@@ -32,3 +74,18 @@ msgstr "Catatan Rilis Seri Pike"
 
 msgid "Prelude"
 msgstr "Prelude"
+
+msgid "Queens Series Release Notes"
+msgstr "Catatan Rilis Seri Queens"
+
+msgid ""
+"Supported django versions are chagned aligning with the supported versions "
+"by horizon. Django 1.11 and 2.0 are supported now. Django 1.8 to 1.10 are no "
+"longer supported."
+msgstr ""
+"Versi django yang didukung diubah sejajar dengan versi yang didukung oleh "
+"horizon. Django 1,11 dan 2,0 didukung sekarang. Django 1.8 hingga 1.10 tidak "
+"lagi didukung."
+
+msgid "Upgrade Notes"
+msgstr "Catatan Upgrade"
