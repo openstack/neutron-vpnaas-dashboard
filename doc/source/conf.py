@@ -27,8 +27,6 @@ from __future__ import print_function
 import os
 import sys
 
-import django
-
 import neutron_vpnaas_dashboard.version
 
 PROJECT = 'neutron-vpnaas-dashboard'
@@ -36,14 +34,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE_DIR, "..", ".."))
 
 sys.path.insert(0, ROOT)
-
-# This is required for ReadTheDocs.org, but isn't a bad idea anyway.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'neutron_vpnaas_dashboard.test.settings')
-
-
-django.setup()
-
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
