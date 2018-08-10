@@ -11,17 +11,18 @@
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 # ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2018. #zanata
 # Wonil Choi <wonil0522@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-04-13 15:23+0000\n"
+"POT-Creation-Date: 2018-08-09 12:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-25 10:53+0000\n"
-"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
+"PO-Revision-Date: 2018-08-05 03:54+0000\n"
+"Last-Translator: Sungjin Kang <gang.sungjin@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -62,11 +63,18 @@ msgstr "새로운 IKE 정책 추가"
 msgid "Add New IPsec Policy"
 msgstr "새로운 IPsec 정책 추가"
 
+msgid "Add New IPsec Site Connection"
+msgstr "새로운 IPsec 사이트 연결 추가"
+
 msgid "Add New VPN Service"
 msgstr "새로운 VPN 서비스 추가"
 
 msgid "Add VPN Service"
 msgstr "VPN 서비스 추가"
+
+#, python-format
+msgid "Added IKE policy \"%s\"."
+msgstr "IKE 정책 \"%s\"를 추가하였습니다."
 
 #, python-format
 msgid "Added IPsec policy \"%s\"."
@@ -84,14 +92,55 @@ msgstr "다음 VPN 서비스가 추가되었습니다. \"%s\""
 msgid "Added endpoint group \"%s\"."
 msgstr "엔드포인트 그룹 \"%s\"를 추가하였습니다."
 
+msgid "Admin State"
+msgstr "관리자 상태"
+
+msgid "Admin State is enabled by default."
+msgstr "기본적으로 관리자 상태는 활성화 상태입니다."
+
+msgid "All fields are optional."
+msgstr "모든 필드는 선택 항목입니다."
+
+msgid "An IKE policy is an association of the following attributes:"
+msgstr "IKE 정책은 다음과 같은 속성이 있습니다:"
+
+msgid "An IPsec policy is an association of the following attributes"
+msgstr "IPsec 정책은 다음과 같은 속성이 있습니다."
+
+msgid "Auth algorithm limited to SHA1 only."
+msgstr "인증 알고리즘은 SHA1로 제한됩니다."
+
 msgid "Authorization algorithm"
 msgstr "인증 알고리즘"
 
 msgid "Authorization algorithm ="
 msgstr "인증 알고리즘="
 
+msgid "Authorization mode"
+msgstr "인증 모드"
+
 msgid "CIDR (for external systems)"
 msgstr "CIDR (외부 시스템용)"
+
+msgid "Create IKE policy for current project."
+msgstr "현재 프로젝트에대한 IKE 정책을 생성합니다."
+
+msgid "Create IPsec policy for current project."
+msgstr "현재 프로젝트의 IPsec 정책을 생성합니다."
+
+msgid ""
+"Create IPsec site connection for current project. Assign a name and "
+"description for the IPsec site connection. All fields in this tab are "
+"required."
+msgstr ""
+"현재 프로젝트에 IPsec 사이트 연결을 생성합니다. 해당 IPsec 사이트 연결에 대"
+"한 이름과 설명을 입력하십시오. 이 탭의 모든 필드는 필수항목입니다."
+
+msgid "Create VPN service for current project."
+msgstr "현재 프로젝트의 VPN 서비스를 생성합니다."
+
+msgid "Create endpoint group for current project."
+msgstr "현재 프로젝트에대한 엔드포인트 그룹을 생성합니다."
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Created"
@@ -99,6 +148,9 @@ msgstr "생성됨"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr "DPD 타임아웃은 DPD Interval보다 커야 합니다."
+
+msgid "Dead peer detection action"
+msgstr "죽은 피어 감지 동작"
 
 msgid "Dead peer detection actions"
 msgstr "죽은 피어 감지 동작"
@@ -132,6 +184,9 @@ msgstr[0] "VPN 서비스 삭제"
 msgid "Description"
 msgstr "설명"
 
+msgid "Description:"
+msgstr "설명:"
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Down"
 msgstr "Down"
@@ -149,6 +204,12 @@ msgid "Edit IPsec Policy"
 msgstr "IPsec 정책 편집"
 
 msgid "Edit IPsec Site Connection"
+msgstr "IPsec 사이트 접속 편집"
+
+msgid "Edit IPsec policy"
+msgstr "IPsec 정책 편집"
+
+msgid "Edit IPsec site connection"
 msgstr "IPsec 사이트 접속 편집"
 
 msgid "Edit VPN Service"
@@ -175,6 +236,12 @@ msgstr "엔드포인트 그룹 세부 정보"
 #, python-format
 msgid "Endpoint group %s was successfully updated."
 msgstr "엔드포인트 그룹 %s를 성공적으로 업데이트 하였습니다."
+
+msgid "Endpoint group for local subnet(s)"
+msgstr "로컬 서브넷용 엔드포인트 그룹"
+
+msgid "Endpoint group for remote peer CIDR(s)"
+msgstr "원격 피어 CIDR용 엔드포인트 그룹"
 
 msgid "Endpoints"
 msgstr "Endpoints"
@@ -229,6 +296,12 @@ msgstr ""
 "이 탭의 항목은 선택 사항입니다. 생성된 IPsec 사이트 연결에 대한 세부 사항을 "
 "구성할 수 있습니다."
 
+msgid "ID"
+msgstr "ID"
+
+msgid "IKE Phase 1 negotiation mode"
+msgstr "IKE Phase 1 협상 모드"
+
 msgid "IKE Phase1 negotiation mode"
 msgstr "IKE Phase1 협상 모드"
 
@@ -250,6 +323,9 @@ msgstr "IKE 정책 ID="
 #, python-format
 msgid "IKE policy %s was successfully updated."
 msgstr "IKE 정책 %s를 성공적으로 업데이트 했습니다."
+
+msgid "IKE policy associated with this connection"
+msgstr "이 연결에 적용할 IKE 정책"
 
 msgid "IKE version"
 msgstr "IKE 버전"
@@ -299,12 +375,40 @@ msgstr "이 연결에 적용할 IPsec 정책"
 msgid "IPsec site connection %s was successfully updated."
 msgstr "IPsec 사이트 연결 %s를 성공적으로 업데이트하였습니다."
 
+msgid "IPv4"
+msgstr "IPv4"
+
+msgid "IPv4:"
+msgstr "IPv4:"
+
+msgid "IPv6"
+msgstr "IPv6"
+
+msgid "IPv6:"
+msgstr "IPv6:"
+
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Inactive"
 msgstr "비활성"
 
 msgid "Initiator state"
 msgstr "Initiator 상태"
+
+msgid ""
+"Life time consists of units and value. Units in 'seconds' and the default "
+"value is 3600."
+msgstr ""
+"수명(lifetime)은 단위와 값으로 구성됩니다. '초(seconds)' 단위이며 기본값은 "
+"3600입니다."
+
+msgid "Lifetime"
+msgstr "수명(Lifetime)"
+
+msgid "Lifetime Units"
+msgstr "수명 단위"
+
+msgid "Lifetime Value"
+msgstr "수명 값"
 
 msgid "Lifetime units"
 msgstr "Lifetime units"
@@ -321,6 +425,12 @@ msgstr "IKE 키의 수명 값"
 msgid "Lifetime value for IKE keys "
 msgstr "IKE 키의 수명 값"
 
+msgid "Limited to 'main' mode only."
+msgstr "'main' 모드에서만 가능합니다."
+
+msgid "Local Endpoint Group"
+msgstr "로컬 엔드포인트 그룹"
+
 msgid "Local Endpoint Group(s)"
 msgstr "로컬 엔드포인트 그룹"
 
@@ -332,6 +442,9 @@ msgstr "로컬 시스템 서브넷"
 
 msgid "Local subnet(s). This field is valid if type is Subnet"
 msgstr "로컬 서브넷. 이 항목은 유형이 서브넷인 경우 유효합니다"
+
+msgid "MTU"
+msgstr "MTU"
 
 msgid "Maximum Transmission Unit size for the connection"
 msgstr "연결에 대한 최대 전달 단위 크기"
@@ -353,6 +466,12 @@ msgstr "PFS"
 
 msgid "PFS ="
 msgstr "PFS="
+
+msgid "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+msgstr "PFS는 Diffie-Hellman 그룹 2, 5 (기본) 그리고 14만 사용할 수 있습니다."
+
+msgid "Peer Endpoint Group"
+msgstr "상대 엔드포인트 그룹"
 
 msgid "Peer Endpoint Group(s)"
 msgstr "상대 엔드포인트 그룹"
@@ -394,6 +513,12 @@ msgstr "완벽한 Forward 보안"
 msgid "Pre-Shared Key (PSK) string"
 msgstr "사전 공유키 (PSK) 문자"
 
+msgid "Project ID"
+msgstr "프로젝트 ID"
+
+msgid "Remote peer subnet"
+msgstr "원격 피어 서브넷"
+
 msgid "Remote peer subnet(s)"
 msgstr "원격 피어 서브넷"
 
@@ -411,6 +536,9 @@ msgid ""
 msgstr ""
 "필요한 경우, 쉼표로 나눈 CIDR 포맷 마스크로 구성된  원격 상대방 서브넷 주소 "
 "(예: 20.1.0.0/24, 21.1.0.0/24). 이 필드는 타입이 CIDR일 경우에 유효합니다."
+
+msgid "Route mode"
+msgstr "라우트 모드"
 
 msgid "Router"
 msgstr "라우터"
@@ -444,14 +572,31 @@ msgid "Scheduled deletion of endpoint group"
 msgid_plural "Scheduled deletion of endpoint groups"
 msgstr[0] "엔드포인트 그룹의 예약 삭제"
 
+msgid "Select IKE policy"
+msgstr "IKE 정책 선택"
+
 msgid "Select IPsec Policy"
 msgstr "IPsec 정책 선택"
+
+msgid "Select VPN service"
+msgstr "VPN 서비스 선택"
 
 msgid "Select a Router"
 msgstr "라우터 선택"
 
 msgid "Select a Subnet"
 msgstr "서브넷 선택"
+
+msgid "Select local endpoint group"
+msgstr "로컬 엔드포인트 그룹 선택"
+
+msgid "Select peer endpoint group"
+msgstr "로컬 엔드포인트 피어 선택"
+
+msgid ""
+"Specify a name, description, router, and subnet (optional) for the VPN "
+"service."
+msgstr "VPN 서비스의 이름, 설명, 라우터, 그리고 서브넷을 지정합니다."
 
 msgid "Status"
 msgstr "상태"
@@ -475,11 +620,46 @@ msgid "The pre-defined key string between the two peers of the VPN connection"
 msgstr "VPN에 연결하는 2개의 피어간에 미리 정의돈 문자열을 사용합니다."
 
 msgid ""
+"The router and admin state fields require to be enabled. All others are "
+"optional."
+msgstr ""
+"라우터, 관리자 상태 필드는 활성화 되어야 합니다. 그 외에는 모두 선택 항목입니"
+"다."
+
+msgid ""
+"The state of IPsec site connection to start in. If disabled (not checked), "
+"IPsec site connection does not forward packets."
+msgstr ""
+"시작할 IPsec 사이트 연결 상태. 비활성화된 경우 (선택하지 않은 경우), IPsec 사"
+"이트 연결은 패킷을 전달하지 않습니다."
+
+msgid ""
 "The state of VPN service to start in. If disabled (not checked), VPN service "
 "does not forward packets."
 msgstr ""
 "시작할 VPN 서비스 상태. 비활성화된 경우 (선택하지 않은 경우), VPN 서비스는 패"
 "킷을 전달하지 않습니다."
+
+msgid "The type of IPsec tunnel (tunnel/transport) to be used."
+msgstr "사용될 IPsec 터널 (터널/전송) 유형입니다."
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IKE "
+"policy."
+msgstr ""
+"IKE 정책에서 사용하는 알고리즘 유형(3des, aes-128, aes-192, aes-256)입니다."
+
+msgid ""
+"The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IPsec "
+"policy."
+msgstr ""
+"IPsec 정책에 사용되는 알고리즘 유형(3des, aes-128, aes-192, aes-256)입니다."
+
+msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
+msgstr "IPsec 정책에 사용되는 프로토콜 유형(esp, ah, ah-esp)입니다."
+
+msgid "The type of version (v1/v2) that needs to be filtered."
+msgstr "필터링이 필요한 버전 유형(v1/v2)입니다."
 
 msgid "Transform Protocol"
 msgstr "변환 프로토콜"
@@ -489,6 +669,10 @@ msgstr "타입"
 
 msgid "Type ="
 msgstr "Type ="
+
+#, python-format
+msgid "Unable to add IKE policy \"%s\"."
+msgstr "IKE 정책 \"%s\"를 추가할 수 없습니다."
 
 #, python-format
 msgid "Unable to add IPsec policy \"%s\"."
@@ -535,6 +719,9 @@ msgstr "IKE 정책 세부 정보를 가져올 수 없습니다."
 #, python-format
 msgid "Unable to retrieve IKE policy details. %s"
 msgstr "IKE 정책 세부 정보를 가져올 수 없습니다. %s"
+
+msgid "Unable to retrieve IPsec policies list."
+msgstr "IPsec 정책 목록을 찾지 못 했습니다."
 
 msgid "Unable to retrieve IPsec policy details."
 msgstr "IPsec 정책 세부 정보를 가져올 수 없습니다."
@@ -585,6 +772,9 @@ msgstr "라우터 목록을 찾지 못했습니다."
 msgid "VPN"
 msgstr "VPN"
 
+msgid "VPN Connections"
+msgstr "VPN 연결"
+
 msgid "VPN Service"
 msgstr "VPN 서비스"
 
@@ -604,6 +794,9 @@ msgstr "VPN 서비스"
 msgid "VPN service %s was successfully updated."
 msgstr "VPN 서비스 %s를 성공적으로 업데이트하였습니다."
 
+msgid "VPN service associated with this connection"
+msgstr "이 연결에 연동할 VPN 서비스 "
+
 msgid "Valid integer greater than the DPD interval"
 msgstr "DPD 간격을 보다 큰 유효한 정수"
 
@@ -615,6 +808,21 @@ msgstr "DPD 타임아웃보다 작은 유효한 정수"
 
 msgid "Virtual Private Network"
 msgstr "가상 내부 네트워크"
+
+msgid "You may update IKE policy details here."
+msgstr "IKE 정책의 세부 정보를 수정할 수 있습니다."
+
+msgid "You may update IPsec policy details here."
+msgstr "IPsec 정책의 세부 정보를 업데이트 할 수 있습니다."
+
+msgid "You may update IPsec site connection details here."
+msgstr "IPsec 사이트 연결 세부 정보를 업데이트 할 수 있습니다."
+
+msgid "You may update VPN service details here."
+msgstr "VPN 서비스의 세부 정보를 업데이트 할 수 있습니다."
+
+msgid "You may update endpoint group details here."
+msgstr "엔드포인트 그룹 세부 사항을 여기서 업데이트 할 수 있습니다."
 
 msgid "aes-128"
 msgstr "aes-128"

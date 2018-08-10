@@ -1,16 +1,17 @@
 # Frank Kloeker <eumel@arcor.de>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2018. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
+# Robert Simai <robert.simai@suse.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-02 19:54+0000\n"
+"POT-Creation-Date: 2018-08-09 12:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-06 07:44+0000\n"
-"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
+"PO-Revision-Date: 2018-07-26 11:52+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -197,6 +198,9 @@ msgstr "Inaktiv"
 msgid "Edit Connection"
 msgstr "Verbindung bearbeiten"
 
+msgid "Edit Endpoint Group"
+msgstr "Endpunktgruppe bearbeiten"
+
 msgid "Edit IKE Policy"
 msgstr "IKE Richtlinie bearbeiten"
 
@@ -284,6 +288,10 @@ msgstr "IPSec Site Verbindung %s konnte nicht nicht geändert werden"
 #, python-format
 msgid "Failed to update VPN service %s"
 msgstr "VPN Dienst %s konnte nicht aktualisiert werden"
+
+#, python-format
+msgid "Failed to update endpoint group %s"
+msgstr "Endpunktgruppe %s konnte nicht aktualisiert werden."
 
 msgid ""
 "Fields in this tab are optional. You can configure the detail of IPsec site "
