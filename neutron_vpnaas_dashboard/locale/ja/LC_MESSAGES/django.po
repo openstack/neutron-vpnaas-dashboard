@@ -1,19 +1,18 @@
-# Yuko Katabami <yukokatabami@gmail.com>, 2016. #zanata
 # Akihiro Motoki <amotoki@gmail.com>, 2018. #zanata
 # Yuko Katabami <yukokatabami@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-14 18:36+0000\n"
+"POT-Creation-Date: 2018-09-12 15:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-15 05:00+0000\n"
+"PO-Revision-Date: 2018-09-13 08:11+0000\n"
 "Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid ""
@@ -142,7 +141,7 @@ msgstr "作成済み"
 
 msgid "DPD Timeout must be greater than DPD Interval"
 msgstr ""
-"Dead Peer 検出タイムアウトはDead Peer 検出間隔より大きくなければいけません。"
+"Dead Peer 検出タイムアウトは Dead Peer 検出間隔より大きくなければいけません。"
 
 msgid "Dead peer detection action"
 msgstr "Dead Peer 検出時のアクション"
@@ -466,7 +465,7 @@ msgstr ""
 "注意: ローカルサブネットを指定する推奨の方法は、 IPsec サイト間接続でエンドポ"
 "イントグループを使用する方法です。 VPN サービスでサブネットを指定する方法は廃"
 "止予定です。新規の VPN サービスや IPsec サイト間接続では、エンドポイントグ"
-"ループを使うことをお薦めします。"
+"ループを使うことをお勧めします。"
 
 msgid "Optional Parameters"
 msgstr "詳細パラメーター"
@@ -499,14 +498,14 @@ msgstr ""
 "VPN 接続の接続相手のゲートウェイのパブリック IPv4/IPv6 アドレスまたは FQDN"
 
 msgid "Peer router identity for authentication (Peer ID)"
-msgstr "接続相手のルータの認証用識別子 (Peer ID)"
+msgstr "接続相手のルーターの認証用識別子 (Peer ID)"
 
 msgid ""
 "Peer router identity for authentication. Can be IPv4/IPv6 address, e-mail, "
 "key ID, or FQDN"
 msgstr ""
-"接続相手のルータの認証用識別子。IPv4/IPv6 アドレス、メールアドレス、キー ID、"
-"FQDN が使用できます。"
+"接続相手のルーターの認証用識別子。IPv4/IPv6 アドレス、メールアドレス、キー "
+"ID、FQDN が使用できます。"
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Pending Create"
