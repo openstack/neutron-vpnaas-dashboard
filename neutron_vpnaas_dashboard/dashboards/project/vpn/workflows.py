@@ -249,7 +249,12 @@ class AddIKEPolicyAction(workflows.Action):
     def __init__(self, request, *args, **kwargs):
         super(AddIKEPolicyAction, self).__init__(request, *args, **kwargs)
 
-        auth_algorithm_choices = [("sha1", "sha1")]
+        auth_algorithm_choices = [
+            ("sha1", "sha1"),
+            ('sha256', _('sha256')),
+            ('sha384', _('sha384')),
+            ('sha512', _('sha512')),
+        ]
         self.fields['auth_algorithm'].choices = auth_algorithm_choices
         # Currently this field has only one choice, so mark it as readonly.
         self.fields['auth_algorithm'].widget.attrs['readonly'] = True
@@ -352,7 +357,12 @@ class AddIPsecPolicyAction(workflows.Action):
     def __init__(self, request, *args, **kwargs):
         super(AddIPsecPolicyAction, self).__init__(request, *args, **kwargs)
 
-        auth_algorithm_choices = [("sha1", "sha1")]
+        auth_algorithm_choices = [
+            ("sha1", "sha1"),
+            ('sha256', _('sha256')),
+            ('sha384', _('sha384')),
+            ('sha512', _('sha512')),
+        ]
         self.fields['auth_algorithm'].choices = auth_algorithm_choices
         # Currently this field has only one choice, so mark it as readonly.
         self.fields['auth_algorithm'].widget.attrs['readonly'] = True

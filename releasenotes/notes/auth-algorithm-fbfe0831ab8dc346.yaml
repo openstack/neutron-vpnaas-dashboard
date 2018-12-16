@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    neutron-vpnaas-dashboard now supports all auth algorithms.
+    neutron-vpnaas supports sha1, sha256, sha384, sha512
+    for IKE policy auth_algorithm and IPsec policy auth_algorithm.
