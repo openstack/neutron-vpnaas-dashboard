@@ -92,11 +92,12 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
     name = forms.CharField(max_length=80, label=_("Name"), required=False)
     description = forms.CharField(
         required=False, max_length=80, label=_("Description"))
-    # Currently this field has only one choice, so mark it as readonly.
     auth_algorithm = forms.ThemableChoiceField(
         label=_("Authorization algorithm"),
-        choices=[('sha1', _('sha1'))],
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}),
+        choices=[('sha1', _('sha1')),
+                 ('sha256', _('sha256')),
+                 ('sha384', _('sha384')),
+                 ('sha512', _('sha512'))],
         required=False)
     encryption_algorithm = forms.ThemableChoiceField(
         label=_("Encryption algorithm"),
@@ -171,8 +172,10 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
     # Currently this field has only one choice, so mark it as readonly.
     auth_algorithm = forms.ThemableChoiceField(
         label=_("Authorization algorithm"),
-        choices=[('sha1', _('sha1'))],
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}),
+        choices=[('sha1', _('sha1')),
+                 ('sha256', _('sha256')),
+                 ('sha384', _('sha384')),
+                 ('sha512', _('sha512'))],
         required=False)
     encapsulation_mode = forms.ThemableChoiceField(
         label=_("Encapsulation mode"),

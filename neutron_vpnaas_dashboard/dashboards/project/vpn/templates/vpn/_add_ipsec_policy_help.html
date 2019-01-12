@@ -4,11 +4,11 @@
 <p>{% trans 'An IPsec policy is an association of the following attributes' %}</p>
 <dl class="dl-readable">
   <dt>{% trans 'Authorization algorithm' %}</dt>
-  <dd>{% trans 'Auth algorithm limited to SHA1 only.' %}</dd>
+  <dd>{% trans 'Valid algorithms are sha1, sha256, sha384 and sha512.' %}</dd>
   <dt>{% trans 'Encapsulation mode' %}</dt>
   <dd>{% trans 'The type of IPsec tunnel (tunnel/transport) to be used.' %}</dd>
   <dt>{% trans 'Encryption algorithm' %}</dt>
-  <dd>{% trans 'The type of algorithm (3des, aes-128, aes-192, aes-256) used in the IPsec policy.' %}</dd>
+  <dd>{% trans 'Valid algorithms are 3des, aes-128, aes-192 and aes-256.' %}</dd>
   <dt>{% trans 'Lifetime' %}</dt>
   <dd>{% trans "Life time consists of units and value. Units in 'seconds' and the default value is 3600." %}</dd>
   <dt>{% trans 'Perfect Forward Secrecy' %}</dt>
