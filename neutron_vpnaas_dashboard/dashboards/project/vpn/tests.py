@@ -26,8 +26,6 @@ from neutron_vpnaas_dashboard.test import helpers as test
 
 class VPNTests(test.TestCase):
 
-    use_mox = False
-
     class AttributeDict(dict):
         def __getattr__(self, attr):
             return self[attr]

@@ -23,8 +23,6 @@ neutronclient = client.Client
 
 class VPNaasApiTests(test.APITestCase):
 
-    use_mox = False
-
     @helpers.create_mocks({neutronclient: ('create_vpnservice',)})
     def test_vpnservice_create(self):
         vpnservice1 = self.api_vpnservices.first()
