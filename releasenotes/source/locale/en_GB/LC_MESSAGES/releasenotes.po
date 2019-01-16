@@ -1,14 +1,15 @@
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
+# Andi Chandler <andi@gowling.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-09 12:19+0000\n"
+"POT-Creation-Date: 2019-01-12 21:44+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-08-09 12:02+0000\n"
+"PO-Revision-Date: 2019-01-15 12:25+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -26,6 +27,9 @@ msgstr "1.2.0"
 
 msgid "1.3.0"
 msgstr "1.3.0"
+
+msgid "1.4.0-12"
+msgstr "1.4.0-12"
 
 msgid "Add support for Endpoint Group feature."
 msgstr "Add support for Endpoint Group feature."
@@ -92,3 +96,12 @@ msgstr ""
 
 msgid "Upgrade Notes"
 msgstr "Upgrade Notes"
+
+msgid ""
+"neutron-vpnaas-dashboard now supports all auth algorithms. neutron-vpnaas "
+"supports sha1, sha256, sha384, sha512 for IKE policy auth_algorithm and "
+"IPsec policy auth_algorithm."
+msgstr ""
+"neutron-vpnaas-dashboard now supports all auth algorithms. neutron-vpnaas "
+"supports sha1, sha256, sha384, sha512 for IKE policy auth_algorithm and "
+"IPsec policy auth_algorithm."
