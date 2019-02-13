@@ -153,7 +153,7 @@ class AddEndpointGroupAction(workflows.Action):
             'class': 'switched',
             'data-switch-on': 'type',
             'data-type-subnet': _("External System Subnets"),
-            }),
+        }),
         help_text=_("Local subnet(s). "
                     "This field is valid if type is Subnet"),)
 
