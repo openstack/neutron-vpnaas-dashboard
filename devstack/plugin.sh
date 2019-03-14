@@ -14,7 +14,7 @@ function configure_neutron_vpnaas_dashboard {
     # so check for an existence of locale directory is required.
     if [ -d $VPNAAS_DASHBOARD_DIR/neutron_vpnaas_dashboard/locale ]; then
         (cd $VPNAAS_DASHBOARD_DIR/neutron_vpnaas_dashboard; \
-         DJANGO_SETTINGS_MODULE=openstack_dashboard.settings ../manage.py compilemessages)
+         DJANGO_SETTINGS_MODULE=openstack_dashboard.settings $PYTHON ../manage.py compilemessages)
     fi
 }
 
