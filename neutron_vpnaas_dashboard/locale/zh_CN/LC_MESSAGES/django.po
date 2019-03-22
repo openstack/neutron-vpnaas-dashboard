@@ -1,0 +1,912 @@
+# BillXiang <m13250816269@163.com>, 2016. #zanata
+# Linda <duleish@cn.ibm.com>, 2016. #zanata
+# Long Yu <yulong10@163.com>, 2016. #zanata
+# sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
+# Bin <liubin@glab.cn>, 2017. #zanata
+# TigerFang <tigerfun@126.com>, 2017. #zanata
+# Tony <tfu@redhat.com>, 2017. #zanata
+# bkb <bakbad2015@gmail.com>, 2017. #zanata
+# blkart <blkart.org@gmail.com>, 2017. #zanata
+# vuuv <froms2008@gmail.com>, 2017. #zanata
+# zhonghuali <lizhonghua.li@huawei.com>, 2017. #zanata
+# Tony <tfu@redhat.com>, 2019. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2019-03-19 10:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-03-22 04:43+0000\n"
+"Last-Translator: Tony <tfu@redhat.com>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh_CN\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid ""
+"(Deprecated) Remote peer subnet(s) address(es) with mask(s) in CIDR format "
+"separated with commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
+msgstr ""
+"（已过时）CIDR 格式的远程对等子网地址及子网掩码，用逗号分隔（例如，"
+"20.1.0.0/24, 21.1.0.0/24）"
+
+msgid "-"
+msgstr "_"
+
+msgid "3des"
+msgstr "3des"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "运行中"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Add Endpoint Group"
+msgstr "添加端点组"
+
+msgid "Add IKE Policy"
+msgstr "添加 IKE 策略"
+
+msgid "Add IPsec Policy"
+msgstr "添加 IPsec 策略"
+
+msgid "Add IPsec Site Connection"
+msgstr "添加 IPsec 站点连接"
+
+msgid "Add New Endpoint Groups"
+msgstr "添加新端点组"
+
+msgid "Add New IKE Policy"
+msgstr "添加新的 IKE 策略"
+
+msgid "Add New IPsec Policy"
+msgstr "添加新的 IPsec 策略"
+
+msgid "Add New IPsec Site Connection"
+msgstr "添加新的 IPsec 站点连接"
+
+msgid "Add New VPN Service"
+msgstr "添加新的 VPN 服务"
+
+msgid "Add VPN Service"
+msgstr "添加 VPN 服务"
+
+#, python-format
+msgid "Added IKE policy \"%s\"."
+msgstr "添加的 IKE 策略 \"%s\"。"
+
+#, python-format
+msgid "Added IPsec policy \"%s\"."
+msgstr "添加的 IPsec 策略 \"%s\"。"
+
+#, python-format
+msgid "Added IPsec site connection \"%s\"."
+msgstr "添加的 IPsec 站点连接 \"%s\"。"
+
+#, python-format
+msgid "Added VPN service \"%s\"."
+msgstr "添加的 VPN 服务 \"%s\"。"
+
+#, python-format
+msgid "Added endpoint group \"%s\"."
+msgstr "添加的端点组 \"%s\"。"
+
+msgid "Admin State"
+msgstr "管理状态"
+
+msgid "Admin State is enabled by default."
+msgstr "管理状态被默认启用。"
+
+msgid "All fields are optional."
+msgstr "所有的选项都是可选的。"
+
+msgid "An IKE policy is an association of the following attributes:"
+msgstr "IKE 策略是以下属性的集合："
+
+msgid "An IPsec policy is an association of the following attributes"
+msgstr "IPsec 策略是以下属性的集合"
+
+msgid "Auth algorithm limited to SHA1 only."
+msgstr "认证算法仅限SHA1。"
+
+msgid "Authorization algorithm"
+msgstr "授权算法"
+
+msgid "Authorization algorithm ="
+msgstr "授权算法 ="
+
+msgid "Authorization mode"
+msgstr "授权模式"
+
+msgid "CIDR (for external systems)"
+msgstr "CIDR (外部系统)"
+
+msgid "Create IKE policy for current project."
+msgstr "为当前项目创建 IKE 策略。"
+
+msgid "Create IPsec policy for current project."
+msgstr "为当前项目创建 IPsec 策略。"
+
+msgid ""
+"Create IPsec site connection for current project. Assign a name and "
+"description for the IPsec site connection. All fields in this tab are "
+"required."
+msgstr ""
+"为当前项目创建 IPsec 站点连接。为 IPsec 站点连接分配名称和描述。当前选项卡中"
+"的所有字段都是必填字段。"
+
+msgid "Create VPN service for current project."
+msgstr "为当前项目创建 VPN 服务"
+
+msgid "Create endpoint group for current project."
+msgstr "为当前项目创建站点组。"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "已创建"
+
+msgid "DPD Timeout must be greater than DPD Interval"
+msgstr "DPD 超时必须大于 DPD 间隔"
+
+msgid "Dead peer detection action"
+msgstr "已失效对等检测"
+
+msgid "Dead peer detection actions"
+msgstr "已失效对等检测操作"
+
+msgid "Dead peer detection interval"
+msgstr "已失效对等检测间隔"
+
+msgid "Dead peer detection timeout"
+msgstr "已失效对等检测超时"
+
+msgid "Delete Endpoint Group"
+msgid_plural "Delete Endpoint Groups"
+msgstr[0] "删除端点组"
+
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "删除 IKE 策略"
+
+msgid "Delete IPsec Policy"
+msgid_plural "Delete IPsec Policies"
+msgstr[0] "删除I Psec 策略"
+
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "删除 IPsec 站点连接"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "删除 VPN 服务"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Description:"
+msgstr "描述："
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "关闭"
+
+msgid "Edit Connection"
+msgstr "编辑连接"
+
+msgid "Edit Endpoint Group"
+msgstr "编辑端点组"
+
+msgid "Edit IKE Policy"
+msgstr "编辑 IKE 策略"
+
+msgid "Edit IPsec Policy"
+msgstr "编辑 IPsec 策略"
+
+msgid "Edit IPsec Site Connection"
+msgstr "编辑 IPsec 站点连接"
+
+msgid "Edit IPsec policy"
+msgstr "编辑 IPsec 策略"
+
+msgid "Edit IPsec site connection"
+msgstr "编辑 IPsec 站点连接"
+
+msgid "Edit VPN Service"
+msgstr "编辑 VPN 服务"
+
+msgid "Enable Admin State"
+msgstr "启用管理员状态"
+
+msgid "Encapsulation mode"
+msgstr "封装模式"
+
+msgid "Encryption algorithm"
+msgstr "加密算法"
+
+msgid "Encryption algorithm ="
+msgstr "端点算法 ="
+
+msgid "Endpoint Groups"
+msgstr "端点组"
+
+msgid "Endpoint Groups Details"
+msgstr "端点组详情"
+
+#, python-format
+msgid "Endpoint group %s was successfully updated."
+msgstr "端点组 %s 已被成功更新。"
+
+msgid "Endpoint group for local subnet(s)"
+msgstr "本地子网的端点组"
+
+msgid "Endpoint group for remote peer CIDR(s)"
+msgstr "远程对等 CIDR 的端点组"
+
+msgid "Endpoints"
+msgstr "服务地址。"
+
+msgid "Endpoints ="
+msgstr "端点 ="
+
+msgid "Equal to or greater than 60"
+msgstr "等于或大于 60"
+
+msgid ""
+"Equal to or greater than 68 if the local subnet is IPv4. Equal to or greater "
+"than 1280 if the local subnet is IPv6."
+msgstr ""
+"如果本地子网是 IPv4，那么等于或者大于 68。如果本地子网是 IPv6，那么等于或大"
+"于 1280。"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "Error"
+
+msgid "External System CIDRs"
+msgstr "外部系统 CIDR"
+
+msgid "External System Subnets"
+msgstr "外部系统子网"
+
+#, python-format
+msgid "Failed to update IKE policy %s"
+msgstr "更新 IKE 策略 %s 失败"
+
+#, python-format
+msgid "Failed to update IPsec policy %s"
+msgstr "更新 IPsec 策略 %s 失败"
+
+#, python-format
+msgid "Failed to update IPsec site connection %s"
+msgstr "更新 IPsec 站点连接 %s 失败"
+
+#, python-format
+msgid "Failed to update VPN service %s"
+msgstr "更新 VPN 服务service %s 失败。"
+
+#, python-format
+msgid "Failed to update endpoint group %s"
+msgstr "更新端点组 %s 失败"
+
+msgid ""
+"Fields in this tab are optional. You can configure the detail of IPsec site "
+"connection created."
+msgstr "本标签中的字段都是可选的。您可以配置已创建的 IPsec站点连接的详情。"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IKE Phase 1 negotiation mode"
+msgstr "IKE Phase1协商模式"
+
+msgid "IKE Phase1 negotiation mode"
+msgstr "IKE Phase1 协商模式"
+
+msgid "IKE Policies"
+msgstr "IKE 策略"
+
+msgid "IKE Policy"
+msgstr "IKE 策略"
+
+msgid "IKE Policy ="
+msgstr "IKE 策略 ="
+
+msgid "IKE Policy Details"
+msgstr "IKE 策略详情"
+
+msgid "IKE Policy ID ="
+msgstr "IKE 策略 ID ="
+
+#, python-format
+msgid "IKE policy %s was successfully updated."
+msgstr "成功更新 IKE 策略  %s。"
+
+msgid "IKE policy associated with this connection"
+msgstr "与这个连接相关联的 IKE 策略"
+
+msgid "IKE version"
+msgstr "IKE 版本"
+
+msgid "IPsec Policies"
+msgstr "IPsec 策略"
+
+msgid "IPsec Policy"
+msgstr "IPsec 策略"
+
+msgid "IPsec Policy ="
+msgstr "IPsec 策略 ="
+
+msgid "IPsec Policy Details"
+msgstr "IPsec 策略详情"
+
+msgid "IPsec Policy ID ="
+msgstr "IPsec 策略 ID ="
+
+msgid "IPsec Site Connection Details"
+msgstr "IPsec 站点连接详情"
+
+msgid "IPsec Site Connections"
+msgstr "IPsec 站点连接"
+
+msgid "IPsec connection validation requires that local endpoints are subnets"
+msgstr "IPsec 连接验证需要本地端点是子网"
+
+msgid ""
+"IPsec connection validation requires that local endpoints are subnets, and "
+"peer endpoints are CIDRs."
+msgstr "IPsec 连接验证需要本地端点是子网，对等端点是 CIDR。"
+
+msgid "IPsec connection validation requires that peer endpoints are CIDRs"
+msgstr "IPsec 连接验证需要对等端点是 CIDRs"
+
+#, python-format
+msgid "IPsec policy %s was successfully updated."
+msgstr "IPsec 策略 %s 已被成功更新。"
+
+msgid "IPsec policy associated with this connection"
+msgstr "与这个连接相关联的 IPsec 策略"
+
+#, python-format
+msgid "IPsec site connection %s was successfully updated."
+msgstr "IPsec 站点连接 %s 被成功更新。"
+
+msgid "IPv4"
+msgstr "IPv4"
+
+msgid "IPv4:"
+msgstr "IPv4:"
+
+msgid "IPv6"
+msgstr "IPv6"
+
+msgid "IPv6:"
+msgstr "IPv6:"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "失效"
+
+msgid "Initiator state"
+msgstr "发起者状态"
+
+msgid ""
+"Life time consists of units and value. Units in 'seconds' and the default "
+"value is 3600."
+msgstr "生存期由单位和值组成。单位是“秒”，默认值是 3600。"
+
+msgid "Lifetime"
+msgstr "生存期"
+
+msgid "Lifetime Units"
+msgstr "生存周期单位"
+
+msgid "Lifetime Value"
+msgstr "生存周期值"
+
+msgid "Lifetime units"
+msgstr "生存期单位"
+
+msgid "Lifetime units for IKE keys"
+msgstr "IKE 密钥的生存期单位"
+
+msgid "Lifetime value"
+msgstr "生存期值"
+
+msgid "Lifetime value for IKE keys"
+msgstr "IKE 密钥的生存期值"
+
+msgid "Lifetime value for IKE keys "
+msgstr "IKE 密钥的生存周期"
+
+msgid "Limited to 'main' mode only."
+msgstr "只限于'main'模式"
+
+msgid "Local Endpoint Group"
+msgstr "本地端点组"
+
+msgid "Local Endpoint Group(s)"
+msgstr "本地端点组"
+
+msgid "Local Side Public IPs"
+msgstr "本地端公共 IP"
+
+msgid "Local System Subnets"
+msgstr "本地系统子网"
+
+msgid "Local subnet(s). This field is valid if type is Subnet"
+msgstr "本地子网。如果类型是子网则这个项有效"
+
+msgid ""
+"Local subnets which the new IPsec connection is connected to. Required if no "
+"subnet is specified in a VPN service selected."
+msgstr ""
+"新的 IPsec 连接要连接到的本地子网。如果没有在选择的 VPN 服务中指定子网，则需"
+"要这个设置。"
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Maximum Transmission Unit size for the connection"
+msgstr "此连接的最大传输单元大小"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Name ="
+msgstr "名称 ="
+
+msgid ""
+"Note: The recommended way to specify local subnets is to use endpoint groups "
+"in IPsec site connection. It is deprecated to specify subnet in VPN service. "
+"For a new VPN service or IPsec site connection, using endpoint group is "
+"recommended."
+msgstr ""
+"备注：指定本地子网的推荐方法是使用 IPsec 站点连接中的端点组。对于一个新的 "
+"VPN 服务或 IPsec 站点连接，推荐使用端点组。"
+
+msgid "Optional Parameters"
+msgstr "可选参数"
+
+msgid "Optional. No need to be specified when you use endpoint groups."
+msgstr "可选。当使用端点组时不需要指定。"
+
+msgid "PFS"
+msgstr "PFS"
+
+msgid "PFS ="
+msgstr "PFS ="
+
+msgid "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+msgstr "PFS 被限制为只能使用 Diffie-Hellman 组 2、5（默认）和 14。"
+
+msgid "Peer Endpoint Group"
+msgstr "对等端点组"
+
+msgid "Peer Endpoint Group(s)"
+msgstr "对等端点组"
+
+msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
+msgstr "对等网关公共 IPv4/IPv6 地址或 FQDN"
+
+msgid "Peer gateway public IPv4/IPv6 address or FQDN for the VPN Connection"
+msgstr "VPN 连接的对等网关公共 IPv4/IPv6 地址或 FQDN"
+
+msgid "Peer router identity for authentication (Peer ID)"
+msgstr "用于认证的对等路由器身份（对等标识）"
+
+msgid ""
+"Peer router identity for authentication. Can be IPv4/IPv6 address, e-mail, "
+"key ID, or FQDN"
+msgstr ""
+"用于认证的对等路由器身份。可以是 IPv4/IPv6 地址、电子邮件、密钥标识或 FQDN"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "暂挂创建"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "正在暂停删除动作"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "暂挂更新"
+
+msgid "Perfect Forward Secrecy"
+msgstr "完善前向保密"
+
+msgid "Pre-Shared Key (PSK) string"
+msgstr " 预共享密钥 (PSK) 字符串"
+
+msgid "Project ID"
+msgstr "项目 ID"
+
+msgid "Remote peer CIDR(s) connected to the new IPsec connection."
+msgstr "连接到新的 IPsec 连接的远程对等 CIDR。"
+
+msgid "Remote peer subnet"
+msgstr "远程对等子网"
+
+msgid "Remote peer subnet(s)"
+msgstr "远程对等子网"
+
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
+msgstr ""
+"CIDR 格式的远程对等子网地址及子网掩码，用逗号分隔（例如，20.1.0.0/24, "
+"21.1.0.0/24）"
+
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24). This field is valid if "
+"type is CIDR"
+msgstr ""
+"CIDR 格式的远程对等子网地址及子网掩码，用逗号分隔（例如，20.1.0.0/24, "
+"21.1.0.0/24）"
+
+msgid "Route mode"
+msgstr "路由模式"
+
+msgid "Router"
+msgstr "路由器"
+
+msgid "Router ="
+msgstr "路由器 ="
+
+msgid "Router ID ="
+msgstr "路由器ID = "
+
+msgid "Save Changes"
+msgstr "保存变更"
+
+msgid "Scheduled deletion of IKE policy"
+msgid_plural "Scheduled deletion of IKE policies"
+msgstr[0] "已调度删除 IKE 策略"
+
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "已调度删除 IPsec 策略"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "已调度删除 IPsec 站点连接"
+
+msgid "Scheduled deletion of VPN service"
+msgid_plural "Scheduled deletion of VPN services"
+msgstr[0] "已调度删除 VPN 服务"
+
+msgid "Scheduled deletion of endpoint group"
+msgid_plural "Scheduled deletion of endpoint groups"
+msgstr[0] "已调度删除端点组"
+
+msgid "Select IKE policy"
+msgstr "选择 IKE 策略"
+
+msgid "Select IPsec Policy"
+msgstr "选择 IPsec 策略"
+
+msgid "Select VPN service"
+msgstr "选择 VPN 服务"
+
+msgid "Select a Router"
+msgstr "选择一个路由器"
+
+msgid "Select a Subnet"
+msgstr "选择子网"
+
+msgid "Select local endpoint group"
+msgstr "选择本地端点组"
+
+msgid "Select peer endpoint group"
+msgstr "选择对等端点组"
+
+msgid ""
+"Specify a name, description, router, and subnet (optional) for the VPN "
+"service."
+msgstr "为VPN服务指定名称，描述信息，路由以及子网（可选）。"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Status ="
+msgstr "状态 ="
+
+msgid "Subnet"
+msgstr "子网"
+
+msgid "Subnet (for local systems)"
+msgstr "子网 (本地系统)"
+
+msgid "Subnet ="
+msgstr "子网 ="
+
+msgid "Subnet ID ="
+msgstr "子网 ID ="
+
+msgid ""
+"The VPN service is attached to a router and references to endpoint group or "
+"a single subnet to push to a remote site."
+msgstr "VPN 服务连接到路由器，并引用端点组或单个子网以推送至远程站点。"
+
+msgid "The pre-defined key string between the two peers of the VPN connection"
+msgstr "VPN 连接的两个对等之间的预定义密钥字符串"
+
+msgid ""
+"The router and admin state fields require to be enabled. All others are "
+"optional."
+msgstr "路由及管理状态是必须的。其他的选项是可选的。"
+
+msgid ""
+"The state of IPsec site connection to start in. If disabled (not checked), "
+"IPsec site connection does not forward packets."
+msgstr ""
+"开始的 IPsec 站点连接状态。如果禁用（没有勾选），IPsec 站点连接不转发数据包。"
+
+msgid ""
+"The state of VPN service to start in. If disabled (not checked), VPN service "
+"does not forward packets."
+msgstr "VPN 服务的起始状态。如果为禁用 (未选中)，那么 VPN 服务不转发包。"
+
+msgid "The type of IPsec tunnel (tunnel/transport) to be used."
+msgstr "使用的 IPsec tunnel (tunnel/transport) 类型。"
+
+msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
+msgstr "IPsec 策略中使用的协议类型（esp、ah、ah-esp）。"
+
+msgid "The type of version (v1/v2) that needs to be filtered."
+msgstr "需要进行筛选的版本种类 (v1/v2)"
+
+msgid "Transform Protocol"
+msgstr "转换协议"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Type ="
+msgstr "类型 ="
+
+#, python-format
+msgid "Unable to add IKE policy \"%s\"."
+msgstr "无法添加 IKE 策略 \"%s\"。"
+
+#, python-format
+msgid "Unable to add IPsec policy \"%s\"."
+msgstr "无法添加 IPsec 策略 \"%s\"。"
+
+#, python-format
+msgid "Unable to add IPsec site connection \"%s\"."
+msgstr "无法添加 IPsec 站点连接 \"%s\"。"
+
+#, python-format
+msgid "Unable to add VPN service \"%s\"."
+msgstr "无法添加 VPN 服务 \"%s\"。"
+
+#, python-format
+msgid "Unable to add endpoint group \"%s\"."
+msgstr "无法添加端点组 \"%s\"。"
+
+#, python-format
+msgid "Unable to delete IKE policy. %s"
+msgstr "无法删除 IKE 策略 %s"
+
+#, python-format
+msgid "Unable to delete IPsec policy. %s"
+msgstr "无法删除 IPsec 策略 %s"
+
+#, python-format
+msgid "Unable to delete IPsec site connection. %s"
+msgstr "无法删除 IPsec 站点连接 %s"
+
+#, python-format
+msgid "Unable to delete VPN service. %s"
+msgstr "无法删除 VPN 服务 %s"
+
+#, python-format
+msgid "Unable to delete endpoint group. %s"
+msgstr "无法删除端点组 %s"
+
+msgid "Unable to retrieve IKE policies list."
+msgstr "无法获取 IKE 策略列表。"
+
+msgid "Unable to retrieve IKE policy details."
+msgstr "无法获取 IKE 策略详情。"
+
+#, python-format
+msgid "Unable to retrieve IKE policy details. %s"
+msgstr "无法获取 IKE 策略详情。 %s"
+
+msgid "Unable to retrieve IPsec policies list."
+msgstr "无法获取 IPsec 策略列表。"
+
+msgid "Unable to retrieve IPsec policy details."
+msgstr "无法获取 IPsec 策略详情。"
+
+#, python-format
+msgid "Unable to retrieve IPsec policy details. %s"
+msgstr "无法获取 IPsec 策略详情。%s"
+
+msgid "Unable to retrieve IPsec policy list."
+msgstr "无法获取 IPsec 策略列表。"
+
+msgid "Unable to retrieve IPsec site connection details."
+msgstr "无法获取 IPsec 站点连接详情。"
+
+#, python-format
+msgid "Unable to retrieve IPsec site connection details. %s"
+msgstr "无法获取 IPsec 站点连接详情。%s"
+
+msgid "Unable to retrieve IPsec site connections list."
+msgstr "无法获取 IPsec站点连接列表。"
+
+msgid "Unable to retrieve VPN service details."
+msgstr "无法获取 VPN 服务详情。"
+
+#, python-format
+msgid "Unable to retrieve VPN service details. %s"
+msgstr "无法获取 VPN 服务详情。 %s"
+
+msgid "Unable to retrieve VPN services list."
+msgstr "无法获取 VPN 服务列表。"
+
+msgid "Unable to retrieve endpoint group details."
+msgstr "无法获取端点组详情。"
+
+#, python-format
+msgid "Unable to retrieve endpoint group details. %s"
+msgstr "无法获取端点组详情。 %s"
+
+msgid "Unable to retrieve endpoint group list."
+msgstr "无法获取端点组列表。"
+
+msgid "Unable to retrieve networks list."
+msgstr "无法检索网络列表。"
+
+msgid "Unable to retrieve routers list."
+msgstr "无法检索路由器列表。"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "VPN Connections"
+msgstr "VPN 连接"
+
+msgid "VPN Service"
+msgstr " VPN 服务"
+
+msgid "VPN Service ="
+msgstr "VPN 服务 ="
+
+msgid "VPN Service Details"
+msgstr " VPN 服务详情"
+
+msgid "VPN Service ID ="
+msgstr "VPN 服务 ID ="
+
+msgid "VPN Services"
+msgstr " VPN 服务"
+
+#, python-format
+msgid "VPN service %s was successfully updated."
+msgstr "VPN 服务 %s 已被成功更新。"
+
+msgid "VPN service associated with this connection"
+msgstr "与这个连接相关联的 VPN 服务"
+
+msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
+msgstr "有效算法为 3des、aes-128、aes-192 和 aes-256。"
+
+msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
+msgstr "有效算法为 sha1、sha256、sha384 和 sha512。"
+
+msgid "Valid integer greater than the DPD interval"
+msgstr "大于 DPD 间隔的有效整数"
+
+msgid "Valid integer lesser than DPD timeout"
+msgstr "小于 DPD 超时的有效整数"
+
+msgid "Valid integer lesser than the DPD timeout"
+msgstr "小于 DPD 超时的有效整数"
+
+msgid "Virtual Private Network"
+msgstr "虚拟专用网络"
+
+msgid "You may update IKE policy details here."
+msgstr "您可以在此处更新 IKE 策略详情。"
+
+msgid "You may update IPsec policy details here."
+msgstr "您可以在此处更新 IPsec 策略详情。"
+
+msgid "You may update IPsec site connection details here."
+msgstr "您可以在此处更新 IPsec 站点连接详情。"
+
+msgid "You may update VPN service details here."
+msgstr "您可以在此处更新 VPN 服务详情。"
+
+msgid "You may update endpoint group details here."
+msgstr "您可以在此处更新端点组的详情。"
+
+msgid "aes-128"
+msgstr "aes-128"
+
+msgid "aes-192"
+msgstr "aes-192"
+
+msgid "aes-256"
+msgstr "aes-256"
+
+msgid "ah"
+msgstr "ah"
+
+msgid "ah-esp"
+msgstr "ah-esp"
+
+msgid "bi-directional"
+msgstr "双向"
+
+msgid "clear"
+msgstr "清除"
+
+msgid "disabled"
+msgstr "禁用"
+
+msgid "down"
+msgstr "关闭"
+
+msgid "esp"
+msgstr "esp"
+
+msgid "group14"
+msgstr "group14"
+
+msgid "group2"
+msgstr "group2"
+
+msgid "group5"
+msgstr "group5"
+
+msgid "hold"
+msgstr "保留"
+
+msgid "response-only"
+msgstr "仅应答"
+
+msgid "restart"
+msgstr "重启"
+
+msgid "restart-by-peer"
+msgstr "被对等重新启动"
+
+msgid "seconds"
+msgstr "秒"
+
+msgid "sha1"
+msgstr "sha1"
+
+msgid "sha256"
+msgstr "sha256"
+
+msgid "sha384"
+msgstr "sha384"
+
+msgid "sha512"
+msgstr "sha512"
+
+msgid "transport"
+msgstr "网络运输"
+
+msgid "tunnel"
+msgstr "通道"
+
+msgid "up"
+msgstr "启动"
+
+msgid "v1"
+msgstr "v1"
+
+msgid "v2"
+msgstr "v2"
