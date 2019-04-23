@@ -30,7 +30,7 @@ where horizon is installed.
 
 .. code-block:: console
 
-   $ git clone https://git.openstack.org//openstack/neutron-vpnaas-dashboard
+   $ git clone https://opendev.org/openstack/neutron-vpnaas-dashboard
    $ cd neutron-vpnaas-dashboard
    $ sudo pip install .
 

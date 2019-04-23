@@ -22,5 +22,5 @@ all-in-one environment.
 .. code-block:: none
 
    [[local|localrc]]
-   enable_plugin neutron-vpnaas https://git.openstack.org/openstack/neutron-vpnaas master
-   enable_plugin neutron-vpnaas-dashboard https://git.openstack.org/openstack/neutron-vpnaas-dashboard master
+   enable_plugin neutron-vpnaas https://opendev.org/openstack/neutron-vpnaas master
+   enable_plugin neutron-vpnaas-dashboard https://opendev.org/openstack/neutron-vpnaas-dashboard master
