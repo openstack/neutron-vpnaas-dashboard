@@ -2,15 +2,16 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2018. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2018. #zanata
+# Robert Simai <robert.simai@suse.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-01-12 21:44+0000\n"
+"POT-Creation-Date: 2019-04-09 08:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-07-26 11:52+0000\n"
+"PO-Revision-Date: 2019-05-03 02:06+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -834,6 +835,12 @@ msgstr "VPN Dienst %s erfolgreich aktualisiert."
 msgid "VPN service associated with this connection"
 msgstr "VPN Dienst für diese Verbindung"
 
+msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
+msgstr "Gültige Algorithmen sind 3des, aes-128, aes-192 und aes-256."
+
+msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
+msgstr "Gültige Algorithmen sind sha1, sha256, sha384 und sha512."
+
 msgid "Valid integer greater than the DPD interval"
 msgstr "Gültige Ganzzahl größer als das DPD Intervall"
 
@@ -917,6 +924,15 @@ msgstr "Sekunden"
 
 msgid "sha1"
 msgstr "sha1"
+
+msgid "sha256"
+msgstr "sha256"
+
+msgid "sha384"
+msgstr "sha384"
+
+msgid "sha512"
+msgstr "sha512"
 
 msgid "transport"
 msgstr "Transport"

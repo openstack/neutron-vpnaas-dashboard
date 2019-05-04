@@ -13,15 +13,16 @@
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2018. #zanata
 # Wonil Choi <wonil0522@gmail.com>, 2018. #zanata
+# ByungYeol Woo <wby1089@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-01-12 21:44+0000\n"
+"POT-Creation-Date: 2019-04-09 08:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-08-28 11:02+0000\n"
+"PO-Revision-Date: 2019-05-01 10:56+0000\n"
 "Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
@@ -820,6 +821,12 @@ msgstr "VPN 서비스 %s를 성공적으로 업데이트하였습니다."
 msgid "VPN service associated with this connection"
 msgstr "이 연결에 연동할 VPN 서비스 "
 
+msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
+msgstr "유효한 알고리즘은 3des, aes-128, aes-192, aes-256 입니다."
+
+msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
+msgstr "유효한 알고리즘은 sha1, sha256, sha384, sha512 입니다."
+
 msgid "Valid integer greater than the DPD interval"
 msgstr "DPD 간격을 보다 큰 유효한 정수"
 
@@ -903,6 +910,15 @@ msgstr "초"
 
 msgid "sha1"
 msgstr "sha1"
+
+msgid "sha256"
+msgstr "sha256"
+
+msgid "sha384"
+msgstr "sha384"
+
+msgid "sha512"
+msgstr "sha512"
 
 msgid "transport"
 msgstr "transport"
