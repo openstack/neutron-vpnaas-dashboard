@@ -211,7 +211,7 @@ htmlhelp_basename = 'neutronvpnaasdashboarddoc'
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_documents = [
-    ('index', 'neutron-vpnaas-dashboard.tex',
+    ('index', 'doc-neutron-vpnaas-dashboard.tex',
      u'Neutron VPNaaS Dashboard Documentation',
      u'Neutron Contributors', 'howto'),
 ]
