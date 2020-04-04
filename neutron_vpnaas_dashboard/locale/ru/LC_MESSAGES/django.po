@@ -1,0 +1,961 @@
+# Antonio Kless <antoniok.spb@gmail.com>, 2015. #zanata
+# Fedor Tarasenko <feodor.tarasenko@gmail.com>, 2015. #zanata
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Aleksey Alekseenko <9118250541@mail.ru>, 2016. #zanata
+# Alexander <ainikitenkov@gmail.com>, 2016. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Andrew <apapsujko@gmail.com>, 2016. #zanata
+# Artem <amikhalev90@gmail.com>, 2016. #zanata
+# Daisy <guoyingc@cn.ibm.com>, 2016. #zanata
+# Fedor Tarasenko <feodor.tarasenko@gmail.com>, 2016. #zanata
+# Nikita Burtsev <nikita.burtsev@gmail.com>, 2016. #zanata
+# Artem <amikhalev90@gmail.com>, 2017. #zanata
+# Ilya Alekseyev <ilyaalekseyev@acm.org>, 2017. #zanata
+# Roman Gorshunov <roman.gorshunov@att.com>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2020-01-08 15:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-04-03 11:35+0000\n"
+"Last-Translator: Roman Gorshunov <roman.gorshunov@att.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+msgid ""
+"(Deprecated) Remote peer subnet(s) address(es) with mask(s) in CIDR format "
+"separated with commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
+msgstr ""
+"(Устаревший функционал) Адрес(а) подсетей удаленных узлов с масками в "
+"формате CIDR, разделенные запятыми при необходимости (например, 20.1.0.0/24, "
+"21.1.0.0/24)"
+
+msgid "-"
+msgstr "-"
+
+msgid "3des"
+msgstr "3des"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Active"
+msgstr "Активен"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Add Endpoint Group"
+msgstr "Добавить группу конечных точек"
+
+msgid "Add IKE Policy"
+msgstr "Добавить политику IKE"
+
+msgid "Add IPsec Policy"
+msgstr "Добавить политику IPsec"
+
+msgid "Add IPsec Site Connection"
+msgstr "Добавить IPsec подключение"
+
+msgid "Add New Endpoint Groups"
+msgstr "Добавить группы конечных точек"
+
+msgid "Add New IKE Policy"
+msgstr "Добавить политику IKE"
+
+msgid "Add New IPsec Policy"
+msgstr "Добавить политику IPsec"
+
+msgid "Add New IPsec Site Connection"
+msgstr "Добавить новое IPsec подключение"
+
+msgid "Add New VPN Service"
+msgstr "Добавить новый сервис VPN"
+
+msgid "Add VPN Service"
+msgstr "Добавить сервис VPN"
+
+#, python-format
+msgid "Added IKE policy \"%s\"."
+msgstr "Добавлена политика IKE \"%s\"."
+
+#, python-format
+msgid "Added IPsec policy \"%s\"."
+msgstr "Добавлена политика IPsec \"%s\"."
+
+#, python-format
+msgid "Added IPsec site connection \"%s\"."
+msgstr "Добавлено подключение IPsec \"%s\"."
+
+#, python-format
+msgid "Added VPN service \"%s\"."
+msgstr "Добавлен сервис VPN \"%s\"."
+
+#, python-format
+msgid "Added endpoint group \"%s\"."
+msgstr "Добавлена группа конечных точек \"%s\"."
+
+msgid "Admin State"
+msgstr "Административное состояние"
+
+msgid "Admin State is enabled by default."
+msgstr "Административное состояние по умолчанию - включено."
+
+msgid "All fields are optional."
+msgstr "Все поля не обязательны."
+
+msgid "An IKE policy is an association of the following attributes:"
+msgstr "Политика IKE объединяет следующие атрибуты:"
+
+msgid "An IPsec policy is an association of the following attributes"
+msgstr "Политика IPsec это сочетание следующих атрибутов"
+
+msgid "Authorization algorithm"
+msgstr " Алгоритм авторизации"
+
+msgid "Authorization algorithm ="
+msgstr " Алгоритм авторизации ="
+
+msgid "Authorization mode"
+msgstr "Режим авторизации"
+
+msgid "CIDR (for external systems)"
+msgstr "CIDR (для внешних систем)"
+
+msgid "Create IKE policy for current project."
+msgstr "Создание политики IKE для текущего проекта."
+
+msgid "Create IPsec policy for current project."
+msgstr "Создание политики IPsec для текущего проекта."
+
+msgid ""
+"Create IPsec site connection for current project. Assign a name and "
+"description for the IPsec site connection. All fields in this tab are "
+"required."
+msgstr ""
+"Создание нового IPsec подключения для текущего проекта. Укажите имя и "
+"название для IPsec подключения. Все поля на данной вкладке обязательны для "
+"заполнения."
+
+msgid "Create VPN service for current project."
+msgstr "Создайте VPN сервис для текущего проекта."
+
+msgid "Create endpoint group for current project."
+msgstr "Создайте группу конечных точек для текущего проекта."
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Created"
+msgstr "Создано"
+
+msgid "DPD Timeout must be greater than DPD Interval"
+msgstr "Таймаут DPD должен быть больше, чем интервал DPD"
+
+msgid "Dead peer detection action"
+msgstr "Действие при обнаружение недоступного пира"
+
+msgid "Dead peer detection actions"
+msgstr "Действия при обнаружение недоступного пира"
+
+msgid "Dead peer detection interval"
+msgstr "Интервал обнаружения недоступного пира"
+
+msgid "Dead peer detection timeout"
+msgstr "Время ожидания для обнаружения недоступного пира"
+
+msgid "Delete Endpoint Group"
+msgid_plural "Delete Endpoint Groups"
+msgstr[0] "Удалить группу конечных точек"
+msgstr[1] "Удалить группы конечных точек"
+msgstr[2] "Удалить группы конечных точек"
+
+msgid "Delete IKE Policy"
+msgid_plural "Delete IKE Policies"
+msgstr[0] "Удалить политику IKE"
+msgstr[1] "Удалить политики IKE"
+msgstr[2] "Удалить политики IKE"
+
+msgid "Delete IPsec Policy"
+msgid_plural "Delete IPsec Policies"
+msgstr[0] "Удалить политику IPsec"
+msgstr[1] "Удалить политики IPsec"
+msgstr[2] "Удалить политики IPsec"
+
+msgid "Delete IPsec Site Connection"
+msgid_plural "Delete IPsec Site Connections"
+msgstr[0] "Удалить IPsec соединение"
+msgstr[1] "Удалить IPsec соединения"
+msgstr[2] "Удалить IPsec соединения"
+
+msgid "Delete VPN Service"
+msgid_plural "Delete VPN Services"
+msgstr[0] "Удалить службу VPN"
+msgstr[1] "Удалить службы VPN"
+msgstr[2] "Удалить службы VPN"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Description:"
+msgstr "Описание:"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Down"
+msgstr "Выключен"
+
+msgid "Edit Connection"
+msgstr "Редактировать подключение"
+
+msgid "Edit Endpoint Group"
+msgstr "Редактировать группу конечных точек"
+
+msgid "Edit IKE Policy"
+msgstr "Редактировать IKE политику"
+
+msgid "Edit IPsec Policy"
+msgstr "Редактировать IPsec политику"
+
+msgid "Edit IPsec Site Connection"
+msgstr "Редактировать подключение IPsec сайта"
+
+msgid "Edit IPsec policy"
+msgstr "Редактировать IPsec политику"
+
+msgid "Edit IPsec site connection"
+msgstr "Редактировать подключение IPsec сайта"
+
+msgid "Edit VPN Service"
+msgstr "Редактировать VPN сервис"
+
+msgid "Enable Admin State"
+msgstr "Разрешить Admin State"
+
+msgid "Encapsulation mode"
+msgstr "Режим инкапсуляции"
+
+msgid "Encryption algorithm"
+msgstr "Алгоритм шифрования"
+
+msgid "Encryption algorithm ="
+msgstr "Алгоритм шифрования ="
+
+msgid "Endpoint Groups"
+msgstr "Группы конечных точек"
+
+msgid "Endpoint Groups Details"
+msgstr "Информация о группах конечных точек"
+
+#, python-format
+msgid "Endpoint group %s was successfully updated."
+msgstr "Группа конечных точек туннелей %s была успешно обновлена."
+
+msgid "Endpoint group for local subnet(s)"
+msgstr "Группа конечных точек для локальных подсетей"
+
+msgid "Endpoint group for remote peer CIDR(s)"
+msgstr "Группа конечных точек для CIDR удалённых подключений"
+
+msgid "Endpoints"
+msgstr "Точки доступа"
+
+msgid "Endpoints ="
+msgstr "Конечные точки ="
+
+msgid "Equal to or greater than 60"
+msgstr "Равен или больше 60"
+
+msgid ""
+"Equal to or greater than 68 if the local subnet is IPv4. Equal to or greater "
+"than 1280 if the local subnet is IPv6."
+msgstr ""
+"Равен или больше 68, если локальная подсеть IPv4. Равен или больше 1280, "
+"если локальная подсеть IPv6."
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "External System CIDRs"
+msgstr "CIDR'ы внешних систем"
+
+msgid "External System Subnets"
+msgstr "Подсети внешних систем"
+
+#, python-format
+msgid "Failed to update IKE policy %s"
+msgstr "Не удалось обновить IKE политику %s"
+
+#, python-format
+msgid "Failed to update IPsec policy %s"
+msgstr "Не удалось обновить IPsec политику %s"
+
+#, python-format
+msgid "Failed to update IPsec site connection %s"
+msgstr "Не удалось обновить подключение IPsec сайта %s"
+
+#, python-format
+msgid "Failed to update VPN service %s"
+msgstr "Не удалось обновить VPN сервис %s"
+
+#, python-format
+msgid "Failed to update endpoint group %s"
+msgstr "Неудалось обновить группу конечных точек туннелей %s"
+
+msgid ""
+"Fields in this tab are optional. You can configure the detail of IPsec site "
+"connection created."
+msgstr ""
+"Поля на данной заклады не обязательны для заполнения. Вы можете изменить "
+"параметры созданного IPsec подключения."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IKE Phase 1 negotiation mode"
+msgstr "Режим согласования IKE Phase1"
+
+msgid "IKE Phase1 negotiation mode"
+msgstr "Режим согласования IKE Phase1"
+
+msgid "IKE Policies"
+msgstr "Политики IKE"
+
+msgid "IKE Policy"
+msgstr "Политика IKE"
+
+msgid "IKE Policy ="
+msgstr "Политика IKE ="
+
+msgid "IKE Policy Details"
+msgstr "Информация о политики IKE"
+
+msgid "IKE Policy ID ="
+msgstr "ID политики IKE ="
+
+#, python-format
+msgid "IKE policy %s was successfully updated."
+msgstr "IKE политика %s была успешно обновлена."
+
+msgid "IKE policy associated with this connection"
+msgstr "Политика IKE для данного подключения"
+
+msgid "IKE version"
+msgstr "Версия IKE"
+
+msgid "IPsec Policies"
+msgstr "Политики IPsec ="
+
+msgid "IPsec Policy"
+msgstr "Политика IPsec"
+
+msgid "IPsec Policy ="
+msgstr "Политика IPsec ="
+
+msgid "IPsec Policy Details"
+msgstr "Информация о политике IPsec"
+
+msgid "IPsec Policy ID ="
+msgstr "ID политики IPsec ="
+
+msgid "IPsec Site Connection Details"
+msgstr "Информация об IPsec подключении"
+
+msgid "IPsec Site Connections"
+msgstr "Подключения IPsec"
+
+msgid "IPsec connection validation requires that local endpoints are subnets"
+msgstr ""
+"Процедура проверки IPsec соединения требует, чтобы локальные конечные точки "
+"подключения были подсетями"
+
+msgid ""
+"IPsec connection validation requires that local endpoints are subnets, and "
+"peer endpoints are CIDRs."
+msgstr ""
+"Процедура проверки IPsec соединения требует, чтобы локальные конечные точки "
+"подключения были подсетями, а удалённые конечные точки подключения были в "
+"формате CIDR."
+
+msgid "IPsec connection validation requires that peer endpoints are CIDRs"
+msgstr ""
+"Процедура проверки IPsec соединения требует, чтобы удалённые конечные точки "
+"подключения были в формате CIDR"
+
+#, python-format
+msgid "IPsec policy %s was successfully updated."
+msgstr "IPsec политика %s была успешно обновлена."
+
+msgid "IPsec policy associated with this connection"
+msgstr "Политика IPsec для данного подключения"
+
+#, python-format
+msgid "IPsec site connection %s was successfully updated."
+msgstr "Подключение IPsec сайта %s было успешно обновлено."
+
+msgid "IPv4"
+msgstr "IPv4"
+
+msgid "IPv4:"
+msgstr "IPv4:"
+
+msgid "IPv6"
+msgstr "IPv6"
+
+msgid "IPv6:"
+msgstr "IPv6:"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Inactive"
+msgstr "Неактивный"
+
+msgid "Initiator state"
+msgstr "Состояние инициатора"
+
+msgid ""
+"Life time consists of units and value. Units in 'seconds' and the default "
+"value is 3600."
+msgstr ""
+"Время жизни содержит единицы измерения и значение. Единица измерения "
+"'секунды' и значение по умолчанию 3600."
+
+msgid "Lifetime"
+msgstr "Жизненный цикл"
+
+msgid "Lifetime Units"
+msgstr "Единицы измерения жизненного цикла"
+
+msgid "Lifetime Value"
+msgstr "Размер жизненного цикла"
+
+msgid "Lifetime units"
+msgstr "Единицы измерения жизненного цикла"
+
+msgid "Lifetime units for IKE keys"
+msgstr "Единицы измерения жизненного цикла IKE ключей"
+
+msgid "Lifetime value"
+msgstr "Размер жизненного цикла"
+
+msgid "Lifetime value for IKE keys"
+msgstr "Размер жизненного цикла IKE ключей"
+
+msgid "Lifetime value for IKE keys "
+msgstr "Размер жизненного цикла IKE ключей"
+
+msgid "Limited to 'main' mode only."
+msgstr "Ограничен только 'главным' режимом."
+
+msgid "Local Endpoint Group"
+msgstr "Локальнаю группа конечных точек"
+
+msgid "Local Endpoint Group(s)"
+msgstr "Локальные группы конечных точек"
+
+msgid "Local Side Public IPs"
+msgstr "Локальные публичные IP"
+
+msgid "Local System Subnets"
+msgstr "Подсети локальных систем"
+
+msgid "Local subnet(s). This field is valid if type is Subnet"
+msgstr "Локальные подсети. Это поле корректно, если тип записи - подсеть"
+
+msgid ""
+"Local subnets which the new IPsec connection is connected to. Required if no "
+"subnet is specified in a VPN service selected."
+msgstr ""
+"Локальная подсеть, к которой подключено новое IPsec соединение. Это "
+"обязательный параметр, если вы не указали подсеть в выбраном VPN сервисе."
+
+msgid "MTU"
+msgstr "MTU"
+
+msgid "Maximum Transmission Unit size for the connection"
+msgstr "Размер MTU для подключения"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Name ="
+msgstr "Имя = "
+
+msgid ""
+"Note: The recommended way to specify local subnets is to use endpoint groups "
+"in IPsec site connection. It is deprecated to specify subnet in VPN service. "
+"For a new VPN service or IPsec site connection, using endpoint group is "
+"recommended."
+msgstr ""
+"Примечание: для указания локальных подсетей рекомендуется использовать "
+"группы конечных точек в IPsec соединении.Прямое указание подсетей в сервисе "
+"VPN явлется устаревшим. Для новых сервисов VPN или IPsec подключений "
+"рекомендуется использовать круппы конечных точек подключений."
+
+msgid "Optional Parameters"
+msgstr "Дополнительные параметры"
+
+msgid "Optional. No need to be specified when you use endpoint groups."
+msgstr ""
+"Необязательный параметр, если вы используете группы конечных точек "
+"подключения."
+
+msgid "PFS"
+msgstr "PFS"
+
+msgid "PFS ="
+msgstr "PFS ="
+
+msgid "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+msgstr ""
+"PFS (совершенная прямая секретность) ограниченна использованием групп Диффи-"
+"Хелмана 2, 5 (по умолчанию) и 14."
+
+msgid "Peer Endpoint Group"
+msgstr "Удалённая группа конечных точек"
+
+msgid "Peer Endpoint Group(s)"
+msgstr "Удалённые группы конечных точек"
+
+msgid "Peer gateway public IPv4/IPv6 Address or FQDN"
+msgstr "Публичный IPv4/IPv6 адрес или FQDN шлюза пира"
+
+msgid "Peer gateway public IPv4/IPv6 address or FQDN for the VPN Connection"
+msgstr "Публичный IPv4/IPv6 адрес или FQDN шлюза пира для VPN подключения"
+
+msgid "Peer router identity for authentication (Peer ID)"
+msgstr "Идентификатор маршрутизатора пира для аутентификации (Peer ID)"
+
+msgid ""
+"Peer router identity for authentication. Can be IPv4/IPv6 address, e-mail, "
+"key ID, or FQDN"
+msgstr ""
+"Идентификатор маршрутизатора пира для аутентификации. Может быть IPv4/IPv6 "
+"адрес, адрес электронной почты, ID ключа или FQDN"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Create"
+msgstr "Ожидает создание"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Delete"
+msgstr "Ожидает удаления"
+
+msgctxt "Current status of an IPsec site connection and VPN service"
+msgid "Pending Update"
+msgstr "Ожидает обновления"
+
+msgid "Perfect Forward Secrecy"
+msgstr "Совершенная прямая секретность"
+
+msgid "Pre-Shared Key (PSK) string"
+msgstr "Строка заранее установленного ключа совместного использования (PSK)"
+
+msgid "Project ID"
+msgstr "ID проекта"
+
+msgid "Remote peer CIDR(s) connected to the new IPsec connection."
+msgstr "CIDR удалённых подключений, подключенных к новому IPsec туннелю"
+
+msgid "Remote peer subnet"
+msgstr "Подсеть удаленного пира"
+
+msgid "Remote peer subnet(s)"
+msgstr "Подсеть(и) удаленного пира"
+
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24)"
+msgstr ""
+"Адрес(а) подсетей удаленных узлов с масками в формате CIDR, разделенные "
+"запятыми при необходимости (например, 20.1.0.0/24, 21.1.0.0/24) "
+
+msgid ""
+"Remote peer subnet(s) address(es) with mask(s) in CIDR format separated with "
+"commas if needed (e.g. 20.1.0.0/24, 21.1.0.0/24). This field is valid if "
+"type is CIDR"
+msgstr ""
+"Адрес(а) подсетей удаленных узлов с масками в формате CIDR, разделенные "
+"запятыми при необходимости (например, 20.1.0.0/24, 21.1.0.0/24). Это поле "
+"корректно, если тип записи - формат CIDR"
+
+msgid "Route mode"
+msgstr "Режим маршрутизации"
+
+msgid "Router"
+msgstr "Маршрутизатор"
+
+msgid "Router ="
+msgstr "Маршрутизатор ="
+
+msgid "Router ID ="
+msgstr "ID маршрутизатора ="
+
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+msgid "Scheduled deletion of IKE policy"
+msgid_plural "Scheduled deletion of IKE policies"
+msgstr[0] "Запланировано удаление политики IKE"
+msgstr[1] "Запланировано удаление политик IKE"
+msgstr[2] "Запланировано удаление политик IKE"
+
+msgid "Scheduled deletion of IPsec policy"
+msgid_plural "Scheduled deletion of IPsec policies"
+msgstr[0] "Запланировано удаление политики IPsec"
+msgstr[1] "Запланировано удаление политик IPsec"
+msgstr[2] "Запланировано удаление политик IPsec"
+
+msgid "Scheduled deletion of IPsec site connection"
+msgid_plural "Scheduled deletion of IPsec site connections"
+msgstr[0] "Запланировано удаление IPsec соединение"
+msgstr[1] "Запланировано удаление IPsec соединений"
+msgstr[2] "Запланировано удаление IPsec соединений"
+
+msgid "Scheduled deletion of VPN service"
+msgid_plural "Scheduled deletion of VPN services"
+msgstr[0] "Запланировано удаление сервиса VPN"
+msgstr[1] "Запланировано удаление сервисов VPN"
+msgstr[2] "Запланировано удаление сервисов VPN"
+
+msgid "Scheduled deletion of endpoint group"
+msgid_plural "Scheduled deletion of endpoint groups"
+msgstr[0] "Запланировано удаление группы конечных точек"
+msgstr[1] "Запланировано удаление групп конечных точек"
+msgstr[2] "Запланировано удаление групп конечных точек"
+
+msgid "Select IKE policy"
+msgstr "Выберите политику IKE"
+
+msgid "Select IPsec Policy"
+msgstr "Выберите политику IPsec"
+
+msgid "Select VPN service"
+msgstr "Выберите сервис VPN"
+
+msgid "Select a Router"
+msgstr "Выберите Маршрутизатор"
+
+msgid "Select a Subnet"
+msgstr "Выбор подсети"
+
+msgid "Select local endpoint group"
+msgstr "Выберите локальную группу конечных точек"
+
+msgid "Select peer endpoint group"
+msgstr "Выберите удалённую группу конечных точек"
+
+msgid ""
+"Specify a name, description, router, and subnet (optional) for the VPN "
+"service."
+msgstr ""
+"Укажите имя, описание, маршрутизатор и (опционально) подсеть для сервиса VPN."
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Status ="
+msgstr "Статус ="
+
+msgid "Subnet"
+msgstr "Подсеть"
+
+msgid "Subnet (for local systems)"
+msgstr "Подсеть (для локальных систем)"
+
+msgid "Subnet ="
+msgstr "Подсеть ="
+
+msgid "Subnet ID ="
+msgstr "ID подсети ="
+
+msgid ""
+"The VPN service is attached to a router and references to endpoint group or "
+"a single subnet to push to a remote site."
+msgstr ""
+"Служба VPN связана с маршрутизатором и использует одну группу конечных точек "
+"или одну подсеть для передачи данных на удаленную локацию."
+
+msgid "The pre-defined key string between the two peers of the VPN connection"
+msgstr "Предопределённый ключ PSK между двумя точками VPN соединения "
+
+msgid ""
+"The router and admin state fields require to be enabled. All others are "
+"optional."
+msgstr ""
+"Поля маршрутизатор и административное состояние должны быть заполнены. Все "
+"остальные поля необязательны."
+
+msgid ""
+"The state of IPsec site connection to start in. If disabled (not checked), "
+"IPsec site connection does not forward packets."
+msgstr ""
+"Состояние начала подключения сайта по протоколу IPsec. Если отключено (нет "
+"флажка), то IPsec соединение не пересылает пакеты."
+
+msgid ""
+"The state of VPN service to start in. If disabled (not checked), VPN service "
+"does not forward packets."
+msgstr ""
+"Состояние, в котором запускается служба VPN. Если она отключена (нет "
+"флажка), то это означает, что служба VPN не пересылает пакеты."
+
+msgid "The type of IPsec tunnel (tunnel/transport) to be used."
+msgstr "Тип туннеля IPsec (туннель/транспорт) который будет использован."
+
+msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
+msgstr "Тип протокола (esp, ah, ah-esp) используемый в политике IPsec."
+
+msgid "The type of version (v1/v2) that needs to be filtered."
+msgstr "Тип версии (v1/v2) для фильтрации."
+
+msgid "Transform Protocol"
+msgstr "Протокол трансформации"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Type ="
+msgstr "Тип ="
+
+#, python-format
+msgid "Unable to add IKE policy \"%s\"."
+msgstr "Не удалось добавить политику IKE \"%s\"."
+
+#, python-format
+msgid "Unable to add IPsec policy \"%s\"."
+msgstr "Не удалось добавить политику IPsec \"%s\"."
+
+#, python-format
+msgid "Unable to add IPsec site connection \"%s\"."
+msgstr "Не удалось добавить подключение IPsec \"%s\"."
+
+#, python-format
+msgid "Unable to add VPN service \"%s\"."
+msgstr "Не удалось добавить сервис VPN \"%s\"."
+
+#, python-format
+msgid "Unable to add endpoint group \"%s\"."
+msgstr "Не удалось добавить группу конечных точек \"%s\"."
+
+#, python-format
+msgid "Unable to delete IKE policy. %s"
+msgstr "Не удалось удалить политику IKE. %s"
+
+#, python-format
+msgid "Unable to delete IPsec policy. %s"
+msgstr "Не удалось удалить политику IPsec. %s"
+
+#, python-format
+msgid "Unable to delete IPsec site connection. %s"
+msgstr "Не удалось удалить подключение IPsec. %s"
+
+#, python-format
+msgid "Unable to delete VPN service. %s"
+msgstr "Не удалось удалить сервис VPN. %s"
+
+#, python-format
+msgid "Unable to delete endpoint group. %s"
+msgstr "Не удалось удалить группу конечных точек. %s"
+
+msgid "Unable to retrieve IKE policies list."
+msgstr "Не удалось получить список политик IKE."
+
+msgid "Unable to retrieve IKE policy details."
+msgstr "Не удалось получить информацию о политике IKE."
+
+#, python-format
+msgid "Unable to retrieve IKE policy details. %s"
+msgstr "Не удалось получить данные о политике IKE. %s"
+
+msgid "Unable to retrieve IPsec policies list."
+msgstr "Не удалось получить список политик IPsec."
+
+msgid "Unable to retrieve IPsec policy details."
+msgstr "Не удалось получить информацию о политике IPsec."
+
+#, python-format
+msgid "Unable to retrieve IPsec policy details. %s"
+msgstr "Не удалось получить данные о политике IPsec. %s"
+
+msgid "Unable to retrieve IPsec policy list."
+msgstr "Не удалось получить список политик IPsec."
+
+msgid "Unable to retrieve IPsec site connection details."
+msgstr "Не удалось получить информацию об IPsec подключении"
+
+#, python-format
+msgid "Unable to retrieve IPsec site connection details. %s"
+msgstr "Не удалось получить данные подключения IPsec сайта %s"
+
+msgid "Unable to retrieve IPsec site connections list."
+msgstr "Не удалось получить список IPsec подключений."
+
+msgid "Unable to retrieve VPN service details."
+msgstr "Не удалось получить информацию о сервисе VPN."
+
+#, python-format
+msgid "Unable to retrieve VPN service details. %s"
+msgstr "Не удалось получить данные о сервисе VPN. %s"
+
+msgid "Unable to retrieve VPN services list."
+msgstr "Не удалось получить список сервисов VPN."
+
+msgid "Unable to retrieve endpoint group details."
+msgstr "Не удалось получить информацию о группе конечных точек."
+
+#, python-format
+msgid "Unable to retrieve endpoint group details. %s"
+msgstr "Не удалось получить данные о группе конечных точек. %s"
+
+msgid "Unable to retrieve endpoint group list."
+msgstr "Не удалось получить список групп конечных точек."
+
+msgid "Unable to retrieve networks list."
+msgstr "Не удалось получить список сетей."
+
+msgid "Unable to retrieve routers list."
+msgstr "Не удалось получить список Маршрутизаторов."
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "VPN Connections"
+msgstr "Подключения VPN"
+
+msgid "VPN Service"
+msgstr "Сервис VPN"
+
+msgid "VPN Service ="
+msgstr "Сервис VPN ="
+
+msgid "VPN Service Details"
+msgstr "Информация о сервисе VPN"
+
+msgid "VPN Service ID ="
+msgstr "ID сервиса VPN ="
+
+msgid "VPN Services"
+msgstr "Сервисы VPN"
+
+#, python-format
+msgid "VPN service %s was successfully updated."
+msgstr "VPN сервис %s был успешно обновлен."
+
+msgid "VPN service associated with this connection"
+msgstr "Сервис VPN для данного подключения"
+
+msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
+msgstr "Доступные алгоритмы: 3des, aes-128, aes-192 и aes-256."
+
+msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
+msgstr "Доступные алгоритмы: sha1, sha256, sha384 и sha512."
+
+msgid "Valid integer greater than the DPD interval"
+msgstr "Допустимое целое число большее интервала DPD"
+
+msgid "Valid integer lesser than DPD timeout"
+msgstr "Допустимое целое число, меньшее таймаута DPD"
+
+msgid "Valid integer lesser than the DPD timeout"
+msgstr "Допустимое целое число, большее таймаута DPD"
+
+msgid "Virtual Private Network"
+msgstr "Виртуальная частная сеть"
+
+msgid "You may update IKE policy details here."
+msgstr " Здесь вы можете обновить данные о политике IKE."
+
+msgid "You may update IPsec policy details here."
+msgstr " Здесь вы можете обновить данные о политике IPSec."
+
+msgid "You may update IPsec site connection details here."
+msgstr " Здесь вы можете обновить данные о политике IPSec сайта.  "
+
+msgid "You may update VPN service details here."
+msgstr " Здесь вы можете обновить данные VPN сервиса."
+
+msgid "You may update endpoint group details here."
+msgstr " Здесь вы можете изменить конфигурацию группы конечных точек."
+
+msgid "aes-128"
+msgstr "aes-128"
+
+msgid "aes-192"
+msgstr "aes-192"
+
+msgid "aes-256"
+msgstr "aes-256"
+
+msgid "ah"
+msgstr "ah"
+
+msgid "ah-esp"
+msgstr "ah-esp"
+
+msgid "bi-directional"
+msgstr "bi-направленный"
+
+msgid "clear"
+msgstr "очистить"
+
+msgid "disabled"
+msgstr "запрещено"
+
+msgid "down"
+msgstr "вниз"
+
+msgid "esp"
+msgstr "esp"
+
+msgid "group14"
+msgstr "group14"
+
+msgid "group2"
+msgstr "group2"
+
+msgid "group5"
+msgstr "group5"
+
+msgid "hold"
+msgstr "держать"
+
+msgid "response-only"
+msgstr "только ответ"
+
+msgid "restart"
+msgstr "начать заново"
+
+msgid "restart-by-peer"
+msgstr "перезапуск-пиром"
+
+msgid "seconds"
+msgstr "секунды"
+
+msgid "sha1"
+msgstr "sha1"
+
+msgid "sha256"
+msgstr "sha256"
+
+msgid "sha384"
+msgstr "sha384"
+
+msgid "sha512"
+msgstr "sha512"
+
+msgid "transport"
+msgstr "транспортировать"
+
+msgid "tunnel"
+msgstr "туннельный"
+
+msgid "up"
+msgstr "вверх"
+
+msgid "v1"
+msgstr "v1"
+
+msgid "v2"
+msgstr "v2"
