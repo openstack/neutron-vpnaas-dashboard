@@ -43,10 +43,10 @@ extensions = [
 ]
 
 # openstackdocstheme options
-repository_name = 'openstack/neutron-vpnaas-dashboard'
-bug_project = 'neutron-vpnaas-dashboard'
-bug_tag = 'doc'
-html_last_updated_fmt = '%Y-%m-%d %H:%M'
+openstackdocs_repo_name = 'openstack/neutron-vpnaas-dashboard'
+openstackdocs_auto_name = False
+openstackdocs_bug_project = 'neutron-vpnaas-dashboard'
+openstackdocs_bug_tag = 'doc'
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
@@ -100,7 +100,7 @@ exclude_patterns = []
 # show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'native'
 
 # A list of ignored prefixes for module index sorting.
 # modindex_common_prefix = []
