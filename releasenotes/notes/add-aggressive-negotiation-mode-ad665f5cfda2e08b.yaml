@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The ``phase1 negotiation mode`` supports the ``aggressive`` option for IKE
+    policy.

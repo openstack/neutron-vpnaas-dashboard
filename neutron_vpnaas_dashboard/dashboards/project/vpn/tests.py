@@ -92,12 +92,12 @@ class VPNTests(test.TestCase):
     def test_index_vpnservices(self):
         self.setup_mocks()
 
-        res = self.client.get(self.INDEX_URL)
+        res = self.client.get(self.INDEX_URL + '?tab=vpntabs__vpnservices')
 
         self.assertTemplateUsed(res, '%s/vpn/index.html'
                                 % self.DASHBOARD)
         self.assertTemplateUsed(res, 'horizon/common/_detail_table.html')
-        self.assertEqual(len(res.context['table'].data),
+        self.assertEqual(len(res.context['vpnservicestable_table'].data),
                          len(self.vpnservices.list()))
         self.check_mocks()
 

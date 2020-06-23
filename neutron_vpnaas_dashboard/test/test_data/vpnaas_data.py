@@ -101,6 +101,21 @@ def data(TEST):
                       'encryption_algorithm': 'aes-256',
                       'ike_version': 'v1',
                       'lifetime': {'units': 'seconds', 'value': 3600},
+                      'phase1_negotiation_mode': 'aggressive',
+                      'pfs': 'group5',
+                      'ipsecsiteconns': []}
+    TEST.api_ikepolicies.add(ikepolicy_dict)
+    TEST.ikepolicies.add(vpn.IKEPolicy(ikepolicy_dict))
+
+    # 3rd IKE policy
+    ikepolicy_dict = {'id': 'a1f009b7-0ffa-43a7-ba19-dcabb0b4c983',
+                      'tenant_id': '1',
+                      'name': 'ikepolicy_3',
+                      'description': 'ikepolicy description',
+                      'auth_algorithm': 'sha1',
+                      'encryption_algorithm': 'aes-256',
+                      'ike_version': 'v1',
+                      'lifetime': {'units': 'seconds', 'value': 3600},
                       'phase1_negotiation_mode': 'main',
                       'pfs': 'group5',
                       'ipsecsiteconns': []}
