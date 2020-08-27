@@ -103,9 +103,9 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
     def delete(self, request, obj_id):
         try:
             api_vpn.vpnservice_delete(request, obj_id)
-        except Exception as e:
+        except Exception:
             exceptions.handle(
-                request, _('Unable to delete VPN service. %s') % e)
+                request, _('Unable to delete VPN service.'))
 
 
 class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
@@ -131,9 +131,9 @@ class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
     def delete(self, request, obj_id):
         try:
             api_vpn.endpointgroup_delete(request, obj_id)
-        except Exception as e:
+        except Exception:
             exceptions.handle(
-                request, _('Unable to delete endpoint group. %s') % e)
+                request, _('Unable to delete endpoint group.'))
 
 
 class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
@@ -164,9 +164,9 @@ class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
     def delete(self, request, obj_id):
         try:
             api_vpn.ikepolicy_delete(request, obj_id)
-        except Exception as e:
+        except Exception:
             exceptions.handle(
-                request, _('Unable to delete IKE policy. %s') % e)
+                request, _('Unable to delete IKE policy.'))
 
 
 class DeleteIPsecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
@@ -197,9 +197,9 @@ class DeleteIPsecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
     def delete(self, request, obj_id):
         try:
             api_vpn.ipsecpolicy_delete(request, obj_id)
-        except Exception as e:
+        except Exception:
             exceptions.handle(
-                request, _('Unable to delete IPsec policy. %s') % e)
+                request, _('Unable to delete IPsec policy.'))
 
 
 class DeleteIPsecSiteConnectionLink(policy.PolicyTargetMixin,
@@ -226,9 +226,9 @@ class DeleteIPsecSiteConnectionLink(policy.PolicyTargetMixin,
     def delete(self, request, obj_id):
         try:
             api_vpn.ipsecsiteconnection_delete(request, obj_id)
-        except Exception as e:
-            exceptions.handle(
-                request, _('Unable to delete IPsec site connection. %s') % e)
+        except Exception:
+            exceptions.handle(request,
+                              _('Unable to delete IPsec site connection.'))
 
 
 class UpdateVPNServiceLink(tables.LinkAction):

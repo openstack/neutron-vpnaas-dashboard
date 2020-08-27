@@ -267,9 +267,9 @@ class UpdateVPNServiceView(horizon_forms.ModalFormView):
         vpnservice_id = self.kwargs['vpnservice_id']
         try:
             return api_vpn.vpnservice_get(self.request, vpnservice_id)
-        except Exception as e:
+        except Exception:
             redirect = self.success_url
-            msg = _('Unable to retrieve VPN service details. %s') % e
+            msg = _('Unable to retrieve VPN service details.')
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
@@ -303,9 +303,9 @@ class UpdateEndpointGroupView(horizon_forms.ModalFormView):
         endpoint_group_id = self.kwargs['endpoint_group_id']
         try:
             return api_vpn.endpointgroup_get(self.request, endpoint_group_id)
-        except Exception as e:
+        except Exception:
             redirect = self.success_url
-            msg = _('Unable to retrieve endpoint group details. %s') % e
+            msg = _('Unable to retrieve endpoint group details.')
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
@@ -337,9 +337,9 @@ class UpdateIKEPolicyView(horizon_forms.ModalFormView):
         ikepolicy_id = self.kwargs['ikepolicy_id']
         try:
             return api_vpn.ikepolicy_get(self.request, ikepolicy_id)
-        except Exception as e:
+        except Exception:
             redirect = self.success_url
-            msg = _('Unable to retrieve IKE policy details. %s') % e
+            msg = _('Unable to retrieve IKE policy details.')
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
@@ -379,9 +379,9 @@ class UpdateIPsecPolicyView(horizon_forms.ModalFormView):
         ipsecpolicy_id = self.kwargs['ipsecpolicy_id']
         try:
             return api_vpn.ipsecpolicy_get(self.request, ipsecpolicy_id)
-        except Exception as e:
+        except Exception:
             redirect = self.success_url
-            msg = _('Unable to retrieve IPsec policy details. %s') % e
+            msg = _('Unable to retrieve IPsec policy details.')
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
@@ -422,9 +422,9 @@ class UpdateIPsecSiteConnectionView(horizon_forms.ModalFormView):
         connection_id = self.kwargs['ipsecsiteconnection_id']
         try:
             return api_vpn.ipsecsiteconnection_get(self.request, connection_id)
-        except Exception as e:
+        except Exception:
             redirect = self.success_url
-            msg = _('Unable to retrieve IPsec site connection details. %s') % e
+            msg = _('Unable to retrieve IPsec site connection details.')
             exceptions.handle(self.request, msg, redirect=redirect)
 
     def get_initial(self):
