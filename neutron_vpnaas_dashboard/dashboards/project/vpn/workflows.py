@@ -282,11 +282,10 @@ class AddIKEPolicyAction(workflows.Action):
         self.fields['pfs'].choices = pfs_choices
         self.fields['pfs'].initial = "group5"
 
-        phase1_neg_mode_choices = [("main", "main")]
+        phase1_neg_mode_choices = [("main", "main"),
+                                   ("aggressive", "aggressive")]
         self.fields[
             'phase1_negotiation_mode'].choices = phase1_neg_mode_choices
-        # Currently this field has only one choice, so mark it as readonly.
-        self.fields['phase1_negotiation_mode'].widget.attrs['readonly'] = True
 
     class Meta(object):
         name = _("Add New IKE Policy")

@@ -128,11 +128,10 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
                  ('group5', _('group5')),
                  ('group14', _('group14'))],
         required=False)
-    # Currently this field has only one choice, so mark it as readonly.
     phase1_negotiation_mode = forms.ThemableChoiceField(
         label=_("IKE Phase1 negotiation mode"),
-        choices=[('main', 'main')],
-        widget=forms.TextInput(attrs={'readonly': 'readonly'}),
+        choices=[('main', 'main'),
+                 ('aggressive', 'aggressive')],
         required=False)
 
     failure_url = 'horizon:project:vpn:index'
