@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-01-08 15:16+0000\n"
+"POT-Creation-Date: 2020-10-02 07:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -416,9 +416,6 @@ msgstr "IKE 鍵のライフタイムの値"
 msgid "Lifetime value for IKE keys "
 msgstr "IKE 鍵のライフタイムの値"
 
-msgid "Limited to 'main' mode only."
-msgstr "利用できるモードは 'main' のみです。"
-
 msgid "Local Endpoint Group"
 msgstr "ローカルのエンドポイントグループ"
 
@@ -700,35 +697,11 @@ msgstr "VPN サービス \"%s\" を追加できません。"
 msgid "Unable to add endpoint group \"%s\"."
 msgstr "エンドポイントグループ \"%s\" を追加できません。"
 
-#, python-format
-msgid "Unable to delete IKE policy. %s"
-msgstr "IKE ポリシーを削除できません。%s"
-
-#, python-format
-msgid "Unable to delete IPsec policy. %s"
-msgstr "IPsec ポリシーを削除できません。%s"
-
-#, python-format
-msgid "Unable to delete IPsec site connection. %s"
-msgstr "IPsec サイト間接続を削除できません。%s"
-
-#, python-format
-msgid "Unable to delete VPN service. %s"
-msgstr "VPN サービスを削除できません。%s"
-
-#, python-format
-msgid "Unable to delete endpoint group. %s"
-msgstr "エンドポイントグループを削除できません。 %s"
-
 msgid "Unable to retrieve IKE policies list."
 msgstr "IKE ポリシーの一覧を取得できません。"
 
 msgid "Unable to retrieve IKE policy details."
 msgstr "IKE ポリシーの詳細を取得できません。"
-
-#, python-format
-msgid "Unable to retrieve IKE policy details. %s"
-msgstr "IKE ポリシーの詳細を取得できません。 %s"
 
 msgid "Unable to retrieve IPsec policies list."
 msgstr "IPsec ポリシーの一覧を取得できません。"
@@ -736,19 +709,11 @@ msgstr "IPsec ポリシーの一覧を取得できません。"
 msgid "Unable to retrieve IPsec policy details."
 msgstr "IPsec ポリシーの詳細を取得できません。"
 
-#, python-format
-msgid "Unable to retrieve IPsec policy details. %s"
-msgstr "IPsec ポリシーの詳細を取得できません。%s"
-
 msgid "Unable to retrieve IPsec policy list."
 msgstr "IPsec ポリシーの一覧を取得できません。"
 
 msgid "Unable to retrieve IPsec site connection details."
 msgstr "IPsec サイト間接続の詳細を取得できません。"
-
-#, python-format
-msgid "Unable to retrieve IPsec site connection details. %s"
-msgstr "IPsec サイト間接続の詳細を取得できません。%s"
 
 msgid "Unable to retrieve IPsec site connections list."
 msgstr "IPsec サイト間接続の一覧を取得できません。"
@@ -756,19 +721,11 @@ msgstr "IPsec サイト間接続の一覧を取得できません。"
 msgid "Unable to retrieve VPN service details."
 msgstr "VPN サービスの詳細を取得できません。"
 
-#, python-format
-msgid "Unable to retrieve VPN service details. %s"
-msgstr "VPN サービスの詳細を取得できません。 %s"
-
 msgid "Unable to retrieve VPN services list."
 msgstr "VPN サービスの一覧を取得できません。"
 
 msgid "Unable to retrieve endpoint group details."
 msgstr "エンドポイントグループの詳細を取得できません。"
-
-#, python-format
-msgid "Unable to retrieve endpoint group details. %s"
-msgstr "エンドポイントグループの詳細を取得できません: %s"
 
 msgid "Unable to retrieve endpoint group list."
 msgstr "エンドポイントグループの一覧を取得できません。"
