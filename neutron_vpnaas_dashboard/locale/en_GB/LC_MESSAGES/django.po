@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-01-08 15:16+0000\n"
+"POT-Creation-Date: 2020-09-04 01:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -427,9 +427,6 @@ msgstr "Lifetime value for IKE keys"
 msgid "Lifetime value for IKE keys "
 msgstr "Lifetime value for IKE keys "
 
-msgid "Limited to 'main' mode only."
-msgstr "Limited to 'main' mode only."
-
 msgid "Local Endpoint Group"
 msgstr "Local Endpoint Group"
 
@@ -713,35 +710,11 @@ msgstr "Unable to add VPN service \"%s\"."
 msgid "Unable to add endpoint group \"%s\"."
 msgstr "Unable to add endpoint group \"%s\"."
 
-#, python-format
-msgid "Unable to delete IKE policy. %s"
-msgstr "Unable to delete IKE policy. %s"
-
-#, python-format
-msgid "Unable to delete IPsec policy. %s"
-msgstr "Unable to delete IPsec policy. %s"
-
-#, python-format
-msgid "Unable to delete IPsec site connection. %s"
-msgstr "Unable to delete IPsec site connection. %s"
-
-#, python-format
-msgid "Unable to delete VPN service. %s"
-msgstr "Unable to delete VPN service. %s"
-
-#, python-format
-msgid "Unable to delete endpoint group. %s"
-msgstr "Unable to delete endpoint group. %s"
-
 msgid "Unable to retrieve IKE policies list."
 msgstr "Unable to retrieve IKE policies list."
 
 msgid "Unable to retrieve IKE policy details."
 msgstr "Unable to retrieve IKE policy details."
-
-#, python-format
-msgid "Unable to retrieve IKE policy details. %s"
-msgstr "Unable to retrieve IKE policy details. %s"
 
 msgid "Unable to retrieve IPsec policies list."
 msgstr "Unable to retrieve IPsec policies list."
@@ -749,19 +722,11 @@ msgstr "Unable to retrieve IPsec policies list."
 msgid "Unable to retrieve IPsec policy details."
 msgstr "Unable to retrieve IPsec policy details."
 
-#, python-format
-msgid "Unable to retrieve IPsec policy details. %s"
-msgstr "Unable to retrieve IPsec policy details. %s"
-
 msgid "Unable to retrieve IPsec policy list."
 msgstr "Unable to retrieve IPsec policy list."
 
 msgid "Unable to retrieve IPsec site connection details."
 msgstr "Unable to retrieve IPsec site connection details."
-
-#, python-format
-msgid "Unable to retrieve IPsec site connection details. %s"
-msgstr "Unable to retrieve IPsec site connection details. %s"
 
 msgid "Unable to retrieve IPsec site connections list."
 msgstr "Unable to retrieve IPsec site connections list."
@@ -769,19 +734,11 @@ msgstr "Unable to retrieve IPsec site connections list."
 msgid "Unable to retrieve VPN service details."
 msgstr "Unable to retrieve VPN service details."
 
-#, python-format
-msgid "Unable to retrieve VPN service details. %s"
-msgstr "Unable to retrieve VPN service details. %s"
-
 msgid "Unable to retrieve VPN services list."
 msgstr "Unable to retrieve VPN services list."
 
 msgid "Unable to retrieve endpoint group details."
 msgstr "Unable to retrieve endpoint group details."
-
-#, python-format
-msgid "Unable to retrieve endpoint group details. %s"
-msgstr "Unable to retrieve endpoint group details. %s"
 
 msgid "Unable to retrieve endpoint group list."
 msgstr "Unable to retrieve endpoint group list."

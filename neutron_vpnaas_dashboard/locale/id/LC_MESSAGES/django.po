@@ -3,15 +3,16 @@
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
 # suhartono <cloudsuhartono@gmail.com>, 2018. #zanata
 # suhartono <cloudsuhartono@gmail.com>, 2019. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-01-08 15:16+0000\n"
+"POT-Creation-Date: 2020-09-04 01:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-05-05 11:14+0000\n"
+"PO-Revision-Date: 2020-10-08 05:25+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -419,9 +420,6 @@ msgstr "Lifetime value for IKE keys"
 msgid "Lifetime value for IKE keys "
 msgstr "Nilai Lifetime untuk IKE key "
 
-msgid "Limited to 'main' mode only."
-msgstr "Terbatas hanya untuk 'main' saja."
-
 msgid "Local Endpoint Group"
 msgstr "Local Endpoint Group"
 
@@ -519,6 +517,10 @@ msgstr "Pending Update (penundaan pembaharuan)"
 
 msgid "Perfect Forward Secrecy"
 msgstr "Perfect Forward Secrecy"
+
+msgid "Phase 1 negotiation mode limited to using 'main' and 'aggressive'."
+msgstr ""
+"Modus negosiasi tahap 1 terbatas pada penggunaan  'main' dan 'aggressive'."
 
 msgid "Pre-Shared Key (PSK) string"
 msgstr "Pre-Shared Key (PSK) string (string PSK)"
@@ -701,25 +703,20 @@ msgstr "Tidak dapat menambahkan VPN service \"%s\"."
 msgid "Unable to add endpoint group \"%s\"."
 msgstr "Tidak dapat menambahkan endpoint group \"%s\"."
 
-#, python-format
-msgid "Unable to delete IKE policy. %s"
-msgstr "Tidak dapat menghapus IKE policy. %s"
+msgid "Unable to delete IKE policy."
+msgstr "Tidak dapat menghapus kebijakan IKE."
 
-#, python-format
-msgid "Unable to delete IPsec policy. %s"
-msgstr "Tidak dapat menghapus IPsec policy. %s"
+msgid "Unable to delete IPsec policy."
+msgstr "Tidak dapat menghapus kebijakan IPsec."
 
-#, python-format
-msgid "Unable to delete IPsec site connection. %s"
-msgstr "Tidak dapat menghapus IPsec site connection. %s"
+msgid "Unable to delete IPsec site connection."
+msgstr "Tidak dapat menghapus koneksi situs IPsec."
 
-#, python-format
-msgid "Unable to delete VPN service. %s"
-msgstr "Tidak dapat menghapus VPN service. %s"
+msgid "Unable to delete VPN service."
+msgstr "Tidak dapat menghapus layanan VPN."
 
-#, python-format
-msgid "Unable to delete endpoint group. %s"
-msgstr "Tidak dapat menghapus endpoint group. %s"
+msgid "Unable to delete endpoint group."
+msgstr "Tidak dapat menghapus grup endpoint"
 
 msgid "Unable to retrieve IKE policies list."
 msgstr "Tidak dapat mengambil IKE policies list."
@@ -727,19 +724,11 @@ msgstr "Tidak dapat mengambil IKE policies list."
 msgid "Unable to retrieve IKE policy details."
 msgstr "Tidak dapat mengambil IKE policy details."
 
-#, python-format
-msgid "Unable to retrieve IKE policy details. %s"
-msgstr "Tidak dapat mengambil IKE policy details. %s"
-
 msgid "Unable to retrieve IPsec policies list."
 msgstr "Tidak dapat mengambil IPsec policies list."
 
 msgid "Unable to retrieve IPsec policy details."
 msgstr "Tidak dapat mengambil IPsec policy details."
-
-#, python-format
-msgid "Unable to retrieve IPsec policy details. %s"
-msgstr "Tidak dapat mengambil IPsec policy details. %s"
 
 msgid "Unable to retrieve IPsec policy list."
 msgstr "Tidak dapat mengambil IPsec policy list."
@@ -747,29 +736,17 @@ msgstr "Tidak dapat mengambil IPsec policy list."
 msgid "Unable to retrieve IPsec site connection details."
 msgstr "Tidak dapat mengambil IPsec site connection details."
 
-#, python-format
-msgid "Unable to retrieve IPsec site connection details. %s"
-msgstr "Tidak dapat mengambil IPsec site connection details. %s"
-
 msgid "Unable to retrieve IPsec site connections list."
 msgstr "Tidak dapat mengambil IPsec site connections list."
 
 msgid "Unable to retrieve VPN service details."
 msgstr "Tidak dapat mengambil VPN service details."
 
-#, python-format
-msgid "Unable to retrieve VPN service details. %s"
-msgstr "Tidak dapat mengambil VPN service details. %s"
-
 msgid "Unable to retrieve VPN services list."
 msgstr "Tidak dapat mengambil VPN services list."
 
 msgid "Unable to retrieve endpoint group details."
 msgstr "Tidak dapat mengambil endpoint group details."
-
-#, python-format
-msgid "Unable to retrieve endpoint group details. %s"
-msgstr "Tidak dapat mengambil endpoint group details. %s"
 
 msgid "Unable to retrieve endpoint group list."
 msgstr "Tidak dapat mengambil endpoint group list."

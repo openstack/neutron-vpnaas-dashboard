@@ -3,16 +3,17 @@
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2019. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-01-08 15:16+0000\n"
+"POT-Creation-Date: 2020-09-04 01:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-05-03 02:06+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"PO-Revision-Date: 2020-10-05 06:33+0000\n"
+"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -428,9 +429,6 @@ msgstr "Lebensdauer der IKE-Schlüssel"
 msgid "Lifetime value for IKE keys "
 msgstr "Gültigkeitsdauer der IKE-Schlüssel"
 
-msgid "Limited to 'main' mode only."
-msgstr "Beschränkt auf 'main' Modus."
-
 msgid "Local Endpoint Group"
 msgstr "Lokale Endpunktgruppe"
 
@@ -725,25 +723,20 @@ msgstr "VPN Dienst \"%s\" konnte nicht hinzugefügt werden."
 msgid "Unable to add endpoint group \"%s\"."
 msgstr "Endpunktgruppe \"%s\" kann nicht hinzugefügt werden."
 
-#, python-format
-msgid "Unable to delete IKE policy. %s"
-msgstr "IKE Richtlinie %s konnte nicht gelöscht werden."
+msgid "Unable to delete IKE policy."
+msgstr "IKE Richtlinie konnte nicht gelöscht werden."
 
-#, python-format
-msgid "Unable to delete IPsec policy. %s"
-msgstr "IPsec Richtlinie %s konnte nicht gelöscht werden."
+msgid "Unable to delete IPsec policy."
+msgstr "IPsec Richtlinie konnte nicht gelöscht werden."
 
-#, python-format
-msgid "Unable to delete IPsec site connection. %s"
-msgstr "IPsec Site Verbindung konnte nicht gelöscht werden: %s"
+msgid "Unable to delete IPsec site connection."
+msgstr "IPsec Site Verbindung konnte nicht gelöscht werden."
 
-#, python-format
-msgid "Unable to delete VPN service. %s"
-msgstr "VPN Dienst %s konnte nicht gelöscht werden."
+msgid "Unable to delete VPN service."
+msgstr "VPN Dienst konnte nicht gelöscht werden."
 
-#, python-format
-msgid "Unable to delete endpoint group. %s"
-msgstr "Endpunktgruppe %s konnte nicht gelöscht werden."
+msgid "Unable to delete endpoint group."
+msgstr "Endpunktgruppe konnte nicht gelöscht werden."
 
 msgid "Unable to retrieve IKE policies list."
 msgstr "Liste der IKE Richtlinien kann nicht abgerufen werden."
@@ -751,19 +744,11 @@ msgstr "Liste der IKE Richtlinien kann nicht abgerufen werden."
 msgid "Unable to retrieve IKE policy details."
 msgstr "IKE Richtliniendetails können nicht abgerufen werden."
 
-#, python-format
-msgid "Unable to retrieve IKE policy details. %s"
-msgstr "IKE Richtliniendetails können nicht abgerufen werden. %s"
-
 msgid "Unable to retrieve IPsec policies list."
 msgstr "IPSec Richtlinien Liste kann nicht abgerufen werden."
 
 msgid "Unable to retrieve IPsec policy details."
 msgstr "IPsec Richtliniendetails können nicht abgerufen werden."
-
-#, python-format
-msgid "Unable to retrieve IPsec policy details. %s"
-msgstr "IPsec Richtliniendetails können nicht abgerufen werden. %s"
 
 msgid "Unable to retrieve IPsec policy list."
 msgstr "IPsec Richtlinienliste kann nicht abgerufen werden."
@@ -771,29 +756,17 @@ msgstr "IPsec Richtlinienliste kann nicht abgerufen werden."
 msgid "Unable to retrieve IPsec site connection details."
 msgstr "IPsec Site Verbindungsdetails können nicht abgerufen werden."
 
-#, python-format
-msgid "Unable to retrieve IPsec site connection details. %s"
-msgstr "IPsec Site Verbindungsdetails können nicht abgerufen werden. %s"
-
 msgid "Unable to retrieve IPsec site connections list."
 msgstr "IPsec Site Verbindungsliste kann nicht abgerufen werden."
 
 msgid "Unable to retrieve VPN service details."
 msgstr "VPN Dienstdetails können nicht abgerufen werden."
 
-#, python-format
-msgid "Unable to retrieve VPN service details. %s"
-msgstr "VPN Dienstdetails können nicht abgerufen werden. %s"
-
 msgid "Unable to retrieve VPN services list."
 msgstr "VPN Diensteliste kann nicht abgerufen werden."
 
 msgid "Unable to retrieve endpoint group details."
 msgstr "Endpunktgruppendetails können nicht abgerufen werden."
-
-#, python-format
-msgid "Unable to retrieve endpoint group details. %s"
-msgstr "Endpunktgruppendetails können nicht abgerufen werden. %s"
 
 msgid "Unable to retrieve endpoint group list."
 msgstr "Endpunktgruppenliste kann nicht abgerufen werden."

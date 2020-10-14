@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-01-08 15:16+0000\n"
+"POT-Creation-Date: 2020-09-04 01:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -429,9 +429,6 @@ msgstr "IKE 키의 수명 값"
 msgid "Lifetime value for IKE keys "
 msgstr "IKE 키의 수명 값"
 
-msgid "Limited to 'main' mode only."
-msgstr "'main' 모드에서만 가능합니다."
-
 msgid "Local Endpoint Group"
 msgstr "로컬 엔드포인트 그룹"
 
@@ -707,35 +704,11 @@ msgstr "다음 VPN 서비스를 추가할 수 없습니다. \"%s\""
 msgid "Unable to add endpoint group \"%s\"."
 msgstr "엔드포인트 그룹 \"%s\"를 추가할 수 없습니다."
 
-#, python-format
-msgid "Unable to delete IKE policy. %s"
-msgstr "IKE 정책을 삭제할 수 없습니다. %s"
-
-#, python-format
-msgid "Unable to delete IPsec policy. %s"
-msgstr "IPsec 정책을 삭제할 수 없습니다. %s"
-
-#, python-format
-msgid "Unable to delete IPsec site connection. %s"
-msgstr "IPsec 사이트 연결을 삭제할 수 없습니다. %s"
-
-#, python-format
-msgid "Unable to delete VPN service. %s"
-msgstr "VPN 서비스를 삭제할 수 없습니다. %s"
-
-#, python-format
-msgid "Unable to delete endpoint group. %s"
-msgstr "다음 엔드포인트 그룹을 삭제할 수 없습니다. %s"
-
 msgid "Unable to retrieve IKE policies list."
 msgstr "IKE 정책 목록을 가져올 수 없습니다."
 
 msgid "Unable to retrieve IKE policy details."
 msgstr "IKE 정책 세부 정보를 가져올 수 없습니다."
-
-#, python-format
-msgid "Unable to retrieve IKE policy details. %s"
-msgstr "IKE 정책 세부 정보를 가져올 수 없습니다. %s"
 
 msgid "Unable to retrieve IPsec policies list."
 msgstr "IPsec 정책 목록을 찾지 못 했습니다."
@@ -743,19 +716,11 @@ msgstr "IPsec 정책 목록을 찾지 못 했습니다."
 msgid "Unable to retrieve IPsec policy details."
 msgstr "IPsec 정책 세부 정보를 가져올 수 없습니다."
 
-#, python-format
-msgid "Unable to retrieve IPsec policy details. %s"
-msgstr "IPsec 정책 세부 정보를 가져올 수 없습니다. %s"
-
 msgid "Unable to retrieve IPsec policy list."
 msgstr "IPsec 정책 목록을 가져올 수 없습니다."
 
 msgid "Unable to retrieve IPsec site connection details."
 msgstr "IPsec 사이트 연결 세부 정보를 가져올 수 없습니다."
-
-#, python-format
-msgid "Unable to retrieve IPsec site connection details. %s"
-msgstr "IPsec 사이트 접속 세부 정보를 찾지 못 했습니다. %s"
 
 msgid "Unable to retrieve IPsec site connections list."
 msgstr "IPsec 사이트 연결 목록을 가져올 수 없습니다."
@@ -763,19 +728,11 @@ msgstr "IPsec 사이트 연결 목록을 가져올 수 없습니다."
 msgid "Unable to retrieve VPN service details."
 msgstr "VPN 서비스 세부 정보를 가져올 수 없습니다."
 
-#, python-format
-msgid "Unable to retrieve VPN service details. %s"
-msgstr "VPN 서비스 세부 정보를 가져올 수 없습니다. %s"
-
 msgid "Unable to retrieve VPN services list."
 msgstr "VPN 서비스 목록을 가져올 수 없습니다."
 
 msgid "Unable to retrieve endpoint group details."
 msgstr "엔드포인트 그룹 세부 정보를 가져올 수 없습니다."
-
-#, python-format
-msgid "Unable to retrieve endpoint group details. %s"
-msgstr "엔드포인트 그룹 세부 정보를 가져올 수 없습니다. %s"
 
 msgid "Unable to retrieve endpoint group list."
 msgstr "엔드포인트 그룹 목록을 가져올 수 없습니다."
