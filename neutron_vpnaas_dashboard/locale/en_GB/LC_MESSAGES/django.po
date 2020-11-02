@@ -6,15 +6,16 @@
 # Jacky Hu <hudayou@hotmail.com>, 2017. #zanata
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
 # Andi Chandler <andi@gowling.com>, 2019. #zanata
+# Andi Chandler <andi@gowling.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-09-04 01:59+0000\n"
+"POT-Creation-Date: 2020-10-14 12:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-01-15 12:23+0000\n"
+"PO-Revision-Date: 2020-11-02 02:59+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -524,6 +525,9 @@ msgstr "Pending Update"
 msgid "Perfect Forward Secrecy"
 msgstr "Perfect Forward Secrecy"
 
+msgid "Phase 1 negotiation mode limited to using 'main' and 'aggressive'."
+msgstr "Phase 1 negotiation mode limited to using 'main' and 'aggressive'."
+
 msgid "Pre-Shared Key (PSK) string"
 msgstr "Pre-Shared Key (PSK) string"
 
@@ -709,6 +713,21 @@ msgstr "Unable to add VPN service \"%s\"."
 #, python-format
 msgid "Unable to add endpoint group \"%s\"."
 msgstr "Unable to add endpoint group \"%s\"."
+
+msgid "Unable to delete IKE policy."
+msgstr "Unable to delete IKE policy."
+
+msgid "Unable to delete IPsec policy."
+msgstr "Unable to delete IPsec policy."
+
+msgid "Unable to delete IPsec site connection."
+msgstr "Unable to delete IPsec site connection."
+
+msgid "Unable to delete VPN service."
+msgstr "Unable to delete VPN service."
+
+msgid "Unable to delete endpoint group."
+msgstr "Unable to delete endpoint group."
 
 msgid "Unable to retrieve IKE policies list."
 msgstr "Unable to retrieve IKE policies list."
