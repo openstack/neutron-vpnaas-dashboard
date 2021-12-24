@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -61,8 +60,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Neutron VPNaaS Dashboard Release Notes'
-copyright = u'2017, OpenStack Foundation'
+project = 'Neutron VPNaaS Dashboard Release Notes'
+copyright = '2017, OpenStack Foundation'
 
 # Release notes are version independent.
 # The full version, including alpha/beta/rc tags.
