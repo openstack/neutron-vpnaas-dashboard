@@ -15,9 +15,9 @@
 
 from django import template
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
+from django.utils.translation import ngettext_lazy
 from django.utils.translation import pgettext_lazy
-from django.utils.translation import ugettext_lazy as _
-from django.utils.translation import ungettext_lazy
 
 from horizon import exceptions
 from horizon import tables
@@ -81,7 +81,7 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_present(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Delete VPN Service",
             u"Delete VPN Services",
             count
@@ -89,7 +89,7 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_past(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Scheduled deletion of VPN service",
             u"Scheduled deletion of VPN services",
             count
@@ -114,7 +114,7 @@ class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_present(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Delete Endpoint Group",
             u"Delete Endpoint Groups",
             count
@@ -122,7 +122,7 @@ class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_past(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Scheduled deletion of endpoint group",
             u"Scheduled deletion of endpoint groups",
             count
@@ -142,7 +142,7 @@ class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_present(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Delete IKE Policy",
             u"Delete IKE Policies",
             count
@@ -150,7 +150,7 @@ class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_past(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Scheduled deletion of IKE policy",
             u"Scheduled deletion of IKE policies",
             count
@@ -175,7 +175,7 @@ class DeleteIPsecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_present(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Delete IPsec Policy",
             u"Delete IPsec Policies",
             count
@@ -183,7 +183,7 @@ class DeleteIPsecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
 
     @staticmethod
     def action_past(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Scheduled deletion of IPsec policy",
             u"Scheduled deletion of IPsec policies",
             count
@@ -209,7 +209,7 @@ class DeleteIPsecSiteConnectionLink(policy.PolicyTargetMixin,
 
     @staticmethod
     def action_present(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Delete IPsec Site Connection",
             u"Delete IPsec Site Connections",
             count
@@ -217,7 +217,7 @@ class DeleteIPsecSiteConnectionLink(policy.PolicyTargetMixin,
 
     @staticmethod
     def action_past(count):
-        return ungettext_lazy(
+        return ngettext_lazy(
             u"Scheduled deletion of IPsec site connection",
             u"Scheduled deletion of IPsec site connections",
             count
