@@ -8,6 +8,7 @@ Neutron VPNaaS Dashboard Release Notes
    unreleased
    yoga
    xena
+   wallaby
    victoria
    ussuri
    train
