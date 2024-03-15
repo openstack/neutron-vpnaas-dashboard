@@ -255,7 +255,8 @@ class VPNTests(test.TestCase):
         self.assertEqual(workflow.name, workflows.AddVPNService.name)
 
         expected_objs = ['<AddVPNServiceStep: addvpnserviceaction>', ]
-        self.assertQuerysetEqual(workflow.steps, expected_objs)
+        steps = [repr(step) for step in workflow.steps]
+        self.assertQuerysetEqual(steps, expected_objs)
 
         self.mock_network_list_for_tenant.assert_called_once_with(
             helpers.IsHttpRequest(), self.tenant.id)
@@ -331,7 +332,8 @@ class VPNTests(test.TestCase):
         self.assertEqual(workflow.name, workflows.AddEndpointGroup.name)
 
         expected_objs = ['<AddEndpointGroupStep: addendpointgroupaction>', ]
-        self.assertQuerysetEqual(workflow.steps, expected_objs)
+        steps = [repr(step) for step in workflow.steps]
+        self.assertQuerysetEqual(steps, expected_objs)
         self.mock_network_list_for_tenant.assert_called_once_with(
             helpers.IsHttpRequest(), self.tenant.id)
 
@@ -389,7 +391,8 @@ class VPNTests(test.TestCase):
         self.assertEqual(workflow.name, workflows.AddIKEPolicy.name)
 
         expected_objs = ['<AddIKEPolicyStep: addikepolicyaction>', ]
-        self.assertQuerysetEqual(workflow.steps, expected_objs)
+        steps = [repr(step) for step in workflow.steps]
+        self.assertQuerysetEqual(steps, expected_objs)
 
     @helpers.create_mocks({api_vpn: ('ikepolicy_create', )})
     def test_add_ikepolicy_post(self):
@@ -448,7 +451,8 @@ class VPNTests(test.TestCase):
         self.assertEqual(workflow.name, workflows.AddIPsecPolicy.name)
 
         expected_objs = ['<AddIPsecPolicyStep: addipsecpolicyaction>', ]
-        self.assertQuerysetEqual(workflow.steps, expected_objs)
+        steps = [repr(step) for step in workflow.steps]
+        self.assertQuerysetEqual(steps, expected_objs)
 
     @helpers.create_mocks({api_vpn: ('ipsecpolicy_create', )})
     def test_add_ipsecpolicy_post(self):
@@ -525,7 +529,8 @@ class VPNTests(test.TestCase):
                          'addipsecsiteconnectionaction>',
                          '<AddIPsecSiteConnectionOptionalStep: '
                          'addipsecsiteconnectionoptionalaction>', ]
-        self.assertQuerysetEqual(workflow.steps, expected_objs)
+        steps = [repr(step) for step in workflow.steps]
+        self.assertQuerysetEqual(steps, expected_objs)
 
         self.mock_ikepolicy_list.assert_called_once_with(
             helpers.IsHttpRequest(),
