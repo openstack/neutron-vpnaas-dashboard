@@ -11,7 +11,6 @@
 #    under the License.
 
 from neutronclient.v2_0 import client
-
 from openstack_dashboard import api
 from openstack_dashboard.test import helpers
 

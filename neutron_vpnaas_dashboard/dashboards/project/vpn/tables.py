@@ -18,10 +18,8 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import ngettext_lazy
 from django.utils.translation import pgettext_lazy
-
 from horizon import exceptions
 from horizon import tables
-
 from openstack_dashboard import policy
 
 from neutron_vpnaas_dashboard.api import vpn as api_vpn

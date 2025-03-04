@@ -13,11 +13,9 @@
 #    under the License.
 
 from django.utils.translation import gettext_lazy as _
-
 from horizon import exceptions
 from horizon import forms
 from horizon import workflows
-
 from openstack_dashboard import api
 
 from neutron_vpnaas_dashboard.api import vpn as api_vpn

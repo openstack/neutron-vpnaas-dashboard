@@ -13,9 +13,7 @@
 #    under the License.
 
 from django.urls import reverse
-
 from horizon.workflows import views
-
 from openstack_dashboard import api
 from openstack_dashboard.test import helpers
 

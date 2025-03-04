@@ -15,9 +15,7 @@
 import logging
 
 from django.utils.translation import gettext_lazy as _
-
 import horizon
-
 from openstack_dashboard.api import neutron
 
 LOG = logging.getLogger(__name__)

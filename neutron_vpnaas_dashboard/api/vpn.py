@@ -15,7 +15,6 @@
 from collections import OrderedDict
 
 from horizon.utils.memoized import memoized
-
 from openstack_dashboard.api import neutron
 from openstack_dashboard.contrib.developer.profiler import api as profiler
 
