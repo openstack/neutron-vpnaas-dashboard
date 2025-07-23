@@ -78,4 +78,4 @@ Restart Apache:
 
 .. code-block:: console
 
-   $ sudo service apache2 restart
+   $ sudo systemctl restart apache2
