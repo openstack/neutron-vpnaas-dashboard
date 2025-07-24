@@ -80,16 +80,16 @@ class DeleteVPNServiceLink(policy.PolicyTargetMixin, tables.DeleteAction):
     @staticmethod
     def action_present(count):
         return ngettext_lazy(
-            u"Delete VPN Service",
-            u"Delete VPN Services",
+            "Delete VPN Service",
+            "Delete VPN Services",
             count
         )
 
     @staticmethod
     def action_past(count):
         return ngettext_lazy(
-            u"Scheduled deletion of VPN service",
-            u"Scheduled deletion of VPN services",
+            "Scheduled deletion of VPN service",
+            "Scheduled deletion of VPN services",
             count
         )
 
@@ -113,16 +113,16 @@ class DeleteEndpointGroupLink(policy.PolicyTargetMixin, tables.DeleteAction):
     @staticmethod
     def action_present(count):
         return ngettext_lazy(
-            u"Delete Endpoint Group",
-            u"Delete Endpoint Groups",
+            "Delete Endpoint Group",
+            "Delete Endpoint Groups",
             count
         )
 
     @staticmethod
     def action_past(count):
         return ngettext_lazy(
-            u"Scheduled deletion of endpoint group",
-            u"Scheduled deletion of endpoint groups",
+            "Scheduled deletion of endpoint group",
+            "Scheduled deletion of endpoint groups",
             count
         )
 
@@ -141,16 +141,16 @@ class DeleteIKEPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
     @staticmethod
     def action_present(count):
         return ngettext_lazy(
-            u"Delete IKE Policy",
-            u"Delete IKE Policies",
+            "Delete IKE Policy",
+            "Delete IKE Policies",
             count
         )
 
     @staticmethod
     def action_past(count):
         return ngettext_lazy(
-            u"Scheduled deletion of IKE policy",
-            u"Scheduled deletion of IKE policies",
+            "Scheduled deletion of IKE policy",
+            "Scheduled deletion of IKE policies",
             count
         )
 
@@ -174,16 +174,16 @@ class DeleteIPsecPolicyLink(policy.PolicyTargetMixin, tables.DeleteAction):
     @staticmethod
     def action_present(count):
         return ngettext_lazy(
-            u"Delete IPsec Policy",
-            u"Delete IPsec Policies",
+            "Delete IPsec Policy",
+            "Delete IPsec Policies",
             count
         )
 
     @staticmethod
     def action_past(count):
         return ngettext_lazy(
-            u"Scheduled deletion of IPsec policy",
-            u"Scheduled deletion of IPsec policies",
+            "Scheduled deletion of IPsec policy",
+            "Scheduled deletion of IPsec policies",
             count
         )
 
@@ -208,16 +208,16 @@ class DeleteIPsecSiteConnectionLink(policy.PolicyTargetMixin,
     @staticmethod
     def action_present(count):
         return ngettext_lazy(
-            u"Delete IPsec Site Connection",
-            u"Delete IPsec Site Connections",
+            "Delete IPsec Site Connection",
+            "Delete IPsec Site Connections",
             count
         )
 
     @staticmethod
     def action_past(count):
         return ngettext_lazy(
-            u"Scheduled deletion of IPsec site connection",
-            u"Scheduled deletion of IPsec site connections",
+            "Scheduled deletion of IPsec site connection",
+            "Scheduled deletion of IPsec site connections",
             count
         )
 
@@ -313,28 +313,28 @@ STATUS_CHOICES = (
 STATUS_DISPLAY_CHOICES = (
     ("active", pgettext_lazy("Current status of an IPsec site connection "
                              "and VPN service",
-                             u"Active")),
+                             "Active")),
     ("down", pgettext_lazy("Current status of an IPsec site connection "
                            "and VPN service",
-                           u"Down")),
+                           "Down")),
     ("error", pgettext_lazy("Current status of an IPsec site connection "
                             "and VPN service",
-                            u"Error")),
+                            "Error")),
     ("created", pgettext_lazy("Current status of an IPsec site connection "
                               "and VPN service",
-                              u"Created")),
+                              "Created")),
     ("pending_create", pgettext_lazy("Current status of an "
                                      "IPsec site connection and VPN service",
-                                     u"Pending Create")),
+                                     "Pending Create")),
     ("pending_update", pgettext_lazy("Current status of an "
                                      "IPsec site connection and VPN service",
-                                     u"Pending Update")),
+                                     "Pending Update")),
     ("pending_delete", pgettext_lazy("Current status of an "
                                      "IPsec site connection and VPN service",
-                                     u"Pending Delete")),
+                                     "Pending Delete")),
     ("inactive", pgettext_lazy("Current status of an IPsec site connection "
                                "and VPN service",
-                               u"Inactive")),
+                               "Inactive")),
 )
 
 
