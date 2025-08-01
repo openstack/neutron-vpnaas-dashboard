@@ -1,16 +1,15 @@
 # Alexander <ainikitenkov@gmail.com>, 2016. #zanata
-# Artem <amikhalev90@gmail.com>, 2017. #zanata
 # Roman Gorshunov <roman.gorshunov@att.com>, 2020. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2025. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Neutron VPNaaS Dashboard Release Notes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-21 11:36+0000\n"
+"POT-Creation-Date: 2025-07-28 16:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-07-16 01:33+0000\n"
+"PO-Revision-Date: 2025-07-31 12:14+0000\n"
 "Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -36,11 +35,29 @@ msgstr "1.5.0"
 msgid "2.0.0"
 msgstr "2.0.0"
 
+msgid "2023.1 Series Release Notes"
+msgstr "Примечания к выпуску 2023.1"
+
+msgid "2023.2 Series Release Notes"
+msgstr "Примечания к выпуску 2023.2"
+
+msgid "2024.1 Series Release Notes"
+msgstr "Примечания к выпуску 2024.1"
+
+msgid "2024.2 Series Release Notes"
+msgstr "Примечания к выпуску 2024.2"
+
+msgid "2025.1 Series Release Notes"
+msgstr "Примечания к выпуску 2025.1"
+
 msgid "3.0.0"
 msgstr "3.0.0"
 
+msgid "7.0.0"
+msgstr "7.0.0"
+
 msgid "Add support for Endpoint Group feature."
-msgstr "Добавлена поддержка групп конечных точек."
+msgstr "Добавлена поддержка групп точек доступа."
 
 msgid ""
 "Add support the attributes of IPsec site connection to be able to get more "
@@ -53,13 +70,13 @@ msgstr ""
 "bugs/1261127>`_."
 
 msgid "Bug Fixes"
-msgstr "Исправленные ошибки"
+msgstr "Исправления ошибок"
 
 msgid "Current Series Release Notes"
-msgstr "Примечания к текущему релизу"
+msgstr "Примечания к текущему выпуску"
 
 msgid "Neutron VPNaaS Dashboard Release Notes"
-msgstr "Примечания к релизу панели Neutron VPNaaS"
+msgstr "Примечания к выпуску панели управления Neutron VPNaaS"
 
 msgid ""
 "Neutron VPNaaS support in the OpenStack Dashboard is now split out into a "
@@ -81,13 +98,13 @@ msgstr ""
 "отдельный Python модуль."
 
 msgid "New Features"
-msgstr "Новые особенности"
+msgstr "Новые возможности"
 
 msgid "Pike Series Release Notes"
-msgstr "Примечания к релизу Pike"
+msgstr "Примечания к выпуску Pike"
 
 msgid "Prelude"
-msgstr "Введение"
+msgstr "Предисловие"
 
 msgid ""
 "Python 2.7 support has been dropped. Last release of neutron-vpnaas- "
@@ -98,14 +115,21 @@ msgstr ""
 "vpnaas- dashboard, поддерживавшим Python 2.7 был OpenStack Train. "
 "Минимальная поддерживаемая neutron-vpnaas-dashboard версия – Python 3.6."
 
+msgid ""
+"Python 3.6 & 3.7 support has been dropped. The minimum version of Python now "
+"supported is Python 3.8."
+msgstr ""
+"Поддержка Python 3.6 и 3.7 прекращена. Минимальная версия Python, которая "
+"теперь поддерживается — Python 3.8."
+
 msgid "Queens Series Release Notes"
-msgstr "Примечания к релизу Queens"
+msgstr "Примечания к выпуску Queens"
 
 msgid "Rocky Series Release Notes"
-msgstr "Примечания к релизу Rocky"
+msgstr "Примечания к выпуску Rocky"
 
 msgid "Stein Series Release Notes"
-msgstr "Примечания к релизу Stein"
+msgstr "Примечания к выпуску Stein"
 
 msgid ""
 "Supported django versions are chagned aligning with the supported versions "
@@ -117,10 +141,28 @@ msgstr ""
 "1.8 по 1.10 более не поддерживаются."
 
 msgid "Train Series Release Notes"
-msgstr "Примечания к релизу Train"
+msgstr "Примечания к выпуску Train"
 
 msgid "Upgrade Notes"
-msgstr "Информация об обновлении"
+msgstr "Примечания к обновлению"
+
+msgid "Ussuri Series Release Notes"
+msgstr "Примечания к выпуску Ussuri"
+
+msgid "Victoria Series Release Notes"
+msgstr "Примечания к выпуску Victoria"
+
+msgid "Wallaby Series Release Notes"
+msgstr "Примечания к выпуску Wallaby"
+
+msgid "Xena Series Release Notes"
+msgstr "Примечания к выпуску Xena"
+
+msgid "Yoga Series Release Notes"
+msgstr "Примечания к выпуску Yoga"
+
+msgid "Zed Series Release Notes"
+msgstr "Примечания к выпуску Zed"
 
 msgid ""
 "neutron-vpnaas-dashboard now supports all auth algorithms. neutron-vpnaas "
