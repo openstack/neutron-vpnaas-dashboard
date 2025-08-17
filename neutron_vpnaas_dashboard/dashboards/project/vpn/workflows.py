@@ -584,14 +584,14 @@ class AddIPsecSiteConnectionOptionalAction(workflows.Action):
     dpd_action = forms.ThemableChoiceField(
         label=_("Dead peer detection actions"),
         required=False,
-        help_text=_("1. Hold -  ends the connection and waits for the remote "
+        help_text=_("1. Hold - ends the connection and waits for the remote "
                     "side to reconnect. 2. Clear - drops the connection and "
-                    "doesn’t try to bring it back. 3. Disabled - turns off "
+                    "does not try to bring it back. 3. Disabled - turns off "
                     "dead peer detection entirely, so no active checks are "
                     "sent. 4. Restart - starts trying to reconnect as soon "
                     "as the timeout happens. 5. Restart-by-peer - the "
                     "connection is re-established because the remote peer "
-                    "initiated the restart after a timeout or failure"))
+                    "initiated the restart after a timeout or failure."))
     dpd_interval = forms.IntegerField(
         min_value=1, label=_("Dead peer detection interval"),
         initial=30,
