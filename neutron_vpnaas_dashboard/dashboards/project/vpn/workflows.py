@@ -603,7 +603,12 @@ class AddIPsecSiteConnectionOptionalAction(workflows.Action):
         required=False,
         help_text=_("Valid integer greater than the DPD interval"))
     initiator = forms.ThemableChoiceField(
-        label=_("Initiator state"), required=False)
+        label=_("Initiator state"), required=False,
+        help_text=_("Defines which side of the connection is responsible "
+                    "for initiating. Bi-directional - the tunnel can be "
+                    "established by either endpoint. Response-only - waits "
+                    "until the remote peer sends a request, and only then "
+                    "the connection is established."))
     admin_state_up = forms.BooleanField(
         label=_("Enable Admin State"),
         help_text=_("The state of IPsec site connection to start in. "
