@@ -248,19 +248,19 @@ class AddIKEPolicyAction(workflows.Action):
         super(AddIKEPolicyAction, self).__init__(request, *args, **kwargs)
 
         auth_algorithm_choices = [
-            ("sha1", "sha1"),
-            ('sha256', _('sha256')),
-            ('sha384', _('sha384')),
-            ('sha512', _('sha512')),
+            ("sha1", "SHA-1"),
+            ('sha256', _('SHA-256')),
+            ('sha384', _('SHA-384')),
+            ('sha512', _('SHA-512')),
         ]
         self.fields['auth_algorithm'].choices = auth_algorithm_choices
         # Currently this field has only one choice, so mark it as readonly.
         self.fields['auth_algorithm'].widget.attrs['readonly'] = True
 
-        encryption_algorithm_choices = [("3des", "3des"),
-                                        ("aes-128", "aes-128"),
-                                        ("aes-192", "aes-192"),
-                                        ("aes-256", "aes-256")]
+        encryption_algorithm_choices = [("3des", "3DES"),
+                                        ("aes-128", "AES-128"),
+                                        ("aes-192", "AES-192"),
+                                        ("aes-256", "AES-256")]
         self.fields[
             'encryption_algorithm'].choices = encryption_algorithm_choices
         self.fields['encryption_algorithm'].initial = "aes-128"
@@ -355,10 +355,10 @@ class AddIPsecPolicyAction(workflows.Action):
         super(AddIPsecPolicyAction, self).__init__(request, *args, **kwargs)
 
         auth_algorithm_choices = [
-            ("sha1", "sha1"),
-            ('sha256', _('sha256')),
-            ('sha384', _('sha384')),
-            ('sha512', _('sha512')),
+            ("sha1", "SHA-1"),
+            ('sha256', _('SHA-256')),
+            ('sha384', _('SHA-384')),
+            ('sha512', _('SHA-512')),
         ]
         self.fields['auth_algorithm'].choices = auth_algorithm_choices
         # Currently this field has only one choice, so mark it as readonly.
@@ -368,10 +368,10 @@ class AddIPsecPolicyAction(workflows.Action):
                                       ("transport", "transport")]
         self.fields['encapsulation_mode'].choices = encapsulation_mode_choices
 
-        encryption_algorithm_choices = [("3des", "3des"),
-                                        ("aes-128", "aes-128"),
-                                        ("aes-192", "aes-192"),
-                                        ("aes-256", "aes-256")]
+        encryption_algorithm_choices = [("3des", "3DES"),
+                                        ("aes-128", "AES-128"),
+                                        ("aes-192", "AES-192"),
+                                        ("aes-256", "AES-256")]
         self.fields[
             'encryption_algorithm'].choices = encryption_algorithm_choices
         self.fields['encryption_algorithm'].initial = "aes-128"
@@ -387,9 +387,9 @@ class AddIPsecPolicyAction(workflows.Action):
         self.fields['pfs'].choices = pfs_choices
         self.fields['pfs'].initial = "group5"
 
-        transform_protocol_choices = [("esp", "esp"),
-                                      ("ah", "ah"),
-                                      ("ah-esp", "ah-esp")]
+        transform_protocol_choices = [("esp", "ESP"),
+                                      ("ah", "AH"),
+                                      ("ah-esp", "AH-ESP")]
         self.fields['transform_protocol'].choices = transform_protocol_choices
 
     class Meta(object):

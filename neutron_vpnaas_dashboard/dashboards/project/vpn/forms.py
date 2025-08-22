@@ -93,17 +93,17 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
         required=False, max_length=80, label=_("Description"))
     auth_algorithm = forms.ThemableChoiceField(
         label=_("Authorization algorithm"),
-        choices=[('sha1', _('sha1')),
-                 ('sha256', _('sha256')),
-                 ('sha384', _('sha384')),
-                 ('sha512', _('sha512'))],
+        choices=[('sha1', _('SHA-1')),
+                 ('sha256', _('SHA-256')),
+                 ('sha384', _('SHA-384')),
+                 ('sha512', _('SHA-512'))],
         required=False)
     encryption_algorithm = forms.ThemableChoiceField(
         label=_("Encryption algorithm"),
-        choices=[('3des', _('3des')),
-                 ('aes-128', _('aes-128')),
-                 ('aes-192', _('aes-192')),
-                 ('aes-256', _('aes-256'))],
+        choices=[('3des', _('3DES')),
+                 ('aes-128', _('AES-128')),
+                 ('aes-192', _('AES-192')),
+                 ('aes-256', _('AES-256'))],
         required=False)
     ike_version = forms.ThemableChoiceField(
         label=_("IKE version"),
@@ -170,10 +170,10 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
     # Currently this field has only one choice, so mark it as readonly.
     auth_algorithm = forms.ThemableChoiceField(
         label=_("Authorization algorithm"),
-        choices=[('sha1', _('sha1')),
-                 ('sha256', _('sha256')),
-                 ('sha384', _('sha384')),
-                 ('sha512', _('sha512'))],
+        choices=[('sha1', _('SHA-1')),
+                 ('sha256', _('SHA-256')),
+                 ('sha384', _('SHA-384')),
+                 ('sha512', _('SHA-512'))],
         required=False)
     encapsulation_mode = forms.ThemableChoiceField(
         label=_("Encapsulation mode"),
@@ -182,10 +182,10 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
         required=False)
     encryption_algorithm = forms.ThemableChoiceField(
         label=_("Encryption algorithm"),
-        choices=[('3des', _('3des')),
-                 ('aes-128', _('aes-128')),
-                 ('aes-192', _('aes-192')),
-                 ('aes-256', _('aes-256'))],
+        choices=[('3des', _('3DES')),
+                 ('aes-128', _('AES-128')),
+                 ('aes-192', _('AES-192')),
+                 ('aes-256', _('AES-256'))],
         required=False)
     # Currently this field has only one choice, so mark it as readonly.
     lifetime_units = forms.ThemableChoiceField(
@@ -206,9 +206,9 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
         required=False)
     transform_protocol = forms.ThemableChoiceField(
         label=_("Transform Protocol"),
-        choices=[('esp', _('esp')),
-                 ('ah', _('ah')),
-                 ('ah-esp', _('ah-esp'))],
+        choices=[('esp', _('ESP')),
+                 ('ah', _('AH')),
+                 ('ah-esp', _('AH-ESP'))],
         required=False)
 
     failure_url = 'horizon:project:vpn:index'
