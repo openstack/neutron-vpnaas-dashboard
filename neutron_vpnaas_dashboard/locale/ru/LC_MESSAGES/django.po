@@ -15,12 +15,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-08-12 16:06+0000\n"
+"POT-Creation-Date: 2025-08-25 07:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-08-18 09:53+0000\n"
-"Last-Translator: Dmitriy Chubinidze <dcu995@gmail.com>\n"
+"PO-Revision-Date: 2025-08-25 10:02+0000\n"
+"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -38,23 +38,38 @@ msgid "-"
 msgstr "-"
 
 msgid ""
-"1. Hold -  ends the connection and waits for the remote side to reconnect. "
-"2. Clear - drops the connection and doesn’t try to bring it back. 3. "
-"Disabled - turns off dead peer detection entirely, so no active checks are "
-"sent. 4. Restart - starts trying to reconnect as soon as the timeout "
-"happens. 5. Restart-by-peer - the connection is re-established because the "
-"remote peer initiated the restart after a timeout or failure"
+"1. Hold - ends the connection and waits for the remote side to reconnect. 2. "
+"Clear - drops the connection and does not try to bring it back. 3. Disabled "
+"- turns off dead peer detection entirely, so no active checks are sent. 4. "
+"Restart - starts trying to reconnect as soon as the timeout happens. 5. "
+"Restart-by-peer - the connection is re-established because the remote peer "
+"initiated the restart after a timeout or failure."
 msgstr ""
 "1. Hold - разрыв соединения и ожидание повторного подключения удаленной "
 "стороны. 2. Clear - разрыв соединения и отсутствие попыток его восстановить. "
-"3. Disabled - полное отключение DPD, поэтому активные проверки не "
-"отправляются. 4. Restart - начало попыток переподключения сразу после "
-"истечения времени ожидания. 5. Restart-by-peer - соединение "
-"восстанавливается, поскольку удаленный узел инициировал перезапуск после "
-"истечения времени ожидания или сбоя"
+"3. Disabled - полное отключение обнаружения неработающих удаленных узлов, "
+"поэтому активные проверки не отправляются. 4. Restart - начало попыток "
+"повторного подключения сразу после истечения времени ожидания. 5. Restart-by-"
+"peer - соединение восстанавливается, поскольку удаленный узел инициировал "
+"перезапуск после истечения времени ожидания или сбоя."
 
-msgid "3des"
-msgstr "3des"
+msgid "3DES"
+msgstr "3DES"
+
+msgid "AES-128"
+msgstr "AES-128"
+
+msgid "AES-192"
+msgstr "AES-192"
+
+msgid "AES-256"
+msgstr "AES-256"
+
+msgid "AH"
+msgstr "AH"
+
+msgid "AH-ESP"
+msgstr "AH-ESP"
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Active"
@@ -179,6 +194,17 @@ msgstr "Интервал обнаружения недоступного пир�
 msgid "Dead peer detection timeout"
 msgstr "Время ожидания недоступного пира"
 
+msgid ""
+"Defines which side of the connection is responsible for initiating. Bi-"
+"directional - the tunnel can be established by either endpoint. Response-"
+"only - waits until the remote peer sends a request, and only then the "
+"connection is established."
+msgstr ""
+"Определяет, какая сторона соединения отвечает за инициирование. Bi-"
+"directional - туннель может быть установлен любой точкой доступа. Response-"
+"only - ждёт, пока удаленный узел отправит запрос, и только после этого "
+"соединение устанавливается."
+
 msgid "Delete Endpoint Group"
 msgid_plural "Delete Endpoint Groups"
 msgstr[0] "Удалить группу точки доступа"
@@ -218,6 +244,9 @@ msgstr "Описание:"
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Down"
 msgstr "Выключен"
+
+msgid "ESP"
+msgstr "ESP"
 
 msgid "Edit Connection"
 msgstr "Изменить подключение"
@@ -609,6 +638,18 @@ msgstr "Маршрутизатор ="
 msgid "Router ID ="
 msgstr "ID маршрутизатора ="
 
+msgid "SHA-1"
+msgstr "SHA-1"
+
+msgid "SHA-256"
+msgstr "SHA-256"
+
+msgid "SHA-384"
+msgstr "SHA-384"
+
+msgid "SHA-512"
+msgstr "SHA-512"
+
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
@@ -721,8 +762,8 @@ msgstr ""
 msgid "The type of IPsec tunnel (tunnel/transport) to be used."
 msgstr "Тип туннеля IPsec (туннель/транспорт) который будет использован."
 
-msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
-msgstr "Тип протокола (esp, ah, ah-esp) используемый в политике IPsec."
+msgid "The type of protocol (ESP, AH, AH-ESP) used in IPsec policy."
+msgstr "Тип протокола (ESP, AH, AH-ESP) используемый в политике IPsec."
 
 msgid "The type of version (v1/v2) that needs to be filtered."
 msgstr "Тип версии (v1/v2), которую необходимо отфильтровать."
@@ -838,11 +879,11 @@ msgstr "Служба VPN %s была успешно обновлена."
 msgid "VPN service associated with this connection"
 msgstr "Служба VPN для данного подключения"
 
-msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
-msgstr "Доступные алгоритмы 3des, aes-128, aes-192 и aes-256."
+msgid "Valid algorithms are 3DES, AES-128, AES-192 and AES-256."
+msgstr "Доступные алгоритмы 3DES, AES-128, AES-192 и AES-256."
 
-msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
-msgstr "Доступные алгоритмы sha1, sha256, sha384 и sha512."
+msgid "Valid algorithms are SHA-1, SHA-256, SHA-384 and SHA-512."
+msgstr "Доступные алгоритмы SHA-1, SHA-256, SHA-384 и SHA-512."
 
 msgid "Valid integer greater than the DPD interval"
 msgstr "Допустимое целое число, большее интервала DPD"
@@ -871,21 +912,6 @@ msgstr "Здесь вы можете обновить данные VPN служ�
 msgid "You may update endpoint group details here."
 msgstr "Здесь вы можете изменить детали группы точки доступа."
 
-msgid "aes-128"
-msgstr "aes-128"
-
-msgid "aes-192"
-msgstr "aes-192"
-
-msgid "aes-256"
-msgstr "aes-256"
-
-msgid "ah"
-msgstr "ah"
-
-msgid "ah-esp"
-msgstr "ah-esp"
-
 msgid "bi-directional"
 msgstr "bi-directional"
 
@@ -897,9 +923,6 @@ msgstr "disabled"
 
 msgid "down"
 msgstr "выключено"
-
-msgid "esp"
-msgstr "esp"
 
 msgid "group14"
 msgstr "group14"
@@ -924,18 +947,6 @@ msgstr "restart-by-peer"
 
 msgid "seconds"
 msgstr "сек."
-
-msgid "sha1"
-msgstr "sha1"
-
-msgid "sha256"
-msgstr "sha256"
-
-msgid "sha384"
-msgstr "sha384"
-
-msgid "sha512"
-msgstr "sha512"
 
 msgid "transport"
 msgstr "транспорт"

@@ -13,16 +13,15 @@
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2018. #zanata
 # Wonil Choi <wonil0522@gmail.com>, 2018. #zanata
-# ByungYeol Woo <wby1089@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-10-02 07:38+0000\n"
+"POT-Creation-Date: 2025-08-25 07:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-05-01 10:56+0000\n"
+"PO-Revision-Date: 2018-08-28 11:02+0000\n"
 "Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
@@ -38,9 +37,6 @@ msgstr ""
 
 msgid "-"
 msgstr "-"
-
-msgid "3des"
-msgstr "3des"
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Active"
@@ -669,9 +665,6 @@ msgstr ""
 msgid "The type of IPsec tunnel (tunnel/transport) to be used."
 msgstr "사용될 IPsec 터널 (터널/전송) 유형입니다."
 
-msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
-msgstr "IPsec 정책에 사용되는 프로토콜 유형(esp, ah, ah-esp)입니다."
-
 msgid "The type of version (v1/v2) that needs to be filtered."
 msgstr "필터링이 필요한 버전 유형(v1/v2)입니다."
 
@@ -771,12 +764,6 @@ msgstr "VPN 서비스 %s를 성공적으로 업데이트하였습니다."
 msgid "VPN service associated with this connection"
 msgstr "이 연결에 연동할 VPN 서비스 "
 
-msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
-msgstr "유효한 알고리즘은 3des, aes-128, aes-192, aes-256 입니다."
-
-msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
-msgstr "유효한 알고리즘은 sha1, sha256, sha384, sha512 입니다."
-
 msgid "Valid integer greater than the DPD interval"
 msgstr "DPD 간격을 보다 큰 유효한 정수"
 
@@ -804,21 +791,6 @@ msgstr "VPN 서비스의 세부 정보를 업데이트 할 수 있습니다."
 msgid "You may update endpoint group details here."
 msgstr "엔드포인트 그룹 세부 사항을 여기서 업데이트 할 수 있습니다."
 
-msgid "aes-128"
-msgstr "aes-128"
-
-msgid "aes-192"
-msgstr "aes-192"
-
-msgid "aes-256"
-msgstr "aes-256"
-
-msgid "ah"
-msgstr "ah"
-
-msgid "ah-esp"
-msgstr "ah-esp"
-
 msgid "bi-directional"
 msgstr "bi-directional"
 
@@ -830,9 +802,6 @@ msgstr "disabled"
 
 msgid "down"
 msgstr "down"
-
-msgid "esp"
-msgstr "esp"
 
 msgid "group14"
 msgstr "group14"
@@ -857,18 +826,6 @@ msgstr "restart-by-peer"
 
 msgid "seconds"
 msgstr "초"
-
-msgid "sha1"
-msgstr "sha1"
-
-msgid "sha256"
-msgstr "sha256"
-
-msgid "sha384"
-msgstr "sha384"
-
-msgid "sha512"
-msgstr "sha512"
 
 msgid "transport"
 msgstr "transport"

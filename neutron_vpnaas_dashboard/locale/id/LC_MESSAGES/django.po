@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-10-02 07:38+0000\n"
+"POT-Creation-Date: 2025-08-25 07:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,9 +28,6 @@ msgstr ""
 
 msgid "-"
 msgstr "-"
-
-msgid "3des"
-msgstr "3des"
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Active"
@@ -663,9 +660,6 @@ msgstr ""
 msgid "The type of IPsec tunnel (tunnel/transport) to be used."
 msgstr "Jenis IPsec tunnel (tunnel/transport) yang akan digunakan."
 
-msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
-msgstr "Jenis protokol (esp, ah, ah-esp) digunakan dalam kebijakan IPsec."
-
 msgid "The type of version (v1/v2) that needs to be filtered."
 msgstr "Jenis versi (v1 / v2) yang perlu disaring."
 
@@ -765,12 +759,6 @@ msgstr "VPN service %s berhasil diperbarui."
 msgid "VPN service associated with this connection"
 msgstr "Layanan VPN yang terkait dengan koneksi ini"
 
-msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
-msgstr "Algoritma yang valid adalah 3des, aes-128, aes-192 dan aes-256."
-
-msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
-msgstr "Algoritma yang valid adalah sha1, sha256, sha384 dan sha512."
-
 msgid "Valid integer greater than the DPD interval"
 msgstr "Bilangan bulat yang valid lebih besar dari DPD interval"
 
@@ -798,21 +786,6 @@ msgstr "Anda dapat memperbarui rincian layanan VPN di sini."
 msgid "You may update endpoint group details here."
 msgstr "Anda dapat memperbarui rincian grup endpoint di sini."
 
-msgid "aes-128"
-msgstr "aes-128"
-
-msgid "aes-192"
-msgstr "aes-192"
-
-msgid "aes-256"
-msgstr "aes-256"
-
-msgid "ah"
-msgstr "ah"
-
-msgid "ah-esp"
-msgstr "ah-esp"
-
 msgid "bi-directional"
 msgstr "bi-directional (dua arah)"
 
@@ -824,9 +797,6 @@ msgstr "disabled"
 
 msgid "down"
 msgstr "down (turun)"
-
-msgid "esp"
-msgstr "esp"
 
 msgid "group14"
 msgstr "grup14"
@@ -851,18 +821,6 @@ msgstr "restart-by-peer"
 
 msgid "seconds"
 msgstr "seconds (detik)"
-
-msgid "sha1"
-msgstr "sha1"
-
-msgid "sha256"
-msgstr "sha256"
-
-msgid "sha384"
-msgstr "sha384"
-
-msgid "sha512"
-msgstr "sha512"
 
 msgid "transport"
 msgstr "transport"

@@ -1,12 +1,11 @@
 # Akihiro Motoki <amotoki@gmail.com>, 2018. #zanata
 # Yuko Katabami <yukokatabami@gmail.com>, 2018. #zanata
 # Akihiro Motoki <amotoki@gmail.com>, 2019. #zanata
-# Takashi Kuroda <tkuroda@redhat.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-10-02 07:38+0000\n"
+"POT-Creation-Date: 2025-08-25 07:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,9 +25,6 @@ msgstr ""
 
 msgid "-"
 msgstr "-"
-
-msgid "3des"
-msgstr "3des"
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Active"
@@ -660,11 +656,6 @@ msgstr ""
 msgid "The type of IPsec tunnel (tunnel/transport) to be used."
 msgstr "使用する IPsec トンネル種別です。tunnel、transport を指定できます。"
 
-msgid "The type of protocol (esp, ah, ah-esp) used in IPsec policy."
-msgstr ""
-"この IPsec ポリシーで使用するプロトコル種別です。esp、ah、ah-esp を指定できま"
-"す。"
-
 msgid "The type of version (v1/v2) that needs to be filtered."
 msgstr "使用する IKE バージョンの種類です。v1、v2 を指定できます。"
 
@@ -764,12 +755,6 @@ msgstr "VPN サービス %s が正常に更新されました。"
 msgid "VPN service associated with this connection"
 msgstr "この接続に関連付ける VPN サービス"
 
-msgid "Valid algorithms are 3des, aes-128, aes-192 and aes-256."
-msgstr "有効なアルゴリズムは 3des、aes-128、aes-192、および aes-256 です。"
-
-msgid "Valid algorithms are sha1, sha256, sha384 and sha512."
-msgstr "有効なアルゴリズムは sha1、sha256、sha384、および sha512 です。"
-
 msgid "Valid integer greater than the DPD interval"
 msgstr "Dead Peer 検出間隔よりも大きい有効な整数値"
 
@@ -797,21 +782,6 @@ msgstr "VPN サービスの詳細をここから更新できます。"
 msgid "You may update endpoint group details here."
 msgstr "エンドポイントグループの詳細をここから更新できます。"
 
-msgid "aes-128"
-msgstr "aes-128"
-
-msgid "aes-192"
-msgstr "aes-192"
-
-msgid "aes-256"
-msgstr "aes-256"
-
-msgid "ah"
-msgstr "ah"
-
-msgid "ah-esp"
-msgstr "ah-esp"
-
 msgid "bi-directional"
 msgstr "bi-directional"
 
@@ -823,9 +793,6 @@ msgstr "disabled"
 
 msgid "down"
 msgstr "down"
-
-msgid "esp"
-msgstr "esp"
 
 msgid "group14"
 msgstr "group14"
@@ -850,18 +817,6 @@ msgstr "restart-by-peer"
 
 msgid "seconds"
 msgstr "秒"
-
-msgid "sha1"
-msgstr "sha1"
-
-msgid "sha256"
-msgstr "sha256"
-
-msgid "sha384"
-msgstr "sha384"
-
-msgid "sha512"
-msgstr "sha512"
 
 msgid "transport"
 msgstr "トランスポート"
