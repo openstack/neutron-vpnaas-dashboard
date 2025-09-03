@@ -254,7 +254,7 @@ class VPNTests(test.TestCase):
 
         expected_objs = ['<AddVPNServiceStep: addvpnserviceaction>', ]
         steps = [repr(step) for step in workflow.steps]
-        self.assertQuerysetEqual(steps, expected_objs)
+        self.assertQuerySetEqual(steps, expected_objs)
 
         self.mock_network_list_for_tenant.assert_called_once_with(
             helpers.IsHttpRequest(), self.tenant.id)
@@ -331,7 +331,7 @@ class VPNTests(test.TestCase):
 
         expected_objs = ['<AddEndpointGroupStep: addendpointgroupaction>', ]
         steps = [repr(step) for step in workflow.steps]
-        self.assertQuerysetEqual(steps, expected_objs)
+        self.assertQuerySetEqual(steps, expected_objs)
         self.mock_network_list_for_tenant.assert_called_once_with(
             helpers.IsHttpRequest(), self.tenant.id)
 
@@ -390,7 +390,7 @@ class VPNTests(test.TestCase):
 
         expected_objs = ['<AddIKEPolicyStep: addikepolicyaction>', ]
         steps = [repr(step) for step in workflow.steps]
-        self.assertQuerysetEqual(steps, expected_objs)
+        self.assertQuerySetEqual(steps, expected_objs)
 
     @helpers.create_mocks({api_vpn: ('ikepolicy_create', )})
     def test_add_ikepolicy_post(self):
@@ -450,7 +450,7 @@ class VPNTests(test.TestCase):
 
         expected_objs = ['<AddIPsecPolicyStep: addipsecpolicyaction>', ]
         steps = [repr(step) for step in workflow.steps]
-        self.assertQuerysetEqual(steps, expected_objs)
+        self.assertQuerySetEqual(steps, expected_objs)
 
     @helpers.create_mocks({api_vpn: ('ipsecpolicy_create', )})
     def test_add_ipsecpolicy_post(self):
@@ -528,7 +528,7 @@ class VPNTests(test.TestCase):
                          '<AddIPsecSiteConnectionOptionalStep: '
                          'addipsecsiteconnectionoptionalaction>', ]
         steps = [repr(step) for step in workflow.steps]
-        self.assertQuerysetEqual(steps, expected_objs)
+        self.assertQuerySetEqual(steps, expected_objs)
 
         self.mock_ikepolicy_list.assert_called_once_with(
             helpers.IsHttpRequest(),
