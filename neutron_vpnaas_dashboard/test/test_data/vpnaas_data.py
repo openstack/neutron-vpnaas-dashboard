@@ -12,6 +12,11 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+from openstack.network.v2 import vpn_endpoint_group
+from openstack.network.v2 import vpn_ike_policy
+from openstack.network.v2 import vpn_ipsec_policy
+from openstack.network.v2 import vpn_ipsec_site_connection
+from openstack.network.v2 import vpn_service
 from openstack_dashboard.test.test_data import utils
 
 from neutron_vpnaas_dashboard.api import vpn
@@ -25,12 +30,12 @@ def data(TEST):
     TEST.ipsecsiteconnections = utils.TestDataContainer()
     TEST.endpointgroups = utils.TestDataContainer()
 
-    # Data return by neutronclient.
-    TEST.api_vpnservices = utils.TestDataContainer()
-    TEST.api_ikepolicies = utils.TestDataContainer()
-    TEST.api_ipsecpolicies = utils.TestDataContainer()
-    TEST.api_ipsecsiteconnections = utils.TestDataContainer()
-    TEST.api_endpointgroups = utils.TestDataContainer()
+    # Data return by OpenstackSDK.
+    TEST.api_vpnservices = list()
+    TEST.api_ikepolicies = list()
+    TEST.api_ipsecpolicies = list()
+    TEST.api_ipsecsiteconnections = list()
+    TEST.api_endpointgroups = list()
 
     # 1st VPN service.
     vpnservice_dict = {'id': '09a26949-6231-4f72-942a-0c8c0ddd4d61',
@@ -45,7 +50,7 @@ def data(TEST):
                        'status': 'Active',
                        'ipsecsiteconns': TEST.ipsecsiteconnections.list()
                        }
-    TEST.api_vpnservices.add(vpnservice_dict)
+    TEST.api_vpnservices.append(vpn_service.VpnService(**vpnservice_dict))
     TEST.vpnservices.add(vpn.VPNService(vpnservice_dict))
 
     # 2nd VPN service.
@@ -63,7 +68,7 @@ def data(TEST):
                        'external_v4_ip': '10.0.0.0/24',
                        'external_v6_ip': 'fd4c:a535:831c::/64'
                        }
-    TEST.api_vpnservices.add(vpnservice_dict)
+    TEST.api_vpnservices.append(vpn_service.VpnService(**vpnservice_dict))
     TEST.vpnservices.add(vpn.VPNService(vpnservice_dict))
 
     # 1st Endpoint Group
@@ -74,7 +79,8 @@ def data(TEST):
                           'type': 'subnet',
                           'endpoints': [TEST.subnets.first().id]
                           }
-    TEST.api_endpointgroups.add(endpointgroup_dict)
+    TEST.api_endpointgroups.append(vpn_endpoint_group.VpnEndpointGroup(
+        **endpointgroup_dict))
     TEST.endpointgroups.add(vpn.EndpointGroup(endpointgroup_dict))
 
     # 1st IKE policy
@@ -89,7 +95,7 @@ def data(TEST):
                       'phase1_negotiation_mode': 'main',
                       'pfs': 'group5',
                       'ipsecsiteconns': TEST.ipsecsiteconnections.list()}
-    TEST.api_ikepolicies.add(ikepolicy_dict)
+    TEST.api_ikepolicies.append(vpn_ike_policy.VpnIkePolicy(**ikepolicy_dict))
     TEST.ikepolicies.add(vpn.IKEPolicy(ikepolicy_dict))
 
     # 2nd IKE policy
@@ -104,7 +110,7 @@ def data(TEST):
                       'phase1_negotiation_mode': 'aggressive',
                       'pfs': 'group5',
                       'ipsecsiteconns': []}
-    TEST.api_ikepolicies.add(ikepolicy_dict)
+    TEST.api_ikepolicies.append(vpn_ike_policy.VpnIkePolicy(**ikepolicy_dict))
     TEST.ikepolicies.add(vpn.IKEPolicy(ikepolicy_dict))
 
     # 3rd IKE policy
@@ -119,7 +125,7 @@ def data(TEST):
                       'phase1_negotiation_mode': 'main',
                       'pfs': 'group5',
                       'ipsecsiteconns': []}
-    TEST.api_ikepolicies.add(ikepolicy_dict)
+    TEST.api_ikepolicies.append(vpn_ike_policy.VpnIkePolicy(**ikepolicy_dict))
     TEST.ikepolicies.add(vpn.IKEPolicy(ikepolicy_dict))
 
     # 1st IPsec policy
@@ -134,7 +140,8 @@ def data(TEST):
                         'pfs': 'group5',
                         'transform_protocol': 'esp',
                         'ipsecsiteconns': TEST.ipsecsiteconnections.list()}
-    TEST.api_ipsecpolicies.add(ipsecpolicy_dict)
+    TEST.api_ipsecpolicies.append(vpn_ipsec_policy.VpnIpsecPolicy(
+        **ipsecpolicy_dict))
     TEST.ipsecpolicies.add(vpn.IPsecPolicy(ipsecpolicy_dict))
 
     # 2nd IPsec policy
@@ -149,7 +156,8 @@ def data(TEST):
                         'pfs': 'group5',
                         'transform_protocol': 'esp',
                         'ipsecsiteconns': []}
-    TEST.api_ipsecpolicies.add(ipsecpolicy_dict)
+    TEST.api_ipsecpolicies.append(vpn_ipsec_policy.VpnIpsecPolicy(
+        **ipsecpolicy_dict))
     TEST.ipsecpolicies.add(vpn.IPsecPolicy(ipsecpolicy_dict))
 
     # 1st IPsec site connection
@@ -173,7 +181,9 @@ def data(TEST):
                                 'vpnservice_id': vpnservice_dict['id'],
                                 'admin_state_up': True,
                                 'status': 'Active'}
-    TEST.api_ipsecsiteconnections.add(ipsecsiteconnection_dict)
+    TEST.api_ipsecsiteconnections.append(
+        vpn_ipsec_site_connection.VpnIPSecSiteConnection(
+            **ipsecsiteconnection_dict))
     TEST.ipsecsiteconnections.add(
         vpn.IPsecSiteConnection(ipsecsiteconnection_dict))
 
@@ -196,6 +206,8 @@ def data(TEST):
                                 'vpnservice_id': vpnservice_dict['id'],
                                 'admin_state_up': True,
                                 'status': 'Active'}
-    TEST.api_ipsecsiteconnections.add(ipsecsiteconnection_dict)
+    TEST.api_ipsecsiteconnections.append(
+        vpn_ipsec_site_connection.VpnIPSecSiteConnection(
+            **ipsecsiteconnection_dict))
     TEST.ipsecsiteconnections.add(
         vpn.IPsecSiteConnection(ipsecsiteconnection_dict))

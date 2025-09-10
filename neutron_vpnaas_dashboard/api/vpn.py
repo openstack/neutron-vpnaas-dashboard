@@ -18,7 +18,7 @@ from horizon.utils.memoized import memoized
 from openstack_dashboard.api import neutron
 from openstack_dashboard.contrib.developer.profiler import api as profiler
 
-neutronclient = neutron.neutronclient
+networkclient = neutron.networkclient
 
 
 class IKEPolicy(neutron.NeutronAPIDictWrapper):
@@ -52,18 +52,14 @@ def vpnservice_create(request, **kwargs):
     :param router_id: router id for router of VPN service
     :param subnet_id: subnet id for subnet of VPN service
     """
-    body = {'vpnservice':
-            {'admin_state_up': kwargs['admin_state_up'],
-             'name': kwargs['name'],
-             'description': kwargs['description'],
-             'router_id': kwargs['router_id']
-             }
-            }
+    body = {'admin_state_up': kwargs['admin_state_up'],
+            'name': kwargs['name'],
+            'description': kwargs['description'],
+            'router_id': kwargs['router_id']}
     if kwargs.get('subnet_id'):
-        body['vpnservice']['subnet_id'] = kwargs['subnet_id']
-    vpnservice = neutronclient(request).create_vpnservice(body).get(
-        'vpnservice')
-    return VPNService(vpnservice)
+        body['subnet_id'] = kwargs['subnet_id']
+    vpnservice = networkclient(request).create_vpn_service(**body)
+    return VPNService(vpnservice.to_dict())
 
 
 @profiler.trace
@@ -75,12 +71,12 @@ def vpnservice_list(request, **kwargs):
 
 def _vpnservice_list(request, expand_subnet=False, expand_router=False,
                      expand_conns=False, **kwargs):
-    vpnservices = neutronclient(request).list_vpnservices(
-        **kwargs).get('vpnservices')
+    vpnservices = networkclient(request).vpn_services(**kwargs)
+    vpns_dicts = [vpn.to_dict() for vpn in vpnservices]
     if expand_subnet:
         subnets = neutron.subnet_list(request)
         subnet_dict = OrderedDict((s.id, s) for s in subnets)
-        for s in vpnservices:
+        for s in vpns_dicts:
             if s.get('subnet_id'):
                 s['subnet_name'] = subnet_dict.get(s['subnet_id']).cidr
     if expand_router:
@@ -93,7 +89,7 @@ def _vpnservice_list(request, expand_subnet=False, expand_router=False,
         for s in vpnservices:
             s['ipsecsiteconns'] = [c.id for c in ipsecsiteconns
                                    if c.vpnservice_id == s['id']]
-    return [VPNService(v) for v in vpnservices]
+    return [VPNService(v) for v in vpns_dicts]
 
 
 @profiler.trace
@@ -104,8 +100,8 @@ def vpnservice_get(request, vpnservice_id):
 
 def _vpnservice_get(request, vpnservice_id, expand_subnet=False,
                     expand_router=False, expand_conns=False):
-    vpnservice = neutronclient(request).show_vpnservice(vpnservice_id).get(
-        'vpnservice')
+    vpnservice = networkclient(request).get_vpn_service(
+        vpnservice_id).to_dict()
     if expand_subnet and ('subnet_id' in vpnservice):
         if vpnservice['subnet_id'] is not None:
             vpnservice['subnet'] = neutron.subnet_get(
@@ -122,14 +118,14 @@ def _vpnservice_get(request, vpnservice_id, expand_subnet=False,
 
 @profiler.trace
 def vpnservice_update(request, vpnservice_id, **kwargs):
-    vpnservice = neutronclient(request).update_vpnservice(
-        vpnservice_id, kwargs).get('vpnservice')
+    vpnservice = networkclient(request).update_vpn_service(
+        vpnservice_id, **kwargs).to_dict()
     return VPNService(vpnservice)
 
 
 @profiler.trace
 def vpnservice_delete(request, vpnservice_id):
-    neutronclient(request).delete_vpnservice(vpnservice_id)
+    networkclient(request).delete_vpn_service(vpnservice_id)
 
 
 @profiler.trace
@@ -142,15 +138,13 @@ def endpointgroup_create(request, **kwargs):
     :param type: type of Endpoint Group
     :param endpoints: endpoint(s) of Endpoint Group
     """
-    body = {'endpoint_group':
-            {'name': kwargs['name'],
-             'description': kwargs['description'],
-             'type': kwargs['type'],
-             'endpoints': kwargs['endpoints']}
+    body = {'name': kwargs['name'],
+            'description': kwargs['description'],
+            'type': kwargs['type'],
+            'endpoints': kwargs['endpoints']
             }
-    endpointgroup = neutronclient(request).create_endpoint_group(body).get(
-        'endpoint_group')
-    return EndpointGroup(endpointgroup)
+    endpointgroup = networkclient(request).create_vpn_endpoint_group(**body)
+    return EndpointGroup(endpointgroup.to_dict())
 
 
 @profiler.trace
@@ -159,16 +153,16 @@ def endpointgroup_list(request, **kwargs):
 
 
 def _endpointgroup_list(request, expand_conns=False, **kwargs):
-    endpointgroups = neutronclient(request).list_endpoint_groups(
-        **kwargs).get('endpoint_groups')
+    endpointgroups = networkclient(request).vpn_endpoint_groups(**kwargs)
+    vpn_epg_dicts = [epg.to_dict() for epg in endpointgroups]
     if expand_conns:
         ipsecsiteconns = _ipsecsiteconnection_list(request)
-        for g in endpointgroups:
+        for g in vpn_epg_dicts:
             g['ipsecsiteconns'] = [
                 c.id for c in ipsecsiteconns
                 if (c.get('local_ep_group_id') == g['id'] or
                     c.get('peer_ep_group_id') == g['id'])]
-    return [EndpointGroup(v) for v in endpointgroups]
+    return [EndpointGroup(v) for v in vpn_epg_dicts]
 
 
 @profiler.trace
@@ -177,8 +171,8 @@ def endpointgroup_get(request, endpoint_group_id):
 
 
 def _endpointgroup_get(request, endpoint_group_id, expand_conns=False):
-    endpointgroup = neutronclient(request).show_endpoint_group(
-        endpoint_group_id).get('endpoint_group')
+    endpointgroup = networkclient(request).get_vpn_endpoint_group(
+        endpoint_group_id).to_dict()
     if expand_conns:
         ipsecsiteconns = _ipsecsiteconnection_list(request)
         endpointgroup['ipsecsiteconns'] = [
@@ -190,14 +184,14 @@ def _endpointgroup_get(request, endpoint_group_id, expand_conns=False):
 
 @profiler.trace
 def endpointgroup_update(request, endpoint_group_id, **kwargs):
-    endpointgroup = neutronclient(request).update_endpoint_group(
-        endpoint_group_id, kwargs).get('endpoint_group')
+    endpointgroup = networkclient(request).update_vpn_endpoint_group(
+        endpoint_group_id, **kwargs).to_dict()
     return EndpointGroup(endpointgroup)
 
 
 @profiler.trace
 def endpointgroup_delete(request, endpoint_group_id):
-    neutronclient(request).delete_endpoint_group(endpoint_group_id)
+    networkclient(request).delete_vpn_endpoint_group(endpoint_group_id)
 
 
 @profiler.trace
@@ -214,18 +208,15 @@ def ikepolicy_create(request, **kwargs):
     :param pfs: Perfect Forward Secrecy for IKE policy
     :param phase1_negotiation_mode: IKE Phase1 negotiation mode for IKE policy
     """
-    body = {'ikepolicy':
-            {'name': kwargs['name'],
-             'description': kwargs['description'],
-             'auth_algorithm': kwargs['auth_algorithm'],
-             'encryption_algorithm': kwargs['encryption_algorithm'],
-             'ike_version': kwargs['ike_version'],
-             'lifetime': kwargs['lifetime'],
-             'pfs': kwargs['pfs'],
-             'phase1_negotiation_mode': kwargs['phase1_negotiation_mode']}
-            }
-    ikepolicy = neutronclient(request).create_ikepolicy(body).get(
-        'ikepolicy')
+    body = {'name': kwargs['name'],
+            'description': kwargs['description'],
+            'auth_algorithm': kwargs['auth_algorithm'],
+            'encryption_algorithm': kwargs['encryption_algorithm'],
+            'ike_version': kwargs['ike_version'],
+            'lifetime': kwargs['lifetime'],
+            'pfs': kwargs['pfs'],
+            'phase1_negotiation_mode': kwargs['phase1_negotiation_mode']}
+    ikepolicy = networkclient(request).create_vpn_ike_policy(**body).to_dict()
     return IKEPolicy(ikepolicy)
 
 
@@ -235,14 +226,15 @@ def ikepolicy_list(request, **kwargs):
 
 
 def _ikepolicy_list(request, expand_conns=False, **kwargs):
-    ikepolicies = neutronclient(request).list_ikepolicies(
-        **kwargs).get('ikepolicies')
+    ikepolicies = networkclient(request).vpn_ike_policies(
+        **kwargs)
+    vpn_ikep_dicts = [ikep.to_dict() for ikep in ikepolicies]
     if expand_conns:
         ipsecsiteconns = _ipsecsiteconnection_list(request, **kwargs)
-        for p in ikepolicies:
+        for p in vpn_ikep_dicts:
             p['ipsecsiteconns'] = [c.id for c in ipsecsiteconns
                                    if c.ikepolicy_id == p['id']]
-    return [IKEPolicy(v) for v in ikepolicies]
+    return [IKEPolicy(v) for v in vpn_ikep_dicts]
 
 
 @profiler.trace
@@ -251,8 +243,8 @@ def ikepolicy_get(request, ikepolicy_id):
 
 
 def _ikepolicy_get(request, ikepolicy_id, expand_conns=False):
-    ikepolicy = neutronclient(request).show_ikepolicy(
-        ikepolicy_id).get('ikepolicy')
+    ikepolicy = networkclient(request).get_vpn_ike_policy(
+        ikepolicy_id).to_dict()
     if expand_conns:
         ipsecsiteconns = _ipsecsiteconnection_list(request)
         ikepolicy['ipsecsiteconns'] = [c for c in ipsecsiteconns
@@ -262,14 +254,14 @@ def _ikepolicy_get(request, ikepolicy_id, expand_conns=False):
 
 @profiler.trace
 def ikepolicy_update(request, ikepolicy_id, **kwargs):
-    ikepolicy = neutronclient(request).update_ikepolicy(
-        ikepolicy_id, kwargs).get('ikepolicy')
+    ikepolicy = networkclient(request).update_vpn_ike_policy(
+        ikepolicy_id, **kwargs).to_dict()
     return IKEPolicy(ikepolicy)
 
 
 @profiler.trace
 def ikepolicy_delete(request, ikepolicy_id):
-    neutronclient(request).delete_ikepolicy(ikepolicy_id)
+    networkclient(request).delete_vpn_ike_policy(ikepolicy_id)
 
 
 @profiler.trace
@@ -286,19 +278,17 @@ def ipsecpolicy_create(request, **kwargs):
     :param pfs: Perfect Forward Secrecy for IPsec policy
     :param transform_protocol: Transform Protocol for IPsec policy
     """
-    body = {'ipsecpolicy':
-            {'name': kwargs['name'],
-             'description': kwargs['description'],
-             'auth_algorithm': kwargs['auth_algorithm'],
-             'encapsulation_mode': kwargs['encapsulation_mode'],
-             'encryption_algorithm': kwargs['encryption_algorithm'],
-             'lifetime': kwargs['lifetime'],
-             'pfs': kwargs['pfs'],
-             'transform_protocol': kwargs['transform_protocol']}
+    body = {'name': kwargs['name'],
+            'description': kwargs['description'],
+            'auth_algorithm': kwargs['auth_algorithm'],
+            'encapsulation_mode': kwargs['encapsulation_mode'],
+            'encryption_algorithm': kwargs['encryption_algorithm'],
+            'lifetime': kwargs['lifetime'],
+            'pfs': kwargs['pfs'],
+            'transform_protocol': kwargs['transform_protocol']
             }
-    ipsecpolicy = neutronclient(request).create_ipsecpolicy(body).get(
-        'ipsecpolicy')
-    return IPsecPolicy(ipsecpolicy)
+    ipsecpolicy = networkclient(request).create_vpn_ipsec_policy(**body)
+    return IPsecPolicy(ipsecpolicy.to_dict())
 
 
 @profiler.trace
@@ -307,14 +297,15 @@ def ipsecpolicy_list(request, **kwargs):
 
 
 def _ipsecpolicy_list(request, expand_conns=False, **kwargs):
-    ipsecpolicies = neutronclient(request).list_ipsecpolicies(
-        **kwargs).get('ipsecpolicies')
+    ipsecpolicies = networkclient(request).vpn_ipsec_policies(
+        **kwargs)
+    ipsec_dicts = [ipsec.to_dict() for ipsec in ipsecpolicies]
     if expand_conns:
         ipsecsiteconns = _ipsecsiteconnection_list(request, **kwargs)
-        for p in ipsecpolicies:
+        for p in ipsec_dicts:
             p['ipsecsiteconns'] = [c.id for c in ipsecsiteconns
                                    if c.ipsecpolicy_id == p['id']]
-    return [IPsecPolicy(v) for v in ipsecpolicies]
+    return [IPsecPolicy(v) for v in ipsec_dicts]
 
 
 @profiler.trace
@@ -323,8 +314,8 @@ def ipsecpolicy_get(request, ipsecpolicy_id):
 
 
 def _ipsecpolicy_get(request, ipsecpolicy_id, expand_conns=False):
-    ipsecpolicy = neutronclient(request).show_ipsecpolicy(
-        ipsecpolicy_id).get('ipsecpolicy')
+    ipsecpolicy = networkclient(request).get_vpn_ipsec_policy(
+        ipsecpolicy_id).to_dict()
     if expand_conns:
         ipsecsiteconns = _ipsecsiteconnection_list(request)
         ipsecpolicy['ipsecsiteconns'] = [c for c in ipsecsiteconns
@@ -335,14 +326,14 @@ def _ipsecpolicy_get(request, ipsecpolicy_id, expand_conns=False):
 
 @profiler.trace
 def ipsecpolicy_update(request, ipsecpolicy_id, **kwargs):
-    ipsecpolicy = neutronclient(request).update_ipsecpolicy(
-        ipsecpolicy_id, kwargs).get('ipsecpolicy')
+    ipsecpolicy = networkclient(request).update_vpn_ipsec_policy(
+        ipsecpolicy_id, **kwargs).to_dict()
     return IPsecPolicy(ipsecpolicy)
 
 
 @profiler.trace
 def ipsecpolicy_delete(request, ipsecpolicy_id):
-    neutronclient(request).delete_ipsecpolicy(ipsecpolicy_id)
+    networkclient(request).delete_vpn_ipsec_policy(ipsecpolicy_id)
 
 
 @profiler.trace
@@ -384,8 +375,8 @@ def ipsecsiteconnection_create(request, **kwargs):
         body['peer_ep_group_id'] = kwargs['peer_ep_group_id']
     else:
         body['peer_cidrs'] = kwargs['peer_cidrs']
-    ipsecsiteconnection = neutronclient(request).create_ipsec_site_connection(
-        {'ipsec_site_connection': body}).get('ipsec_site_connection')
+    ipsecsiteconnection = networkclient(
+        request).create_vpn_ipsec_site_connection(**body).to_dict()
     return IPsecSiteConnection(ipsecsiteconnection)
 
 
@@ -401,26 +392,27 @@ def ipsecsiteconnection_list(request, **kwargs):
 def _ipsecsiteconnection_list(request, expand_ikepolicies=False,
                               expand_ipsecpolicies=False,
                               expand_vpnservices=False, **kwargs):
-    ipsecsiteconnections = neutronclient(request).list_ipsec_site_connections(
-        **kwargs).get('ipsec_site_connections')
+    ipsecsiteconnections = networkclient(request).vpn_ipsec_site_connections(
+        **kwargs)
+    ipsec_dicts = [ipsec.to_dict() for ipsec in ipsecsiteconnections]
     if expand_ikepolicies:
         ikepolicies = _ikepolicy_list(request)
         policy_dict = OrderedDict((p.id, p) for p in ikepolicies)
-        for c in ipsecsiteconnections:
+        for c in ipsec_dicts:
             c['ikepolicy_name'] = policy_dict.get(c['ikepolicy_id']).name_or_id
     if expand_ipsecpolicies:
         ipsecpolicies = _ipsecpolicy_list(request)
         policy_dict = OrderedDict((p.id, p) for p in ipsecpolicies)
-        for c in ipsecsiteconnections:
+        for c in ipsec_dicts:
             c['ipsecpolicy_name'] = policy_dict.get(c['ipsecpolicy_id']
                                                     ).name_or_id
     if expand_vpnservices:
         vpnservices = _vpnservice_list(request)
         service_dict = OrderedDict((s.id, s) for s in vpnservices)
-        for c in ipsecsiteconnections:
+        for c in ipsec_dicts:
             c['vpnservice_name'] = service_dict.get(c['vpnservice_id']
                                                     ).name_or_id
-    return [IPsecSiteConnection(v) for v in ipsecsiteconnections]
+    return [IPsecSiteConnection(v) for v in ipsec_dicts]
 
 
 @profiler.trace
@@ -434,8 +426,9 @@ def ipsecsiteconnection_get(request, ipsecsiteconnection_id):
 def _ipsecsiteconnection_get(request, ipsecsiteconnection_id,
                              expand_ikepolicies, expand_ipsecpolicies,
                              expand_vpnservices):
-    ipsecsiteconnection = neutronclient(request).show_ipsec_site_connection(
-        ipsecsiteconnection_id).get('ipsec_site_connection')
+    ipsecsiteconnection = networkclient(
+        request).get_vpn_ipsec_site_connection(
+            ipsecsiteconnection_id).to_dict()
     if expand_ikepolicies:
         ipsecsiteconnection['ikepolicy'] = _ikepolicy_get(
             request, ipsecsiteconnection['ikepolicy_id'])
@@ -450,11 +443,13 @@ def _ipsecsiteconnection_get(request, ipsecsiteconnection_id,
 
 @profiler.trace
 def ipsecsiteconnection_update(request, ipsecsiteconnection_id, **kwargs):
-    ipsecsiteconnection = neutronclient(request).update_ipsec_site_connection(
-        ipsecsiteconnection_id, kwargs).get('ipsec_site_connection')
+    ipsecsiteconnection = networkclient(
+        request).update_vpn_ipsec_site_connection(
+            ipsecsiteconnection_id, **kwargs).to_dict()
     return IPsecSiteConnection(ipsecsiteconnection)
 
 
 @profiler.trace
 def ipsecsiteconnection_delete(request, ipsecsiteconnection_id):
-    neutronclient(request).delete_ipsec_site_connection(ipsecsiteconnection_id)
+    networkclient(request).delete_vpn_ipsec_site_connection(
+        ipsecsiteconnection_id)
