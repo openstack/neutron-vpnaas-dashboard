@@ -1,0 +1,14 @@
+---
+features:
+  - |
+    VPNaaS dashboard now supports additional algorithms introduced in
+    neutron-vpnaas:
+
+    - Auth algorithms: aes-xcbc, aes-cmac.
+
+    - Encryption algorithms: AES-CTR (aes-128-ctr, aes-192-ctr,
+      aes-256-ctr), AES-CCM with 8/12/16-octet ICV
+      (aes-*-ccm-8, aes-*-ccm-12, aes-*-ccm-16), and AES-GCM with
+      8/12/16-octet ICV (aes-*-gcm-8, aes-*-gcm-12, aes-*-gcm-16).
+
+    - PFS groups: group15 through group31.

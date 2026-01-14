@@ -252,6 +252,8 @@ class AddIKEPolicyAction(workflows.Action):
             ('sha256', _('SHA-256')),
             ('sha384', _('SHA-384')),
             ('sha512', _('SHA-512')),
+            ('aes-xcbc', _('AES-XCBC')),
+            ('aes-cmac', _('AES-CMAC')),
         ]
         self.fields['auth_algorithm'].choices = auth_algorithm_choices
         # Currently this field has only one choice, so mark it as readonly.
@@ -260,7 +262,28 @@ class AddIKEPolicyAction(workflows.Action):
         encryption_algorithm_choices = [("3des", "3DES"),
                                         ("aes-128", "AES-128"),
                                         ("aes-192", "AES-192"),
-                                        ("aes-256", "AES-256")]
+                                        ("aes-256", "AES-256"),
+                                        ("aes-128-ctr", "AES-128-CTR"),
+                                        ("aes-192-ctr", "AES-192-CTR"),
+                                        ("aes-256-ctr", "AES-256-CTR"),
+                                        ("aes-128-ccm-8", "AES-128-CCM-8"),
+                                        ("aes-192-ccm-8", "AES-192-CCM-8"),
+                                        ("aes-256-ccm-8", "AES-256-CCM-8"),
+                                        ("aes-128-ccm-12", "AES-128-CCM-12"),
+                                        ("aes-192-ccm-12", "AES-192-CCM-12"),
+                                        ("aes-256-ccm-12", "AES-256-CCM-12"),
+                                        ("aes-128-ccm-16", "AES-128-CCM-16"),
+                                        ("aes-192-ccm-16", "AES-192-CCM-16"),
+                                        ("aes-256-ccm-16", "AES-256-CCM-16"),
+                                        ("aes-128-gcm-8", "AES-128-GCM-8"),
+                                        ("aes-192-gcm-8", "AES-192-GCM-8"),
+                                        ("aes-256-gcm-8", "AES-256-GCM-8"),
+                                        ("aes-128-gcm-12", "AES-128-GCM-12"),
+                                        ("aes-192-gcm-12", "AES-192-GCM-12"),
+                                        ("aes-256-gcm-12", "AES-256-GCM-12"),
+                                        ("aes-128-gcm-16", "AES-128-GCM-16"),
+                                        ("aes-192-gcm-16", "AES-192-GCM-16"),
+                                        ("aes-256-gcm-16", "AES-256-GCM-16")]
         self.fields[
             'encryption_algorithm'].choices = encryption_algorithm_choices
         self.fields['encryption_algorithm'].initial = "aes-128"
@@ -276,7 +299,24 @@ class AddIKEPolicyAction(workflows.Action):
 
         pfs_choices = [("group2", "group2"),
                        ("group5", "group5"),
-                       ("group14", "group14")]
+                       ("group14", "group14"),
+                       ("group15", "group15"),
+                       ("group16", "group16"),
+                       ("group17", "group17"),
+                       ("group18", "group18"),
+                       ("group19", "group19"),
+                       ("group20", "group20"),
+                       ("group21", "group21"),
+                       ("group22", "group22"),
+                       ("group23", "group23"),
+                       ("group24", "group24"),
+                       ("group25", "group25"),
+                       ("group26", "group26"),
+                       ("group27", "group27"),
+                       ("group28", "group28"),
+                       ("group29", "group29"),
+                       ("group30", "group30"),
+                       ("group31", "group31")]
         self.fields['pfs'].choices = pfs_choices
         self.fields['pfs'].initial = "group5"
 
@@ -359,6 +399,8 @@ class AddIPsecPolicyAction(workflows.Action):
             ('sha256', _('SHA-256')),
             ('sha384', _('SHA-384')),
             ('sha512', _('SHA-512')),
+            ('aes-xcbc', _('AES-XCBC')),
+            ('aes-cmac', _('AES-CMAC')),
         ]
         self.fields['auth_algorithm'].choices = auth_algorithm_choices
         # Currently this field has only one choice, so mark it as readonly.
@@ -371,7 +413,28 @@ class AddIPsecPolicyAction(workflows.Action):
         encryption_algorithm_choices = [("3des", "3DES"),
                                         ("aes-128", "AES-128"),
                                         ("aes-192", "AES-192"),
-                                        ("aes-256", "AES-256")]
+                                        ("aes-256", "AES-256"),
+                                        ("aes-128-ctr", "AES-128-CTR"),
+                                        ("aes-192-ctr", "AES-192-CTR"),
+                                        ("aes-256-ctr", "AES-256-CTR"),
+                                        ("aes-128-ccm-8", "AES-128-CCM-8"),
+                                        ("aes-192-ccm-8", "AES-192-CCM-8"),
+                                        ("aes-256-ccm-8", "AES-256-CCM-8"),
+                                        ("aes-128-ccm-12", "AES-128-CCM-12"),
+                                        ("aes-192-ccm-12", "AES-192-CCM-12"),
+                                        ("aes-256-ccm-12", "AES-256-CCM-12"),
+                                        ("aes-128-ccm-16", "AES-128-CCM-16"),
+                                        ("aes-192-ccm-16", "AES-192-CCM-16"),
+                                        ("aes-256-ccm-16", "AES-256-CCM-16"),
+                                        ("aes-128-gcm-8", "AES-128-GCM-8"),
+                                        ("aes-192-gcm-8", "AES-192-GCM-8"),
+                                        ("aes-256-gcm-8", "AES-256-GCM-8"),
+                                        ("aes-128-gcm-12", "AES-128-GCM-12"),
+                                        ("aes-192-gcm-12", "AES-192-GCM-12"),
+                                        ("aes-256-gcm-12", "AES-256-GCM-12"),
+                                        ("aes-128-gcm-16", "AES-128-GCM-16"),
+                                        ("aes-192-gcm-16", "AES-192-GCM-16"),
+                                        ("aes-256-gcm-16", "AES-256-GCM-16")]
         self.fields[
             'encryption_algorithm'].choices = encryption_algorithm_choices
         self.fields['encryption_algorithm'].initial = "aes-128"
@@ -383,7 +446,24 @@ class AddIPsecPolicyAction(workflows.Action):
 
         pfs_choices = [("group2", "group2"),
                        ("group5", "group5"),
-                       ("group14", "group14")]
+                       ("group14", "group14"),
+                       ("group15", "group15"),
+                       ("group16", "group16"),
+                       ("group17", "group17"),
+                       ("group18", "group18"),
+                       ("group19", "group19"),
+                       ("group20", "group20"),
+                       ("group21", "group21"),
+                       ("group22", "group22"),
+                       ("group23", "group23"),
+                       ("group24", "group24"),
+                       ("group25", "group25"),
+                       ("group26", "group26"),
+                       ("group27", "group27"),
+                       ("group28", "group28"),
+                       ("group29", "group29"),
+                       ("group30", "group30"),
+                       ("group31", "group31")]
         self.fields['pfs'].choices = pfs_choices
         self.fields['pfs'].initial = "group5"
 
