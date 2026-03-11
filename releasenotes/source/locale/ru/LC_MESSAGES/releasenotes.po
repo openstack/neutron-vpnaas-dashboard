@@ -2,16 +2,17 @@
 # Roman Gorshunov <roman.gorshunov@att.com>, 2020. #zanata
 # Dmitriy Chubinidze <dcu995@gmail.com>, 2025. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2025. #zanata
+# Dmitriy Chubinidze <dcu995@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Neutron VPNaaS Dashboard Release Notes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-23 14:52+0000\n"
+"POT-Creation-Date: 2026-03-10 09:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-09-19 09:43+0000\n"
-"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
+"PO-Revision-Date: 2026-03-10 10:17+0000\n"
+"Last-Translator: Dmitriy Chubinidze <dcu995@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -32,6 +33,9 @@ msgstr "1.3.0"
 
 msgid "1.5.0"
 msgstr "1.5.0"
+
+msgid "13.0.0-12"
+msgstr "13.0.0-12"
 
 msgid "2.0.0"
 msgstr "2.0.0"
@@ -72,11 +76,23 @@ msgstr ""
 "больше форматов, таких как полное доменное имя (FQDN), помимо формата IP. "
 "Подробнее см. ошибку `1261127 <https://launchpad.net/bugs/1261127>`_."
 
+msgid "Auth algorithms: aes-xcbc, aes-cmac."
+msgstr "Алгоритмы аутентификации: aes-xcbc, aes-cmac."
+
 msgid "Bug Fixes"
 msgstr "Исправления ошибок"
 
 msgid "Current Series Release Notes"
 msgstr "Примечания к текущему выпуску"
+
+msgid ""
+"Encryption algorithms: AES-CTR (aes-128-ctr, aes-192-ctr, aes-256-ctr), AES-"
+"CCM with 8/12/16-octet ICV (aes-*-ccm-8, aes-*-ccm-12, aes-*-ccm-16), and "
+"AES-GCM with 8/12/16-octet ICV (aes-*-gcm-8, aes-*-gcm-12, aes-*-gcm-16)."
+msgstr ""
+"Алгоритмы шифрования: AES-CTR (aes-128-ctr, aes-192-ctr, aes-256-ctr), AES-"
+"CCM с ICV 8/12/16-октетов (aes-*-ccm-8, aes-*-ccm-12, aes-*-ccm-16) и AES-"
+"GCM с ICV 8/12/16-октетов (aes-*-gcm-8, aes-*-gcm-12, aes-*-gcm-16)."
 
 msgid "Neutron VPNaaS Dashboard Release Notes"
 msgstr "Примечания к выпуску панели управления Neutron VPNaaS"
@@ -102,6 +118,9 @@ msgstr ""
 
 msgid "New Features"
 msgstr "Новые возможности"
+
+msgid "PFS groups: group15 through group31."
+msgstr "Группы PFS: группа 15 – группа 31."
 
 msgid "Pike Series Release Notes"
 msgstr "Примечания к выпуску Pike"
@@ -165,6 +184,13 @@ msgstr "Примечания к обновлению"
 
 msgid "Ussuri Series Release Notes"
 msgstr "Примечания к выпуску Ussuri"
+
+msgid ""
+"VPNaaS dashboard now supports additional algorithms introduced in neutron-"
+"vpnaas:"
+msgstr ""
+"Панель управления VPNaaS теперь поддерживает дополнительные алгоритмы, "
+"представленные в neutron-vpnaas:"
 
 msgid "Victoria Series Release Notes"
 msgstr "Примечания к выпуску Victoria"
