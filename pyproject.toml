@@ -30,7 +30,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://docs.openstack.org/neutron-vpnaas-dashboard/latest/"
-Repository = "https://opendev.org/openstack/neutron-fwaas-dashboard"
+Repository = "https://opendev.org/openstack/neutron-vpnaas-dashboard"
 
 [tool.setuptools]
 packages = [
