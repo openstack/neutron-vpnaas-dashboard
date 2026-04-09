@@ -29,8 +29,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://docs.openstack.org/neutron-vpnaas-dashboard/latest/"
-Repository = "https://opendev.org/openstack/neutron-fwaas-dashboard"
+"Bug Tracker" = "https://bugs.launchpad.net/neutron-vpnaas-dashboard"
+"Documentation" = "https://docs.openstack.org/neutron-vpnaas-dashboard/latest/"
+"Source Code" = "https://opendev.org/openstack/neutron-vpnaas-dashboard"
 
 [tool.setuptools]
 packages = [
