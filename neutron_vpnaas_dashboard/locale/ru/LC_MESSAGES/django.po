@@ -11,16 +11,18 @@
 # Roman Gorshunov <roman.gorshunov@att.com>, 2020. #zanata
 # Dmitriy Chubinidze <dcu995@gmail.com>, 2025. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2025. #zanata
+# Dmitriy Chubinidze <dcu995@gmail.com>, 2026. #zanata
+# Ivan Anfimov <lazekteam@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-08-25 07:18+0000\n"
+"POT-Creation-Date: 2026-05-08 19:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-08-25 10:02+0000\n"
-"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
+"PO-Revision-Date: 2026-05-11 05:38+0000\n"
+"Last-Translator: Dmitriy Chubinidze <dcu995@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -59,11 +61,80 @@ msgstr "3DES"
 msgid "AES-128"
 msgstr "AES-128"
 
+msgid "AES-128-CCM-12"
+msgstr "AES-128-CCM-12"
+
+msgid "AES-128-CCM-16"
+msgstr "AES-128-CCM-16"
+
+msgid "AES-128-CCM-8"
+msgstr "AES-128-CCM-8"
+
+msgid "AES-128-CTR"
+msgstr "AES-128-CTR"
+
+msgid "AES-128-GCM-12"
+msgstr "AES-128-GCM-12"
+
+msgid "AES-128-GCM-16"
+msgstr "AES-128-GCM-16"
+
+msgid "AES-128-GCM-8"
+msgstr "AES-128-GCM-8"
+
 msgid "AES-192"
 msgstr "AES-192"
 
+msgid "AES-192-CCM-12"
+msgstr "AES-192-CCM-12"
+
+msgid "AES-192-CCM-16"
+msgstr "AES-192-CCM-16"
+
+msgid "AES-192-CCM-8"
+msgstr "AES-192-CCM-8"
+
+msgid "AES-192-CTR"
+msgstr "AES-192-CTR"
+
+msgid "AES-192-GCM-12"
+msgstr "AES-192-GCM-12"
+
+msgid "AES-192-GCM-16"
+msgstr "AES-192-GCM-16"
+
+msgid "AES-192-GCM-8"
+msgstr "AES-192-GCM-8"
+
 msgid "AES-256"
 msgstr "AES-256"
+
+msgid "AES-256-CCM-12"
+msgstr "AES-256-CCM-12"
+
+msgid "AES-256-CCM-16"
+msgstr "AES-256-CCM-16"
+
+msgid "AES-256-CCM-8"
+msgstr "AES-256-CCM-8"
+
+msgid "AES-256-CTR"
+msgstr "AES-256-CTR"
+
+msgid "AES-256-GCM-12"
+msgstr "AES-256-GCM-12"
+
+msgid "AES-256-GCM-16"
+msgstr "AES-256-GCM-16"
+
+msgid "AES-256-GCM-8"
+msgstr "AES-256-GCM-8"
+
+msgid "AES-CMAC"
+msgstr "AES-CMAC"
+
+msgid "AES-XCBC"
+msgstr "AES-XCBC"
 
 msgid "AH"
 msgstr "AH"
@@ -544,10 +615,9 @@ msgstr "PFS"
 msgid "PFS ="
 msgstr "PFS ="
 
-msgid "PFS limited to using Diffie-Hellman groups 2, 5 (default) and 14."
+msgid "PFS supports Diffie-Hellman groups 2, 5 (default), 14 through 31."
 msgstr ""
-"PFS (совершенная прямая секретность) ограниченна использованием групп Диффи-"
-"Хелмана 2, 5 (по умолчанию) и 14."
+"PFS поддерживает группы Диффи-Хеллмана 2, 5 (по умолчанию), с 14 по 31."
 
 msgid "Peer Endpoint Group"
 msgstr "Удаленная группа точки доступа"
@@ -879,11 +949,17 @@ msgstr "Служба VPN %s была успешно обновлена."
 msgid "VPN service associated with this connection"
 msgstr "Служба VPN для данного подключения"
 
-msgid "Valid algorithms are 3DES, AES-128, AES-192 and AES-256."
-msgstr "Доступные алгоритмы 3DES, AES-128, AES-192 и AES-256."
+msgid ""
+"Valid algorithms are 3DES and AES-128/192/256 including CTR, CCM (ICV "
+"8/12/16) and GCM (ICV 8/12/16) variants."
+msgstr ""
+"Допустимыми алгоритмами являются 3DES и AES-128/192/256, включая варианты "
+"CTR, CCM (ICV 8/12/16) и GCM (ICV 8/12/16)."
 
-msgid "Valid algorithms are SHA-1, SHA-256, SHA-384 and SHA-512."
-msgstr "Доступные алгоритмы SHA-1, SHA-256, SHA-384 и SHA-512."
+msgid ""
+"Valid algorithms are SHA-1, SHA-256, SHA-384, SHA-512, AES-XCBC and AES-CMAC."
+msgstr ""
+"Доступные алгоритмы SHA-1, SHA-256, SHA-384, SHA-512, AES-XCBC и AES-CMAC."
 
 msgid "Valid integer greater than the DPD interval"
 msgstr "Допустимое целое число, большее интервала DPD"
@@ -927,8 +1003,59 @@ msgstr "выключено"
 msgid "group14"
 msgstr "group14"
 
+msgid "group15"
+msgstr "group15"
+
+msgid "group16"
+msgstr "group16"
+
+msgid "group17"
+msgstr "group17"
+
+msgid "group18"
+msgstr "group18"
+
+msgid "group19"
+msgstr "group19"
+
 msgid "group2"
 msgstr "group2"
+
+msgid "group20"
+msgstr "group20"
+
+msgid "group21"
+msgstr "group21"
+
+msgid "group22"
+msgstr "group22"
+
+msgid "group23"
+msgstr "group23"
+
+msgid "group24"
+msgstr "group24"
+
+msgid "group25"
+msgstr "group25"
+
+msgid "group26"
+msgstr "group26"
+
+msgid "group27"
+msgstr "group27"
+
+msgid "group28"
+msgstr "group28"
+
+msgid "group29"
+msgstr "group29"
+
+msgid "group30"
+msgstr "group30"
+
+msgid "group31"
+msgstr "group31"
 
 msgid "group5"
 msgstr "group5"
