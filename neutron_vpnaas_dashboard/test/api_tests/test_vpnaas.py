@@ -46,17 +46,21 @@ class VPNaasApiTests(test.APITestCase):
         subnets = self.subnets.list()
         routers = self.routers.list()
 
-        self.mock_vpn_services.return_value = vpnservices
+        # vpn_services() returns a generator, like the real SDK call.
+        self.mock_vpn_services.return_value = iter(vpnservices)
         self.mock_subnet_list.return_value = subnets
         self.mock_router_list.return_value = routers
         self.mock_vpn_ipsec_site_connections.return_value = (
             self.api_ipsecsiteconnections)
 
         ret_val = api_vpn.vpnservice_list(self.request)
+        self.assertEqual(len(vpnservices), len(ret_val))
         for (v, d) in zip(ret_val, self.vpnservices.list()):
             self.assertIsInstance(v, api_vpn.VPNService)
             self.assertTrue(v.name, d.name)
             self.assertTrue(v.id)
+            self.assertIn('router_name', v.to_dict())
+            self.assertIn('ipsecsiteconns', v.to_dict())
 
         self.mock_vpn_services.assert_called_once_with()
         self.mock_subnet_list.assert_called_once_with(self.request)
