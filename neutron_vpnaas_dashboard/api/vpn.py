@@ -82,11 +82,11 @@ def _vpnservice_list(request, expand_subnet=False, expand_router=False,
     if expand_router:
         routers = neutron.router_list(request)
         router_dict = OrderedDict((r.id, r) for r in routers)
-        for s in vpnservices:
+        for s in vpns_dicts:
             s['router_name'] = router_dict.get(s['router_id']).name_or_id
     if expand_conns:
         ipsecsiteconns = _ipsecsiteconnection_list(request, **kwargs)
-        for s in vpnservices:
+        for s in vpns_dicts:
             s['ipsecsiteconns'] = [c.id for c in ipsecsiteconns
                                    if c.vpnservice_id == s['id']]
     return [VPNService(v) for v in vpns_dicts]
