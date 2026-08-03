@@ -29,11 +29,25 @@ class IPsecPolicy(neutron.NeutronAPIDictWrapper):
     """Wrapper for neutron VPN IPsec policy."""
 
 
-class IPsecSiteConnection(neutron.NeutronAPIDictWrapper):
+class AdminStateDictWrapper(neutron.NeutronAPIDictWrapper):
+    """Wrapper restoring the ``admin_state_up`` key openstacksdk renamed.
+
+    openstacksdk exposes the admin state as ``is_admin_state_up`` while the
+    dashboard views, forms and templates read ``admin_state_up``. Restore the
+    legacy key, like NeutronAPIDictWrapper does for ``port_security_enabled``.
+    """
+
+    def __init__(self, apidict):
+        if 'is_admin_state_up' in apidict and 'admin_state_up' not in apidict:
+            apidict['admin_state_up'] = apidict['is_admin_state_up']
+        super().__init__(apidict)
+
+
+class IPsecSiteConnection(AdminStateDictWrapper):
     """Wrapper for neutron IPsec site connection."""
 
 
-class VPNService(neutron.NeutronAPIDictWrapper):
+class VPNService(AdminStateDictWrapper):
     """Wrapper for neutron VPN service."""
 
 
