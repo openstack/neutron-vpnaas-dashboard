@@ -83,6 +83,8 @@ class VPNaasApiTests(test.APITestCase):
 
         ret_val = api_vpn.vpnservice_get(self.request, vpnservice.id)
         self.assertIsInstance(ret_val, api_vpn.VPNService)
+        # The SDK returns is_admin_state_up; the views read admin_state_up.
+        self.assertIs(True, ret_val['admin_state_up'])
 
         self.mock_get_vpn_service.assert_called_once_with(vpnservice.id)
         self.mock_subnet_get.assert_called_once_with(self.request, subnet.id)
@@ -321,6 +323,8 @@ class VPNaasApiTests(test.APITestCase):
         ret_val = api_vpn.ipsecsiteconnection_get(self.request,
                                                   ipsecsiteconnection.id)
         self.assertIsInstance(ret_val, api_vpn.IPsecSiteConnection)
+        # The SDK returns is_admin_state_up; the views read admin_state_up.
+        self.assertIs(True, ret_val['admin_state_up'])
 
         self.mock_get_vpn_ipsec_site_connection.assert_called_once_with(
             ipsecsiteconnection.id)
