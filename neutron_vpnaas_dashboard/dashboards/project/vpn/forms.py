@@ -37,10 +37,10 @@ class UpdateVPNService(forms.SelfHandlingForm):
 
     def handle(self, request, context):
         try:
-            data = {'vpnservice': {'name': context['name'],
-                                   'description': context['description'],
-                                   'admin_state_up': context['admin_state_up'],
-                                   }}
+            data = {'name': context['name'],
+                    'description': context['description'],
+                    'admin_state_up': context['admin_state_up'],
+                    }
             vpnservice = api_vpn.vpnservice_update(
                 request, self.initial['vpnservice_id'], **data)
             msg = (_('VPN service %s was successfully updated.')
@@ -69,10 +69,8 @@ class UpdateEndpointGroup(forms.SelfHandlingForm):
 
     def handle(self, request, context):
         try:
-            data = {'endpoint_group':
-                    {'name': context['name'],
-                     'description': context['description']}
-                    }
+            data = {'name': context['name'],
+                    'description': context['description']}
             endpointgroup = api_vpn.endpointgroup_update(
                 request, self.initial['endpoint_group_id'], **data)
             msg = (_('Endpoint group %s was successfully updated.')
@@ -177,18 +175,17 @@ class UpdateIKEPolicy(forms.SelfHandlingForm):
 
     def handle(self, request, context):
         try:
-            data = {'ikepolicy':
-                    {'name': context['name'],
-                     'description': context['description'],
-                     'auth_algorithm': context['auth_algorithm'],
-                     'encryption_algorithm': context['encryption_algorithm'],
-                     'ike_version': context['ike_version'],
-                     'lifetime': {'units': context['lifetime_units'],
-                                  'value': context['lifetime_value']},
-                     'pfs': context['pfs'],
-                     'phase1_negotiation_mode':
-                     context['phase1_negotiation_mode'],
-                     }}
+            data = {'name': context['name'],
+                    'description': context['description'],
+                    'auth_algorithm': context['auth_algorithm'],
+                    'encryption_algorithm': context['encryption_algorithm'],
+                    'ike_version': context['ike_version'],
+                    'lifetime': {'units': context['lifetime_units'],
+                                 'value': context['lifetime_value']},
+                    'pfs': context['pfs'],
+                    'phase1_negotiation_mode':
+                    context['phase1_negotiation_mode'],
+                    }
             ikepolicy = api_vpn.ikepolicy_update(
                 request, self.initial['ikepolicy_id'], **data)
             msg = (_('IKE policy %s was successfully updated.')
@@ -295,17 +292,16 @@ class UpdateIPsecPolicy(forms.SelfHandlingForm):
 
     def handle(self, request, context):
         try:
-            data = {'ipsecpolicy':
-                    {'name': context['name'],
-                     'description': context['description'],
-                     'auth_algorithm': context['auth_algorithm'],
-                     'encapsulation_mode': context['encapsulation_mode'],
-                     'encryption_algorithm': context['encryption_algorithm'],
-                     'lifetime': {'units': context['lifetime_units'],
-                                  'value': context['lifetime_value']},
-                     'pfs': context['pfs'],
-                     'transform_protocol': context['transform_protocol'],
-                     }}
+            data = {'name': context['name'],
+                    'description': context['description'],
+                    'auth_algorithm': context['auth_algorithm'],
+                    'encapsulation_mode': context['encapsulation_mode'],
+                    'encryption_algorithm': context['encryption_algorithm'],
+                    'lifetime': {'units': context['lifetime_units'],
+                                 'value': context['lifetime_value']},
+                    'pfs': context['pfs'],
+                    'transform_protocol': context['transform_protocol'],
+                    }
             ipsecpolicy = api_vpn.ipsecpolicy_update(
                 request, self.initial['ipsecpolicy_id'], **data)
             msg = (_('IPsec policy %s was successfully updated.')
@@ -422,8 +418,7 @@ class UpdateIPsecSiteConnection(forms.SelfHandlingForm):
                 data['peer_cidrs'] = [cidr.strip() for cidr in cidrs.split(',')
                                       if cidr.strip()]
             ipsecsiteconnection = api_vpn.ipsecsiteconnection_update(
-                request, self.initial['ipsecsiteconnection_id'],
-                ipsec_site_connection=data)
+                request, self.initial['ipsecsiteconnection_id'], **data)
             msg = (_('IPsec site connection %s was successfully updated.')
                    % context['name'])
             messages.success(request, msg)

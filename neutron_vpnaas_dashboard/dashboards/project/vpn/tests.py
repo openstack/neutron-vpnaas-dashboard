@@ -710,7 +710,7 @@ class VPNTests(test.TestCase):
         self.mock_vpnservice_get.assert_called_once_with(
             helpers.IsHttpRequest(), vpnservice.id)
         self.mock_vpnservice_update.assert_called_once_with(
-            helpers.IsHttpRequest(), vpnservice.id, vpnservice=data)
+            helpers.IsHttpRequest(), vpnservice.id, **data)
 
     @helpers.create_mocks({api_vpn: ('endpointgroup_get', )})
     def test_update_endpointgroup_get(self):
@@ -751,7 +751,7 @@ class VPNTests(test.TestCase):
         self.mock_endpointgroup_get.assert_called_once_with(
             helpers.IsHttpRequest(), endpointgroup.id)
         self.mock_endpointgroup_update.assert_called_once_with(
-            helpers.IsHttpRequest(), endpointgroup.id, endpoint_group=data)
+            helpers.IsHttpRequest(), endpointgroup.id, **data)
 
     @helpers.create_mocks({api_vpn: ('ikepolicy_get', )})
     def test_update_ikepolicy_get(self):
@@ -799,7 +799,7 @@ class VPNTests(test.TestCase):
         self.mock_ikepolicy_get.assert_called_once_with(
             helpers.IsHttpRequest(), ikepolicy.id)
         self.mock_ikepolicy_update.assert_called_once_with(
-            helpers.IsHttpRequest(), ikepolicy.id, ikepolicy=data)
+            helpers.IsHttpRequest(), ikepolicy.id, **data)
 
     @helpers.create_mocks({api_vpn: ('ipsecpolicy_get', )})
     def test_update_ipsecpolicy_get(self):
@@ -849,7 +849,7 @@ class VPNTests(test.TestCase):
         self.mock_ipsecpolicy_get.assert_called_once_with(
             helpers.IsHttpRequest(), ipsecpolicy.id)
         self.mock_ipsecpolicy_update.assert_called_once_with(
-            helpers.IsHttpRequest(), ipsecpolicy.id, ipsecpolicy=data)
+            helpers.IsHttpRequest(), ipsecpolicy.id, **data)
 
     @helpers.create_mocks({api_vpn: ('ipsecsiteconnection_get', )})
     def test_update_ipsecsiteconnection_get(self):
@@ -907,8 +907,7 @@ class VPNTests(test.TestCase):
         self.mock_ipsecsiteconnection_get.assert_called_once_with(
             helpers.IsHttpRequest(), ipsecsiteconnection.id)
         self.mock_ipsecsiteconnection_update.assert_called_once_with(
-            helpers.IsHttpRequest(), ipsecsiteconnection.id,
-            ipsec_site_connection=data)
+            helpers.IsHttpRequest(), ipsecsiteconnection.id, **data)
 
     @helpers.create_mocks({api_vpn: ('vpnservice_list', 'vpnservice_delete',)})
     def test_delete_vpnservice(self):
