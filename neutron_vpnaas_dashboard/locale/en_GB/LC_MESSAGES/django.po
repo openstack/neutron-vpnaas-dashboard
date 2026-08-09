@@ -6,15 +6,16 @@
 # Jacky Hu <hudayou@hotmail.com>, 2017. #zanata
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
 # Andi Chandler <andi@gowling.com>, 2020. #zanata
+# Andi Chandler <andi@gowling.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: neutron-vpnaas-dashboard VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-05-08 19:58+0000\n"
+"POT-Creation-Date: 2026-08-06 10:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-10-10 01:59+0000\n"
+"PO-Revision-Date: 2026-08-08 09:55+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -30,6 +31,42 @@ msgstr ""
 
 msgid "-"
 msgstr "-"
+
+msgid "3DES"
+msgstr "3DES"
+
+msgid "AES-128"
+msgstr "AES-128"
+
+msgid "AES-128-CCM-8"
+msgstr "AES-128-CCM-8"
+
+msgid "AES-128-CTR"
+msgstr "AES-128-CTR"
+
+msgid "AES-192"
+msgstr "AES-192"
+
+msgid "AES-192-CCM-8"
+msgstr "AES-192-CCM-8"
+
+msgid "AES-192-CTR"
+msgstr "AES-192-CTR"
+
+msgid "AES-256"
+msgstr "AES-256"
+
+msgid "AES-256-CCM-8"
+msgstr "AES-256-CCM-8"
+
+msgid "AES-256-CTR"
+msgstr "AES-256-CTR"
+
+msgid "AES-CMAC"
+msgstr "AES-CMAC"
+
+msgid "AES-XCBC"
+msgstr "AES-XCBC"
 
 msgctxt "Current status of an IPsec site connection and VPN service"
 msgid "Active"
@@ -481,6 +518,9 @@ msgstr "PFS"
 msgid "PFS ="
 msgstr "PFS ="
 
+msgid "PFS supports Diffie-Hellman groups 2, 5 (default), 14 through 31."
+msgstr "PFS supports Diffie-Hellman groups 2, 5 (default), 14 through 31."
+
 msgid "Peer Endpoint Group"
 msgstr "Peer Endpoint Group"
 
@@ -563,6 +603,18 @@ msgstr "Router ="
 
 msgid "Router ID ="
 msgstr "Router ID ="
+
+msgid "SHA-1"
+msgstr "SHA-1"
+
+msgid "SHA-256"
+msgstr "SHA-256"
+
+msgid "SHA-384"
+msgstr "SHA-384"
+
+msgid "SHA-512"
+msgstr "SHA-512"
 
 msgid "Save Changes"
 msgstr "Save Changes"
@@ -671,6 +723,9 @@ msgstr ""
 
 msgid "The type of IPsec tunnel (tunnel/transport) to be used."
 msgstr "The type of IPsec tunnel (tunnel/transport) to be used."
+
+msgid "The type of protocol (ESP, AH, AH-ESP) used in IPsec policy."
+msgstr "The type of protocol (ESP, AH, AH-ESP) used in IPsec policy."
 
 msgid "The type of version (v1/v2) that needs to be filtered."
 msgstr "The type of version (v1/v2) that needs to be filtered."
@@ -830,6 +885,27 @@ msgstr "group14"
 
 msgid "group2"
 msgstr "group2"
+
+msgid "group24"
+msgstr "group24"
+
+msgid "group25"
+msgstr "group25"
+
+msgid "group26"
+msgstr "group26"
+
+msgid "group27"
+msgstr "group27"
+
+msgid "group28"
+msgstr "group28"
+
+msgid "group29"
+msgstr "group29"
+
+msgid "group30"
+msgstr "group30"
 
 msgid "group5"
 msgstr "group5"
